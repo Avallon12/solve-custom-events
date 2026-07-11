@@ -1,0 +1,67 @@
+/* Hallmark · tokens — Sol Vé Custom Events
+ * Locked at build time per Hallmark discipline 3 (no mid-render improvisation).
+ * Hex values are binding per the Creative Direction Manual v1.0, Chapter 1
+ * (client-mandated palette; OKLCH substitution not permitted).
+ */
+:root {
+  /* Primary brand colors — Manual Chapter 1.1 */
+  --ivory: #F8F7F6;          /* Soft Ivory / Warm White — page background */
+  --gold: #9E8D6F;           /* Muted Antique Gold — headings, CTAs, accents */
+  --stone: #ABA297;          /* Warm Stone Gold — eyebrows, soft accents */
+  --charcoal: #242216;       /* Deep Olive Charcoal — body text, dark headings */
+  --bronze: #8B765C;         /* Bronze Gold — borders, small accents, rules */
+
+  /* Supporting neutrals — Manual Chapter 1.2 */
+  --champagne: #C7B6A6;
+  --linen: #D0C8B1;
+  --cocoa: #6C6251;
+  --espresso: #5C4E32;
+  --walnut: #4B3724;
+
+  /* MMM campaign colors — Manual Part 5 (that section only) */
+  --mmm-burgundy: #5B1020;
+  --mmm-gold: #C9A84C;
+  --mmm-gold-hover: #B4933F;
+
+  /* Derived alpha tokens — every translucent value lives here */
+  --overlay-hero: rgba(36, 34, 22, 0.65);      /* warm 65% — Manual Ch. 6 */
+  --overlay-card: rgba(36, 34, 22, 0.3);       /* warm 30% — Manual Ch. 6 */
+  --overlay-caption: rgba(36, 34, 22, 0.75);
+  --overlay-img-rest: rgba(36, 34, 22, 0.12);
+  --nav-bg: rgba(248, 247, 246, 0.95);         /* Manual Part 2 */
+  --border-soft: rgba(171, 162, 151, 0.4);     /* stone at 40% — card default */
+  --border-soft-25: rgba(171, 162, 151, 0.25);
+  --border-soft-30: rgba(171, 162, 151, 0.3);
+  --border-soft-35: rgba(171, 162, 151, 0.35);
+  --border-soft-50: rgba(171, 162, 151, 0.5);
+  --border-soft-80: rgba(171, 162, 151, 0.8);
+  --linen-50: rgba(208, 200, 177, 0.5);
+  --linen-35: rgba(208, 200, 177, 0.35);
+  --surface-dark-card: rgba(248, 247, 246, 0.03);
+  --surface-mmm-card: rgba(248, 247, 246, 0.04);
+  --border-mmm-soft: rgba(201, 168, 76, 0.4);
+  --border-mmm-35: rgba(201, 168, 76, 0.35);
+  --border-mmm-50: rgba(201, 168, 76, 0.5);
+  --surface-mmm-hover: rgba(201, 168, 76, 0.15);
+
+  /* Typography — Manual Chapter 2 */
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Cormorant Garamond", Georgia, serif;
+  --font-ui: "Inter", system-ui, sans-serif;
+
+  /* Spacing — Manual Chapter 3 */
+  --section-pad: 100px;
+  --card-pad: 40px;
+  --card-gap: 24px;
+  --max-width: 1240px;
+  --page-pad: 80px;
+
+  /* Elevation & motion */
+  --shadow-card: 0 4px 24px rgba(158, 141, 111, 0.12);
+  --shadow-card-dark: 0 4px 24px rgba(0, 0, 0, 0.3);
+  --shadow-card-mmm: 0 4px 24px rgba(0, 0, 0, 0.35);
+  --dur-short: 150ms;
+  --dur-med: 300ms;
+  --dur-long: 500ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}

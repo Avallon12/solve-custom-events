@@ -1,6 +1,6 @@
 # Sol Vé Custom Events — Website
 
-Static site built exactly to the **Sol Vé Website Creative Direction Manual v1.0** (July 2026).
+Static site built exactly to the **Sol Vé Website Build Instructions v5.0** (July 12, 2026, prepared by Rida Ghani on behalf of Lynea Vaugeois Hetherington).
 
 ## Run locally
 
@@ -14,26 +14,35 @@ Then open http://localhost:8080. The site uses root-relative URLs (`/css/...`, `
 
 | Path | Page |
 |---|---|
-| `/` | Homepage |
-| `/about/` | About Lynea |
+| `/` | Homepage (values section, six divisions, SOLVÉ banner, portfolio, press, founder quote) |
+| `/about/` | Who we are + Meet Lynea (exact copy from solvecustomevents.com/about) |
+| `/values/` | Land Acknowledgement, Diversity/Inclusion/Belonging, 2SLGBTQIA+ Inclusion |
 | `/divisions/` | Divisions overview |
-| `/divisions/{event-design,weddings,proposals,retreats,conferences,fundraising}/` | Six division pages |
-| `/solve/` | SOLVÉ Global Summit (dark institutional theme) |
-| `/solve/delegate/` | Delegate interest form |
-| `/solve/sponsor/` | Sponsorship inquiry form |
-| `/mystic/` | MMM Fundraising Campaign (burgundy/gold theme) |
-| `/portfolio/` `/press/` `/contact/` | Portfolio, Press, Contact |
+| `/divisions/{event-design,weddings,signature-moments,workshops,conferences,fundraising}/` | Six division pages |
+| `/divisions/{proposals,retreats}/` | Redirects to the renamed v5 slugs |
+| `/solve/` | SOLVÉ Global Summit (Far Blue #0E2447 theme, no dates — Coming Soon only) |
+| `/solve/delegate/` `/solve/sponsor/` | Delegate interest + sponsorship inquiry forms |
+| `/mystic/` | MMM full page (Deep Burgundy/MMM Gold theme, Stand With Humanity) |
+| `/portfolio/` | Filterable gallery with lightbox |
+| `/press/` | Press, Publications and Awards |
+| `/contact/` | Contact form (v5 field set) |
 
-Shared assets: `tokens.css` (locked design tokens — every color, font, and duration lives here), `css/styles.css` (component styles referencing tokens only), `js/main.js` (nav, forms). `build_divisions.py` regenerates the six division pages from one shared template — edit it and re-run `python3 build_divisions.py && python3 hallmark_fixes.py` rather than editing division pages by hand.
+Shared assets: `tokens.css` (locked design tokens — every color, font, and duration lives here), `css/styles.css` (component styles referencing tokens only), `js/main.js` (nav, MMM popup, lightbox, portfolio filters, forms), `assets/` (WebP images: Sol Vé logo, MMM logo, Lynea portrait, SOLVÉ five-pillars banner).
+
+**`build_site.py` is the single source of truth for every page.** All v5 copy lives in it verbatim. Edit it and re-run `python3 build_site.py` rather than editing HTML by hand.
+
+The MMM item in the navigation is the MMM logo (not text) and opens the campaign popup with the MMM website and Eventbrite ticket links, per v5 Section 0 / Page 12.
 
 ## Design discipline
 
-The build follows the [Hallmark](https://github.com/nutlope/hallmark) anti-AI-slop design skill (installed at `~/.claude/skills/hallmark/`), audited against its slop-test gates: locked tokens (no inline color values), one orchestrated hero entrance instead of universal scroll reveals, honest captions (stock stand-ins are labelled "Style reference", never fabricated event names), eyebrows capped to manual-mandated ones, `minmax(0, 1fr)` grid tracks, no-wrap CTAs, and typographic apostrophes. Where Hallmark and the Creative Direction Manual conflict (fonts, exact hex palette, nav shape, uniform section padding, 100vh SOLVÉ hero), **the manual wins** — it is the binding client spec. Run history lives in `.hallmark/log.json`.
+The build follows the [Hallmark](https://github.com/nutlope/hallmark) anti-AI-slop design skill: locked tokens, one orchestrated hero entrance, honest captions (stock stand-ins are labelled "Style reference"), `minmax(0, 1fr)` grid tracks, no-wrap CTAs, typographic apostrophes. Where Hallmark and the v5 build document conflict, **the document wins** — it is the binding client spec. v5 contrast law is enforced: light text only on dark grounds (#242216, #0E2447, #5B1020), dark text only on ivory; 1px gold hairlines between sections; gold borders on all cards. Run history lives in `.hallmark/log.json`.
 
-## Items requiring action before launch (per the manual)
+## Items requiring assets or action before launch (v5 Section 16)
 
-- **Copy approval (Part 9.2):** Lynea must approve the About-page biography, philosophy quote, and Mission/Vision/Values before go-live.
-- **Real photography (Part 6.3):** The Lynea-with-cello photo was pulled from the Drive (`assets/lynea-cello.jpg`) and is in place on the About page. The Mystic Mingle folder and MMM wordmark logo were not publicly downloadable — swap the marked stock images in `/mystic/` and the portfolio grids once those assets are exported from the Drive.
-- **Form backend (Part 8.3):** Forms currently show the specified inline confirmations. Wire the `<form>` elements to a form endpoint (Formspree, Basin, or a serverless function) that routes to lynea@solvecustomevents.com and ridaghani2000@gmail.com, and add reCAPTCHA v3.
-- **GA4 (Part 8.3):** Add the GA4 tag once the measurement ID exists.
+- **Photography:** Homepage hero, philosophy image, division pages, and portfolio use dark placeholders / labelled stock until Lynea provides real Sol Vé photography.
+- **"Resourcing the Fight" quote photo:** v5 says the SOLVÉ hero headline must be replaced with Lynea's photographed quote. That image was not among the delivered assets — the text headline stands in; swap it into `.solve-hero` when received.
+- **5-emoji photo placement:** Currently placed inside the "Who This Is For" section on `/solve/` (one of the two positions v5 allows). Confirm placement with Lynea.
+- **Press/award links:** Bridal Fantasy, Men's Vow Magazine, Dance BBG, AVOLA links and award images to be provided by Lynea.
+- **Form backend:** Forms show the specified inline confirmations. Wire the `<form>` elements to a form endpoint that routes to **lynea@solvecustomevents.com only** (v5 URGENT — not Rida, not any other email), and connect a CRM (v5 recommends HubSpot free tier; confirm platform with Lynea).
+- **Performance:** All local images are WebP. After deploy, run [PageSpeed Insights](https://pagespeed.web.dev) against the live URL and fix any critical issues.
 - **Sitemap:** `sitemap.xml` is ready; submit it to Google Search Console after deploy.

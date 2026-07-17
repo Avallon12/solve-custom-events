@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://solvecustomevents.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://solvecustomevents.com/about/</loc><priority>0.9</priority></url>
-  <url><loc>https://solvecustomevents.com/divisions/</loc><priority>0.9</priority></url>
-  <url><loc>https://solvecustomevents.com/divisions/event-design/</loc><priority>0.8</priority></url>
-  <url><loc>https://solvecustomevents.com/divisions/weddings/</loc><priority>0.8</priority></url>
-  <url><loc>https://solvecustomevents.com/divisions/proposals/</loc><priority>0.8</priority></url>
-  <url><loc>https://solvecustomevents.com/divisions/retreats/</loc><priority>0.8</priority></url>
-  <url><loc>https://solvecustomevents.com/divisions/conferences/</loc><priority>0.8</priority></url>
-  <url><loc>https://solvecustomevents.com/divisions/fundraising/</loc><priority>0.8</priority></url>
-  <url><loc>https://solvecustomevents.com/solve/</loc><priority>1.0</priority></url>
-  <url><loc>https://solvecustomevents.com/solve/delegate/</loc><priority>0.9</priority></url>
-  <url><loc>https://solvecustomevents.com/solve/sponsor/</loc><priority>0.9</priority></url>
-  <url><loc>https://solvecustomevents.com/mystic/</loc><priority>0.9</priority></url>
-  <url><loc>https://solvecustomevents.com/portfolio/</loc><priority>0.7</priority></url>
-  <url><loc>https://solvecustomevents.com/press/</loc><priority>0.6</priority></url>
-  <url><loc>https://solvecustomevents.com/contact/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.solvecustomevents.com/</loc></url>
+  <url><loc>https://www.solvecustomevents.com/about/</loc></url>
+  <url><loc>https://www.solvecustomevents.com/values/</loc></url>
+  <url><loc>https://www.solvecustomevents.com/divisions/</loc></url>
+  <url><loc>https://www.solvecustomevents.com/divisions/event-design/</loc></url>
+  <url><loc>https://www.solvecustomevents.com/divisions/weddings/</loc></url>
+  <url><loc>https://www.solvecustomevents.com/divisions/signature-moments/</loc></url>
+  <url><loc>https://www.solvecustomevents.com/divisions/workshops/</loc></url>
+  <url><loc>https://www.solvecustomevents.com/divisions/conferences/</loc></url>
+  <url><loc>https://www.solvecustomevents.com/divisions/fundraising/</loc></url>
+  <url><loc>https://www.solvecustomevents.com/solve/</loc></url>
+  <url><loc>https://www.solvecustomevents.com/solve/delegate/</loc></url>
+  <url><loc>https://www.solvecustomevents.com/solve/sponsor/</loc></url>
+  <url><loc>https://www.solvecustomevents.com/mystic/</loc></url>
+  <url><loc>https://www.solvecustomevents.com/portfolio/</loc></url>
+  <url><loc>https://www.solvecustomevents.com/press/</loc></url>
+  <url><loc>https://www.solvecustomevents.com/contact/</loc></url>
 </urlset>

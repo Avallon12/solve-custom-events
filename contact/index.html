@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Sol Vé Custom Events Calgary Alberta</title>
-  <meta name="description" content="Tell us your vision. Contact Sol Vé Custom Events for luxury event production in Calgary, Alberta and beyond.">
+  <title>Contact Sol Vé Custom Events Tell Us Your Vision</title>
+  <meta name="description" content="Tell us what you are building. Every extraordinary event begins with a conversation with Sol Vé Custom Events, Calgary, Alberta.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;700&display=swap">
@@ -17,28 +17,33 @@
   <header class="site-nav">
     <div class="container">
       <a class="nav-logo" href="/" aria-label="Sol Vé Custom Events home">
-        <span class="wordmark">Sol Vé</span>
-        <span class="wordmark-sub">Custom Events</span>
+        <img src="/assets/solve-logo.webp" alt="Sol Vé Custom Events" width="287" height="200">
       </a>
       <nav aria-label="Primary">
         <ul class="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/about/">About</a></li>
+          <li><a href="/values/">Values</a></li>
           <li class="has-dropdown">
             <a href="/divisions/">Divisions</a>
             <ul class="dropdown">
               <li><a href="/divisions/event-design/">Event Design and Styling</a></li>
               <li><a href="/divisions/weddings/">Weddings</a></li>
-              <li><a href="/divisions/proposals/">Proposals and Bespoke Experiences</a></li>
-              <li><a href="/divisions/retreats/">Retreats</a></li>
+              <li><a href="/divisions/signature-moments/">Signature Moments</a></li>
+              <li><a href="/divisions/workshops/">Workshops and Curated Experiences</a></li>
               <li><a href="/divisions/conferences/">Conferences and International Events</a></li>
               <li><a href="/divisions/fundraising/">Fundraising Campaign Events</a></li>
             </ul>
           </li>
           <li><a href="/solve/">SOLVÉ Global Summit</a></li>
           <li><a href="/portfolio/">Portfolio</a></li>
-          <li><a href="/press/">Press</a></li>
+          <li><a href="/press/">Press and Awards</a></li>
           <li><a href="/contact/">Contact</a></li>
+          <li>
+            <button type="button" class="nav-mmm-btn" aria-haspopup="dialog" aria-label="About the Mystic Moonlight Masquerade campaign">
+              <img src="/assets/mmm-logo.webp" alt="Mystic Moonlight Masquerade" width="500" height="172">
+            </button>
+          </li>
         </ul>
       </nav>
       <div class="nav-cta"><a class="btn btn-primary" href="/contact/">Tell Us Your Vision</a></div>
@@ -53,7 +58,7 @@
         <div class="split">
           <div>
             <h1>Tell us what you are building.</h1>
-            <p style="max-width: 540px;" class="justify">Every extraordinary event begins with a conversation. Tell us your vision and we will tell you what is possible. We respond to every inquiry personally.</p>
+            <p style="max-width: 540px;">Every extraordinary event begins with a conversation.</p>
             <p style="font-family: var(--font-ui); font-size: 14px; color: var(--cocoa);">
               Calgary, Alberta<br>
               <a href="mailto:lynea@solvecustomevents.com" style="color: var(--bronze);">lynea@solvecustomevents.com</a>
@@ -66,7 +71,7 @@
                 <input type="text" id="c-name" name="full_name" required autocomplete="name">
               </div>
               <div class="form-field">
-                <label for="c-email">Email Address <span class="req">*</span></label>
+                <label for="c-email">Email <span class="req">*</span></label>
                 <input type="email" id="c-email" name="email" required autocomplete="email">
               </div>
               <div class="form-field">
@@ -74,24 +79,20 @@
                 <input type="tel" id="c-phone" name="phone" autocomplete="tel">
               </div>
               <div class="form-field">
-                <label for="c-division">Which division fits your event? <span class="req">*</span></label>
-                <select id="c-division" name="division" required>
-                  <option value="">Select a division</option>
-                  <option>Event Design and Styling</option>
-                  <option>Weddings</option>
-                  <option>Proposals and Bespoke Experiences</option>
-                  <option>Retreats</option>
-                  <option>Conferences and International Events</option>
-                  <option>Fundraising Campaign Events</option>
-                  <option>Not sure yet</option>
+                <label for="c-type">Type of inquiry <span class="req">*</span></label>
+                <select id="c-type" name="inquiry_type" required>
+                  <option value="">Select a type</option>
+                  <option>Sol Vé Events</option>
+                  <option>SOLVÉ Global Summit</option>
+                  <option>MMM Campaign</option>
                 </select>
               </div>
               <div class="form-field">
-                <label for="c-vision">Tell us your vision <span class="req">*</span></label>
-                <textarea id="c-vision" name="vision" required></textarea>
+                <label for="c-message">Message <span class="req">*</span></label>
+                <textarea id="c-message" name="message" required></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Begin Your Experience</button>
-              <p class="form-note">Submissions are routed to lynea@solvecustomevents.com and ridaghani2000@gmail.com.</p>
+              <button type="submit" class="btn btn-primary">Send Your Vision</button>
+              <p class="form-note">Submissions are routed to lynea@solvecustomevents.com.</p>
             </form>
             <div class="form-confirmation" id="contact-confirmation" role="status">
               Thank you. Your vision has been received. We will be in touch shortly.
@@ -103,21 +104,39 @@
 
   </main>
 
+  <div class="mmm-popup" id="mmm-popup" role="dialog" aria-modal="true" aria-label="Mystic Moonlight Masquerade">
+    <div class="mmm-popup-panel">
+      <button type="button" class="mmm-popup-close" aria-label="Close">&times;</button>
+      <img class="mmm-logo-img" src="/assets/mmm-logo.webp" alt="Mystic Moonlight Masquerade" width="500" height="172">
+      <h2>Mystic Moonlight Masquerade Ball and Gala Fundraising Campaign 2026</h2>
+      <p class="mmm-presented">Proudly presented by Sol Vé Custom Events</p>
+      <h3>2026 Campaign Theme: Silk Roads to Discovery</h3>
+      <p>A celebration of the weaving together of the fabrics of societies: those that brought us dance, music, spices, foods and fashion.</p>
+      <p>The Mystic Moonlight Masquerade Campaign is an immersive charity masquerade event in Calgary, Alberta, featuring a wide range of performers, live DJs, visual art installations, and a multi-tier gala experience, with 100% of net proceeds supporting marginalized communities.</p>
+      <p class="mmm-stats">Goal: $200,000&nbsp;|&nbsp;10 Non-Profits and Charities&nbsp;|&nbsp;Multiple events&nbsp;|&nbsp;1 Movement</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://www.mysticmoonlightmasquerade.com" target="_blank" rel="noopener">Visit MMM Website</a>
+        <a class="btn btn-secondary" href="https://www.eventbrite.ca/e/mystic-moonlight-masquerade-gala-ball-tickets-1990348600242" target="_blank" rel="noopener">Get Gala Ball Tickets</a>
+      </div>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top">
-        <div>
-          <span class="wordmark">Sol Vé</span>
+        <div class="footer-logo">
+          <img src="/assets/solve-logo.webp" alt="Sol Vé Custom Events" width="287" height="200" loading="lazy">
           <p class="footer-tag">Luxury event production across six divisions. Calgary, Alberta.</p>
         </div>
         <nav aria-label="Footer">
           <ul>
             <li><a href="/about/">About</a></li>
+            <li><a href="/values/">Values</a></li>
             <li><a href="/divisions/">Divisions</a></li>
             <li><a href="/solve/">SOLVÉ Global Summit</a></li>
             <li><a href="/mystic/">MMM Campaign</a></li>
             <li><a href="/portfolio/">Portfolio</a></li>
-            <li><a href="/press/">Press</a></li>
+            <li><a href="/press/">Press and Awards</a></li>
             <li><a href="/contact/">Contact</a></li>
           </ul>
         </nav>

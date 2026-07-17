@@ -1,55 +1,56 @@
 /* Hallmark · tokens — Sol Vé Custom Events
  * Locked at build time per Hallmark discipline 3 (no mid-render improvisation).
- * Hex values are binding per the Creative Direction Manual v1.0, Chapter 1
+ * Hex values are binding per Website Build Instructions v5.0, Color System
  * (client-mandated palette; OKLCH substitution not permitted).
  */
 :root {
-  /* Primary brand colors — Manual Chapter 1.1 */
-  --ivory: #F8F7F6;          /* Soft Ivory / Warm White — page background */
-  --gold: #9E8D6F;           /* Muted Antique Gold — headings, CTAs, accents */
-  --stone: #ABA297;          /* Warm Stone Gold — eyebrows, soft accents */
-  --charcoal: #242216;       /* Deep Olive Charcoal — body text, dark headings */
-  --bronze: #8B765C;         /* Bronze Gold — borders, small accents, rules */
+  /* Sol Vé site colors — all pages except SOLVÉ and MMM */
+  --ivory: #F8F7F6;          /* Soft Ivory — primary light background */
+  --gold: #9E8D6F;           /* Muted Antique Gold — logo, H1/H2, CTAs, rims */
+  --stone: #ABA297;          /* Warm Stone Gold — subtle accents */
+  --charcoal: #242216;       /* Deep Olive Charcoal — dark sections, body text */
+  --bronze: #8B765C;         /* Bronze Gold — button borders, hairline rules */
+  --champagne: #C7B6A6;      /* Champagne Beige — card backgrounds only */
+  --linen: #D0C8B1;          /* Linen Cream — card hover, inner dividers */
+  --cocoa: #6C6251;          /* derived neutral for small UI text on light */
 
-  /* Supporting neutrals — Manual Chapter 1.2 */
-  --champagne: #C7B6A6;
-  --linen: #D0C8B1;
-  --cocoa: #6C6251;
-  --espresso: #5C4E32;
-  --walnut: #4B3724;
+  /* SOLVÉ Global Summit page colors — SOLVÉ pages only */
+  --solve-blue: #0E2447;     /* Far Blue — primary dark background */
+  --solve-greyblue: #808898; /* Grey Blue — secondary supporting sections */
+  --solve-white: #FEFEFE;    /* Near White — primary text on dark */
+  --solve-offwhite: #FDFDFD; /* Off White — secondary text on dark */
+  --solve-crimson: #6B0F1A;  /* Deep Crimson — sparing accent, never redM red */
 
-  /* MMM campaign colors — Manual Part 5 (that section only) */
-  --mmm-burgundy: #5B1020;
-  --mmm-gold: #C9A84C;
+  /* MMM section colors — MMM section only */
+  --mmm-burgundy: #5B1020;   /* Deep Burgundy — MMM primary dark background */
+  --mmm-gold: #C9A84C;       /* MMM Gold — MMM primary accent */
+  --mmm-champagne: #E4D18A;  /* MMM Champagne — secondary warm gold */
+  --mmm-ivory: #F8F5EF;      /* MMM Ivory — MMM light sections */
   --mmm-gold-hover: #B4933F;
 
   /* Derived alpha tokens — every translucent value lives here */
-  --overlay-hero: rgba(36, 34, 22, 0.65);      /* warm 65% — Manual Ch. 6 */
-  --overlay-card: rgba(36, 34, 22, 0.3);       /* warm 30% — Manual Ch. 6 */
+  --overlay-hero: rgba(36, 34, 22, 0.65);      /* warm 65% — v5 hero rule */
+  --overlay-card: rgba(36, 34, 22, 0.3);
   --overlay-caption: rgba(36, 34, 22, 0.75);
   --overlay-img-rest: rgba(36, 34, 22, 0.12);
-  --nav-bg: rgba(248, 247, 246, 0.95);         /* Manual Part 2 */
-  --border-soft: rgba(171, 162, 151, 0.4);     /* stone at 40% — card default */
-  --border-soft-25: rgba(171, 162, 151, 0.25);
-  --border-soft-30: rgba(171, 162, 151, 0.3);
-  --border-soft-35: rgba(171, 162, 151, 0.35);
-  --border-soft-50: rgba(171, 162, 151, 0.5);
-  --border-soft-80: rgba(171, 162, 151, 0.8);
+  --nav-bg: rgba(248, 247, 246, 0.96);
+  --gold-40: rgba(158, 141, 111, 0.4);
+  --gold-55: rgba(158, 141, 111, 0.55);
   --linen-50: rgba(208, 200, 177, 0.5);
   --linen-35: rgba(208, 200, 177, 0.35);
-  --surface-dark-card: rgba(248, 247, 246, 0.03);
-  --surface-mmm-card: rgba(248, 247, 246, 0.04);
-  --border-mmm-soft: rgba(201, 168, 76, 0.4);
-  --border-mmm-35: rgba(201, 168, 76, 0.35);
-  --border-mmm-50: rgba(201, 168, 76, 0.5);
+  --surface-dark-card: rgba(248, 247, 246, 0.04);
+  --surface-solve-card: rgba(254, 254, 254, 0.04);
+  --surface-mmm-card: rgba(248, 245, 239, 0.05);
+  --border-mmm-soft: rgba(201, 168, 76, 0.5);
   --surface-mmm-hover: rgba(201, 168, 76, 0.15);
+  --lightbox-bg: rgba(20, 18, 10, 0.92);
 
-  /* Typography — Manual Chapter 2 */
+  /* Typography */
   --font-display: "Playfair Display", Georgia, serif;
   --font-body: "Cormorant Garamond", Georgia, serif;
   --font-ui: "Inter", system-ui, sans-serif;
 
-  /* Spacing — Manual Chapter 3 */
+  /* Spacing */
   --section-pad: 100px;
   --card-pad: 40px;
   --card-gap: 24px;
@@ -59,7 +60,7 @@
   /* Elevation & motion */
   --shadow-card: 0 4px 24px rgba(158, 141, 111, 0.12);
   --shadow-card-dark: 0 4px 24px rgba(0, 0, 0, 0.3);
-  --shadow-card-mmm: 0 4px 24px rgba(0, 0, 0, 0.35);
+  --shadow-popup: 0 24px 80px rgba(0, 0, 0, 0.5);
   --dur-short: 150ms;
   --dur-med: 300ms;
   --dur-long: 500ms;

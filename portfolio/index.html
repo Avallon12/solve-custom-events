@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | Sol Vé Custom Events Luxury Event Production Calgary</title>
-  <meta name="description" content="Selected work from Sol Vé Custom Events — galas, weddings, cultural productions, fundraising campaigns, and international events produced in Calgary and beyond.">
+  <title>Gallery of Unforgettable Events Sol Vé Custom Events Portfolio</title>
+  <meta name="description" content="A filterable gallery of Sol Vé Custom Events work across event design, weddings, signature moments, workshops, conferences, and fundraising campaigns.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;700&display=swap">
@@ -17,28 +17,33 @@
   <header class="site-nav">
     <div class="container">
       <a class="nav-logo" href="/" aria-label="Sol Vé Custom Events home">
-        <span class="wordmark">Sol Vé</span>
-        <span class="wordmark-sub">Custom Events</span>
+        <img src="/assets/solve-logo.webp" alt="Sol Vé Custom Events" width="287" height="200">
       </a>
       <nav aria-label="Primary">
         <ul class="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/about/">About</a></li>
+          <li><a href="/values/">Values</a></li>
           <li class="has-dropdown">
             <a href="/divisions/">Divisions</a>
             <ul class="dropdown">
               <li><a href="/divisions/event-design/">Event Design and Styling</a></li>
               <li><a href="/divisions/weddings/">Weddings</a></li>
-              <li><a href="/divisions/proposals/">Proposals and Bespoke Experiences</a></li>
-              <li><a href="/divisions/retreats/">Retreats</a></li>
+              <li><a href="/divisions/signature-moments/">Signature Moments</a></li>
+              <li><a href="/divisions/workshops/">Workshops and Curated Experiences</a></li>
               <li><a href="/divisions/conferences/">Conferences and International Events</a></li>
               <li><a href="/divisions/fundraising/">Fundraising Campaign Events</a></li>
             </ul>
           </li>
           <li><a href="/solve/">SOLVÉ Global Summit</a></li>
           <li><a href="/portfolio/">Portfolio</a></li>
-          <li><a href="/press/">Press</a></li>
+          <li><a href="/press/">Press and Awards</a></li>
           <li><a href="/contact/">Contact</a></li>
+          <li>
+            <button type="button" class="nav-mmm-btn" aria-haspopup="dialog" aria-label="About the Mystic Moonlight Masquerade campaign">
+              <img src="/assets/mmm-logo.webp" alt="Mystic Moonlight Masquerade" width="500" height="172">
+            </button>
+          </li>
         </ul>
       </nav>
       <div class="nav-cta"><a class="btn btn-primary" href="/contact/">Tell Us Your Vision</a></div>
@@ -48,81 +53,112 @@
 
   <main>
 
-    <section class="section" style="padding-top: 160px; padding-bottom: 40px;">
+    <section class="section gold-rim" style="padding-top: 140px;">
       <div class="container">
-        <h1 style="max-width: 760px;">The work speaks in rooms, not words.</h1>
-        <p style="max-width: 620px;" class="justify">A selection from across the six divisions — campaign events, cultural productions, weddings, and intimate moments, each designed with intention.</p>
+        <h1>Gallery of Unforgettable Events</h1>
+        <p style="max-width: 720px;">Placeholder style references remain in place until Sol Vé’s event photography is added. Every image opens in the gallery.</p>
       </div>
     </section>
 
-    <section class="section" style="padding-top: 40px;" aria-label="Portfolio gallery">
+    <section class="section" aria-label="Portfolio gallery">
       <div class="container">
+        <div class="filter-bar" role="group" aria-label="Filter gallery by division">
+          <button type="button" class="filter-btn active" data-filter="all">All</button>
+          <button type="button" class="filter-btn" data-filter="event-design">Event Design</button>
+          <button type="button" class="filter-btn" data-filter="weddings">Weddings</button>
+          <button type="button" class="filter-btn" data-filter="signature-moments">Signature Moments</button>
+          <button type="button" class="filter-btn" data-filter="workshops">Workshops</button>
+          <button type="button" class="filter-btn" data-filter="conferences">Conferences</button>
+          <button type="button" class="filter-btn" data-filter="fundraising">Fundraising</button>
+        </div>
         <div class="editorial-grid">
-          <figure class="eg-a">
+          <figure class="eg-a lightbox-item" data-category="fundraising">
             <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1400&q=80" alt="A grand reception hall styled with warm candlelight and cascading florals" loading="lazy">
             <figcaption>Mystic Moonlight Masquerade Campaign, 2026</figcaption>
           </figure>
-          <figure class="eg-b">
-            <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1000&q=80" alt="A lion dance performance in vibrant costume" loading="lazy">
-            <figcaption>Lion Dancers, Mystic Mingle, 2026</figcaption>
-          </figure>
-          <figure class="eg-c">
-            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80" alt="Guests mingling at an elegant evening event under string lights" loading="lazy">
+          <figure class="eg-b lightbox-item" data-category="fundraising">
+            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=80" alt="Guests mingling at an elegant evening event under string lights" loading="lazy">
             <figcaption>Mystic Mingle, 2026</figcaption>
           </figure>
-          <figure class="eg-d">
-            <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=900&q=80" alt="A gala room with dramatic warm lighting and floral installations" loading="lazy">
+          <figure class="eg-c lightbox-item" data-category="event-design">
+            <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=900&q=80" alt="A cultural performance in vibrant costume at an evening celebration" loading="lazy">
+            <figcaption>Mystic Threads, 2026</figcaption>
+          </figure>
+          <figure class="eg-d lightbox-item" data-category="event-design">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80" alt="Sparklers and celebration at a styled evening event" loading="lazy">
             <figcaption>The World In Vogue, 2026</figcaption>
           </figure>
-          <figure class="eg-e">
+          <figure class="eg-e lightbox-item" data-category="weddings">
             <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=900&q=80" alt="A bride and groom in an intimate moment during golden hour" loading="lazy">
-            <figcaption>Style reference — Weddings Division</figcaption>
+            <figcaption>Style reference: Weddings Division</figcaption>
           </figure>
-          <figure class="eg-f">
-            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1600&q=80" alt="A candlelit gala dinner styled with warm florals and draped fabric" loading="lazy">
-            <figcaption>Style reference — Campaign Galas</figcaption>
+          <figure class="eg-f lightbox-item" data-category="weddings">
+            <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=1600&q=80" alt="A styled outdoor ceremony space with draped fabric and warm light" loading="lazy">
+            <figcaption>Style reference: Destination Weddings</figcaption>
           </figure>
-          <figure class="eg-c">
-            <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=900&q=80" alt="A styled outdoor ceremony space with draped fabric and warm light" loading="lazy">
-            <figcaption>Style reference — Destination Weddings</figcaption>
-          </figure>
-          <figure class="eg-d">
+          <figure class="eg-c lightbox-item" data-category="signature-moments">
             <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=900&q=80" alt="An intimate candlelit proposal setting at sunset" loading="lazy">
-            <figcaption>Style reference — Proposals</figcaption>
+            <figcaption>Style reference: Signature Moments</figcaption>
           </figure>
-          <figure class="eg-e">
+          <figure class="eg-d lightbox-item" data-category="workshops">
+            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=900&q=80" alt="A serene resort pool surrounded by palms at golden hour" loading="lazy">
+            <figcaption>Style reference: Workshops and Curated Experiences</figcaption>
+          </figure>
+          <figure class="eg-e lightbox-item" data-category="conferences">
             <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80" alt="Delegates gathered at an international conference session" loading="lazy">
-            <figcaption>Style reference — International Events</figcaption>
+            <figcaption>Style reference: Conferences and International Events</figcaption>
+          </figure>
+          <figure class="eg-g lightbox-item" data-category="event-design">
+            <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=1200&q=80" alt="A styled gala room with dramatic warm lighting and floral installations" loading="lazy">
+            <figcaption>Style reference: Event Design and Styling</figcaption>
+          </figure>
+          <figure class="eg-g lightbox-item" data-category="weddings">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80" alt="A couple beneath a floral wedding arch in warm evening light" loading="lazy">
+            <figcaption>Style reference: Multicultural Weddings</figcaption>
+          </figure>
+          <figure class="eg-f lightbox-item" data-category="fundraising">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1600&q=80" alt="A performance on stage at a charity gala bathed in warm light" loading="lazy">
+            <figcaption>Style reference: Fundraising Campaign Events</figcaption>
           </figure>
         </div>
-      </div>
-    </section>
-
-    <section class="section section-linen cta-band">
-      <div class="container">
-        <h2>Your event belongs here next.</h2>
-        <p>Every extraordinary event begins with a conversation. Tell us your vision and we will tell you what is possible.</p>
-        <a class="btn btn-primary" href="/contact/">Begin Your Experience</a>
       </div>
     </section>
 
   </main>
 
+  <div class="mmm-popup" id="mmm-popup" role="dialog" aria-modal="true" aria-label="Mystic Moonlight Masquerade">
+    <div class="mmm-popup-panel">
+      <button type="button" class="mmm-popup-close" aria-label="Close">&times;</button>
+      <img class="mmm-logo-img" src="/assets/mmm-logo.webp" alt="Mystic Moonlight Masquerade" width="500" height="172">
+      <h2>Mystic Moonlight Masquerade Ball and Gala Fundraising Campaign 2026</h2>
+      <p class="mmm-presented">Proudly presented by Sol Vé Custom Events</p>
+      <h3>2026 Campaign Theme: Silk Roads to Discovery</h3>
+      <p>A celebration of the weaving together of the fabrics of societies: those that brought us dance, music, spices, foods and fashion.</p>
+      <p>The Mystic Moonlight Masquerade Campaign is an immersive charity masquerade event in Calgary, Alberta, featuring a wide range of performers, live DJs, visual art installations, and a multi-tier gala experience, with 100% of net proceeds supporting marginalized communities.</p>
+      <p class="mmm-stats">Goal: $200,000&nbsp;|&nbsp;10 Non-Profits and Charities&nbsp;|&nbsp;Multiple events&nbsp;|&nbsp;1 Movement</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://www.mysticmoonlightmasquerade.com" target="_blank" rel="noopener">Visit MMM Website</a>
+        <a class="btn btn-secondary" href="https://www.eventbrite.ca/e/mystic-moonlight-masquerade-gala-ball-tickets-1990348600242" target="_blank" rel="noopener">Get Gala Ball Tickets</a>
+      </div>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top">
-        <div>
-          <span class="wordmark">Sol Vé</span>
+        <div class="footer-logo">
+          <img src="/assets/solve-logo.webp" alt="Sol Vé Custom Events" width="287" height="200" loading="lazy">
           <p class="footer-tag">Luxury event production across six divisions. Calgary, Alberta.</p>
         </div>
         <nav aria-label="Footer">
           <ul>
             <li><a href="/about/">About</a></li>
+            <li><a href="/values/">Values</a></li>
             <li><a href="/divisions/">Divisions</a></li>
             <li><a href="/solve/">SOLVÉ Global Summit</a></li>
             <li><a href="/mystic/">MMM Campaign</a></li>
             <li><a href="/portfolio/">Portfolio</a></li>
-            <li><a href="/press/">Press</a></li>
+            <li><a href="/press/">Press and Awards</a></li>
             <li><a href="/contact/">Contact</a></li>
           </ul>
         </nav>

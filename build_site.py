@@ -25,48 +25,48 @@ DIVISIONS = [
         "name": "Event Design and Styling",
         "home": "For fashion shows, galas, branded activations, and cultural productions.",
         "full": "For fashion shows, galas, branded activations, and cultural productions. Sol V\u00e9\u2019s creative direction, artistic concept, and visual execution are designed with heartfelt consideration for every detail. All artistic IP remains owned by Sol V\u00e9.",
-        "img": "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=900&q=80",
-        "alt": "A styled gala room with dramatic warm lighting and floral installations",
+        "img": "/assets/photos/division-event-design.webp",
+        "alt": "A styled dessert table beneath a blush balloon arch with gold accents",
     },
     {
         "slug": "weddings",
         "name": "Weddings",
         "home": "For multicultural, luxury, and destination weddings that belong in a magazine.",
         "full": "For multicultural, luxury, and destination weddings that belong in a magazine. From concept to execution, we carry your vision through every detail, invitations, decorations, florals, food, performers, and beyond.",
-        "img": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80",
-        "alt": "A couple beneath a floral wedding arch in warm evening light",
+        "img": "/assets/photos/division-weddings.webp",
+        "alt": "A pair of wedding rings resting on rustic wood",
     },
     {
         "slug": "signature-moments",
         "name": "Signature Moments",
         "home": "For the proposal, the anniversary, the celebration that deserves to be remembered exactly right.",
         "full": "For the proposal, the anniversary, the celebration that deserves to be remembered exactly right. Whether setting the mood or full design and facilitation, the sky is literally the limit. Surprise engagements are our specialty.",
-        "img": "https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=900&q=80",
-        "alt": "An intimate candlelit proposal setting at sunset",
+        "img": "/assets/photos/division-signature-moments.webp",
+        "alt": "A romantic LOVE dessert display styled with red and blush balloons",
     },
     {
         "slug": "workshops",
         "name": "Workshops and Curated Experiences",
         "home": "For industry professionals, portfolio development, and destination training experiences that restore as well as inspire.",
         "full": "For industry professionals seeking portfolio development, destination training experiences, and curated wellness retreats that restore as well as inspire. We travel worldwide to bring your experience to life.",
-        "img": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=900&q=80",
-        "alt": "A serene resort pool surrounded by palms at golden hour",
+        "img": "/assets/photos/division-workshops.webp",
+        "alt": "Historic stone ruins framing an intimate curated experience",
     },
     {
         "slug": "conferences",
         "name": "Conferences and International Events",
         "home": "For world-class productions at every scale. Including the SOLV\u00c9 Global Summit. Coming Soon.",
         "full": "For world-class productions at every scale. From boardroom conferences to international summits, Sol V\u00e9 brings the same precision and artistry that defines every division to the global stage. The SOLV\u00c9 Global Summit: Coming Soon.",
-        "img": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80",
-        "alt": "Delegates gathered at an international conference session",
+        "img": "/assets/photos/division-conferences.webp",
+        "alt": "A white beachfront gazebo under palms at a destination event",
     },
     {
         "slug": "fundraising",
         "name": "Fundraising Campaign Events",
         "home": "For campaigns that use art, culture, and community to make people show up for the causes that matter.",
         "full": "For campaigns that use art, culture, and community to make people show up for the causes that matter. Sol V\u00e9 produced the Mystic Moonlight Masquerade Ball and Gala Fundraising Campaign 2026, Calgary\u2019s most extraordinary fundraising campaign of the year.",
-        "img": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=900&q=80",
-        "alt": "A performance on stage at a charity gala bathed in warm light",
+        "img": "/assets/photos/division-fundraising.webp",
+        "alt": "A grand banquet hall set for a gala under dramatic purple lighting",
     },
 ]
 
@@ -231,7 +231,7 @@ HOME = f"""
             <p class="justify">Sol V\u00e9 Custom Events is a multi-division luxury event production company founded in Calgary, Alberta. From intimate proposals to international conferences, from charity galas to destination weddings, every experience we produce is built on a single principle: that the extraordinary is not an accident. It is designed.</p>
           </div>
           <div class="split-media">
-            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80" alt="A styled event space with warm light, florals, and layered table settings" loading="lazy">
+            <img src="/assets/photos/philosophy.webp" alt="A vivid mural of an eye surrounded by butterflies and color" loading="lazy">
           </div>
         </div>
       </div>
@@ -292,27 +292,27 @@ HOME = f"""
         <h2 id="portfolio-heading" class="section-headline">Portfolio highlights</h2>
         <div class="editorial-grid">
           <figure class="eg-a lightbox-item">
-            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1400&q=80" alt="A grand reception hall styled with warm candlelight and cascading florals" loading="lazy">
+            <img src="/assets/photos/mmm-campaign.webp" alt="Performers in luminous costumes at the Mystic Moonlight Masquerade" loading="lazy">
             <figcaption>Mystic Moonlight Masquerade Campaign, 2026</figcaption>
           </figure>
           <figure class="eg-b lightbox-item">
-            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=80" alt="Guests mingling at an elegant evening event under string lights" loading="lazy">
+            <img src="/assets/photos/mystic-mingle.webp" alt="Vibrant lion-dance performers at Mystic Mingle" loading="lazy">
             <figcaption>Mystic Mingle, 2026</figcaption>
           </figure>
           <figure class="eg-c lightbox-item">
-            <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=900&q=80" alt="A cultural performance in vibrant costume at an evening celebration" loading="lazy">
+            <img src="/assets/photos/mystic-threads.webp" alt="An illuminated feathered masquerade headdress" loading="lazy">
             <figcaption>Mystic Threads, 2026</figcaption>
           </figure>
           <figure class="eg-d lightbox-item">
-            <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=900&q=80" alt="A bride and groom in an intimate moment during golden hour" loading="lazy">
-            <figcaption>Style reference: Weddings Division</figcaption>
+            <img src="/assets/photos/wedding-division.webp" alt="A bride and groom on a white dance floor in an elegant hall" loading="lazy">
+            <figcaption>Weddings Division</figcaption>
           </figure>
           <figure class="eg-e lightbox-item">
-            <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=900&q=80" alt="A styled outdoor ceremony space with draped fabric and warm light" loading="lazy">
-            <figcaption>Style reference: Destination Weddings</figcaption>
+            <img src="/assets/photos/destination-wedding.webp" alt="A couple embracing before a mountain lake at a destination wedding" loading="lazy">
+            <figcaption>Destination Weddings</figcaption>
           </figure>
           <figure class="eg-f lightbox-item">
-            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=80" alt="Sparklers and celebration at a styled evening event" loading="lazy">
+            <img src="/assets/photos/world-in-vogue.webp" alt="A glittering city skyline at night for The World In Vogue" loading="lazy">
             <figcaption>The World In Vogue, 2026</figcaption>
           </figure>
         </div>
@@ -422,7 +422,7 @@ ABOUT = f"""
       <div class="container">
         <div class="split split-40-60">
           <div class="split-media portrait-frame">
-            <img src="/assets/lynea-cello.webp" alt="Lynea Vaugeois Hetherington, Founder and Creative Director of Sol V\u00e9 Custom Events" style="min-width: min(400px, 100%);" loading="lazy">
+            <img src="/assets/photos/founder-portrait.webp" alt="Lynea Vaugeois Hetherington, Founder and Creative Director of Sol V\u00e9 Custom Events" style="min-width: min(400px, 100%);" loading="lazy">
           </div>
           <div>
             <h2 id="lynea-heading">Meet Lynea (Vaugeois) Hetherington</h2>
@@ -430,6 +430,15 @@ ABOUT = f"""
 {paras(MEET_LYNEA)}
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Behind the scenes — full-bleed founder portrait (banner guide) -->
+    <section class="section" aria-label="Behind the scenes at Sol Vé">
+      <div class="container">
+        <figure class="split-media landscape" style="max-width: 960px; margin: 0 auto;">
+          <img src="/assets/photos/behind-the-scenes.webp" alt="Lynea outdoors among the trees, styled for a Sol Vé shoot" loading="lazy">
+        </figure>
       </div>
     </section>
 
@@ -1199,30 +1208,30 @@ MYSTIC = f"""
 # PAGE 13: PORTFOLIO — filterable gallery + lightbox
 # ────────────────────────────────────────────────────────────────
 PORTFOLIO_IMAGES = [
-    ("eg-a", "fundraising", "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1400&q=80",
-     "A grand reception hall styled with warm candlelight and cascading florals", "Mystic Moonlight Masquerade Campaign, 2026"),
-    ("eg-b", "fundraising", "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=80",
-     "Guests mingling at an elegant evening event under string lights", "Mystic Mingle, 2026"),
-    ("eg-c", "event-design", "https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=900&q=80",
-     "A cultural performance in vibrant costume at an evening celebration", "Mystic Threads, 2026"),
-    ("eg-d", "event-design", "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80",
-     "Sparklers and celebration at a styled evening event", "The World In Vogue, 2026"),
-    ("eg-e", "weddings", "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=900&q=80",
-     "A bride and groom in an intimate moment during golden hour", "Style reference: Weddings Division"),
-    ("eg-f", "weddings", "https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=1600&q=80",
-     "A styled outdoor ceremony space with draped fabric and warm light", "Style reference: Destination Weddings"),
-    ("eg-c", "signature-moments", "https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=900&q=80",
-     "An intimate candlelit proposal setting at sunset", "Style reference: Signature Moments"),
-    ("eg-d", "workshops", "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=900&q=80",
-     "A serene resort pool surrounded by palms at golden hour", "Style reference: Workshops and Curated Experiences"),
-    ("eg-e", "conferences", "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80",
-     "Delegates gathered at an international conference session", "Style reference: Conferences and International Events"),
-    ("eg-g", "event-design", "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=1200&q=80",
-     "A styled gala room with dramatic warm lighting and floral installations", "Style reference: Event Design and Styling"),
-    ("eg-g", "weddings", "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80",
-     "A couple beneath a floral wedding arch in warm evening light", "Style reference: Multicultural Weddings"),
-    ("eg-f", "fundraising", "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1600&q=80",
-     "A performance on stage at a charity gala bathed in warm light", "Style reference: Fundraising Campaign Events"),
+    ("eg-a", "fundraising", "/assets/photos/mmm-campaign.webp",
+     "Performers in luminous costumes at the Mystic Moonlight Masquerade", "Mystic Moonlight Masquerade Campaign, 2026"),
+    ("eg-b", "fundraising", "/assets/photos/mystic-mingle.webp",
+     "Vibrant lion-dance performers at Mystic Mingle", "Mystic Mingle, 2026"),
+    ("eg-c", "event-design", "/assets/photos/mystic-threads.webp",
+     "An illuminated feathered masquerade headdress", "Mystic Threads, 2026"),
+    ("eg-d", "event-design", "/assets/photos/world-in-vogue.webp",
+     "A glittering city skyline at night", "The World In Vogue, 2026"),
+    ("eg-e", "weddings", "/assets/photos/wedding-division.webp",
+     "A bride and groom on a white dance floor in an elegant hall", "Weddings Division"),
+    ("eg-f", "weddings", "/assets/photos/destination-wedding.webp",
+     "A couple embracing before a mountain lake at a destination wedding", "Destination Weddings"),
+    ("eg-c", "signature-moments", "/assets/photos/division-signature-moments.webp",
+     "A romantic LOVE dessert display styled with red and blush balloons", "Signature Moments"),
+    ("eg-d", "workshops", "/assets/photos/division-workshops.webp",
+     "Historic stone ruins framing an intimate curated experience", "Workshops and Curated Experiences"),
+    ("eg-e", "conferences", "/assets/photos/division-conferences.webp",
+     "A white beachfront gazebo under palms at a destination event", "Conferences and International Events"),
+    ("eg-g", "event-design", "/assets/photos/division-event-design.webp",
+     "A styled dessert table beneath a blush balloon arch with gold accents", "Event Design and Styling"),
+    ("eg-g", "weddings", "/assets/photos/multicultural-weddings.webp",
+     "Gold-foiled multicultural wedding invitations styled with candles", "Multicultural Weddings"),
+    ("eg-f", "fundraising", "/assets/photos/division-fundraising.webp",
+     "A grand banquet hall set for a gala under dramatic purple lighting", "Fundraising Campaign Events"),
 ]
 
 FILTERS = [
@@ -1247,7 +1256,7 @@ PORTFOLIO = f"""
     <section class="section gold-rim" style="padding-top: 140px;">
       <div class="container">
         <h1>Gallery of Unforgettable Events</h1>
-        <p style="max-width: 720px;">Placeholder style references remain in place until Sol V\u00e9\u2019s event photography is added. Every image opens in the gallery.</p>
+        <p style="max-width: 720px;">A selection of Sol V\u00e9 productions across every division. Every image opens in the gallery.</p>
       </div>
     </section>
 
@@ -1273,57 +1282,45 @@ PRESS = """
       </div>
     </section>
 
-    <section class="section" aria-labelledby="in-press-heading">
-      <div class="container">
-        <h2 id="in-press-heading" class="section-headline">In the press</h2>
-        <div class="card-grid card-grid-3">
-          <article class="card">
-            <h4>HUM TV</h4>
-            <p>The World In Vogue fashion show, featuring Zainab Chottani. Link to follow.</p>
-          </article>
-          <article class="card">
-            <h4>AVOLA Magazine</h4>
-            <p>Editorial feature. Link to follow.</p>
-          </article>
-          <article class="card">
-            <h4>Canada Council for the Arts</h4>
-            <p>Arts and culture recognition.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-dark gold-rim" aria-labelledby="publications-heading">
-      <div class="container">
-        <h2 id="publications-heading" class="section-headline">Publications and editorials</h2>
-        <div class="card-grid card-grid-3">
-          <article class="card value-card">
-            <h4>Bridal Fantasy</h4>
-            <p>Two features, two different years, two different towns. Links to follow.</p>
-          </article>
-          <article class="card value-card">
-            <h4>Men\u2019s Vow Magazine</h4>
-            <p>Editorial feature. Link to follow.</p>
-          </article>
-          <article class="card value-card">
-            <h4>Dance BBG</h4>
-            <p>Blog feature. Link to follow.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section class="section" aria-labelledby="awards-heading">
       <div class="container">
-        <h2 id="awards-heading" class="section-headline">Awards and recognition</h2>
-        <div class="card-grid card-grid-2">
+        <h2 id="awards-heading" class="section-headline">Awards</h2>
+        <div class="card-grid card-grid-3">
           <article class="card">
-            <h4>Best Booth: Wedding Fair</h4>
-            <p>Trophy image to follow.</p>
+            <h4>Best Bespoke Wedding &amp; Event Design Company</h4>
+            <p>Lux Life Awards 2026</p>
           </article>
           <article class="card">
-            <h4>International Award: two categories</h4>
-            <p>Details and image to follow.</p>
+            <h4>Artful Event Storytelling Excellence Award</h4>
+            <p>Lux Life Awards 2026</p>
+          </article>
+          <article class="card">
+            <h4>Best Decoration</h4>
+            <p>Awarding organization &mdash; pending confirmation</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark gold-rim" aria-labelledby="press-pub-heading">
+      <div class="container">
+        <h2 id="press-pub-heading" class="section-headline">Press and Publications</h2>
+        <div class="card-grid card-grid-2">
+          <article class="card value-card">
+            <h4>Bridal Fantasy</h4>
+            <p>2019 / 2020</p>
+          </article>
+          <article class="card value-card">
+            <h4>AVOLA Magazine</h4>
+            <p>Editorial Feature</p>
+          </article>
+          <article class="card value-card">
+            <h4>Publication &mdash; pending confirmation</h4>
+            <p>2020</p>
+          </article>
+          <article class="card value-card">
+            <h4>Publication &mdash; pending confirmation</h4>
+            <p>2020</p>
           </article>
         </div>
       </div>

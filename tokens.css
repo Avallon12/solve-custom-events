@@ -6,8 +6,9 @@
 :root {
   /* Sol Vé site colors — all pages except SOLVÉ and MMM */
   --ivory: #F8F7F6;          /* Soft Ivory — primary light background */
-  --gold: #9E8D6F;           /* Muted Antique Gold — logo, H1/H2, CTAs, rims */
-  --stone: #ABA297;          /* Warm Stone Gold — subtle accents */
+  --gold: #9E8D6F;           /* Muted Antique Gold — logo, CTAs, rims, dark-section headings */
+  --gold-ink: #7C6A4C;       /* Deep Antique Gold — headings & eyebrows on light bg (WCAG AA 4.88:1) */
+  --stone: #ABA297;          /* Warm Stone Gold — subtle accents on dark */
   --charcoal: #242216;       /* Deep Olive Charcoal — dark sections, body text */
   --bronze: #8B765C;         /* Bronze Gold — button borders, hairline rules */
   --champagne: #C7B6A6;      /* Champagne Beige — card backgrounds only */

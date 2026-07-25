@@ -792,11 +792,11 @@ FUNDRAISING = division_hero(
 # PAGE 11: SOLV\u00c9 GLOBAL SUMMIT — Far Blue, no dates anywhere
 # ────────────────────────────────────────────────────────────────
 SOLVE = """
-    <!-- Hero — Far Blue full screen. The text headline is a stand-in for the
-         photo of Lynea's quote (asset pending); swap in the image when received. -->
+    <!-- Hero — Far Blue full screen. The Global Summit logo lockup replaces the
+         text eyebrow; the mark itself reads "SOLVE Global Summit". -->
     <section class="solve-hero">
       <div class="container hero-content">
-        <span class="eyebrow">SOLV\u00c9 Global Summit</span>
+        <img class="solve-summit-mark" src="/assets/solve-summit-logo.webp" alt="SOLV\u00c9 Global Summit" width="1061" height="635">
         <h1>Resourcing the fight. Restoring the fighters.</h1>
         <p class="hero-meta">Coming Soon&nbsp;|&nbsp;Riviera Maya, Mexico</p>
         <div class="btn-row">

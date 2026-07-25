@@ -442,6 +442,12 @@ main { padding-top: 76px; }
 .solve-hero .hero-meta { font-family: var(--font-ui); font-size: 16px; color: var(--solve-offwhite); margin-bottom: 48px; letter-spacing: 1px; }
 .solve-hero .btn-row { justify-content: center; }
 
+/* Global Summit logo lockup — stands in for the hero eyebrow */
+.solve-summit-mark {
+  display: block; width: min(420px, 72%); height: auto;
+  margin: 0 auto 28px;
+}
+
 /* Hero quote image — full-width photo of Lynea's quote (v5) */
 .solve-hero-quote-img { margin: 0 auto 40px; max-width: 860px; }
 .solve-hero-quote-img img { width: 100%; border: 1px solid var(--gold); border-radius: 2px; }

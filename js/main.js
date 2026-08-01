@@ -2,20 +2,85 @@
  * Motion discipline (Hallmark): one orchestrated hero entrance lives in CSS;
  * no scroll-triggered reveals, no animation library. */
 document.addEventListener('DOMContentLoaded', function () {
-  // Mobile navigation
-  var toggle = document.querySelector('.nav-toggle');
-  var links = document.querySelector('.nav-links');
-  if (toggle && links) {
-    toggle.addEventListener('click', function () {
-      var open = links.classList.toggle('open');
-      document.body.classList.toggle('nav-open', open);
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  // Keep Tab inside an open dialog (menu overlay, MMM popup, lightbox)
+  var FOCUSABLE = 'a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])';
+  var trapFocus = function (container) {
+    return function (e) {
+      if (e.key !== 'Tab') return;
+      var items = Array.prototype.filter.call(
+        container.querySelectorAll(FOCUSABLE),
+        function (el) { return el.offsetParent !== null; }
+      );
+      if (!items.length) return;
+      var first = items[0], last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+  };
+
+  // The Menu — full-screen overlay, opened from the masthead or compact bar
+  var toggles = document.querySelectorAll('.nav-toggle');
+  var menu = document.querySelector('.nav-overlay');
+  if (menu && toggles.length) {
+    var menuTrap = trapFocus(menu);
+    var lastToggle = null;
+    var setMenu = function (open) {
+      menu.classList.toggle('open', open);
+      document.body.classList.toggle('menu-open', open);
+      toggles.forEach(function (t) { t.setAttribute('aria-expanded', open ? 'true' : 'false'); });
+      if (open) {
+        document.addEventListener('keydown', menuTrap);
+        var closeBtn = menu.querySelector('.nav-overlay-close');
+        if (closeBtn) closeBtn.focus();
+      } else {
+        document.removeEventListener('keydown', menuTrap);
+        // Return focus to whichever button opened it
+        if (lastToggle && lastToggle.offsetParent !== null) lastToggle.focus();
+      }
+    };
+    toggles.forEach(function (t) {
+      t.addEventListener('click', function () {
+        lastToggle = t;
+        setMenu(!menu.classList.contains('open'));
+      });
+    });
+    var overlayClose = menu.querySelector('.nav-overlay-close');
+    if (overlayClose) overlayClose.addEventListener('click', function () { setMenu(false); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && menu.classList.contains('open')) setMenu(false);
+    });
+    menu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { setMenu(false); });
     });
   }
 
-  // Active nav link
+  // Compact bar — slides in (transform only) once the masthead scrolls away
+  var compact = document.getElementById('compact-nav');
+  var masthead = document.querySelector('.site-masthead');
+  if (compact && masthead) {
+    var threshold = 0;
+    var measure = function () { threshold = masthead.offsetHeight; };
+    measure();
+    window.addEventListener('resize', measure);
+    var ticking = false;
+    var update = function () {
+      compact.classList.toggle('visible', window.scrollY > threshold);
+      ticking = false;
+    };
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+    }, { passive: true });
+    update();
+  }
+
+  // Active nav link — the overlay menu carries the wayfinding
   var path = window.location.pathname.replace(/index\.html$/, '');
-  document.querySelectorAll('.nav-links a').forEach(function (a) {
+  document.querySelectorAll('.overlay-links a, .overlay-divisions a').forEach(function (a) {
     var href = a.getAttribute('href');
     if (!href) return;
     var target = new URL(href, window.location.href).pathname.replace(/index\.html$/, '');
@@ -48,15 +113,20 @@ document.addEventListener('DOMContentLoaded', function () {
   // MMM nav popup — the MMM logo in the nav opens this instead of navigating
   var mmmPopup = document.getElementById('mmm-popup');
   if (mmmPopup) {
+    var mmmTrap = trapFocus(mmmPopup);
     var openMmm = function () {
+      // The trigger sits inside the menu overlay — close that first
+      if (menu && menu.classList.contains('open') && typeof setMenu === 'function') setMenu(false);
       mmmPopup.classList.add('open');
       document.body.classList.add('popup-open');
+      document.addEventListener('keydown', mmmTrap);
       var closeBtn = mmmPopup.querySelector('.mmm-popup-close');
       if (closeBtn) closeBtn.focus();
     };
     var closeMmm = function () {
       mmmPopup.classList.remove('open');
       document.body.classList.remove('popup-open');
+      document.removeEventListener('keydown', mmmTrap);
     };
     document.querySelectorAll('.nav-mmm-btn').forEach(function (btn) {
       btn.addEventListener('click', openMmm);

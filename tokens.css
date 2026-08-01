@@ -2,6 +2,8 @@
  * Locked at build time per Hallmark discipline 3 (no mid-render improvisation).
  * Hex values are binding per Website Build Instructions v5.0, Color System
  * (client-mandated palette; OKLCH substitution not permitted).
+ * 2026-08 redesign: type scale, caps face, ornament and film tokens added;
+ * every client hex unchanged. System of record: design.md.
  */
 :root {
   /* Sol Vé site colors — all pages except SOLVÉ and MMM */
@@ -31,14 +33,18 @@
 
   /* Derived alpha tokens — every translucent value lives here */
   --overlay-hero: rgba(36, 34, 22, 0.65);      /* warm 65% — v5 hero rule */
+  --overlay-hero-film: rgba(36, 34, 22, 0.58); /* cinematic hero — slightly lifted */
   --overlay-card: rgba(36, 34, 22, 0.3);
   --overlay-caption: rgba(36, 34, 22, 0.75);
   --overlay-img-rest: rgba(36, 34, 22, 0.12);
   --nav-bg: rgba(248, 247, 246, 0.96);
+  --gold-25: rgba(158, 141, 111, 0.25);
   --gold-40: rgba(158, 141, 111, 0.4);
   --gold-55: rgba(158, 141, 111, 0.55);
   --linen-50: rgba(208, 200, 177, 0.5);
   --linen-35: rgba(208, 200, 177, 0.35);
+  --ivory-10: rgba(248, 247, 246, 0.1);
+  --ivory-70: rgba(248, 247, 246, 0.7);
   --surface-dark-card: rgba(248, 247, 246, 0.04);
   --surface-solve-card: rgba(254, 254, 254, 0.04);
   --surface-mmm-card: rgba(248, 245, 239, 0.05);
@@ -46,17 +52,43 @@
   --surface-mmm-hover: rgba(201, 168, 76, 0.15);
   --lightbox-bg: rgba(20, 18, 10, 0.92);
 
-  /* Typography */
-  --font-display: "Playfair Display", Georgia, serif;
+  /* Gold-foil gradient — large display on dark grounds only.
+   * Darkest stop = --gold (≥3:1 on charcoal & far-blue at display sizes). */
+  --foil: linear-gradient(103deg, var(--champagne) 0%, #E4DACB 28%, var(--gold) 62%, var(--champagne) 100%);
+
+  /* Typography — Cormorant Garamond display/body · Cinzel caps · Inter forms */
+  --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "Cormorant Garamond", Georgia, serif;
+  --font-caps: "Cinzel", "Trajan Pro", Georgia, serif;
   --font-ui: "Inter", system-ui, sans-serif;
 
-  /* Spacing */
-  --section-pad: 100px;
-  --card-pad: 40px;
-  --card-gap: 24px;
-  --max-width: 1240px;
-  --page-pad: 80px;
+  /* Fluid type scale */
+  --text-hero: clamp(2.9rem, 2rem + 4.4vw, 5.5rem);      /* homepage / marquee h1 */
+  --text-display: clamp(2.5rem, 1.9rem + 2.9vw, 4.25rem); /* page h1 */
+  --text-h2: clamp(2.1rem, 1.7rem + 1.9vw, 3.4rem);
+  --text-h3: clamp(1.45rem, 1.3rem + 0.7vw, 1.9rem);
+  --text-h4: clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem);
+  --text-quote: clamp(1.6rem, 1.35rem + 1.5vw, 2.6rem);
+  --text-lead: clamp(1.2rem, 1.1rem + 0.5vw, 1.45rem);
+  --text-body: 1.22rem;       /* ~19.5px Cormorant prose */
+  --text-caps: 0.8125rem;     /* 13px Cinzel tracked */
+  --text-caps-sm: 0.6875rem;  /* 11px Cinzel tracked */
+  --track-caps: 0.16em;
+  --track-caps-wide: 0.3em;
+
+  /* Spacing — 4-pt derived */
+  --section-pad: clamp(96px, 11vw, 168px);
+  --section-pad-sm: clamp(64px, 7vw, 104px);
+  --card-pad: clamp(32px, 3.4vw, 52px);
+  --card-gap: 28px;
+  --max-width: 1280px;
+  --measure: 62ch;
+  --page-pad: clamp(20px, 5vw, 80px);
+
+  /* Chrome scale — the "header too small / logo too small" fix */
+  --masthead-logo-h: clamp(84px, 9vw, 132px);
+  --compact-logo-h: 48px;
+  --utility-h: 42px;
 
   /* Elevation & motion */
   --shadow-card: 0 4px 24px rgba(158, 141, 111, 0.12);

@@ -141,6 +141,9 @@ export default function Footer() {
               © {new Date().getFullYear()} Sol Vé Custom Events
             </span>
             <span style={{ letterSpacing: '0.22em' }}>{contact.serving}</span>
+            <span style={{ letterSpacing: '0.22em' }}>
+              Powered by <span className="text-champagne/80">Avallon</span>
+            </span>
           </div>
         </div>
       </Container>

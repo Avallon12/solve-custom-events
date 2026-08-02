@@ -23,7 +23,7 @@ export default function ClosingCTA({
           <Display as="h2" size="lg" className="mt-6 text-charcoal">
             {heading}
           </Display>
-          <p className="mt-6 max-w-xl font-body text-[19px] leading-relaxed text-cocoa md:text-[21px]">
+          <p className="mt-6 max-w-xl font-body text-[19px] leading-relaxed text-espresso md:text-[21px]">
             {body}
           </p>
           <div className="mt-9">

@@ -52,18 +52,18 @@ export default function Commitments() {
               </p>
             </blockquote>
             <p
-              className="mt-6 font-ui text-[11px] uppercase text-stone"
+              className="mt-6 font-ui text-[11px] uppercase text-walnut"
               style={{ letterSpacing: '0.3em' }}
             >
               {commitments.quoteAttribution}
             </p>
-            <p className="mx-auto mt-9 max-w-2xl font-body text-[19px] leading-relaxed text-cocoa">
+            <p className="mx-auto mt-9 max-w-2xl font-body text-[19px] leading-relaxed text-espresso">
               {commitments.quoteBody}
             </p>
             <div className="mt-12">
               <Ornament />
             </div>
-            <div className="mx-auto mt-12 max-w-3xl space-y-5 font-body text-[18px] leading-relaxed text-cocoa">
+            <div className="mx-auto mt-12 max-w-3xl space-y-5 font-body text-[18px] leading-relaxed text-espresso">
               {commitments.intro.map((paragraph) => (
                 <p key={paragraph.slice(0, 30)}>{paragraph}</p>
               ))}
@@ -95,7 +95,7 @@ export default function Commitments() {
                       {pillar.lead}
                     </p>
 
-                    <div className="mt-7 space-y-5 font-body text-[17px] leading-[1.7] text-cocoa">
+                    <div className="mt-7 space-y-5 font-body text-[17px] leading-[1.7] text-espresso">
                       {pillar.body.map((paragraph) => (
                         <p key={paragraph.slice(0, 30)}>{paragraph}</p>
                       ))}
@@ -167,7 +167,7 @@ export default function Commitments() {
                     {String(i + 1).padStart(2, '0')}
                   </p>
                   <h3 className="mt-5 font-display text-[24px] text-charcoal">{principle.name}</h3>
-                  <p className="mt-3 font-body text-[18px] leading-relaxed text-cocoa">
+                  <p className="mt-3 font-body text-[18px] leading-relaxed text-espresso">
                     {principle.body}
                   </p>
                 </div>

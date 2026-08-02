@@ -76,7 +76,7 @@ export default function Home() {
               <Display as="h2" size="lg" className="mt-6 max-w-xl text-charcoal">
                 {home.philosophyHeadline}
               </Display>
-              <div className="mt-8 max-w-xl space-y-6 font-body text-[18px] leading-[1.7] text-cocoa md:text-[20px]">
+              <div className="mt-8 max-w-xl space-y-6 font-body text-[18px] leading-[1.7] text-espresso md:text-[20px]">
                 {home.philosophyBody.map((paragraph) => (
                   <p key={paragraph.slice(0, 30)}>{paragraph}</p>
                 ))}
@@ -144,7 +144,7 @@ export default function Home() {
             <Display as="h2" size="lg" className="mx-auto mt-6 max-w-3xl text-charcoal">
               {whatSolVeIs.headline}
             </Display>
-            <p className="mx-auto mt-8 max-w-2xl font-body text-[18px] leading-[1.7] text-cocoa md:text-[20px]">
+            <p className="mx-auto mt-8 max-w-2xl font-body text-[18px] leading-[1.7] text-espresso md:text-[20px]">
               {whatSolVeIs.body}
             </p>
             <div className="mx-auto mt-12 max-w-sm">
@@ -166,7 +166,7 @@ export default function Home() {
               “{commitments.quote}”
             </p>
             <p
-              className="mt-4 font-ui text-[11px] uppercase text-stone"
+              className="mt-4 font-ui text-[11px] uppercase text-walnut"
               style={{ letterSpacing: '0.3em' }}
             >
               {commitments.quoteAttribution}
@@ -180,7 +180,7 @@ export default function Home() {
                   <h3 className="font-display text-[22px] leading-tight text-charcoal md:text-[24px]">
                     {value.title}
                   </h3>
-                  <p className="mt-5 font-body text-[17px] leading-relaxed text-cocoa">
+                  <p className="mt-5 font-body text-[17px] leading-relaxed text-espresso">
                     {value.body}
                   </p>
                   <Link
@@ -237,7 +237,7 @@ export default function Home() {
               <Reveal key={item.name} delay={i * 70}>
                 <div className="flex h-full flex-col items-center bg-ivory px-6 py-10 text-center">
                   <p className="font-display text-[21px] text-charcoal">{item.name}</p>
-                  <p className="mt-3 font-body text-[16px] leading-snug text-cocoa">{item.body}</p>
+                  <p className="mt-3 font-body text-[16px] leading-snug text-espresso">{item.body}</p>
                 </div>
               </Reveal>
             ))}
@@ -270,7 +270,7 @@ export default function Home() {
                 </p>
               </blockquote>
               <p
-                className="mt-7 font-ui text-[11px] uppercase text-espresso"
+                className="mt-7 font-ui text-[11px] uppercase text-walnut"
                 style={{ letterSpacing: '0.26em' }}
               >
                 {founder.quoteAttribution}
@@ -288,7 +288,7 @@ export default function Home() {
       <Section tone="ivory" rule className="!py-[60px] md:!py-[90px]">
         <Container width="narrow">
           <Reveal className="text-center">
-            <Lede className="text-cocoa">{home.closingBody}</Lede>
+            <Lede className="text-espresso">{home.closingBody}</Lede>
           </Reveal>
         </Container>
       </Section>

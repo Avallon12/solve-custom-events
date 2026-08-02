@@ -33,7 +33,7 @@ function Roll({
                   {item.name}
                 </p>
                 <p
-                  className="font-ui text-[11px] uppercase text-cocoa md:text-right"
+                  className="font-ui text-[11px] uppercase text-espresso md:text-right"
                   style={{ letterSpacing: '0.22em' }}
                 >
                   {item.body}
@@ -76,7 +76,7 @@ export default function Press() {
 
       <Section tone="linen" className="!py-[50px] md:!py-[70px]">
         <Container>
-          <p className="max-w-3xl font-body text-[17px] italic leading-relaxed text-cocoa">
+          <p className="max-w-3xl font-body text-[17px] italic leading-relaxed text-espresso">
             This page is built to be extended: each award, feature and publication is a single entry
             in one list, so a new mention can be added the day it arrives. Article links and award
             imagery slot into the same rows once Lynea provides them.

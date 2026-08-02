@@ -41,7 +41,7 @@ export default function Founder() {
               <div className="lg:sticky lg:top-32">
                 <Media id="founder-portrait" className="aspect-[4/5] w-full" />
                 <p
-                  className="mt-6 font-ui text-[11px] uppercase text-stone"
+                  className="mt-6 font-ui text-[11px] uppercase text-walnut"
                   style={{ letterSpacing: '0.26em' }}
                 >
                   Lynea Vaugeois Hetherington
@@ -124,7 +124,7 @@ export default function Founder() {
               <Display as="h2" size="lg" className="mt-6 max-w-lg text-charcoal">
                 Every gathering represents a moment of trust.
               </Display>
-              <p className="mt-8 max-w-xl font-body text-[19px] leading-[1.7] text-cocoa md:text-[21px]">
+              <p className="mt-8 max-w-xl font-body text-[19px] leading-[1.7] text-espresso md:text-[21px]">
                 A family entrusts the beginning of a marriage. An organization entrusts its vision. A
                 community entrusts its hopes. A charitable partner entrusts its mission. Every
                 experience deserves to be approached with care, humility, craftsmanship, and respect

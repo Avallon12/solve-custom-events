@@ -59,7 +59,7 @@ export default function Perspectives() {
                         refs.current[i]?.scrollIntoView({ behavior: 'smooth', block: 'start' })
                       }
                       className={`flex items-start gap-3 py-2.5 text-left font-body text-[17px] leading-snug transition-colors duration-300 ${
-                        active === i ? 'text-espresso' : 'text-stone hover:text-cocoa'
+                        active === i ? 'text-espresso' : 'text-espresso hover:text-espresso'
                       }`}
                     >
                       <span
@@ -99,7 +99,7 @@ export default function Perspectives() {
                       {essay.standfirst}
                     </p>
 
-                    <div className="prose-solve mt-9 max-w-2xl text-cocoa">
+                    <div className="prose-solve mt-9 max-w-2xl text-espresso">
                       {essay.body.map((paragraph) => (
                         <p key={paragraph.slice(0, 36)}>{paragraph}</p>
                       ))}

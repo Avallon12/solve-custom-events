@@ -42,14 +42,14 @@ export default function Experiences() {
               {PURPOSES.map((line) => (
                 <p
                   key={line}
-                  className="font-body text-[20px] leading-relaxed text-cocoa md:text-[23px]"
+                  className="font-body text-[20px] leading-relaxed text-espresso md:text-[23px]"
                 >
                   {line}
                 </p>
               ))}
             </div>
 
-            <p className="mt-10 font-body text-[18px] text-stone">
+            <p className="mt-10 font-body text-[18px] text-espresso">
               While every experience is unique, each is guided by the same belief:
             </p>
 
@@ -58,7 +58,7 @@ export default function Experiences() {
               follows.
             </p>
 
-            <p className="mt-9 font-body text-[18px] leading-[1.7] text-cocoa md:text-[20px]">
+            <p className="mt-9 font-body text-[18px] leading-[1.7] text-espresso md:text-[20px]">
               From intimate celebrations to international convenings, Sol Vé creates experiences
               where people connect more deeply, cultures are celebrated, ideas are exchanged,
               communities are strengthened, and new possibilities begin.
@@ -107,7 +107,7 @@ export default function Experiences() {
                     {division.name}
                   </h3>
 
-                  <p className="mt-4 font-body text-[18px] leading-relaxed text-cocoa">
+                  <p className="mt-4 font-body text-[18px] leading-relaxed text-espresso">
                     {division.oneLine}
                   </p>
 

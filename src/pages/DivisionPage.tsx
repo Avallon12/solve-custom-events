@@ -95,7 +95,7 @@ export default function DivisionPage() {
                     <h3 className="mt-5 font-display text-[21px] leading-tight text-charcoal md:text-[24px]">
                       {card.title}
                     </h3>
-                    <p className="mt-4 font-body text-[17px] leading-relaxed text-cocoa">
+                    <p className="mt-4 font-body text-[17px] leading-relaxed text-espresso">
                       {card.body}
                     </p>
                   </Card>
@@ -152,7 +152,7 @@ export default function DivisionPage() {
                     <dt className="font-display text-[21px] leading-snug text-charcoal md:text-[24px]">
                       {item.q}
                     </dt>
-                    <dd className="mt-4 font-body text-[18px] leading-[1.7] text-cocoa">
+                    <dd className="mt-4 font-body text-[18px] leading-[1.7] text-espresso">
                       {item.a}
                     </dd>
                   </div>

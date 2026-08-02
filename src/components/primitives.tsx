@@ -73,7 +73,7 @@ export function Eyebrow({
   return (
     <p
       className={`font-ui text-[11px] uppercase md:text-[13px] ${
-        tone === 'light' ? 'text-champagne' : 'text-stone'
+        tone === 'light' ? 'text-champagne' : 'text-walnut'
       } ${className}`}
       style={{ letterSpacing: '0.3em' }}
     >
@@ -138,7 +138,7 @@ export function Prose({
   tone?: 'dark' | 'light'
 }) {
   return (
-    <div className={`prose-solve ${tone === 'light' ? 'text-champagne' : 'text-cocoa'} ${className}`}>
+    <div className={`prose-solve ${tone === 'light' ? 'text-champagne' : 'text-espresso'} ${className}`}>
       {paragraphs.map((p) => (
         <p key={p.slice(0, 40)}>{p}</p>
       ))}

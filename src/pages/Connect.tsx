@@ -26,8 +26,8 @@ const INQUIRY_TYPES = [
 ]
 
 const fieldClass =
-  'w-full rounded-[2px] border border-stone/60 bg-ivory px-[18px] py-[14px] font-body text-[18px] text-charcoal transition-colors duration-300 placeholder:text-stone focus:border-gold focus:outline-none'
-const labelClass = 'block font-ui text-[11px] uppercase text-cocoa'
+  'w-full rounded-[2px] border border-stone/60 bg-ivory px-[18px] py-[14px] font-body text-[18px] text-charcoal transition-colors duration-300 placeholder:text-espresso focus:border-gold focus:outline-none'
+const labelClass = 'block font-ui text-[11px] uppercase text-espresso'
 
 export default function Connect() {
   const [sent, setSent] = useState(false)
@@ -77,7 +77,7 @@ export default function Connect() {
                 We would be honoured to hear your story.
               </Display>
 
-              <div className="mt-8 max-w-xl space-y-6 font-body text-[18px] leading-[1.7] text-cocoa md:text-[20px]">
+              <div className="mt-8 max-w-xl space-y-6 font-body text-[18px] leading-[1.7] text-espresso md:text-[20px]">
                 <p>
                   Whether you're celebrating a milestone, bringing people together around a shared
                   purpose, creating an unforgettable experience, or exploring an idea that has yet to
@@ -113,12 +113,12 @@ export default function Connect() {
                   <MapPin size={18} className="text-gold" />
                   {contact.location}
                 </p>
-                <p className="pl-9 font-body text-[17px] italic text-cocoa">{contact.serving}</p>
+                <p className="pl-9 font-body text-[17px] italic text-espresso">{contact.serving}</p>
               </div>
 
               <div className="mt-12">
                 <Eyebrow>Follow along</Eyebrow>
-                <p className="mt-5 max-w-md font-body text-[17px] leading-relaxed text-cocoa">
+                <p className="mt-5 max-w-md font-body text-[17px] leading-relaxed text-espresso">
                   Stay connected as we continue to share stories, perspectives, behind-the-scenes
                   moments, and the experiences that continue to shape the way people gather.
                 </p>
@@ -137,7 +137,7 @@ export default function Connect() {
                         </a>
                       ) : (
                         <span
-                          className="font-ui text-[11px] uppercase text-stone"
+                          className="font-ui text-[11px] uppercase text-walnut"
                           style={{ letterSpacing: '0.22em' }}
                           title="Link pending confirmation"
                         >
@@ -158,7 +158,7 @@ export default function Connect() {
                     <p className="mt-10 font-display text-[26px] leading-snug text-charcoal md:text-[30px]">
                       Thank you.
                     </p>
-                    <p className="mx-auto mt-5 max-w-sm font-body text-[18px] leading-relaxed text-cocoa">
+                    <p className="mx-auto mt-5 max-w-sm font-body text-[18px] leading-relaxed text-espresso">
                       Your message is on its way. We will be in touch shortly to begin the
                       conversation.
                     </p>
@@ -241,7 +241,7 @@ export default function Connect() {
                       Send Your Vision
                     </Btn>
 
-                    <p className="font-body text-[15px] leading-relaxed text-stone">
+                    <p className="font-body text-[15px] leading-relaxed text-espresso">
                       Your message goes directly to Lynea. We reply to every enquiry personally.
                     </p>
                   </form>

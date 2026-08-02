@@ -67,7 +67,7 @@ export default function Foundation() {
                   >
                     {item.label}
                   </p>
-                  <p className="mt-5 font-body text-[18px] leading-relaxed text-cocoa">
+                  <p className="mt-5 font-body text-[18px] leading-relaxed text-espresso">
                     {item.body}
                   </p>
                 </div>
@@ -119,7 +119,7 @@ export default function Foundation() {
             {foundation.beyond.couplets.map(([first, second], i) => (
               <Reveal key={first} delay={i * 80}>
                 <p className="font-display text-[21px] text-charcoal md:text-[26px]">{first}</p>
-                <p className="mt-2 font-body text-[18px] leading-relaxed text-cocoa md:text-[20px]">
+                <p className="mt-2 font-body text-[18px] leading-relaxed text-espresso md:text-[20px]">
                   {second}
                 </p>
               </Reveal>

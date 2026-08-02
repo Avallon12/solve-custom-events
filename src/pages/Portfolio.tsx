@@ -61,7 +61,7 @@ export default function Portfolio() {
                   className={`min-h-[44px] rounded-[2px] border px-5 font-ui text-[11px] uppercase transition-colors duration-300 ${
                     filter === option.value
                       ? 'border-gold bg-gold text-ivory'
-                      : 'border-stone/50 text-cocoa hover:border-bronze hover:text-espresso'
+                      : 'border-stone/50 text-espresso hover:border-bronze hover:text-espresso'
                   }`}
                   style={{ letterSpacing: '0.22em' }}
                 >
@@ -88,7 +88,7 @@ export default function Portfolio() {
                       {work.title}
                     </p>
                     <p
-                      className="mt-2 font-ui text-[10px] uppercase text-stone"
+                      className="mt-2 font-ui text-[10px] uppercase text-walnut"
                       style={{ letterSpacing: '0.26em' }}
                     >
                       {divisions.find((d) => d.slug === work.category)?.name}
@@ -99,7 +99,7 @@ export default function Portfolio() {
             ))}
           </div>
 
-          <p className="mt-14 max-w-3xl font-body text-[17px] italic leading-relaxed text-stone">
+          <p className="mt-14 max-w-3xl font-body text-[17px] italic leading-relaxed text-espresso">
             Each project on this page will carry its purpose, its story, the design philosophy behind
             it, professional photography and — where appropriate — the outcome for the client, as
             Lynea's photography is placed.

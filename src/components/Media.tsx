@@ -126,14 +126,14 @@ export default function Media({
 
       {showCaption && (slot.credit || slot.caption || slot.creditPending) && (
         <figcaption
-          className="mt-3 font-ui text-[10px] uppercase text-cocoa md:text-[11px]"
+          className="mt-3 font-ui text-[10px] uppercase text-walnut md:text-[11px]"
           style={{ letterSpacing: '0.22em' }}
         >
           {slot.caption}
           {slot.caption && (slot.credit || slot.creditPending) ? ' · ' : ''}
           {slot.credit ? `Photography ${slot.credit}` : null}
           {!slot.credit && slot.creditPending ? (
-            <span className="text-stone">Photographer credit to be confirmed</span>
+            <span className="text-walnut">Photographer credit to be confirmed</span>
           ) : null}
         </figcaption>
       )}

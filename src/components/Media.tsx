@@ -1,4 +1,5 @@
 import { media, type MediaId, type MediaSlot } from '../data/media'
+import { sizeOf } from '../data/media-dimensions'
 import { Emblem } from './Logo'
 
 /**
@@ -113,6 +114,7 @@ export default function Media({
           <img
             src={slot.src}
             alt={slot.alt}
+            {...sizeOf(id)}
             loading="lazy"
             decoding="async"
             className={`h-full w-full object-cover ${drift ? 'animate-drift' : ''} ${imgClassName}`}

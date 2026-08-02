@@ -24,10 +24,10 @@ import { usePageMeta } from '../lib/meta'
  * Widths and offsets follow the source component; the photography is Sol Vé's.
  */
 const FRAMES = [
-  { id: 'portfolio-florals', start: -200, end: 200, className: 'w-1/3' },
-  { id: 'division-design-stylization', start: 200, end: -250, className: 'mx-auto w-2/3' },
-  { id: 'portfolio-claudia-ali', start: -200, end: 200, className: 'ml-auto w-1/3' },
-  { id: 'division-signature-moments', start: 0, end: -500, className: 'ml-[12%] w-5/12' },
+  { id: 'portfolio-florals', start: -200, end: 200, className: 'w-2/3 sm:w-1/3' },
+  { id: 'division-design-stylization', start: 200, end: -250, className: 'mx-auto w-[85%] sm:w-2/3' },
+  { id: 'portfolio-claudia-ali', start: -200, end: 200, className: 'ml-auto w-2/3 sm:w-1/3' },
+  { id: 'division-signature-moments', start: 0, end: -500, className: 'ml-[12%] w-3/4 sm:w-5/12' },
 ] as const
 
 const PORTFOLIO = [

@@ -7,14 +7,20 @@ export function Container({
   children,
   className = '',
   width = 'default',
+  ref,
 }: {
   children: ReactNode
   className?: string
   width?: 'default' | 'narrow' | 'wide'
+  ref?: React.Ref<HTMLDivElement>
 }) {
   const max =
     width === 'narrow' ? 'max-w-[820px]' : width === 'wide' ? 'max-w-[1440px]' : 'max-w-content'
-  return <div className={`mx-auto w-full ${max} px-5 md:px-10 lg:px-20 ${className}`}>{children}</div>
+  return (
+    <div ref={ref} className={`mx-auto w-full ${max} px-5 md:px-10 lg:px-20 ${className}`}>
+      {children}
+    </div>
+  )
 }
 
 /** Section padding follows Manual 3: 100px desktop / 60px mobile minimum. */

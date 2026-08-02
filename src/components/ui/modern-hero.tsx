@@ -4,6 +4,7 @@ import { motion, useMotionTemplate, useScroll, useTransform } from 'framer-motio
 import { FiArrowDown } from 'react-icons/fi'
 import { media } from '../../data/media'
 import type { MediaId, MediaSlot } from '../../data/media'
+import { sizeOf } from '../../data/media-dimensions'
 import { Container, Eyebrow } from '../primitives'
 
 /**
@@ -200,13 +201,41 @@ function CentreFrame({
   )
 }
 
-function ParallaxFrames({
-  frames,
-}: {
-  frames: readonly Frame[]
-}) {
+function ParallaxFrames({ frames }: { frames: readonly Frame[] }) {
+  const ref = useRef<HTMLDivElement | null>(null)
+
+  // Insurance on top of the reserved dimensions: if anything still settles
+  // after mount — a late font, a slow decode — nudge framer-motion to
+  // re-measure rather than leave the frames on stale offsets.
+  useEffect(() => {
+    const root = ref.current
+    if (!root) return
+
+    const images = Array.from(root.querySelectorAll('img'))
+    const pending = images.filter((img) => !img.complete)
+    if (pending.length === 0) return
+
+    let left = pending.length
+    const done = () => {
+      left -= 1
+      if (left === 0) window.dispatchEvent(new Event('resize'))
+    }
+
+    pending.forEach((img) => {
+      img.addEventListener('load', done, { once: true })
+      img.addEventListener('error', done, { once: true })
+    })
+
+    return () => {
+      pending.forEach((img) => {
+        img.removeEventListener('load', done)
+        img.removeEventListener('error', done)
+      })
+    }
+  }, [])
+
   return (
-    <Container className="relative z-10 pt-[200px]">
+    <Container ref={ref} className="relative z-10 pt-[200px]">
       {frames.map((frame) => (
         <ParallaxFrame key={frame.id} {...frame} />
       ))}
@@ -227,6 +256,7 @@ function ParallaxFrame({
 }) {
   const ref = useRef<HTMLDivElement | null>(null)
   const slot = media[id] as MediaSlot
+  const size = sizeOf(id)
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -243,12 +273,25 @@ function ParallaxFrame({
     // chasing them reads as an error. Credits appear under these same
     // photographs where they sit still, on the division and portfolio pages.
     <motion.div ref={ref} style={{ transform, opacity }} className={className}>
+      {/*
+        The frame reserves its exact height before the photograph decodes, via
+        aspect-ratio and width/height. framer-motion measures this element to
+        build its scroll offsets; if it measures a 0px-tall box the frames end
+        up mispositioned and pre-faded, which is what the glitch was.
+        Eager, not lazy — these are part of the hero, not below the fold.
+      */}
       <img
         src={slot.src}
         alt={slot.alt}
-        loading="lazy"
+        {...size}
+        loading="eager"
         decoding="async"
-        className="w-full rounded-[2px] shadow-[0_20px_60px_rgba(36,34,22,0.18)] ring-1 ring-inset ring-gold/25"
+        style={
+          size.width && size.height
+            ? { aspectRatio: `${size.width} / ${size.height}` }
+            : undefined
+        }
+        className="h-auto w-full rounded-[2px] shadow-[0_20px_60px_rgba(36,34,22,0.18)] ring-1 ring-inset ring-gold/25"
       />
     </motion.div>
   )

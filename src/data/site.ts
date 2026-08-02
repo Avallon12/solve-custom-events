@@ -26,9 +26,22 @@ export type Social = {
 }
 
 export const socials: Social[] = [
-  { name: 'LinkedIn', handleLabel: 'Sol Vé Custom Events', url: '', note: 'Company page — not a personal profile' },
-  { name: 'Instagram', handleLabel: 'Sol Vé Custom Events', url: '' },
-  { name: 'Facebook', handleLabel: 'Sol Vé Custom Events', url: '' },
+  {
+    name: 'LinkedIn',
+    handleLabel: 'Sol Vé Custom Events',
+    url: 'https://www.linkedin.com/company/sol-v%C3%A9-custom-events/',
+    note: 'Company page — not a personal profile',
+  },
+  {
+    name: 'Instagram',
+    handleLabel: '@solvecustomevents',
+    url: 'https://www.instagram.com/solvecustomevents/',
+  },
+  {
+    name: 'Facebook',
+    handleLabel: 'Sol Vé Custom Events',
+    url: 'https://www.facebook.com/solvecustomevents/',
+  },
   { name: 'Website', handleLabel: 'solvecustomevents.com', url: 'https://solvecustomevents.com' },
 ]
 

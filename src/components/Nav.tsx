@@ -6,7 +6,29 @@ import { FacebookIcon, InstagramIcon, LinkedInIcon } from './BrandIcons'
 import { GoldRule, Ornament } from './primitives'
 import { contact, cta, divisionNav, navigation, socials } from '../data/site'
 
-const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII']
+/**
+ * Computed rather than listed — a hard-coded array ran out at VIII the moment a
+ * ninth link was added, and the menu quietly printed "9".
+ */
+const NUMERALS = [
+  [10, 'X'],
+  [9, 'IX'],
+  [5, 'V'],
+  [4, 'IV'],
+  [1, 'I'],
+] as const
+
+function toRoman(value: number) {
+  let remaining = value
+  let out = ''
+  for (const [amount, numeral] of NUMERALS) {
+    while (remaining >= amount) {
+      out += numeral
+      remaining -= amount
+    }
+  }
+  return out
+}
 
 const OVERLAY_LINKS = [
   { label: 'Home', to: '/' },
@@ -144,7 +166,7 @@ export default function Nav({ onOpenMystic }: { onOpenMystic: () => void }) {
                       className="min-w-[2.1em] font-ui text-[11px] text-gold md:min-w-[2.6em]"
                       style={{ letterSpacing: '0.26em' }}
                     >
-                      {ROMAN[i] ?? i + 1}
+                      {toRoman(i + 1)}
                     </span>
                     <NavLink
                       to={link.to}

@@ -106,6 +106,35 @@ export default function DivisionPage() {
         </Section>
       )}
 
+      {division.notableWork && (
+        <Section tone="charcoal">
+          <div className="grain absolute inset-0 opacity-40" />
+          <Container className="relative z-10">
+            <Reveal>
+              <Eyebrow tone="light">Notable Work</Eyebrow>
+              <Display as="h2" size="md" className="mt-6 text-ivory">
+                Productions we are known for.
+              </Display>
+            </Reveal>
+
+            <div className="mt-12 grid gap-6 md:grid-cols-3 md:gap-8">
+              {division.notableWork.map((work, i) => (
+                <Reveal key={work.title} delay={i * 90} className="h-full">
+                  <div className="h-full rounded-[2px] border border-gold/25 p-7">
+                    <h3 className="font-display text-[22px] leading-tight text-ivory md:text-[25px]">
+                      {work.title}
+                    </h3>
+                    <p className="mt-4 font-body text-[17px] leading-relaxed text-champagne/85">
+                      {work.body}
+                    </p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </Container>
+        </Section>
+      )}
+
       {division.faq && (
         <Section tone="ivory" rule>
           <Container width="narrow">

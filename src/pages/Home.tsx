@@ -16,7 +16,7 @@ import {
   Reveal,
   Section,
 } from '../components/primitives'
-import { commitments, foundation, founder, home, press } from '../data/content'
+import { commitments, foundation, founder, home, homeValues, press, whatSolVeIs } from '../data/content'
 import { usePageMeta } from '../lib/meta'
 
 /**
@@ -136,7 +136,25 @@ export default function Home() {
       {/* Six divisions */}
       <ScrollFeature />
 
-      {/* Commitments — three, equal */}
+      {/* What Sol Vé Is — Manual, Homepage Section 2 */}
+      <Section tone="linen">
+        <Container width="narrow">
+          <Reveal className="text-center">
+            <Eyebrow>{whatSolVeIs.eyebrow}</Eyebrow>
+            <Display as="h2" size="lg" className="mx-auto mt-6 max-w-3xl text-charcoal">
+              {whatSolVeIs.headline}
+            </Display>
+            <p className="mx-auto mt-8 max-w-2xl font-body text-[18px] leading-[1.7] text-cocoa md:text-[20px]">
+              {whatSolVeIs.body}
+            </p>
+            <div className="mx-auto mt-12 max-w-sm">
+              <Ornament />
+            </div>
+          </Reveal>
+        </Container>
+      </Section>
+
+      {/* Values — four cards, per Build v5 */}
       <Section tone="ivory" rule id="commitments-preview">
         <Container>
           <Reveal className="mx-auto max-w-3xl text-center">
@@ -155,24 +173,18 @@ export default function Home() {
             </p>
           </Reveal>
 
-          <div className="mt-14 grid items-stretch gap-6 md:grid-cols-3 md:gap-8">
-            {commitments.pillars.map((pillar, i) => (
-              <Reveal key={pillar.id} delay={i * 100} className="h-full">
+          <div className="mt-14 grid items-stretch gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-4">
+            {homeValues.map((value, i) => (
+              <Reveal key={value.title} delay={(i % 4) * 90} className="h-full">
                 <Card tone="linen" className="flex h-full flex-col">
-                  <p
-                    className="font-ui text-[11px] uppercase text-bronze"
-                    style={{ letterSpacing: '0.3em' }}
-                  >
-                    {pillar.label}
-                  </p>
-                  <h3 className="mt-5 font-display text-[23px] leading-tight text-charcoal md:text-[26px]">
-                    {pillar.title}
+                  <h3 className="font-display text-[22px] leading-tight text-charcoal md:text-[24px]">
+                    {value.title}
                   </h3>
-                  <p className="mt-5 font-body text-[18px] leading-relaxed text-cocoa">
-                    {pillar.lead}
+                  <p className="mt-5 font-body text-[17px] leading-relaxed text-cocoa">
+                    {value.body}
                   </p>
                   <Link
-                    to={`/commitments#${pillar.id}`}
+                    to={value.to}
                     className="mt-auto pt-8 font-ui text-[11px] uppercase text-espresso underline underline-offset-4 hover:text-gold"
                     style={{ letterSpacing: '0.22em' }}
                   >

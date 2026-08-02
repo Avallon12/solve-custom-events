@@ -25,6 +25,8 @@ export type Division = {
   whatWeDo?: { heading: string; body: string[] }
   cards?: { title: string; body: string }[]
   faq?: { q: string; a: string }[]
+  /** Named productions to reference on this division page (v5, "Notable Work"). */
+  notableWork?: { title: string; body: string }[]
   proposal: { heading: string; body: string; cta: string }
 }
 
@@ -59,6 +61,20 @@ export const divisions: Division[] = [
       {
         title: 'Artistic ownership',
         body: 'All creative concepts, design ideas, and visual direction belong to Sol Vé.',
+      },
+    ],
+    notableWork: [
+      {
+        title: 'The World In Vogue',
+        body: 'A fashion show featuring Zainab Chottani, broadcast on HUM TV.',
+      },
+      {
+        title: 'Mystic Moonlight Masquerade Campaign',
+        body: 'Immersive performance, art installation and cultural celebration across a multi-event charity campaign.',
+      },
+      {
+        title: 'Branded Activations',
+        body: 'Concept, creative direction and visual execution for branded and cultural productions.',
       },
     ],
     proposal: {

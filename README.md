@@ -17,13 +17,24 @@ npm run lint
 Three client documents contradict each other. Where they conflict, the newest
 one wins. These are the calls that were made — flag any you want reversed.
 
-**1. SOLVÉ Global Summit is not on the site.**
-The Creative Direction Manual and Build v5 both feature it heavily. The newer
-"Website order and messaging" document ends with: *"Remove SOLVÉ Global Summit
-completely for the time being… DO NOT have it positioned anywhere on the
-website!"* — so there is no `/solve` page, no homepage banner, no delegate or
-sponsor form, and no mention on the Conferences page. Nothing else was built
-around its absence, so it can be added later as one more route.
+**1. SOLVÉ Global Summit is built, but unlinked.**
+The newest document says *"Remove SOLVÉ Global Summit completely for the time
+being… DO NOT have it positioned anywhere on the website!"* — yet its own body
+copy names SOLVÉ twice, in *Where It Began* and *Meet the Founder*. Read
+together, that instruction is about not **positioning** it as a page yet, not
+about scrubbing the name from her narrative.
+
+So `/solve`, `/solve/delegate` and `/solve/sponsor` exist in full, in the v5
+colour system with the real logo — but **nothing links to them**. No menu entry,
+no homepage banner, no callout on the Conferences page. Reaching the page needs
+the direct URL. The narrative mentions of SOLVÉ stay where she wrote them.
+
+To publish it: add an entry to `navigation` in `src/data/site.ts`. That's the
+whole change.
+
+Two v5 URGENT items are enforced in `src/data/solve.ts` rather than left to
+memory: **no dates or years appear anywhere** (everything reads "Coming Soon"),
+and **redM is not listed as a founding partner**.
 
 **2. The newest document's page order and copy.**
 `Home → Foundation → Commitments → Experiences → Portfolio → Perspectives →
@@ -110,21 +121,35 @@ email to `lynea@solvecustomevents.com` (Build v5: all forms route to Lynea only)
 so no enquiry is silently lost. `info@solvecustomevents.com` remains the
 public-facing address.
 
-### 4. Logo
+### 4. Logos — done
 
-`src/components/Logo.tsx` is a typographic stand-in built to the brand's
-proportions — emblem plus wordmark, 56px in the bar and 96px in the footer,
-well above the old 44px ceiling that made it "lost and irrelevant". Download the
-real mark from solvecustomevents.com, drop it in `public/media/logo.svg` and
-swap the component's internals for an `<img>`.
+Both real marks are in place: `public/media/logo.webp` (Sol Vé, gold on
+transparent, so it works on ivory and on charcoal) and
+`public/media/solve-summit-logo.webp` (SOLVÉ Global Summit). The Sol Vé mark
+renders 56px in the bar and 92px in the footer, well above the old 44px ceiling
+that made it "lost and irrelevant".
 
 ### 5. Still needed from Lynea
 
+- **One decision on the Land Acknowledgement.** Two of her documents give
+  different versions. Build v5 (copied from solvecustomevents.com/values-1)
+  names *Moh'kinsstis* and the *Otipemisiwak Métis Government of the Métis
+  Nation within Alberta District 6*. The newer document names the *Îyârhe
+  Nakoda Nations (Bearspaw, Chiniki, Goodstoney)* and the *Métis Nation of
+  Alberta, Region 3*. The site currently uses the newer, fuller territory
+  paragraph, with v5's opening and closing lines around it. Lynea should confirm
+  which naming is current — this is not text to guess at.
+- **Testimonial quotes.** Her document names seven categories — Bride & Groom,
+  Corporate Executive, Charity Partner, Performer, Venue Partner, Sponsor,
+  Community Leader — with no quotes written. No section was built rather than
+  invent any.
+- **Per-project detail for the Portfolio.** The newest document asks each
+  project to carry its purpose, story, design philosophy, photography and client
+  outcome. The gallery is in place; the written detail per project is not,
+  because none was supplied.
 - **Photographer names** for the 22 photographs currently marked
   `creditPending` (see section 1)
 - Mystic Moonlight Masquerade photography — lion dancers, performers, event scenes
-- Testimonial quotes (seven categories are named in her document; none are
-  written, so no testimonials section was built rather than inventing any)
 - Press and publication article links, award imagery
 - Confirmation of the two unnamed publications and the "Best Decoration" award body
 - CRM platform choice
@@ -142,6 +167,7 @@ swap the component's internals for an `<img>`.
 | Bronze `#8B765C` | borders, hairlines, hover |
 | Champagne `#C7B6A6` · Linen `#D0C8B1` · Cocoa `#6C6251` | supporting |
 | MMM Burgundy `#5B1020` · MMM Gold `#C9A84C` | campaign section only |
+| SOLVÉ Far Blue `#0E2447` · Grey Blue `#808898` · Deep Crimson `#6B0F1A` | `/solve` only |
 
 Playfair Display for headings, Cormorant Garamond for body, Inter for labels
 and buttons. Type scale, spacing and button specs follow the Manual.
@@ -162,9 +188,9 @@ src/
   components/
     Nav · Footer · ContactRail · MysticDialog
     Hero · ScrollFeature · Media · ClosingCTA · Logo · BrandIcons · ui
-  pages/        one file per route
+  pages/        one file per route (incl. Solve, SolveDelegate, SolveSponsor)
   lib/meta.ts   per-page SEO title + description
-scripts/smoke.tsx   renders all 17 routes, catches runtime errors
+scripts/smoke.tsx   renders all 20 routes, catches runtime errors
 ```
 
 Contact is reachable from anywhere: the nav button, a floating rail that appears

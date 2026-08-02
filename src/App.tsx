@@ -15,6 +15,9 @@ import Perspectives from './pages/Perspectives'
 import Press from './pages/Press'
 import Connect from './pages/Connect'
 import Mystic from './pages/Mystic'
+import Solve from './pages/Solve'
+import SolveDelegate from './pages/SolveDelegate'
+import SolveSponsor from './pages/SolveSponsor'
 import NotFound from './pages/NotFound'
 
 /** New page: top of page. Same page with a hash: scroll to that section. */
@@ -56,6 +59,16 @@ function Shell() {
           <Route path="/press" element={<Press />} />
           <Route path="/connect" element={<Connect />} />
           <Route path="/mystic" element={<Mystic />} />
+
+          {/*
+            SOLVÉ Global Summit. Built in full, deliberately UNLINKED — the
+            newest client document asks that it not be positioned anywhere on
+            the site until its brand and governance are settled. Reachable only
+            by direct URL. To publish: add it to `navigation` in data/site.ts.
+          */}
+          <Route path="/solve" element={<Solve />} />
+          <Route path="/solve/delegate" element={<SolveDelegate />} />
+          <Route path="/solve/sponsor" element={<SolveSponsor />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

@@ -18,6 +18,9 @@ import Perspectives from '../src/pages/Perspectives'
 import Press from '../src/pages/Press'
 import Connect from '../src/pages/Connect'
 import Mystic from '../src/pages/Mystic'
+import Solve from '../src/pages/Solve'
+import SolveDelegate from '../src/pages/SolveDelegate'
+import SolveSponsor from '../src/pages/SolveSponsor'
 import NotFound from '../src/pages/NotFound'
 import { divisions } from '../src/data/divisions'
 
@@ -33,6 +36,9 @@ const ROUTES = [
   '/press',
   '/connect',
   '/mystic',
+  '/solve',
+  '/solve/delegate',
+  '/solve/sponsor',
   '/does-not-exist',
 ]
 
@@ -52,6 +58,9 @@ function Tree({ path }: { path: string }) {
         <Route path="/press" element={<Press />} />
         <Route path="/connect" element={<Connect />} />
         <Route path="/mystic" element={<Mystic />} />
+        <Route path="/solve" element={<Solve />} />
+        <Route path="/solve/delegate" element={<SolveDelegate />} />
+        <Route path="/solve/sponsor" element={<SolveSponsor />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

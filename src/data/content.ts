@@ -18,6 +18,76 @@ export const home = {
     'Whether you are celebrating a milestone, bringing people together around a shared purpose, creating an unforgettable experience, or exploring an idea that has yet to take shape, we would be honoured to hear your story.',
 } as const
 
+/**
+ * "What Sol Vé Is" — Creative Direction Manual, Homepage Section 2, and Build
+ * v5's Philosophy Section. Sits alongside the Foundation copy rather than
+ * replacing it: the two documents describe the company at different altitudes.
+ */
+export const whatSolVeIs = {
+  eyebrow: 'What Sol Vé Is',
+  headline: 'We do not produce events. We produce the moments people spend their lives remembering.',
+  body: 'Sol Vé Custom Events is a multi-division luxury event production company founded in Calgary, Alberta. From intimate proposals to international conferences, from charity galas to destination weddings, every experience we produce is built on a single principle: that the extraordinary is not an accident. It is designed.',
+} as const
+
+/**
+ * Homepage values strip — Build v5, "VALUES SECTION: ADD BETWEEN PHILOSOPHY
+ * AND DIVISIONS". Four cards here; the Commitments page keeps its three equal
+ * boxes as Lynea specified separately.
+ */
+export const homeValues = [
+  {
+    title: 'Diversity, Inclusion and Belonging',
+    body: 'Diversity is having a seat at the table. Inclusion is having a voice. Belonging is having that voice be heard.',
+    to: '/commitments',
+  },
+  {
+    title: 'Reconciliation',
+    body: 'We acknowledge and honour the traditional Treaty 7 territory. We honour all people, Indigenous and Non, who live, work and play on this land.',
+    to: '/commitments#reconciliation',
+  },
+  {
+    title: '2SLGBTQIA+ Inclusion',
+    body: 'Sol Vé Custom Events emphatically states our strong and unwavering support of 2SLGBTQIA+ communities. We provide services that are safe and welcoming spaces for all.',
+    to: '/commitments#inclusion',
+  },
+  {
+    title: 'Community and Environment',
+    body: 'We believe in supporting likeminded inclusive, people-empowered businesses. We are mindful of the environment and choose eco-friendly options wherever possible.',
+    to: '/commitments#conservation',
+  },
+] as const
+
+/** "Who we are" — Build v5: copy exactly from solvecustomevents.com/about. */
+export const whoWeAre = {
+  heading: 'Who we are',
+  body: [
+    "At Sol Vé Custom Events, we are passionate about creating unforgettable events that leave a lasting impression. With years of experience in the event planning industry, we have the expertise and resources to handle every aspect of your event, from the initial consultation to the final execution. Our team of experienced planners will work with you every step of the way to ensure that your event is a reflection of your personal style and taste, and that every detail is taken care of with precision and care. Whether you're planning a corporate event, wedding, birthday or any of life's celebratory events, we have the creativity and knowledge to make your vision a reality.",
+    'Sol Vé is a unique and custom stylizing and planning company that also offers rentals. We are based in Calgary, Alberta, but organize and travel to worldwide destinations to ensure you have the personalized event services you deserve.',
+    'Specializing in weddings, fundraisers, corporate functions, life events and rentals, planning and styling, we love nothing more than creating beautiful and personable designs for every one of our projects.',
+    'We believe in inclusivity, equality, respect and love, welcoming everyone with open arms.',
+    'We believe in supporting and creating long-lasting relationships with likeminded inclusive, people empowered businesses by working with one another to create outstanding designs and creations for our clientele.',
+    'At Sol Vé, we choose to be mindful of the community environment by using as much eco-friendly items as we possibly can to make your visions come to life.',
+    'We choose to work closely with our clients by taking basics and turning it into something personable and inclusive. Your event is our priority. From the creation of concept, invitations, decorations, flowers, food and performers, we help you build your event from the ground up.',
+    'We think outside of the box, carrying your theme through small objects and details using unique decor with visionary artistry. We strive for 100% client satisfaction. We like to travel and love to have fun, making each journey an adventure.',
+  ],
+} as const
+
+/** Mission, Vision, Values — Creative Direction Manual, About page Section 4. */
+export const missionVisionValues = [
+  {
+    label: 'Mission',
+    body: 'To produce experiences so extraordinary that the people inside them believe in something bigger than they did when they walked in.',
+  },
+  {
+    label: 'Vision',
+    body: 'A city, and eventually a world, where the most important stories are told in the most beautiful rooms.',
+  },
+  {
+    label: 'Values',
+    body: 'Beauty is intentional. Authenticity before production value. Every event is an act of advocacy for something.',
+  },
+] as const
+
 export const foundation = {
   headline: 'Every meaningful gathering begins long before people arrive.',
   intro: [
@@ -101,7 +171,13 @@ export const commitments = {
       title: 'Reconciliation & Land Acknowledgement',
       lead: 'Every meaningful gathering begins with respect.',
       body: [
+        // Opening and closing lines are v5's exact wording from
+        // solvecustomevents.com/values-1; the territory paragraph is the newer
+        // document's fuller version. See README for the one discrepancy between
+        // them that Lynea needs to settle.
+        'We at Sol Vé Custom Events believe that all people share the responsibility to contribute to reconciliation.',
         'Sol Vé Custom Events respectfully acknowledges that we live, work, and gather on the traditional territories of the peoples of the Treaty 7 region in Southern Alberta, including the Blackfoot Confederacy (Siksika, Kainai, and Piikani Nations), the Tsuut’ina Nation, and the Îyârhe Nakoda Nations (Bearspaw, Chiniki, and Goodstoney First Nations). We also recognize the Métis Nation of Alberta, Region 3, whose history and contributions continue to enrich the communities we serve.',
+        'To support reconciliation we must truly hear Indigenous oral and written history, share their dreams and celebrate their culture and future endeavors.',
         'As Sol Vé creates experiences across Canada and internationally, we are committed to respectfully acknowledging and honouring the Indigenous Peoples, traditional territories, and cultural histories of every place where we gather.',
         'For us, acknowledgement is more than words spoken at the beginning of an event. It is a commitment to gathering with humility, respect, and a willingness to learn. We believe that bringing people together carries a responsibility to honour the histories, cultures, traditions, and relationships that have shaped the places where we gather.',
         'As we continue to grow, we remain committed to listening, learning, building meaningful relationships, and creating experiences where respect, understanding, and belonging are thoughtfully woven into every gathering.',
@@ -157,6 +233,28 @@ export const commitments = {
     { name: 'Craftsmanship', body: 'Excellence is found in the details others overlook.' },
     { name: 'Collaboration', body: 'The most meaningful experiences are created together.' },
     { name: 'Legacy', body: 'We measure success by what continues long after the gathering ends.' },
+  ],
+} as const
+
+/**
+ * "Meet Lynea (Vaugeois) Hetherington" — Build v5, Page 2: copy exactly from
+ * solvecustomevents.com/about. Her own voice, first person; distinct from the
+ * third-person founder narrative below, which the newest document supplies.
+ */
+export const lyneaBio = {
+  heading: 'Meet Lynea (Vaugeois) Hetherington',
+  subtitle: 'Founder and Creative Director',
+  body: [
+    'Hi there! My name is Lynea (Vaugeois) Hetherington (She/Her), and I am the owner and creative designer behind Sol Vé Custom Events.',
+    'I was born and raised in the beautiful city of Prince George, British Columbia.',
+    'At the age of 13, I joined the modelling industry and quickly found a life-time love and passion for design. Although modelling had its perks, I was always more drawn to the creative aspect of photoshoots through behind the scenes production and styling.',
+    'Soon after I decided to leave the modelling industry, I committed my time to volunteering in event planning and designing, through community events and non-profit organizations.',
+    'After years of experience, I decided to become a business owner and entrepreneur and created Sol Vé Custom Events.',
+    'Coming from a Norwegian-Irish and Spanish background, family and culture has always played a huge part in my life, with over 200 family members, I have always been surrounded by loved ones, food and music.',
+    'I love to go on adventures and have travelled to over 12 countries. I like to think that this has helped me connect with my clients on a more personable level by getting involved and learning about new cultures, through foods, music, language and faiths.',
+    'Growing up, I had the heart and soul desire to become a mother, which is why I made the amazing, life-changing decision to become a foster parent in 1997. It is a passion that I continue to pursue today.',
+    'I am a mother to two beautiful biological children, Kory and Katrina, as well as to my two loving adopted sons, Shaun and Jesse, and a mom to hundreds of children who have impacted my life for the better throughout the last 27 years.',
+    'Life has shown me the importance of relationship! I have been blessed to have enjoyed a 24 year marriage with my late husband and am currently married to an amazing man who walks beside me through all of life’s moments. Now I am ready to invest my all back into my business, in hopes to create new journeys and adventure through the rebirth of Sol Vé Custom Events.',
   ],
 } as const
 

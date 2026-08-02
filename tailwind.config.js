@@ -15,6 +15,15 @@ export default {
         cocoa: '#6C6251',
         espresso: '#5C4E32',
         walnut: '#4B3724',
+        // SOLVÉ Global Summit — that section only (Build v5 colour system)
+        solve: {
+          far: '#0E2447',
+          grey: '#808898',
+          gold: '#9E8D6F',
+          white: '#FEFEFE',
+          off: '#FDFDFD',
+          crimson: '#6B0F1A',
+        },
         // Mystic Moonlight Masquerade — campaign section only
         mmm: {
           burgundy: '#5B1020',

@@ -30,13 +30,14 @@ const FRAMES = [
   { id: 'division-signature-moments', start: 0, end: -500, className: 'ml-[12%] w-3/4 sm:w-5/12' },
 ] as const
 
+/** The six the Photo Guide lists as Homepage portfolio highlights. */
 const PORTFOLIO = [
-  { id: 'portfolio-claudia-ali', span: 'md:col-span-7', ratio: 'aspect-[4/3]' },
-  { id: 'portfolio-florals', span: 'md:col-span-5 md:mt-16', ratio: 'aspect-[3/4]' },
-  { id: 'portfolio-white-wedding', span: 'md:col-span-5', ratio: 'aspect-[3/4]' },
-  { id: 'portfolio-christina-vince', span: 'md:col-span-7 md:mt-20', ratio: 'aspect-[4/3]' },
-  { id: 'portfolio-modern-rustic', span: 'md:col-span-7', ratio: 'aspect-[16/10]' },
-  { id: 'portfolio-celebration', span: 'md:col-span-5 md:mt-12', ratio: 'aspect-[4/5]' },
+  { id: 'portfolio-mmm', span: 'md:col-span-7', ratio: 'aspect-[3/2]' },
+  { id: 'portfolio-threads', span: 'md:col-span-5 md:mt-16', ratio: 'aspect-[3/2]' },
+  { id: 'portfolio-weddings', span: 'md:col-span-5', ratio: 'aspect-[3/4]' },
+  { id: 'portfolio-mingle', span: 'md:col-span-7 md:mt-20', ratio: 'aspect-[3/2]' },
+  { id: 'portfolio-destination', span: 'md:col-span-5', ratio: 'aspect-[3/4]' },
+  { id: 'portfolio-vogue', span: 'md:col-span-7 md:mt-12', ratio: 'aspect-[3/2]' },
 ] as const
 
 export default function Home() {

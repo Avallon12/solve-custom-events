@@ -7,20 +7,31 @@ import type { MediaId } from '../data/media'
 import { divisions } from '../data/divisions'
 import { usePageMeta } from '../lib/meta'
 
-type Work = { media: MediaId; title: string; category: string; ratio: string }
+type Work = { media: MediaId; title: string; category: string }
 
+/**
+ * The eleven entries the Photo Guide lists for the Portfolio page, in its order.
+ *
+ * Every tile shares one aspect ratio. Mixing 4/3 and 3/4 meant each grid row
+ * took the height of its tallest tile and left ragged gaps beneath the rest —
+ * the source photographs run landscape, portrait and square, so a square crop
+ * is the one that treats all of them evenly.
+ */
 const WORK: Work[] = [
-  { media: 'portfolio-claudia-ali', title: 'Claudia and Ali: White Wedding', category: 'weddings', ratio: 'aspect-[4/3]' },
-  { media: 'portfolio-white-wedding', title: 'White Wedding: The Room', category: 'weddings', ratio: 'aspect-[4/3]' },
-  { media: 'portfolio-christina-vince', title: 'Christina and Vince: Vintage Vibes', category: 'weddings', ratio: 'aspect-[4/3]' },
-  { media: 'portfolio-modern-rustic', title: 'Wedding Reception: Modern Rustic', category: 'weddings', ratio: 'aspect-[3/4]' },
-  { media: 'portfolio-florals', title: 'Floral Design', category: 'design-stylization', ratio: 'aspect-[3/4]' },
-  { media: 'division-design-stylization', title: 'Styled Environments', category: 'design-stylization', ratio: 'aspect-[4/3]' },
-  { media: 'portfolio-celebration', title: 'Signature Celebrations', category: 'signature-moments', ratio: 'aspect-[4/3]' },
-  { media: 'division-signature-moments', title: 'The Proposal', category: 'signature-moments', ratio: 'aspect-[3/4]' },
-  { media: 'division-workshops', title: 'Curated Experiences', category: 'workshops', ratio: 'aspect-[4/3]' },
-  { media: 'division-conferences', title: 'Conferences and Convenings', category: 'conferences', ratio: 'aspect-[4/3]' },
-  { media: 'division-fundraising', title: 'Fundraising Campaigns', category: 'fundraising', ratio: 'aspect-[4/3]' },
+  { media: 'portfolio-mmm', title: 'Mystic Moonlight Masquerade Campaign', category: 'fundraising' },
+  { media: 'portfolio-mingle', title: 'Mystic Mingle', category: 'fundraising' },
+  { media: 'portfolio-threads', title: 'Mystic Threads', category: 'fundraising' },
+  { media: 'portfolio-fundraising', title: 'Fundraising Campaign Events', category: 'fundraising' },
+  { media: 'portfolio-weddings', title: 'Weddings Division', category: 'weddings' },
+  { media: 'portfolio-destination', title: 'Destination Weddings', category: 'weddings' },
+  { media: 'portfolio-multicultural', title: 'Multicultural Weddings', category: 'weddings' },
+  { media: 'portfolio-claudia-ali', title: 'Claudia and Ali: White Wedding', category: 'weddings' },
+  { media: 'portfolio-vogue', title: 'The World In Vogue', category: 'design-stylization' },
+  { media: 'portfolio-florals', title: 'Floral Design', category: 'design-stylization' },
+  { media: 'division-design-stylization', title: 'Styled Environments', category: 'design-stylization' },
+  { media: 'portfolio-signature', title: 'Signature Moments', category: 'signature-moments' },
+  { media: 'portfolio-workshops', title: 'Workshops and Curated Experiences', category: 'workshops' },
+  { media: 'portfolio-conferences', title: 'Conferences and International Events', category: 'conferences' },
 ]
 
 const FILTERS = [{ label: 'All', value: 'all' }, ...divisions.map((d) => ({ label: d.name, value: d.slug }))]
@@ -44,7 +55,7 @@ export default function Portfolio() {
             A gallery of unforgettable <Accent>events.</Accent>
           </>
         }
-        media="portfolio-claudia-ali"
+        media="portfolio-mmm"
       />
 
       <Section tone="ivory" rule>
@@ -71,14 +82,14 @@ export default function Portfolio() {
             </div>
           </Reveal>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
+          <div className="mt-12 grid auto-rows-fr grid-cols-2 gap-5 md:gap-8 lg:grid-cols-3">
             {shown.map((work, i) => (
               <Reveal key={work.media} delay={(i % 3) * 80} className="h-full">
-                <figure className="group h-full">
+                <figure className="group flex h-full flex-col">
                   <div className="overflow-hidden rounded-[2px]">
                     <Media
                       id={work.media}
-                      className={`${work.ratio} w-full`}
+                      className="aspect-square w-full"
                       showCaption={false}
                       imgClassName="transition-transform duration-[1200ms] group-hover:scale-105"
                     />

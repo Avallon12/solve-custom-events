@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
+import Media from '../components/Media'
 import { Container, Ornament, Reveal } from '../components/primitives'
 import { solve } from '../data/solve'
 import { usePageMeta } from '../lib/meta'
@@ -35,6 +36,10 @@ export default function Solve() {
     <div className="bg-solve-far">
       {/* Hero */}
       <section className="grain relative flex min-h-[92svh] items-center overflow-hidden pb-16 pt-[150px]">
+        <div className="absolute inset-0 -z-10">
+          <Media id="solve-hero" showCaption={false} drift subtle className="h-full w-full" />
+        </div>
+        <div className="absolute inset-0 -z-10 bg-solve-far/[0.88]" />
         <div
           className="absolute inset-0 opacity-70"
           style={{

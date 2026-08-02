@@ -88,7 +88,7 @@ export default function Press() {
         eyebrow="Media enquiries"
         heading="Working on a story?"
         body="For press enquiries, interviews and imagery, we would be glad to hear from you."
-        cta="Connect With Us"
+        cta="Begin the Conversation"
       />
     </>
   )

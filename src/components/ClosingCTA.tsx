@@ -8,7 +8,7 @@ export default function ClosingCTA({
   eyebrow = 'Begin the conversation',
   heading = 'Tell us what you are building.',
   body = 'Every extraordinary event begins with a conversation. Tell us your vision and we will tell you what is possible.',
-  cta = 'Tell Us Your Vision',
+  cta = 'Begin the Conversation',
 }: {
   eyebrow?: string
   heading?: string

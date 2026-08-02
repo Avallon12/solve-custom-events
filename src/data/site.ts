@@ -88,9 +88,9 @@ export const navigation: NavItem[] = [
 
 /** Wording approved in the Manual, Chapter 4.1 — never invent new CTA copy. */
 export const cta = {
-  primary: 'Tell Us Your Vision',
-  begin: 'Begin Your Journey',
-  discover: 'Discover Experiences',
+  /** One CTA system across the whole site, so nothing reads wedding-specific. */
+  primary: 'Begin the Conversation',
+  secondary: 'Explore Our Experiences',
+  portfolio: 'View Our Work',
   proposal: 'Request a Proposal',
-  connect: 'Connect With Us',
 } as const

@@ -40,7 +40,7 @@ export default function DivisionPage() {
         headline={division.headline}
         subheadline={division.subheadline}
         media={division.media}
-        actions={<Btn to="/connect">Tell Us Your Vision</Btn>}
+        actions={<Btn to="/connect">Begin the Conversation</Btn>}
       />
 
       <Section tone="ivory" rule>

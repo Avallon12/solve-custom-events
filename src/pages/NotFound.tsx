@@ -17,7 +17,7 @@ export default function NotFound() {
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <Btn to="/">Return Home</Btn>
           <Btn to="/connect" variant="outline-light">
-            Tell Us Your Vision
+            Begin the Conversation
           </Btn>
         </div>
         <div className="mx-auto mt-16 max-w-sm">

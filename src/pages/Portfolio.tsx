@@ -30,8 +30,8 @@ const WORK: Work[] = [
   { media: 'portfolio-florals', title: 'Floral Design', category: 'design-stylization' },
   { media: 'division-design-stylization', title: 'Styled Environments', category: 'design-stylization' },
   { media: 'portfolio-signature', title: 'Signature Moments', category: 'signature-moments' },
-  { media: 'portfolio-workshops', title: 'Workshops and Curated Experiences', category: 'workshops' },
-  { media: 'portfolio-conferences', title: 'Conferences and International Events', category: 'conferences' },
+  { media: 'portfolio-workshops', title: 'Workshops & Curated Experiences', category: 'workshops' },
+  { media: 'portfolio-conferences', title: 'Conferences & International Events', category: 'conferences' },
 ]
 
 const FILTERS = [{ label: 'All', value: 'all' }, ...divisions.map((d) => ({ label: d.name, value: d.slug }))]

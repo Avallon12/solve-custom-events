@@ -150,7 +150,7 @@ export default function Commitments() {
       <Section tone="ivory" rule>
         <Container>
           <Reveal className="text-center">
-            <Eyebrow>Sol Vé Principles</Eyebrow>
+            <Eyebrow>Our Principles</Eyebrow>
             <Display as="h2" size="lg" className="mt-6 text-charcoal">
               Six principles, held equally.
             </Display>

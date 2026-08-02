@@ -42,8 +42,8 @@ const PORTFOLIO = [
 
 export default function Home() {
   usePageMeta(
-    'Sol Vé Custom Events — Luxury Event Production, Calgary Alberta',
-    'Sol Vé Custom Events designs how people gather. Luxury weddings, signature moments, curated workshops, conferences and fundraising campaigns, produced in Calgary and worldwide.',
+    'Sol Vé Custom Events | Event Design & Production in Calgary',
+    'Sol Vé creates thoughtfully designed weddings, signature celebrations, workshops, conferences and fundraising experiences in Calgary, throughout Canada and internationally.',
   )
 
   return (
@@ -60,9 +60,9 @@ export default function Home() {
         frames={FRAMES}
         actions={
           <>
-            <HeroLink to="/connect">Begin Your Journey</HeroLink>
+            <HeroLink to="/connect">Begin the Conversation</HeroLink>
             <HeroLink to="/experiences" variant="outline">
-              Discover Experiences
+              Explore Our Experiences
             </HeroLink>
           </>
         }
@@ -209,7 +209,7 @@ export default function Home() {
               </Display>
             </div>
             <Btn to="/portfolio" variant="outline">
-              View the Portfolio
+              View Our Work
             </Btn>
           </Reveal>
 

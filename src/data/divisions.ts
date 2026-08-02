@@ -33,7 +33,7 @@ export type Division = {
 export const divisions: Division[] = [
   {
     slug: 'design-stylization',
-    eyebrow: 'Design and Stylization',
+    eyebrow: 'Design & Stylization',
     name: 'Design & Stylization',
     oneLine: 'Thoughtfully crafted environments that bring vision, beauty, and purpose together.',
     because: 'Because the room begins the conversation before anyone speaks.',
@@ -80,7 +80,7 @@ export const divisions: Division[] = [
     proposal: {
       heading: 'Ready to build something unforgettable?',
       body: 'Tell us what you are imagining and we will show you what is possible.',
-      cta: 'Tell Us Your Vision',
+      cta: 'Begin the Conversation',
     },
   },
   {
@@ -152,7 +152,7 @@ export const divisions: Division[] = [
   },
   {
     slug: 'workshops',
-    eyebrow: 'Workshops and Curated Experiences',
+    eyebrow: 'Workshops & Curated Experiences',
     name: 'Workshops & Curated Experiences',
     oneLine:
       'Immersive gatherings designed to inspire learning, creativity, and meaningful connection.',
@@ -192,7 +192,7 @@ export const divisions: Division[] = [
   },
   {
     slug: 'conferences',
-    eyebrow: 'Conferences and International Events',
+    eyebrow: 'Conferences & International Events',
     name: 'Conferences & International Events',
     oneLine:
       'Purpose-driven convenings where ideas are exchanged, partnerships are formed, and meaningful progress begins.',

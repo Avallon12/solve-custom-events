@@ -7,6 +7,7 @@ npm install
 npm run dev      # local preview
 npm run build    # type-check + production build
 npm run smoke    # renders every route and reports failures
+npm run audit    # fails if SOLVÉ Global Summit appears on any Sol Vé route
 npm run lint
 ```
 
@@ -17,20 +18,21 @@ npm run lint
 Three client documents contradict each other. Where they conflict, the newest
 one wins. These are the calls that were made — flag any you want reversed.
 
-**1. SOLVÉ Global Summit is built, but unlinked.**
+**1. SOLVÉ Global Summit appears nowhere on the Sol Vé site.**
 The newest document says *"Remove SOLVÉ Global Summit completely for the time
-being… DO NOT have it positioned anywhere on the website!"* — yet its own body
-copy names SOLVÉ twice, in *Where It Began* and *Meet the Founder*. Read
-together, that instruction is about not **positioning** it as a page yet, not
-about scrubbing the name from her narrative.
+being… DO NOT have it positioned anywhere on the website!"* That is honoured
+literally: no mention in the homepage, Where It Began, Meet the Founder, the
+Conferences division, navigation, portfolio, footer, page metadata, image alt
+text, or the mobile menu. `npm run audit` renders every Sol Vé route and fails
+the build if any reference reappears — including in alt attributes and hidden
+markup, which is where this kind of thing usually survives a manual sweep.
 
-So `/solve`, `/solve/delegate` and `/solve/sponsor` exist in full, in the v5
-colour system with the real logo — but **nothing links to them**. No menu entry,
-no homepage banner, no callout on the Conferences page. Reaching the page needs
-the direct URL. The narrative mentions of SOLVÉ stay where she wrote them.
-
-To publish it: add an entry to `navigation` in `src/data/site.ts`. That's the
-whole change.
+The page itself exists, unlinked, at `/solve`, `/solve/delegate` and
+`/solve/sponsor`, in the v5 colour system with the real logo, so it can be shown
+to Lynea and switched on the day she approves it. Nothing on the live site
+points to it. To publish: add an entry to `navigation` in `src/data/site.ts`.
+To delete it instead: remove the three routes in `App.tsx`, `src/pages/Solve*`
+and `src/data/solve.ts`.
 
 Two v5 URGENT items are enforced in `src/data/solve.ts` rather than left to
 memory: **no dates or years appear anywhere** (everything reads "Coming Soon"),
@@ -62,13 +64,30 @@ Impact is a full-width section below them.
 
 ---
 
+**6. One CTA system, one set of division names.**
+Primary CTA is **Begin the Conversation** everywhere — nav, floating rail, hero,
+division pages, 404. Secondary is **Explore Our Experiences**; the portfolio
+link is **View Our Work**. "Begin Your Journey" read wedding-specific for a
+company that also does conferences and fundraising.
+
+The six divisions use one naming system in every surface — nav, homepage cards,
+portfolio filters and titles, page eyebrows, URLs and the enquiry dropdown:
+Design & Stylization · Weddings · Signature Moments · Workshops & Curated
+Experiences · Conferences & International Events · Fundraising Campaign Events.
+`npm run audit` renders every Sol Vé route and fails on any SOLVÉ Global Summit
+reference, including alt text and metadata.
+
+---
+
 ## Before this goes live
 
 ### 1. Photographer credits — `src/data/media.ts`
 
-**23 of the 24 image slots are filled with real Sol Vé photography**, taken from
-solvecustomevents.com, re-encoded to WebP (4 MB total for the whole site) and
-placed in `public/media/`. Every slot is defined once in `media.ts`.
+**Every image slot is filled with real Sol Vé photography.** Most of it comes
+from the *Exact Banner-by-Banner Photo Guide* — the photographs are embedded in
+that PDF, so they were extracted at full resolution and placed in the exact
+slots Lynea assigns them. The rest came from solvecustomevents.com. All of it is
+re-encoded to WebP (3 MB for the whole site) and defined once in `media.ts`.
 
 **What still needs doing: the photographer names.** Only six files on the old
 site name their photographer, in the filename — those are credited to *Mike
@@ -93,25 +112,19 @@ with `credit: 'by …'` as they are confirmed.
 others carry a visible *Faithful* photographer watermark. Manual 6.2 forbids
 watermarked images, so none of them were used.
 
-**Still a placeholder:** the Mystic Moonlight hero. No MMM photography exists on
-the old site — Lynea's Mystic Mingle folder (lion dancers, performers) belongs
-there. Empty slots render a warm gradient, film grain and the Sol Vé emblem
-rather than a broken image, so nothing is ever presented as Sol Vé's work when
-it isn't.
+**No placeholders remain.** If a slot is ever emptied it falls back to a warm
+gradient, film grain and the Sol Vé emblem rather than a broken image, so
+nothing is ever presented as Sol Vé's work when it isn't.
 
 **Reels:** set `video: '/media/clip.mp4'` instead of `src`. It plays muted and
 looping. Luxury footage only — no animation, no cartoon.
 
-### 2. Social links — `src/data/site.ts`
+### 2. Social links — done
 
-Four URLs, currently empty. Any left empty renders as a dimmed, non-clickable
-icon marked "link pending" rather than a broken link.
-
-```ts
-{ name: 'LinkedIn', url: '' },   // ← the Sol Vé Custom Events COMPANY page
-{ name: 'Instagram', url: '' },
-{ name: 'Facebook', url: '' },
-```
+LinkedIn (the company page, not a personal profile), Instagram and Facebook are
+live in the footer and the menu, and all three were checked to resolve. Any
+future entry left as an empty string renders as a dimmed, non-clickable icon
+marked "link pending" rather than a broken link.
 
 ### 3. Form routing — `src/pages/Connect.tsx`
 

@@ -28,7 +28,7 @@ export default function DivisionPage() {
     division ? `${division.headline} ${division.subheadline}` : 'Sol Vé Custom Events.',
   )
 
-  if (!division) return <Navigate to="/experiences" replace />
+  if (!division) return <Navigate to="/what-we-create" replace />
 
   const others = divisions.filter((d) => d.slug !== division.slug).slice(0, 3)
 
@@ -99,35 +99,6 @@ export default function DivisionPage() {
                       {card.body}
                     </p>
                   </Card>
-                </Reveal>
-              ))}
-            </div>
-          </Container>
-        </Section>
-      )}
-
-      {division.notableWork && (
-        <Section tone="charcoal">
-          <div className="grain absolute inset-0 opacity-40" />
-          <Container className="relative z-10">
-            <Reveal>
-              <Eyebrow tone="light">Notable Work</Eyebrow>
-              <Display as="h2" size="md" className="mt-6 text-ivory">
-                Productions we are known for.
-              </Display>
-            </Reveal>
-
-            <div className="mt-12 grid gap-6 md:grid-cols-3 md:gap-8">
-              {division.notableWork.map((work, i) => (
-                <Reveal key={work.title} delay={i * 90} className="h-full">
-                  <div className="h-full rounded-[2px] border border-gold/25 p-7">
-                    <h3 className="font-display text-[22px] leading-tight text-ivory md:text-[25px]">
-                      {work.title}
-                    </h3>
-                    <p className="mt-4 font-body text-[17px] leading-relaxed text-champagne/85">
-                      {work.body}
-                    </p>
-                  </div>
                 </Reveal>
               ))}
             </div>
@@ -209,7 +180,7 @@ export default function DivisionPage() {
             {others.map((other, i) => (
               <Reveal key={other.slug} delay={i * 90} className="h-full">
                 <Link
-                  to={`/experiences/${other.slug}`}
+                  to={`/what-we-create/${other.slug}`}
                   className="group flex h-full flex-col rounded-[2px] border border-gold/25 p-7 transition-colors duration-500 hover:border-gold/70 hover:bg-ivory/[0.04]"
                 >
                   <h3 className="font-display text-[23px] leading-tight text-ivory">

@@ -11,7 +11,7 @@ import {
   Reveal,
   Section,
 } from '../components/primitives'
-import { founder, lyneaBio } from '../data/content'
+import { founder } from '../data/content'
 import { usePageMeta } from '../lib/meta'
 
 export default function Founder() {
@@ -72,24 +72,6 @@ export default function Founder() {
               </p>
             </Reveal>
           </div>
-        </Container>
-      </Section>
-
-      {/* Her own account, first person — v5: copy exactly from the original site */}
-      <Section tone="linen" id="meet-lynea">
-        <Container width="narrow">
-          <Reveal>
-            <Eyebrow>{lyneaBio.subtitle}</Eyebrow>
-            <Display as="h2" size="lg" className="mt-6 text-charcoal">
-              {lyneaBio.heading}
-            </Display>
-            <div className="mt-10">
-              <Prose paragraphs={lyneaBio.body} />
-            </div>
-            <div className="mt-12">
-              <Ornament />
-            </div>
-          </Reveal>
         </Container>
       </Section>
 

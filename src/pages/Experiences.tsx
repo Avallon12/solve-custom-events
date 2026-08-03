@@ -84,7 +84,7 @@ export default function Experiences() {
             {divisions.map((division, i) => (
               <Reveal key={division.slug} delay={(i % 2) * 90} className="h-full">
                 <Link
-                  to={`/experiences/${division.slug}`}
+                  to={`/what-we-create/${division.slug}`}
                   className="group flex h-full flex-col rounded-[2px] border border-stone/40 bg-ivory p-6 transition-all duration-500 hover:border-bronze hover:shadow-[0_6px_30px_rgba(158,141,111,0.16)] md:p-8"
                 >
                   <div className="overflow-hidden rounded-[2px]">

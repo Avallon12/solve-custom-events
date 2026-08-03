@@ -55,35 +55,31 @@ export type NavChild = { label: string; to: string }
 export type NavItem = { label: string; to: string; children?: NavChild[] }
 
 export const divisionNav: NavChild[] = [
-  { label: 'Design & Stylization', to: '/experiences/design-stylization' },
-  { label: 'Weddings', to: '/experiences/weddings' },
-  { label: 'Signature Moments', to: '/experiences/signature-moments' },
-  { label: 'Workshops & Curated Experiences', to: '/experiences/workshops' },
-  { label: 'Conferences & International Events', to: '/experiences/conferences' },
-  { label: 'Fundraising Campaign Events', to: '/experiences/fundraising' },
+  { label: 'Design & Stylization', to: '/what-we-create/design-stylization' },
+  { label: 'Weddings', to: '/what-we-create/weddings' },
+  { label: 'Signature Moments', to: '/what-we-create/signature-moments' },
+  { label: 'Workshops & Curated Experiences', to: '/what-we-create/workshops' },
+  { label: 'Conferences & International Events', to: '/what-we-create/conferences' },
+  { label: 'Fundraising Campaign Events', to: '/what-we-create/fundraising' },
 ]
 
+/**
+ * The order is the client's, from "Website order and messaging", and is not
+ * ours to rearrange — she has said the sequence encodes where the brand is
+ * going. Add nothing to this list without her.
+ */
 export const navigation: NavItem[] = [
-  {
-    label: 'Foundation',
-    to: '/foundation',
-    children: [
-      { label: 'The Foundation', to: '/foundation' },
-      { label: 'The Sol Vé Way', to: '/foundation#the-sol-ve-way' },
-      { label: 'Beyond the Occasion', to: '/foundation#beyond-the-occasion' },
-      { label: 'Where It Began', to: '/foundation#where-it-began' },
-      { label: 'Meet the Founder', to: '/founder' },
-    ],
-  },
-  { label: 'Commitments', to: '/commitments' },
-  {
-    label: 'Experiences',
-    to: '/experiences',
-    children: [{ label: 'What We Create', to: '/experiences' }, ...divisionNav],
-  },
-  { label: 'Portfolio', to: '/portfolio' },
-  { label: 'Perspectives', to: '/perspectives' },
-  { label: 'Press', to: '/press' },
+  { label: 'Foundation', to: '/foundation' },
+  { label: 'The Sol Vé Way', to: '/the-sol-ve-way' },
+  { label: 'Beyond the Occasion', to: '/beyond-the-occasion' },
+  { label: 'Our Commitments', to: '/commitments' },
+  { label: 'Sol Vé Principles', to: '/principles' },
+  { label: 'Where It Began', to: '/where-it-began' },
+  { label: 'What We Create', to: '/what-we-create', children: divisionNav },
+  { label: 'Signature Experiences', to: '/signature-experiences' },
+  { label: 'Meet the Founder', to: '/founder' },
+  { label: 'Portfolio / Journal', to: '/portfolio' },
+  { label: 'Connect', to: '/connect' },
 ]
 
 /** Wording approved in the Manual, Chapter 4.1 — never invent new CTA copy. */

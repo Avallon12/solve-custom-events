@@ -7,13 +7,18 @@ import MysticDialog from './components/MysticDialog'
 import Home from './pages/Home'
 import Foundation from './pages/Foundation'
 import Commitments from './pages/Commitments'
-import Experiences from './pages/Experiences'
+import WhatWeCreate from './pages/Experiences'
 import DivisionPage from './pages/DivisionPage'
 import Founder from './pages/Founder'
 import Portfolio from './pages/Portfolio'
 import Perspectives from './pages/Perspectives'
 import Press from './pages/Press'
 import Connect from './pages/Connect'
+import SolVeWay from './pages/SolVeWay'
+import BeyondTheOccasion from './pages/BeyondTheOccasion'
+import Principles from './pages/Principles'
+import WhereItBegan from './pages/WhereItBegan'
+import SignatureExperiences from './pages/SignatureExperiences'
 import Mystic from './pages/Mystic'
 import Solve from './pages/Solve'
 import SolveDelegate from './pages/SolveDelegate'
@@ -49,10 +54,16 @@ function Shell() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          {/* The client's order, from "Website order and messaging". */}
           <Route path="/foundation" element={<Foundation />} />
+          <Route path="/the-sol-ve-way" element={<SolVeWay />} />
+          <Route path="/beyond-the-occasion" element={<BeyondTheOccasion />} />
           <Route path="/commitments" element={<Commitments />} />
-          <Route path="/experiences" element={<Experiences />} />
-          <Route path="/experiences/:slug" element={<DivisionPage />} />
+          <Route path="/principles" element={<Principles />} />
+          <Route path="/where-it-began" element={<WhereItBegan />} />
+          <Route path="/what-we-create" element={<WhatWeCreate />} />
+          <Route path="/what-we-create/:slug" element={<DivisionPage />} />
+          <Route path="/signature-experiences" element={<SignatureExperiences />} />
           <Route path="/founder" element={<Founder />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/perspectives" element={<Perspectives />} />

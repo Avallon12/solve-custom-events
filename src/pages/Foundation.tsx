@@ -11,7 +11,7 @@ import {
   Reveal,
   Section,
 } from '../components/primitives'
-import { foundation, missionVisionValues, whoWeAre } from '../data/content'
+import { foundation } from '../data/content'
 import { usePageMeta } from '../lib/meta'
 
 export default function Foundation() {
@@ -41,39 +41,6 @@ export default function Foundation() {
           <Reveal className="mt-14">
             <Ornament />
           </Reveal>
-        </Container>
-      </Section>
-
-      {/* Who we are — v5: copy exactly from solvecustomevents.com/about */}
-      <Section tone="linen" id="who-we-are">
-        <Container width="narrow">
-          <Reveal>
-            <Eyebrow>Who We Are</Eyebrow>
-            <Display as="h2" size="lg" className="mt-6 text-charcoal">
-              {whoWeAre.heading}
-            </Display>
-            <div className="mt-10">
-              <Prose paragraphs={whoWeAre.body} />
-            </div>
-          </Reveal>
-
-          <div className="mt-16 grid items-stretch gap-6 md:grid-cols-3 md:gap-8">
-            {missionVisionValues.map((item, i) => (
-              <Reveal key={item.label} delay={i * 100} className="h-full">
-                <div className="h-full rounded-[2px] border border-stone/40 bg-ivory p-7 md:p-9">
-                  <p
-                    className="font-ui text-[11px] uppercase text-bronze"
-                    style={{ letterSpacing: '0.3em' }}
-                  >
-                    {item.label}
-                  </p>
-                  <p className="mt-5 font-body text-[18px] leading-relaxed text-espresso">
-                    {item.body}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
         </Container>
       </Section>
 

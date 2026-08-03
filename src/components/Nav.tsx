@@ -30,11 +30,10 @@ function toRoman(value: number) {
   return out
 }
 
+/** Home, then the client's twelve in her order. Nothing else. */
 const OVERLAY_LINKS = [
   { label: 'Home', to: '/' },
   ...navigation.map(({ label, to }) => ({ label, to })),
-  { label: 'Meet the Founder', to: '/founder' },
-  { label: 'Connect', to: '/connect' },
 ]
 
 const socialIcons = {

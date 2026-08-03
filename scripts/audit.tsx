@@ -12,6 +12,11 @@ import Footer from '../src/components/Footer'
 import Home from '../src/pages/Home'
 import Foundation from '../src/pages/Foundation'
 import Commitments from '../src/pages/Commitments'
+import SolVeWay from '../src/pages/SolVeWay'
+import BeyondTheOccasion from '../src/pages/BeyondTheOccasion'
+import Principles from '../src/pages/Principles'
+import WhereItBegan from '../src/pages/WhereItBegan'
+import SignatureExperiences from '../src/pages/SignatureExperiences'
 import Experiences from '../src/pages/Experiences'
 import DivisionPage from '../src/pages/DivisionPage'
 import Founder from '../src/pages/Founder'
@@ -27,9 +32,14 @@ import { divisions } from '../src/data/divisions'
 const ROUTES = [
   '/',
   '/foundation',
+  '/the-sol-ve-way',
+  '/beyond-the-occasion',
   '/commitments',
-  '/experiences',
-  ...divisions.map((d) => `/experiences/${d.slug}`),
+  '/principles',
+  '/where-it-began',
+  '/what-we-create',
+  ...divisions.map((d) => `/what-we-create/${d.slug}`),
+  '/signature-experiences',
   '/founder',
   '/portfolio',
   '/perspectives',
@@ -58,9 +68,14 @@ function Tree({ path }: { path: string }) {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/foundation" element={<Foundation />} />
+        <Route path="/the-sol-ve-way" element={<SolVeWay />} />
+        <Route path="/beyond-the-occasion" element={<BeyondTheOccasion />} />
         <Route path="/commitments" element={<Commitments />} />
-        <Route path="/experiences" element={<Experiences />} />
-        <Route path="/experiences/:slug" element={<DivisionPage />} />
+        <Route path="/principles" element={<Principles />} />
+        <Route path="/where-it-began" element={<WhereItBegan />} />
+        <Route path="/signature-experiences" element={<SignatureExperiences />} />
+        <Route path="/what-we-create" element={<Experiences />} />
+        <Route path="/what-we-create/:slug" element={<DivisionPage />} />
         <Route path="/founder" element={<Founder />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/perspectives" element={<Perspectives />} />

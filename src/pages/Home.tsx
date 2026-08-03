@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { HeroLink, SmoothScrollHero } from '../components/ui/modern-hero'
 import Media from '../components/Media'
 import ScrollFeature from '../components/ScrollFeature'
@@ -6,7 +5,6 @@ import ClosingCTA from '../components/ClosingCTA'
 import {
   Accent,
   Btn,
-  Card,
   Container,
   Display,
   Eyebrow,
@@ -16,7 +14,7 @@ import {
   Reveal,
   Section,
 } from '../components/primitives'
-import { commitments, foundation, founder, home, homeValues, press, whatSolVeIs } from '../data/content'
+import { foundation, home } from '../data/content'
 import { usePageMeta } from '../lib/meta'
 
 /**
@@ -60,9 +58,9 @@ export default function Home() {
         frames={FRAMES}
         actions={
           <>
-            <HeroLink to="/connect">Begin the Conversation</HeroLink>
-            <HeroLink to="/experiences" variant="outline">
-              Explore Our Experiences
+            <HeroLink to="/connect">Begin your Journey</HeroLink>
+            <HeroLink to="/what-we-create" variant="outline">
+              Discover Experiences
             </HeroLink>
           </>
         }
@@ -137,67 +135,6 @@ export default function Home() {
       {/* Six divisions */}
       <ScrollFeature />
 
-      {/* What Sol Vé Is — Manual, Homepage Section 2 */}
-      <Section tone="linen">
-        <Container width="narrow">
-          <Reveal className="text-center">
-            <Eyebrow>{whatSolVeIs.eyebrow}</Eyebrow>
-            <Display as="h2" size="lg" className="mx-auto mt-6 max-w-3xl text-charcoal">
-              {whatSolVeIs.headline}
-            </Display>
-            <p className="mx-auto mt-8 max-w-2xl font-body text-[18px] leading-[1.7] text-espresso md:text-[20px]">
-              {whatSolVeIs.body}
-            </p>
-            <div className="mx-auto mt-12 max-w-sm">
-              <Ornament />
-            </div>
-          </Reveal>
-        </Container>
-      </Section>
-
-      {/* Values — four cards, per Build v5 */}
-      <Section tone="ivory" rule id="commitments-preview">
-        <Container>
-          <Reveal className="mx-auto max-w-3xl text-center">
-            <Eyebrow>Our Commitments</Eyebrow>
-            <Display as="h2" size="lg" className="mt-6 text-charcoal">
-              What we stand for.
-            </Display>
-            <p className="mx-auto mt-7 max-w-2xl font-display text-[21px] italic leading-relaxed text-espresso md:text-[26px]">
-              “{commitments.quote}”
-            </p>
-            <p
-              className="mt-4 font-ui text-[11px] uppercase text-walnut"
-              style={{ letterSpacing: '0.3em' }}
-            >
-              {commitments.quoteAttribution}
-            </p>
-          </Reveal>
-
-          <div className="mt-14 grid items-stretch gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-4">
-            {homeValues.map((value, i) => (
-              <Reveal key={value.title} delay={(i % 4) * 90} className="h-full">
-                <Card tone="linen" className="flex h-full flex-col">
-                  <h3 className="font-display text-[22px] leading-tight text-charcoal md:text-[24px]">
-                    {value.title}
-                  </h3>
-                  <p className="mt-5 font-body text-[17px] leading-relaxed text-espresso">
-                    {value.body}
-                  </p>
-                  <Link
-                    to={value.to}
-                    className="mt-auto pt-8 font-ui text-[11px] uppercase text-espresso underline underline-offset-4 hover:text-gold"
-                    style={{ letterSpacing: '0.22em' }}
-                  >
-                    Read the commitment
-                  </Link>
-                </Card>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
       {/* Portfolio — editorial, asymmetric, never a thumbnail wall */}
       <Section tone="linen">
         <Container>
@@ -219,69 +156,6 @@ export default function Home() {
                 <Media id={item.id} className={`${item.ratio} w-full`} />
               </Reveal>
             ))}
-          </div>
-        </Container>
-      </Section>
-
-      {/* Press */}
-      <Section tone="ivory" rule>
-        <Container>
-          <Reveal className="text-center">
-            <Eyebrow>Press and Recognition</Eyebrow>
-            <Display as="h2" size="md" className="mt-6 text-charcoal">
-              Where our work has been seen.
-            </Display>
-          </Reveal>
-
-          <div className="mt-12 grid gap-px overflow-hidden rounded-[2px] bg-stone/40 sm:grid-cols-2 lg:grid-cols-4">
-            {[...press.features, press.awards[0]].slice(0, 4).map((item, i) => (
-              <Reveal key={item.name} delay={i * 70}>
-                <div className="flex h-full flex-col items-center bg-ivory px-6 py-10 text-center">
-                  <p className="font-display text-[21px] text-charcoal">{item.name}</p>
-                  <p className="mt-3 font-body text-[16px] leading-snug text-espresso">{item.body}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal className="mt-10 text-center">
-            <Link
-              to="/press"
-              className="font-ui text-[11px] uppercase text-espresso underline underline-offset-4 hover:text-gold"
-              style={{ letterSpacing: '0.22em' }}
-            >
-              Press, publications and awards
-            </Link>
-          </Reveal>
-        </Container>
-      </Section>
-
-      {/* Founder */}
-      <Section tone="champagne">
-        <Container>
-          <div className="grid gap-12 lg:grid-cols-[42fr_58fr] lg:items-center lg:gap-20">
-            <Reveal>
-              <Media id="founder-portrait" className="aspect-[4/5] w-full" />
-            </Reveal>
-            <Reveal delay={120}>
-              <Eyebrow>Meet the Founder</Eyebrow>
-              <blockquote className="mt-8 border-l-2 border-gold pl-6 md:pl-9">
-                <p className="font-display text-[24px] italic leading-[1.35] text-charcoal md:text-[34px]">
-                  “{founder.quote}”
-                </p>
-              </blockquote>
-              <p
-                className="mt-7 font-ui text-[11px] uppercase text-walnut"
-                style={{ letterSpacing: '0.26em' }}
-              >
-                {founder.quoteAttribution}
-              </p>
-              <div className="mt-10">
-                <Btn to="/founder" variant="outline">
-                  Her Story
-                </Btn>
-              </div>
-            </Reveal>
           </div>
         </Container>
       </Section>

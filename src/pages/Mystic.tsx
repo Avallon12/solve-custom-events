@@ -163,7 +163,7 @@ export default function Mystic() {
               {mystic.email}
             </a>
             <Link
-              to="/experiences/fundraising"
+              to="/what-we-create/fundraising"
               className="font-ui text-[11px] uppercase text-mmm-champagne underline underline-offset-4 hover:text-mmm-gold"
               style={{ letterSpacing: '0.22em' }}
             >

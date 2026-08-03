@@ -2,6 +2,15 @@
 
 React + Vite + TypeScript + Tailwind. No UI framework, no page builder.
 
+Deployed on Vercel. Vercel blocks a deployment when the commit email cannot be
+matched to a GitHub account, so commits from this repository are authored as
+`hello@avallon.ca` — set locally, in `.git/config`, not globally:
+
+```bash
+git config user.email "hello@avallon.ca"
+git config user.name  "Avallon"
+```
+
 ```bash
 npm install
 npm run dev      # local preview

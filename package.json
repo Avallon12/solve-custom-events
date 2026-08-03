@@ -1,6 +1,7 @@
 {
   "name": "solve-custom-events",
   "private": true,
+  "author": "Avallon <hello@avallon.ca>",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

@@ -119,10 +119,10 @@ export default function Portfolio() {
           <Reveal>
             <Eyebrow>Testimonials</Eyebrow>
           </Reveal>
-          <div className="mt-10 grid gap-px bg-stone/40 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid border-t border-stone/40 sm:grid-cols-2 lg:grid-cols-3">
             {portfolio.testimonials.map((voice, i) => (
               <Reveal key={voice} delay={(i % 3) * 70}>
-                <p className="h-full bg-ivory px-7 py-8 font-display text-[22px] text-charcoal md:text-[25px]">
+                <p className="h-full border-b border-stone/40 px-7 py-8 font-display text-[22px] text-charcoal sm:border-r md:text-[25px]">
                   {voice}
                 </p>
               </Reveal>
@@ -132,7 +132,7 @@ export default function Portfolio() {
       </Section>
 
       <Section tone="ivory">
-        <Container width="wide">
+        <Container width="narrow">
           <Reveal>
             <Eyebrow>Perspectives</Eyebrow>
           </Reveal>
@@ -141,18 +141,18 @@ export default function Portfolio() {
             {perspectives.map((essay, i) => (
               <article key={essay.slug} id={essay.slug} className="scroll-mt-32">
                 <Reveal>
-                  <Display as="h2" size="lg" className="max-w-2xl text-charcoal">
+                  <Display as="h2" size="lg" className="text-charcoal">
                     {essay.title}
                   </Display>
 
-                  <div className="prose-solve mt-9 max-w-2xl text-espresso">
+                  <div className="prose-solve mt-9 text-espresso">
                     {essay.body.map((paragraph) => (
                       <p key={paragraph.slice(0, 36)}>{paragraph}</p>
                     ))}
                   </div>
 
                   {i < perspectives.length - 1 && (
-                    <div className="mt-12 max-w-2xl">
+                    <div className="mt-12">
                       <Ornament />
                     </div>
                   )}

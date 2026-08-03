@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Mail, Phone } from 'lucide-react'
-import Logo, { Emblem } from './Logo'
+import Logo from './Logo'
 import { FacebookIcon, InstagramIcon, LinkedInIcon } from './BrandIcons'
 import { GoldRule, Ornament } from './primitives'
 import { contact, cta, divisionNav, navigation, socials } from '../data/site'
@@ -285,7 +285,6 @@ export default function Nav() {
                 </a>
               </div>
 
-              <Emblem className="mt-10 hidden h-16 w-16 text-gold/25 lg:block" />
             </aside>
           </div>
         </div>

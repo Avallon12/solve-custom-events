@@ -6,7 +6,6 @@ import {
   Container,
   Display,
   Eyebrow,
-  Ornament,
   Prose,
   Reveal,
   Section,
@@ -72,29 +71,6 @@ export default function Founder() {
               </p>
             </Reveal>
           </div>
-        </Container>
-      </Section>
-
-      <Section tone="charcoal">
-        <div className="grain absolute inset-0 opacity-45" />
-        <Container width="narrow" className="relative z-10">
-          <Reveal className="text-center">
-            <Eyebrow tone="light">In Her Words</Eyebrow>
-            <blockquote className="mt-9">
-              <p className="font-display text-[24px] italic leading-[1.4] text-ivory md:text-[34px]">
-                “{founder.quote}”
-              </p>
-            </blockquote>
-            <p
-              className="mt-8 font-ui text-[11px] uppercase text-champagne"
-              style={{ letterSpacing: '0.26em' }}
-            >
-              {founder.quoteAttribution}
-            </p>
-            <div className="mt-14">
-              <Ornament tone="light" />
-            </div>
-          </Reveal>
         </Container>
       </Section>
 

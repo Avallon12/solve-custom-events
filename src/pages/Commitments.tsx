@@ -146,37 +146,6 @@ export default function Commitments() {
         </Container>
       </Section>
 
-      {/* Principles */}
-      <Section tone="ivory" rule>
-        <Container>
-          <Reveal className="text-center">
-            <Eyebrow>Our Principles</Eyebrow>
-            <Display as="h2" size="lg" className="mt-6 text-charcoal">
-              Six principles, held equally.
-            </Display>
-          </Reveal>
-
-          <div className="mt-14 grid gap-px overflow-hidden bg-stone/40 sm:grid-cols-2 lg:grid-cols-3">
-            {commitments.principles.map((principle, i) => (
-              <Reveal key={principle.name} delay={(i % 3) * 80}>
-                <div className="h-full bg-ivory px-7 py-10 md:px-9">
-                  <p
-                    className="font-ui text-[10px] uppercase text-gold"
-                    style={{ letterSpacing: '0.3em' }}
-                  >
-                    {String(i + 1).padStart(2, '0')}
-                  </p>
-                  <h3 className="mt-5 font-display text-[24px] text-charcoal">{principle.name}</h3>
-                  <p className="mt-3 font-body text-[18px] leading-relaxed text-espresso">
-                    {principle.body}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
       <ClosingCTA
         eyebrow="Gather with us"
         heading="Build something that belongs to everyone in the room."

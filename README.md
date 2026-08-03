@@ -13,69 +13,43 @@ npm run lint
 
 ---
 
-## What was decided, and why
+## What this site is
 
-Three client documents contradict each other. Where they conflict, the newest
-one wins. These are the calls that were made — flag any you want reversed.
+Exactly the client's document — "Sol Vé Custom Events Website order and
+messaging" — in its wording and its sequence, and nothing else.
 
-**1. SOLVÉ Global Summit appears nowhere on the Sol Vé site.**
-The newest document says *"Remove SOLVÉ Global Summit completely for the time
-being… DO NOT have it positioned anywhere on the website!"* That is honoured
-literally: no mention in the homepage, Where It Began, Meet the Founder, the
-Conferences division, navigation, portfolio, footer, page metadata, image alt
-text, or the mobile menu. `npm run audit` renders every Sol Vé route and fails
-the build if any reference reappears — including in alt attributes and hidden
-markup, which is where this kind of thing usually survives a manual sweep.
+Her instruction, verbatim: *"I want the EXACT writing in the EXACT same order
+that is in the document I sent you. Both the messaging and sequence is
+explicitly determined by where my brand is going and directly correlates to
+upcoming expansions. Please do not add extra areas or explanations. Simply use
+what has been provided."*
 
-The page itself exists, unlinked, at `/solve`, `/solve/delegate` and
-`/solve/sponsor`, in the v5 colour system with the real logo, so it can be shown
-to Lynea and switched on the day she approves it. Nothing on the live site
-points to it. To publish: add an entry to `navigation` in `src/data/site.ts`.
-To delete it instead: remove the three routes in `App.tsx`, `src/pages/Solve*`
-and `src/data/solve.ts`.
+So the twelve pages are her twelve, in her order:
 
-Two v5 URGENT items are enforced in `src/data/solve.ts` rather than left to
-memory: **no dates or years appear anywhere** (everything reads "Coming Soon"),
-and **redM is not listed as a founding partner**.
+`Home · Foundation · The Sol Vé Way · Beyond the Occasion · Our Commitments ·
+Sol Vé Principles · Where It Began · What We Create · Signature Experiences ·
+Meet the Founder · Portfolio / Journal · Connect`
 
-**2. The newest document's page order and copy.**
-`Home → Foundation → Commitments → Experiences → Portfolio → Perspectives →
-Press → Connect`, plus `Meet the Founder`, the six division pages, and the
-Mystic Moonlight campaign. The older sitemap's `/about`, `/values`, `/divisions`
-naming was dropped along with its weaker copy.
+**Removed**, because it came from the Creative Direction Manual or Build v5
+rather than from her document: the six division sub-pages, the Press page,
+the Mystic Moonlight page and nav dialog, "What Sol Vé Is", the four-card
+values strip, "Who we are", Mission/Vision/Values, the first-person biography,
+Notable Work, the founder pull-quote, and the homepage sections beneath the
+hero. Her document gives the Home page one block of copy; that is what it has.
 
-**3. Division five's headline.**
-Build v5 gives "World-class production at every scale", but the Manual's own
-forbidden-vocabulary list (9.3) rules out *world-class*. The newer document's
-line is used instead: **"The way leaders gather influences what becomes possible
-together."**
+**Removed, on her explicit instruction:** SOLVÉ Global Summit, in full — the
+page, both forms, its data, colours and assets. `npm run audit` renders every
+route and fails the build if a reference reappears, including in alt text and
+metadata.
 
-**4. Divisions renamed** to the newest document's names — *Design & Stylization,
-Weddings, Signature Moments, Workshops & Curated Experiences, Conferences &
-International Events, Fundraising Campaign Events* — with the older document's
-longer body copy kept where it existed.
+Her brand architecture, in her words, is why the sequence matters:
 
-**5. Community Impact sits outside the three commitment boxes.**
-Lynea asked for three vertical boxes, equal in size and spacing, so that none
-reads as more important. The source document has four commitments. Reconciliation,
-2SLGBTQIA+ and Conservation & Environmental are the three boxes, rendered from a
-single loop with identical markup so they cannot drift out of parity; Community
-Impact is a full-width section below them.
+> There is Sol Vé Custom Events. There is Mystic Moonlight Masquerade Ball &
+> Gala Fundraising Campaign (a production of Sol Vé Custom Events). There is
+> SOLVÉ the branded institution. There is SOLVÉ Global Summit in production.
 
----
-
-**6. One CTA system, one set of division names.**
-Primary CTA is **Begin the Conversation** everywhere — nav, floating rail, hero,
-division pages, 404. Secondary is **Explore Our Experiences**; the portfolio
-link is **View Our Work**. "Begin Your Journey" read wedding-specific for a
-company that also does conferences and fundraising.
-
-The six divisions use one naming system in every surface — nav, homepage cards,
-portfolio filters and titles, page eyebrows, URLs and the enquiry dropdown:
-Design & Stylization · Weddings · Signature Moments · Workshops & Curated
-Experiences · Conferences & International Events · Fundraising Campaign Events.
-`npm run audit` renders every Sol Vé route and fails on any SOLVÉ Global Summit
-reference, including alt text and metadata.
+Nothing in `src/data/content.ts` is invented or paraphrased. Before adding a
+section, check it exists in her document.
 
 ---
 

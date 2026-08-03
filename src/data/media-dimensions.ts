@@ -28,8 +28,6 @@ export const dimensions: Record<string, [number, number]> = {
   'founder-second': [1122, 1402],
   'home-hero': [1600, 1067],
   'home-philosophy': [566, 412],
-  'mystic-hero': [1001, 665],
-  'perspectives-hero': [1600, 1200],
   'portfolio-claudia-ali': [1600, 1067],
   'portfolio-conferences': [815, 662],
   'portfolio-destination': [442, 650],
@@ -43,8 +41,6 @@ export const dimensions: Record<string, [number, number]> = {
   'portfolio-vogue': [470, 577],
   'portfolio-weddings': [442, 632],
   'portfolio-workshops': [892, 667],
-  'press-hero': [1600, 1067],
-  'solve-hero': [562, 561],
 }
 
 export function sizeOf(id: string) {

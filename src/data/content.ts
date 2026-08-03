@@ -22,6 +22,113 @@ export const home = {
 
 
 
+/** "What We Create" — verbatim, in the document's order. */
+export const whatWeCreate = {
+  purposes: [
+    'Some celebrate love.',
+    "Some honour life's defining moments.",
+    'Some inspire learning, creativity, and personal growth.',
+    'Some strengthen organizations and teams.',
+    'Some unite communities around a shared cause.',
+    'Others bring together leaders to shape meaningful change.',
+  ],
+  lead: 'While every experience is unique, each is guided by the same belief:',
+  belief:
+    'We design how people gather because the way people gather shapes everything that follows.',
+  close:
+    'From intimate celebrations to international convenings, Sol Vé creates experiences where people connect more deeply, cultures are celebrated, ideas are exchanged, communities are strengthened, and new possibilities begin.',
+  divisions: [
+    {
+      title: 'Design & Stylization',
+      media: 'division-design-stylization',
+      body: [
+        'Beautiful spaces do more than capture attention—they shape how people experience a gathering.',
+        'Our custom design and stylization services transform ideas into thoughtfully curated environments where every detail serves a purpose. From concept development and décor to floral design, furnishings, lighting, and visual storytelling, we create spaces that reflect your vision while enhancing the experience of every guest.',
+      ],
+    },
+    {
+      title: 'Weddings',
+      media: 'division-weddings',
+      body: [
+        'A wedding is more than a celebration.',
+        "It is the beginning of a family's story.",
+        'We create timeless wedding experiences that honour love, family, culture, and tradition with thoughtful planning, genuine hospitality, and intentional design. Every celebration is crafted to reflect the people at its heart, creating memories that will be treasured for generations.',
+      ],
+    },
+    {
+      title: 'Signature Moments',
+      media: 'division-signature-moments',
+      body: [
+        'Some occasions deserve more than a celebration.',
+        'They deserve to become unforgettable memories.',
+        "Whether marking a milestone, anniversary, gala, private celebration, or life's defining moments, we create bespoke experiences that reflect your story and leave a lasting impression on everyone who shares them.",
+      ],
+    },
+    {
+      title: 'Workshops & Curated Experiences',
+      media: 'division-workshops',
+      body: [
+        'The most meaningful learning happens when people feel inspired to participate.',
+        'We design immersive workshops and curated experiences that encourage creativity, collaboration, wellness, discovery, and authentic human connection. Every experience is thoughtfully developed to foster engagement, meaningful conversation, and lasting impact.',
+      ],
+    },
+    {
+      title: 'Conferences & International Events',
+      media: 'division-conferences',
+      body: [
+        'The way leaders gather influences what becomes possible together.',
+        'From executive retreats and industry conferences to international summits and multi-day experiences, we create environments where ideas become partnerships, conversations become collaboration, and shared purpose inspires meaningful progress.',
+      ],
+    },
+    {
+      title: 'Fundraising Campaign Events',
+      media: 'division-fundraising',
+      body: [
+        'Celebration has the power to strengthen communities.',
+        'We believe fundraising should inspire connection as much as generosity. By thoughtfully bringing together charitable organizations, businesses, artists, sponsors, volunteers, and communities, we create experiences that celebrate purpose, encourage collaboration, and help build sustainable support for causes that create lasting social impact.',
+      ],
+    },
+  ],
+  everyExperience: 'Every experience is uniquely its own.',
+  philosophy: 'We design how people gather.',
+  because: 'Because the way people gather shapes everything that follows.',
+} as const
+
+/** Portfolio / Journal — the document's own categories and requirements. */
+export const portfolio = {
+  categories: [
+    'Weddings',
+    'Signature Moments',
+    'Fundraising Campaigns',
+    'Conferences & Leadership Events',
+    'Design & Stylization',
+    'Workshops & Curated Experiences',
+  ],
+  requirements: [
+    'The purpose',
+    'The story',
+    'The design philosophy',
+    'Professional photography',
+    'Client outcomes (where appropriate)',
+  ],
+  features: [
+    'AVOLA Magazine',
+    'REDTV Canada',
+    'Bridal Fantasy',
+    'Dancing With Her',
+    'Men`s Vow Magazine',
+  ],
+  testimonials: [
+    'Bride & Groom',
+    'Corporate Executive',
+    'Charity Partner',
+    'Performer',
+    'Venue Partner',
+    'Sponsor',
+    'Community Leader',
+  ],
+} as const
+
 export const foundation = {
   headline: 'Every meaningful gathering begins long before people arrive.',
   intro: [

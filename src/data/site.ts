@@ -75,7 +75,7 @@ export const navigation: NavItem[] = [
   { label: 'Our Commitments', to: '/commitments' },
   { label: 'Sol Vé Principles', to: '/principles' },
   { label: 'Where It Began', to: '/where-it-began' },
-  { label: 'What We Create', to: '/what-we-create', children: divisionNav },
+  { label: 'What We Create', to: '/what-we-create' },
   { label: 'Signature Experiences', to: '/signature-experiences' },
   { label: 'Meet the Founder', to: '/founder' },
   { label: 'Portfolio / Journal', to: '/portfolio' },

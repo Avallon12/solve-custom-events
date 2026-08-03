@@ -49,7 +49,7 @@ const socialIcons = {
  * short and draws to full length on hover — opening a charcoal room held by a
  * hairline gold frame, with numbered display links that arrive in sequence.
  */
-export default function Nav({ onOpenMystic }: { onOpenMystic: () => void }) {
+export default function Nav() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const { pathname } = useLocation()
@@ -200,8 +200,7 @@ export default function Nav({ onOpenMystic }: { onOpenMystic: () => void }) {
                 transitionDelay: `${open ? 320 : 0}ms`,
               }}
             >
-              {/* The two actions that used to sit in the bar */}
-              <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+              <div className="flex flex-col gap-3">
                 <Link
                   to="/connect"
                   className="inline-flex min-h-[54px] flex-1 items-center justify-center rounded-[2px] bg-gold px-7 font-ui text-[13px] font-semibold uppercase text-ivory transition-colors duration-300 hover:bg-bronze"
@@ -210,20 +209,6 @@ export default function Nav({ onOpenMystic }: { onOpenMystic: () => void }) {
                   {cta.primary}
                 </Link>
 
-                <button
-                  type="button"
-                  onClick={() => {
-                    setOpen(false)
-                    onOpenMystic()
-                  }}
-                  className="inline-flex min-h-[54px] flex-1 items-center justify-center gap-3 rounded-[2px] border-[1.5px] border-mmm-gold/70 px-6 font-ui text-[12px] font-semibold uppercase text-mmm-gold transition-colors duration-300 hover:bg-mmm-gold/10"
-                  style={{ letterSpacing: '0.5px' }}
-                >
-                  <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-mmm-burgundy">
-                    <span className="font-display text-[11px] leading-none text-mmm-gold">M</span>
-                  </span>
-                  Mystic Moonlight
-                </button>
               </div>
 
               <div className="my-7">

@@ -259,39 +259,11 @@ export const media = {
     caption: 'Fundraising Campaign Events',
   },
 
-  'perspectives-hero': {
-    label: 'Perspectives hero',
-    alt: 'Chairs and tables placed close together before a gathering begins',
-    tone: 'dark',
-    src: '/media/perspectives-hero.webp',
-    creditPending: true,
-  },
-  'press-hero': {
-    label: 'Press hero',
-    alt: 'A Sol Vé production photographed for editorial feature',
-    tone: 'dark',
-    src: '/media/press-hero.webp',
-    creditPending: true,
-  },
   'connect-hero': {
     label: 'Connect hero',
     alt: 'A long dressed table with a linen runner and candlelight, set for conversation',
     tone: 'dark',
     src: '/media/connect-hero.webp',
-    creditPending: true,
-  },
-  'solve-hero': {
-    label: 'SOLVÉ Global Summit hero',
-    alt: 'A gazebo canopied in colourful papel picado with dancers gathered beneath',
-    tone: 'dark',
-    src: '/media/solve-hero.webp',
-    creditPending: true,
-  },
-  'mystic-hero': {
-    label: 'Mystic Moonlight Masquerade hero',
-    alt: 'Performers with illuminated fans and hoops at the Mystic Moonlight Masquerade',
-    tone: 'dark',
-    src: '/media/mystic-hero.webp',
     creditPending: true,
   },
 } satisfies Record<string, MediaSlot>

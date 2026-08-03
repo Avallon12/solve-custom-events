@@ -17,16 +17,11 @@ import BeyondTheOccasion from '../src/pages/BeyondTheOccasion'
 import Principles from '../src/pages/Principles'
 import WhereItBegan from '../src/pages/WhereItBegan'
 import SignatureExperiences from '../src/pages/SignatureExperiences'
-import Experiences from '../src/pages/Experiences'
-import DivisionPage from '../src/pages/DivisionPage'
+import WhatWeCreate from '../src/pages/WhatWeCreate'
 import Founder from '../src/pages/Founder'
 import Portfolio from '../src/pages/Portfolio'
-import Perspectives from '../src/pages/Perspectives'
-import Press from '../src/pages/Press'
 import Connect from '../src/pages/Connect'
-import Mystic from '../src/pages/Mystic'
 import NotFound from '../src/pages/NotFound'
-import { divisions } from '../src/data/divisions'
 
 /** Every Sol Vé route. /solve is excluded — it is the summit's own page. */
 const ROUTES = [
@@ -38,14 +33,10 @@ const ROUTES = [
   '/principles',
   '/where-it-began',
   '/what-we-create',
-  ...divisions.map((d) => `/what-we-create/${d.slug}`),
   '/signature-experiences',
   '/founder',
   '/portfolio',
-  '/perspectives',
-  '/press',
   '/connect',
-  '/mystic',
   '/nowhere',
 ]
 
@@ -64,7 +55,7 @@ const BANNED = [
 function Tree({ path }: { path: string }) {
   return (
     <MemoryRouter initialEntries={[path]}>
-      <Nav onOpenMystic={() => {}} />
+      <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/foundation" element={<Foundation />} />
@@ -74,14 +65,10 @@ function Tree({ path }: { path: string }) {
         <Route path="/principles" element={<Principles />} />
         <Route path="/where-it-began" element={<WhereItBegan />} />
         <Route path="/signature-experiences" element={<SignatureExperiences />} />
-        <Route path="/what-we-create" element={<Experiences />} />
-        <Route path="/what-we-create/:slug" element={<DivisionPage />} />
+        <Route path="/what-we-create" element={<WhatWeCreate />} />
         <Route path="/founder" element={<Founder />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/perspectives" element={<Perspectives />} />
-        <Route path="/press" element={<Press />} />
         <Route path="/connect" element={<Connect />} />
-        <Route path="/mystic" element={<Mystic />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

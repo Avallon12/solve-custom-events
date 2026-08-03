@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
 import Hero from '../components/Hero'
 import Media from '../components/Media'
 import ClosingCTA from '../components/ClosingCTA'
@@ -31,10 +29,7 @@ export default function SignatureExperiences() {
           <div className="grid gap-8 md:grid-cols-2 md:gap-10">
             {divisions.map((division, i) => (
               <Reveal key={division.slug} delay={(i % 2) * 90} className="h-full">
-                <Link
-                  to={`/what-we-create/${division.slug}`}
-                  className="group flex h-full flex-col rounded-[2px] border border-stone/40 bg-ivory p-6 transition-all duration-500 hover:border-bronze hover:shadow-[0_6px_30px_rgba(158,141,111,0.16)] md:p-8"
-                >
+                <div className="group flex h-full flex-col rounded-[2px] border border-stone/40 bg-ivory p-6 transition-all duration-500 hover:border-bronze hover:shadow-[0_6px_30px_rgba(158,141,111,0.16)] md:p-8">
                   <div className="overflow-hidden rounded-[2px]">
                     <Media
                       id={division.media}
@@ -56,17 +51,7 @@ export default function SignatureExperiences() {
                     {division.because}
                   </p>
 
-                  <span
-                    className="mt-auto flex items-center gap-2 pt-8 font-ui text-[11px] uppercase text-espresso"
-                    style={{ letterSpacing: '0.22em' }}
-                  >
-                    Explore this division
-                    <ArrowRight
-                      size={14}
-                      className="transition-transform duration-300 group-hover:translate-x-1"
-                    />
-                  </span>
-                </Link>
+                </div>
               </Reveal>
             ))}
           </div>

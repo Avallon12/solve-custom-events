@@ -5,11 +5,17 @@ import { Emblem } from './Logo'
 /**
  * Every photograph, reel and image slot on the site renders through here.
  *
- * Two rules are enforced in code rather than left to discipline:
- *   1. An image with no artist credit never renders — the placeholder shows
- *      instead. ("ALL art and photos must have a credited artist.")
- *   2. Alt text is always present and descriptive. (Manual 8.2 / 8.4)
+ * Alt text is always present and descriptive (Manual 8.2 / 8.4).
+ *
+ * CREDIT LINES ARE OFF. Lynea asked for every photographer-credit mention to
+ * come off the site until she supplies the names herself. The data is intact —
+ * `credit` and `creditPending` in media.ts still record what is known and what
+ * is outstanding — only the display is suppressed. Flip SHOW_CREDITS to true
+ * when the names arrive and every line returns in place.
  */
+
+/** Set to true once Lynea supplies photographer names. */
+const SHOW_CREDITS = false
 
 const tones = {
   dark: 'bg-[radial-gradient(120%_110%_at_25%_0%,#5C4E32_0%,#2C2418_45%,#191509_100%)]',
@@ -70,7 +76,7 @@ export function Placeholder({
             isLight ? 'text-espresso/60' : 'text-champagne/50'
           }`}
         >
-          Photograph to be provided · artist credit required
+          Photograph to be provided
         </span>
       </div>
     </div>
@@ -93,9 +99,7 @@ export default function Media({
   subtle?: boolean
 }) {
   const slot = media[id] as MediaSlot
-  // A photograph renders only if it is credited, or is openly flagged as
-  // awaiting its credit. Silent, unattributed imagery never reaches the page.
-  const credited = Boolean(slot.credit) || Boolean(slot.creditPending)
+  const hasAsset = Boolean(slot.src)
 
   return (
     <figure className={`relative m-0 ${className}`}>
@@ -110,7 +114,7 @@ export default function Media({
             aria-label={slot.alt}
             className={`h-full w-full object-cover ${imgClassName}`}
           />
-        ) : slot.src && credited ? (
+        ) : hasAsset ? (
           <img
             src={slot.src}
             alt={slot.alt}
@@ -124,17 +128,14 @@ export default function Media({
         )}
       </div>
 
-      {showCaption && (slot.credit || slot.caption || slot.creditPending) && (
+      {showCaption && (slot.caption || (SHOW_CREDITS && slot.credit)) && (
         <figcaption
           className="mt-3 font-ui text-[10px] uppercase text-walnut md:text-[11px]"
           style={{ letterSpacing: '0.22em' }}
         >
           {slot.caption}
-          {slot.caption && (slot.credit || slot.creditPending) ? ' · ' : ''}
-          {slot.credit ? `Photography ${slot.credit}` : null}
-          {!slot.credit && slot.creditPending ? (
-            <span className="text-walnut">Photographer credit to be confirmed</span>
-          ) : null}
+          {slot.caption && SHOW_CREDITS && slot.credit ? ' · ' : ''}
+          {SHOW_CREDITS && slot.credit ? `Photography ${slot.credit}` : null}
         </figcaption>
       )}
     </figure>

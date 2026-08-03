@@ -40,7 +40,16 @@ const ROUTES = [
 ]
 
 /** Case-insensitive; catches alt text, metadata and hidden markup alike. */
-const BANNED = [/solv[ée]\s+global/i, /global\s+summit/i, /\bSOLV[ÉE]\b(?!\s*(Custom|Vé))/]
+const BANNED = [
+  // SOLVÉ Global Summit — off the Sol Vé site until the client says otherwise.
+  /solv[ée]\s+global/i,
+  /global\s+summit/i,
+  /\bSOLV[ÉE]\b(?!\s*(Custom|Vé))/,
+  // Photographer credits — off the site until Lynea supplies the names.
+  /credit to be confirmed/i,
+  /artist credit/i,
+  /photography by/i,
+]
 
 function Tree({ path }: { path: string }) {
   return (
@@ -83,7 +92,7 @@ for (const path of ROUTES) {
 
 console.log(
   failures === 0
-    ? '\nNo SOLVÉ Global Summit reference on any Sol Vé route.'
-    : `\n${failures} route(s) still reference the summit.`,
+    ? '\nClean: no summit reference and no photographer-credit line on any route.'
+    : `\n${failures} route(s) contain banned content.`,
 )
 process.exit(failures === 0 ? 0 : 1)

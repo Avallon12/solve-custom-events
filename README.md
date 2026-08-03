@@ -7,7 +7,7 @@ npm install
 npm run dev      # local preview
 npm run build    # type-check + production build
 npm run smoke    # renders every route and reports failures
-npm run audit    # fails if SOLVÉ Global Summit appears on any Sol Vé route
+npm run audit    # fails on summit references or photographer-credit lines
 npm run lint
 ```
 
@@ -89,14 +89,18 @@ that PDF, so they were extracted at full resolution and placed in the exact
 slots Lynea assigns them. The rest came from solvecustomevents.com. All of it is
 re-encoded to WebP (3 MB for the whole site) and defined once in `media.ts`.
 
-**What still needs doing: the photographer names.** Only six files on the old
-site name their photographer, in the filename — those are credited to *Mike
-Hopkins Photography, 2019*. The rest carry no attribution anywhere, so they are
-marked `creditPending: true` and render with a visible line beneath them:
-*"Photographer credit to be confirmed."* Lynea's instruction was "ALL art and
-photos must have a credited artist (If it is not known, please ask)" — so the
-site asks, in public, until the names arrive. Replace each `creditPending: true`
-with `credit: 'by …'` as they are confirmed.
+**Credit lines are switched off.** Lynea asked for every photographer-credit
+mention to come off the site until she supplies the names herself. The display
+is gated behind `SHOW_CREDITS` in `src/components/Media.tsx`, currently `false`.
+
+The data is intact. `creditPending: true` still records which photographs are
+waiting on a name, and one photograph — the Mike Hopkins frame on *Where It
+Began*, credited from its own filename — still carries a real `credit`. Nothing
+was deleted, only hidden.
+
+When the names arrive: fill in `credit: 'by …'` on each slot, flip
+`SHOW_CREDITS` to `true`, and remove the credit patterns from
+`scripts/audit.tsx`. Every line returns in place.
 
 ```ts
 'home-hero': {
@@ -160,8 +164,8 @@ that made it "lost and irrelevant".
   project to carry its purpose, story, design philosophy, photography and client
   outcome. The gallery is in place; the written detail per project is not,
   because none was supplied.
-- **Photographer names** for the 22 photographs currently marked
-  `creditPending` (see section 1)
+- **Photographer names** for the photographs marked `creditPending` — credit
+  lines stay hidden site-wide until they arrive (see section 1)
 - Mystic Moonlight Masquerade photography — lion dancers, performers, event scenes
 - Press and publication article links, award imagery
 - Confirmation of the two unnamed publications and the "Best Decoration" award body

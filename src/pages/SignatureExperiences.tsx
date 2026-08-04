@@ -2,7 +2,7 @@ import Hero from '../components/Hero'
 import Media from '../components/Media'
 import ClosingCTA from '../components/ClosingCTA'
 import { Container, Display, Eyebrow, Reveal, Section } from '../components/primitives'
-import { divisions } from '../data/divisions'
+import { experiences as divisions } from '../data/experiences'
 import { usePageMeta } from '../lib/meta'
 
 /**
@@ -44,7 +44,7 @@ export default function SignatureExperiences() {
                   </Display>
 
                   <p className="mt-4 font-body text-[18px] leading-relaxed text-espresso">
-                    {division.oneLine}
+                    {division.tagline}
                   </p>
 
                   <p className="mt-4 font-body text-[17px] font-medium leading-relaxed text-charcoal">

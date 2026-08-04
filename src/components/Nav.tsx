@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { Mail, Phone } from 'lucide-react'
+import { ChevronDown, Mail, Phone } from 'lucide-react'
 import Logo from './Logo'
 import { FacebookIcon, InstagramIcon, LinkedInIcon } from './BrandIcons'
 import { GoldRule, Ornament } from './primitives'
-import { contact, cta, divisionNav, navigation, socials } from '../data/site'
+import { contact, cta, divisionNav, header, navigation, socials } from '../data/site'
 
 /**
  * Computed rather than listed — a hard-coded array ran out at VIII the moment a
@@ -51,10 +51,23 @@ const socialIcons = {
  */
 export default function Nav() {
   const [open, setOpen] = useState(false)
+  const [openMenu, setOpenMenu] = useState<string | null>(null)
   const [scrolled, setScrolled] = useState(false)
+  const closeTimer = useRef<number | undefined>(undefined)
   const { pathname } = useLocation()
 
-  useEffect(() => setOpen(false), [pathname])
+  useEffect(() => {
+    setOpen(false)
+    setOpenMenu(null)
+  }, [pathname])
+
+  const hoverOpen = (label: string) => {
+    window.clearTimeout(closeTimer.current)
+    setOpenMenu(label)
+  }
+  const hoverClose = () => {
+    closeTimer.current = window.setTimeout(() => setOpenMenu(null), 160)
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12)
@@ -71,7 +84,11 @@ export default function Nav() {
   }, [open])
 
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false)
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== 'Escape') return
+      setOpen(false)
+      setOpenMenu(null)
+    }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [])
@@ -111,6 +128,64 @@ export default function Nav() {
               </span>
             </button>
           </div>
+          {/*
+            The client's six header sections, each with a dropdown. Desktop
+            only; the full-screen menu carries everything at narrow widths.
+          */}
+          <nav
+            aria-label="Sections"
+            className="hidden border-t border-stone/30 lg:block"
+            onMouseLeave={hoverClose}
+          >
+            <div className="mx-auto flex max-w-[1440px] items-stretch justify-center gap-1 px-5 md:px-10 lg:px-14">
+              {header.map((item) => (
+                <div
+                  key={item.label}
+                  className="relative"
+                  onMouseEnter={() => hoverOpen(item.label)}
+                >
+                  <Link
+                    to={item.to}
+                    onFocus={() => hoverOpen(item.label)}
+                    aria-expanded={openMenu === item.label}
+                    className={`flex items-center gap-1.5 px-4 py-4 font-ui text-[11px] uppercase transition-colors duration-300 xl:text-[12px] ${
+                      pathname.startsWith(item.to) ? 'text-gold' : 'text-charcoal hover:text-gold'
+                    }`}
+                    style={{ letterSpacing: '0.18em' }}
+                  >
+                    {item.label}
+                    <ChevronDown
+                      size={12}
+                      className={`transition-transform duration-300 ${
+                        openMenu === item.label ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </Link>
+
+                  <div
+                    className={`absolute left-1/2 top-full z-50 w-[300px] -translate-x-1/2 transition-all duration-300 ${
+                      openMenu === item.label
+                        ? 'pointer-events-auto translate-y-0 opacity-100'
+                        : 'pointer-events-none -translate-y-2 opacity-0'
+                    }`}
+                  >
+                    <div className="border border-stone/40 bg-ivory p-2 shadow-[0_18px_50px_rgba(36,34,22,0.14)]">
+                      {item.children?.map((child) => (
+                        <Link
+                          key={child.to}
+                          to={child.to}
+                          className="block px-4 py-2.5 font-body text-[16px] leading-snug text-charcoal transition-colors duration-200 hover:bg-linen/60 hover:text-espresso"
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </nav>
+
           <GoldRule />
         </div>
       </header>

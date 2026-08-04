@@ -12,6 +12,12 @@ import Principles from './pages/Principles'
 import WhereItBegan from './pages/WhereItBegan'
 import WhatWeCreate from './pages/WhatWeCreate'
 import SignatureExperiences from './pages/SignatureExperiences'
+import Divisions from './pages/Divisions'
+import DivisionPage from './pages/DivisionPage'
+import ServiceCapabilities from './pages/ServiceCapabilities'
+import Perspectives from './pages/Perspectives'
+import Features from './pages/Features'
+import Testimonials from './pages/Testimonials'
 import Founder from './pages/Founder'
 import Portfolio from './pages/Portfolio'
 import Connect from './pages/Connect'
@@ -57,6 +63,14 @@ function Shell() {
           <Route path="/where-it-began" element={<WhereItBegan />} />
           <Route path="/what-we-create" element={<WhatWeCreate />} />
           <Route path="/signature-experiences" element={<SignatureExperiences />} />
+
+          {/* The six header sections */}
+          <Route path="/service-capabilities" element={<ServiceCapabilities />} />
+          <Route path="/divisions" element={<Divisions />} />
+          <Route path="/divisions/:slug" element={<DivisionPage />} />
+          <Route path="/perspectives" element={<Perspectives />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/founder" element={<Founder />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/connect" element={<Connect />} />

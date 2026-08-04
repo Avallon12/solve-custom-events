@@ -126,7 +126,7 @@ export default function Commitments() {
       </Section>
 
       {/* Community Impact — its own section, outside the three */}
-      <Section tone="charcoal">
+      <Section tone="charcoal" id="community">
         <div className="grain absolute inset-0 opacity-45" />
         <Container className="relative z-10">
           <div className="grid gap-12 lg:grid-cols-[40fr_60fr] lg:gap-20">

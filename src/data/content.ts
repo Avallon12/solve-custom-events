@@ -232,13 +232,17 @@ export const commitments = {
     {
       id: 'inclusion',
       label: '2SLGBTQIA+',
-      title: 'Inclusivity & Belonging',
-      lead: 'We believe every person deserves to feel genuinely welcomed.',
+      title: 'Belonging for All',
+      lead: 'We believe every person deserves to experience genuine belonging and be welcomed with dignity.',
       body: [
-        'From the very beginning, Sol Vé has been founded on a simple belief: everyone should be welcomed with open arms. That belief continues to guide every experience we create, every relationship we build, and every space we are entrusted to design.',
-        'Sol Vé Custom Events emphatically affirms our unwavering support for Two-Spirit, Lesbian, Gay, Bisexual, Transgender, Queer and/or Questioning, Intersex, Asexual, and all sexually and gender-diverse communities (2SLGBTQIA+). We are committed to providing experiences, services, and environments that are welcoming, respectful, and safe for 2SLGBTQIA+ individuals, their families, and their allies.',
-        'We are deeply troubled that harassment, discrimination, prejudice, and bigotry related to gender identity, gender expression, and sexual orientation continue to cause harm in our communities. We believe every person deserves to live, celebrate, and gather free from discrimination, with the dignity and respect afforded to all.',
-        'Sol Vé Custom Events is a company for all people. We celebrate the richness of humanity by welcoming people of every culture, heritage, identity, ability, age, faith, family structure, lived experience, perspective, gender identity, and sexual orientation.',
+        'From the very beginning, Sol Vé has been founded on a simple belief: belonging is for all. That belief continues to guide every experience we create, every relationship we build, and every space we are entrusted to design.',
+        'We proudly stand alongside Two-Spirit (an identity recognized by some Indigenous Peoples in North America), Lesbian, Gay, Bisexual, Transgender, Queer and/or Questioning, Intersex, Asexual, and all sexually and gender-diverse communities (2SLGBTQIA+), people with disabilities, Indigenous Peoples, and people of every culture, ethnicity, heritage, nationality, language, and lived experience. Every person deserves the opportunity to live, work, celebrate, and gather with dignity, respect, equal opportunity, and a genuine sense of belonging.',
+        'Inclusivity, equality, dignity, respect, and love are not simply values we speak about: they are commitments we strive to demonstrate through our actions, our partnerships, and every experience we create.',
+        'Sol Vé Custom Events emphatically affirms our unwavering support for Two-Spirit, Lesbian, Gay, Bisexual, Transgender, Queer and/or Questioning, Intersex, Asexual, and all sexually and gender-diverse communities (2SLGBTQIA+). We are equally committed to creating welcoming, respectful, accessible, inclusive, and psychologically safe environments for people of every ability, disability, culture, ethnicity, heritage, nationality, language, identity, faith, age, family structure, socioeconomic background, and lived experience, together with their families, friends, colleagues, and allies.',
+        'While meaningful progress continues to be made, prejudice, discrimination, harassment, exclusion, and systemic barriers still affect many individuals and communities. We reject discrimination in all its forms and are committed to creating experiences where diversity is celebrated, barriers are thoughtfully reduced wherever reasonably possible, and every individual feels seen, heard, respected, valued, welcomed, and free to be their authentic self.',
+        'Accessibility, inclusion, and belonging are never afterthoughts: they are thoughtfully considered from the very beginning of every experience we create. We continually seek opportunities to identify and reduce barriers so that more people can participate fully, comfortably, and with dignity.',
+        'We are equally committed to building lasting relationships with like-minded individuals, businesses, organizations, artists, community groups, and partners who share our belief that kindness, collaboration, equity, accessibility, and mutual respect create stronger experiences for everyone.',
+        'As Sol Vé continues to grow across communities, cultures, and countries, we remain committed to listening, learning, evolving, and creating environments where every person feels they belong.',
       ],
       close: 'Because the most meaningful gatherings are the ones where everyone belongs.',
     },
@@ -279,26 +283,47 @@ export const commitments = {
 
 
 export const founder = {
-  headline: 'Behind every extraordinary event is an extraordinary vision.',
-  subheadline: 'Lynea Vaugeois Hetherington, Founder and Creative Director, Sol Vé Custom Events.',
-  opening: [
-    'Some people see events as occasions.',
-    'Lynea Vaugeois Hetherington has always seen them as opportunities.',
-  ],
+  headline: 'Meet Lynea',
+  subheadline: 'Lynea Vaugeois Hetherington, Founder, Sol Vé Custom Events.',
+  opening: ['Some people see events as occasions.'],
+  emphasis: 'Lynea Vaugeois Hetherington has always seen them as opportunities.',
   body: [
     'An opportunity to strengthen relationships. To celebrate culture. To honour tradition. To inspire collaboration. To create belonging. To bring people together in ways that continue to influence lives long after the gathering has ended.',
-    'As the Founder of Sol Vé Custom Events, Lynea has spent her career exploring a simple but enduring idea: the way people gather shapes everything that follows.',
-    "That belief has guided every chapter of Sol Vé's evolution. What began with thoughtfully designed celebrations grew into an experience and hospitality house founded on intentional gathering, genuine hospitality, and the belief that thoughtfully designed experiences can influence individuals, organizations, and communities alike.",
-    'Over the years, that philosophy has found expression in many forms — from weddings and signature celebrations to workshops, philanthropic initiatives, and international convenings. Each serves a different purpose, yet all are guided by the same commitment: creating environments where people feel welcomed, valued, and inspired to contribute something meaningful.',
-    'For Lynea, thoughtful design has never been solely about aesthetics. It is about stewardship.',
-    'Every gathering represents a moment of trust. A family entrusts the beginning of a marriage. An organization entrusts its vision. A community entrusts its hopes. A charitable partner entrusts its mission. Every experience deserves to be approached with care, humility, craftsmanship, and respect for the people it is intended to serve.',
-    'This philosophy ultimately led to the creation of initiatives such as the Mystic Moonlight Masquerade Fundraising Campaign. Different expressions. One enduring belief.',
-    'Today, Lynea continues to steward Sol Vé with the same curiosity that inspired it from the beginning — always asking what becomes possible when people choose to come together with intention.',
+    'As the Founder of Sol Vé Custom Events, Lynea has spent her career exploring a simple but enduring idea:',
   ],
-  close: 'Because every meaningful gathering is an opportunity to shape everything that follows.',
-  quote:
-    'I got tired of watching extraordinary organizations fight for visibility alone. Sol Vé exists because the most important things in this city, the causes, the stories, the people, deserve a stage that matches them. We build that stage.',
-  quoteAttribution: 'Lynea Vaugeois Hetherington, Founder, Sol Vé Custom Events',
+  idea: 'The way people gather shapes everything that follows.',
+  body2: [
+    "That belief has guided every chapter of Sol Vé's evolution. What began as a boutique event planning company has grown into an experience and hospitality practice founded on intentional gathering, thoughtful design, genuine hospitality, and the belief that meaningful experiences have the power to strengthen individuals, organizations, communities, and the relationships between them.",
+    'Throughout her life, Lynea has been continually reminded that the moments people remember most are rarely defined by perfection. They are defined by how welcomed they felt, how they were treated, and whether they felt they truly belonged. Those experiences continue to shape both her leadership and the way every experience entrusted to Sol Vé is approached.',
+    "Over the years, Lynea has had the privilege of walking alongside couples, families, business leaders, charitable organizations, community groups, and institutions during some of life's most meaningful moments. Every gathering has had its own purpose, yet each has reinforced the same belief: when people feel welcomed, respected, and valued, extraordinary things become possible.",
+  ],
+  trust: {
+    title: 'Every Gathering Represents a Moment of Trust',
+    entrusts: [
+      'A couple entrusts the beginning of a marriage.',
+      'A family entrusts a once in a lifetime celebration.',
+      'An organization entrusts its vision.',
+      'A charitable partner entrusts its mission.',
+      'A government, corporation, or institution entrusts the environment where important conversations, relationships, and decisions may take shape.',
+    ],
+    body: [
+      'Lynea believes that trust should never be taken for granted.',
+      'Every experience deserves to be approached with professionalism, humility, craftsmanship, creativity, and genuine care for the people it is intended to serve.',
+      'For Lynea, thoughtful design has never been solely about aesthetics.',
+      'It is about stewardship.',
+      'It is about understanding the purpose of a gathering before shaping the experience itself.',
+      'It is about creating environments where people feel comfortable contributing their ideas, celebrating their milestones, strengthening relationships, and building community.',
+      'That philosophy has inspired initiatives such as the Mystic Moonlight Masquerade Fundraising Campaign and continues to shape the broader vision for Sol Vé as an organization dedicated to creating experiences that encourage collaboration, generosity, celebration, learning, and meaningful human connection.',
+      'Today, Lynea continues to lead Sol Vé with quiet confidence, thoughtful curiosity, and an unwavering commitment to excellence. Whether partnering with private clients, businesses, charitable organizations, governments, or international institutions, her approach remains grounded in the same enduring question that first inspired her work:',
+    ],
+    question:
+      'How do we create an environment where every person feels welcomed, valued, and inspired to contribute something meaningful?',
+    after: [
+      'It is a question that continues to guide every conversation, every partnership, and every gathering entrusted to Sol Vé.',
+    ],
+    close:
+      'Because every meaningful gathering is an opportunity to strengthen relationships, create belonging, and shape everything that follows.',
+  },
 } as const
 
 export type Perspective = {

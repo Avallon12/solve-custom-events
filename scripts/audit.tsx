@@ -17,6 +17,13 @@ import BeyondTheOccasion from '../src/pages/BeyondTheOccasion'
 import Principles from '../src/pages/Principles'
 import WhereItBegan from '../src/pages/WhereItBegan'
 import SignatureExperiences from '../src/pages/SignatureExperiences'
+import Divisions from '../src/pages/Divisions'
+import DivisionPage from '../src/pages/DivisionPage'
+import ServiceCapabilities from '../src/pages/ServiceCapabilities'
+import Perspectives from '../src/pages/Perspectives'
+import Features from '../src/pages/Features'
+import Testimonials from '../src/pages/Testimonials'
+import { experiences } from '../src/data/experiences'
 import WhatWeCreate from '../src/pages/WhatWeCreate'
 import Founder from '../src/pages/Founder'
 import Portfolio from '../src/pages/Portfolio'
@@ -34,6 +41,12 @@ const ROUTES = [
   '/where-it-began',
   '/what-we-create',
   '/signature-experiences',
+  '/service-capabilities',
+  '/divisions',
+  ...experiences.map((e) => `/divisions/${e.slug}`),
+  '/perspectives',
+  '/features',
+  '/testimonials',
   '/founder',
   '/portfolio',
   '/connect',
@@ -65,6 +78,12 @@ function Tree({ path }: { path: string }) {
         <Route path="/principles" element={<Principles />} />
         <Route path="/where-it-began" element={<WhereItBegan />} />
         <Route path="/signature-experiences" element={<SignatureExperiences />} />
+        <Route path="/service-capabilities" element={<ServiceCapabilities />} />
+        <Route path="/divisions" element={<Divisions />} />
+        <Route path="/divisions/:slug" element={<DivisionPage />} />
+        <Route path="/perspectives" element={<Perspectives />} />
+        <Route path="/features" element={<Features />} />
+        <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/what-we-create" element={<WhatWeCreate />} />
         <Route path="/founder" element={<Founder />} />
         <Route path="/portfolio" element={<Portfolio />} />

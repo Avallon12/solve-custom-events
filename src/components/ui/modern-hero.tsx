@@ -88,16 +88,42 @@ function Hero({
   centre: MediaId
   frames: readonly Frame[]
 }) {
+  const wrapRef = useRef<HTMLDivElement | null>(null)
+  // How far the centre photograph stays pinned before it un-sticks: the
+  // section's real height, not the 4-frame constant — otherwise the backdrop
+  // dissolves early and the remaining frames drift over bare ivory.
+  const [runway, setRunway] = useState(SECTION_HEIGHT)
+
+  useEffect(() => {
+    const el = wrapRef.current
+    if (!el) return
+    const measure = () =>
+      setRunway(Math.max(SECTION_HEIGHT, el.offsetHeight - window.innerHeight))
+    measure()
+    const observer = new ResizeObserver(measure)
+    observer.observe(el)
+    window.addEventListener('resize', measure)
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('resize', measure)
+    }
+  }, [])
+
   return (
     // minHeight, not height: the frame stack defines the true height, so more
     // frames lengthen the drift instead of spilling over whatever follows.
-    <div style={{ minHeight: `calc(${SECTION_HEIGHT}px + 100vh)` }} className="relative w-full">
+    <div
+      ref={wrapRef}
+      style={{ minHeight: `calc(${SECTION_HEIGHT}px + 100vh)` }}
+      className="relative w-full"
+    >
       <CentreFrame
         eyebrow={eyebrow}
         headline={headline}
         subheadline={subheadline}
         actions={actions}
         centre={centre}
+        fadeAt={runway}
       />
 
       <ParallaxFrames frames={frames} />
@@ -113,12 +139,14 @@ function CentreFrame({
   subheadline,
   actions,
   centre,
+  fadeAt,
 }: {
   eyebrow: string
   headline: React.ReactNode
   subheadline?: string
   actions?: React.ReactNode
   centre: MediaId
+  fadeAt: number
 }) {
   const { scrollY } = useScroll()
   const inset = useFrameInset()
@@ -133,7 +161,7 @@ function CentreFrame({
   // scroll frame — the main cause of the stutter. An equivalent `scale` on a
   // child layer is handled by the compositor and costs nothing per frame.
   const scale = useTransform(scrollY, [0, SECTION_HEIGHT + 500], [1.7, 1])
-  const opacity = useTransform(scrollY, [SECTION_HEIGHT, SECTION_HEIGHT + 500], [1, 0])
+  const opacity = useTransform(scrollY, [fadeAt, fadeAt + 500], [1, 0])
 
   // The type holds while the frame opens, then leaves before the images arrive.
   const copyOpacity = useTransform(scrollY, [0, 520, 760], [1, 1, 0])

@@ -1,51 +1,90 @@
-# Sol Vé Custom Events — Website
+# Sol Vé Custom Events — website
 
-Static site built exactly to the **Sol Vé Website Build Instructions v5.0** (July 12, 2026, prepared by Rida Ghani on behalf of Lynea Vaugeois Hetherington).
-
-## Run locally
+Static site. No build step beyond one Python script, no dependencies to install, no
+framework. Every page is generated; nothing is hand-edited in an `index.html`.
 
 ```bash
-python3 -m http.server 8080
+python3 build_site.py        # regenerate every page + sitemap.xml
+python3 check_site.py        # the delivery gate — must exit 0 before shipping
+python3 -m http.server 8899  # preview at http://localhost:8899
 ```
 
-Then open http://localhost:8080. The site uses root-relative URLs (`/css/...`, `/solve/`), so it must be served — do not open the HTML files directly from disk.
+The site uses root-relative URLs, so it must be served — opening the HTML from disk
+will not load the CSS.
 
-## Structure
+## Where things are
 
-| Path | Page |
+| Path | What it is |
 |---|---|
-| `/` | Homepage (values section, six divisions, SOLVÉ banner, portfolio, press, founder quote) |
-| `/about/` | Who we are + Meet Lynea (exact copy from solvecustomevents.com/about) |
-| `/values/` | Land Acknowledgement, Diversity/Inclusion/Belonging, 2SLGBTQIA+ Inclusion |
-| `/divisions/` | Divisions overview |
-| `/divisions/{event-design,weddings,signature-moments,workshops,conferences,fundraising}/` | Six division pages |
-| `/divisions/{proposals,retreats}/` | Redirects to the renamed v5 slugs |
-| `/solve/` | SOLVÉ Global Summit (Far Blue #0E2447 theme, no dates — Coming Soon only) |
-| `/solve/delegate/` `/solve/sponsor/` | Delegate interest + sponsorship inquiry forms |
-| `/mystic/` | MMM full page (Deep Burgundy/MMM Gold theme, Stand With Humanity) |
-| `/portfolio/` | Filterable gallery with lightbox |
-| `/press/` | Press, Publications and Awards |
-| `/contact/` | Contact form (v5 field set) |
+| `content.py` | **All site copy**, verbatim from the client's messaging PDF. Edit words here. |
+| `build_site.py` | The generator: templates, page assembly, routes, redirects. |
+| `check_site.py` | The delivery gate. Eleven rules, each one a client requirement. |
+| `design.md` | The design system, and the reasoning behind it. Read before changing CSS. |
+| `tokens.css` | Colour, type scale, spacing, motion tokens. |
+| `css/styles.css` | Components. |
+| `js/main.js` | Menu, dialogs, reveals, film, lightbox, filters, forms. |
+| `assets/photos/manifest.json` | **Source of truth for imagery.** Nothing publishes without a credit. |
+| `tools/import_photos.py` | Import client photography from the drop folder. |
+| `tools/import_film.py` | Encode client footage to mp4 + webm with a poster frame. |
 
-Shared assets: `tokens.css` (locked design tokens — every color, font, and duration lives here), `css/styles.css` (component styles referencing tokens only), `js/main.js` (nav, MMM popup, lightbox, portfolio filters, forms), `assets/` (WebP images: Sol Vé logo, MMM logo, Lynea portrait, SOLVÉ five-pillars banner).
+## Adding photographs
 
-**`build_site.py` is the single source of truth for every page.** All v5 copy lives in it verbatim. Edit it and re-run `python3 build_site.py` rather than editing HTML by hand.
+1. Drop originals into `assets/photos/incoming/<division>/` — at least 2000px on the
+   long edge.
+2. Optionally add a `credits.txt` beside them: `filename.jpg = Photographer Name`
+3. Run `python3 tools/import_photos.py`
+4. Run `python3 build_site.py && python3 check_site.py`
 
-The MMM item in the navigation is the MMM logo (not text) and opens the campaign popup with the MMM website and Eventbrite ticket links, per v5 Section 0 / Page 12.
+Anything without a photographer's name is imported but **held unpublished** and listed
+in `CREDITS-NEEDED.md`. Add the name, re-run, and it goes live. Until then a composed
+reserved plate stands in its place.
 
-## Design discipline
+This is deliberate: every photograph and artwork on the site carries a named artist.
 
-The locked design system lives in **`design.md`** (2026-08 redesign per Lynea's feedback email: grand two-tier masthead with large logo, per-page contact button, socials + LinkedIn site-wide, credited photography, equal-triad Values layout, cinematic crossfade hero). The build follows the [Hallmark](https://github.com/nutlope/hallmark) anti-AI-slop design skill: locked tokens, one orchestrated hero entrance, honest captions (stock stand-ins are labelled "Style reference"), `minmax(0, 1fr)` grid tracks, no-wrap CTAs, typographic apostrophes. Where Hallmark and the v5 build document conflict, **the document wins** — it is the binding client spec. v5 contrast law is enforced: light text only on dark grounds (#242216, #0E2447, #5B1020), dark text only on ivory; 1px gold hairlines between sections; gold borders on all cards. Run history lives in `.hallmark/log.json`.
+## Adding film
 
-## Items requiring assets or action before launch (v5 Section 16)
+Drop clips into `assets/film/incoming/`, name the videographer in a `credits.txt`
+there, then `python3 tools/import_film.py`. Requires `ffmpeg`.
 
-- **Photographer credits (client action):** Every image now carries a visible credit slot. All Sol Vé photographs currently read "Photography credit to be confirmed" — Lynea to supply the photographer name for each image in `assets/photos/` (see the PHOTO CREDIT list in the delivery email). Division-page heroes are labelled "Style reference" stock and are to be replaced with category-relevant Sol Vé photography once Lynea provides access.
-- **Reels / video:** The homepage hero is a CSS cinematic crossfade of four Sol Vé stills. When real reels arrive, drop a `<video>` element into `.hero-film-frames` (see the comment in `build_site.py` HOME).
-- **Social URLs:** Instagram/Facebook/Pinterest verified from the live site; LinkedIn is Lynea's personal profile — confirm with Lynea whether a company LinkedIn page should be used instead (`SOCIALS` in `build_site.py`).
-- **Photography:** Homepage hero, philosophy image, division pages, and portfolio use Sol Vé stills / labelled stock until Lynea provides final photography.
-- **"Resourcing the Fight" quote photo:** v5 says the SOLVÉ hero headline must be replaced with Lynea's photographed quote. That image was not among the delivered assets — the text headline stands in; swap it into `.solve-hero` when received.
-- **5-emoji photo placement:** Currently placed inside the "Who This Is For" section on `/solve/` (one of the two positions v5 allows). Confirm placement with Lynea.
-- **Press/award links:** Bridal Fantasy, Men's Vow Magazine, Dance BBG, AVOLA links and award images to be provided by Lynea.
-- **Form backend:** Forms show the specified inline confirmations. Wire the `<form>` elements to a form endpoint that routes to **lynea@solvecustomevents.com only** (v5 URGENT — not Rida, not any other email), and connect a CRM (v5 recommends HubSpot free tier; confirm platform with Lynea).
-- **Performance:** All local images are WebP. After deploy, run [PageSpeed Insights](https://pagespeed.web.dev) against the live URL and fix any critical issues.
-- **Sitemap:** `sitemap.xml` is ready; submit it to Google Search Console after deploy.
+## The delivery gate
+
+`check_site.py` fails the build on any of:
+
+1. an image that is unregistered, uncredited, unapproved, or has no alt attribute
+2. an internal link that does not resolve
+3. an external link that does not answer (`--skip-external` to skip when offline)
+4. adjective-selling — *luxury, world-class, opulent, high-end*
+5. any surviving SOLVÉ Global Summit reference outside the redirect stubs
+6. placeholder text (`credit to be confirmed`, `pending confirmation`, …)
+7. a page without a contact button in the masthead and a contact route in the footer
+8. an image too low-resolution for the role it is filling
+9. a LinkedIn URL that is a personal profile rather than the company page
+10. a `lynea@` address on a public page
+11. a video without a poster frame or a credited videographer
+
+Rules 1, 7, 9 and 10 exist because they were explicitly asked for. Rule 8 exists
+because a 442×650 photograph was being stretched across the homepage.
+
+## Known outstanding
+
+- **`content.py` → `LINKEDIN_URL`** is a placeholder. The build intentionally fails
+  rule 9 until the Sol Vé Custom Events company page URL replaces it. That is what
+  stops the personal profile shipping again.
+- Photography and film: all plates are currently reserved, awaiting client assets.
+- The logo is a 287×200 raster. Fine at the sizes used, but a vector (SVG/AI/EPS) is
+  needed before it can be set any larger.
+- Testimonial quotes: seven role slots are reserved in `content.py`.
+
+## Routes
+
+`/` · `/foundation/` · `/values/` (Our Commitments) · `/divisions/` (What We Create)
+· six division pages · `/portfolio/` · `/journal/` + seven essays · `/about/`
+· `/press/` · `/contact/` · `/mystic/`
+
+Redirects kept alive: `/solve/`, `/solve/delegate/`, `/solve/sponsor/` →
+`/divisions/conferences/`; `/divisions/proposals/` → `/divisions/signature-moments/`;
+`/divisions/retreats/` → `/divisions/workshops/`.
+
+**SOLVÉ Global Summit is off the site** per the client's messaging PDF, until it has
+finalized positioning, identity, messaging, governance, website and launch strategy.
+The code is parked behind `SOLVE_ENABLED = False` in `build_site.py`.

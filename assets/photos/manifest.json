@@ -1,0 +1,641 @@
+{
+  "_README": [
+    "Single source of truth for every image on the site.",
+    "",
+    "An image is PUBLISHED only when it has:  approved: true  AND  a non-empty credit.",
+    "check_site.py fails the build on any image referenced in HTML that does not meet",
+    "both conditions. This is what enforces the client rules:",
+    "  - professional photography only",
+    "  - every photograph and artwork carries a named artist",
+    "",
+    "status values:",
+    "  published  - approved, credited, live on the site",
+    "  held       - the file is fine, but the photographer's name is unknown.",
+    "               Listed in CREDITS-NEEDED.md. Publishes the moment a name lands.",
+    "  retired    - will not ship. See 'reason'.",
+    "",
+    "Add new images with tools/import_photos.py; do not hand-edit the entries it writes."
+  ],
+  "_rules": {
+    "min_long_edge": 2000,
+    "min_upscale_ratio": 1.5,
+    "allowed_categories": [
+      "event-design",
+      "weddings",
+      "signature-moments",
+      "workshops",
+      "conferences",
+      "fundraising",
+      "founder",
+      "mmm",
+      "brand"
+    ]
+  },
+  "brand": {
+    "assets/solve-logo.webp": {
+      "status": "published",
+      "category": "brand",
+      "credit": "Sol Vé Custom Events",
+      "approved": true,
+      "alt": "",
+      "decorative": true,
+      "intrinsic": [
+        287,
+        200
+      ],
+      "note": "Raster at 287x200. Fine at the sizes it is used, but it cannot be enlarged into a full crest without going soft — the wordmark beside it is set in Bodoni Moda for that reason. Replace with a vector (SVG/AI/EPS) when the client supplies one."
+    },
+    "assets/mmm-logo.webp": {
+      "status": "published",
+      "category": "brand",
+      "credit": "Sol Vé Custom Events",
+      "approved": true,
+      "alt": "Mystic Moonlight Masquerade",
+      "intrinsic": [
+        500,
+        172
+      ]
+    },
+    "assets/guilloche.svg": {
+      "status": "published",
+      "category": "brand",
+      "credit": "Sol Vé Custom Events",
+      "approved": true,
+      "alt": "",
+      "decorative": true,
+      "note": "Engine-turned rosette generated for this site — the guilloché device. Not a photograph."
+    },
+    "assets/guilloche-band.svg": {
+      "status": "published",
+      "category": "brand",
+      "credit": "Sol Vé Custom Events",
+      "approved": true,
+      "alt": "",
+      "decorative": true,
+      "note": "Linear engine-turn band, generated for this site."
+    }
+  },
+  "photography": {
+    "assets/photos/mystic-threads.webp": {
+      "status": "held",
+      "category": "mmm",
+      "credit": "",
+      "approved": false,
+      "alt": "An illuminated feathered masquerade headdress",
+      "intrinsic": [
+        1536,
+        1024
+      ],
+      "reason": "Photographer unknown. Best-resolution asset on the site; publishes as soon as a name arrives."
+    },
+    "assets/photos/mmm-campaign.webp": {
+      "status": "held",
+      "category": "mmm",
+      "credit": "",
+      "approved": false,
+      "alt": "Performers in luminous costumes at the Mystic Moonlight Masquerade",
+      "intrinsic": [
+        1001,
+        665
+      ],
+      "reason": "Photographer unknown, and under the 2000px minimum. Needs a name and the original file."
+    },
+    "assets/photos/mystic-mingle.webp": {
+      "status": "held",
+      "category": "mmm",
+      "credit": "",
+      "approved": false,
+      "alt": "Lion-dance performers at Mystic Mingle",
+      "intrinsic": [
+        862,
+        592
+      ],
+      "reason": "Photographer unknown, and under the 2000px minimum."
+    },
+    "assets/photos/multicultural-weddings.webp": {
+      "status": "held",
+      "category": "weddings",
+      "credit": "",
+      "approved": false,
+      "alt": "Gold-foiled multicultural wedding invitations styled with candles",
+      "intrinsic": [
+        992,
+        656
+      ],
+      "reason": "Photographer unknown, and under the 2000px minimum."
+    },
+    "assets/photos/founder-portrait.webp": {
+      "status": "held",
+      "category": "founder",
+      "credit": "",
+      "approved": false,
+      "alt": "Lynea Vaugeois Hetherington, Founder and Creative Director",
+      "intrinsic": [
+        1130,
+        1392
+      ],
+      "reason": "Photographer unknown. Also a studio portrait — the messaging PDF asks for the founder greeting guests, speaking with a couple, collaborating with a team, or observing a room."
+    },
+    "assets/photos/behind-the-scenes.webp": {
+      "status": "held",
+      "category": "founder",
+      "credit": "",
+      "approved": false,
+      "alt": "Lynea outdoors among the trees on a Sol Vé shoot",
+      "intrinsic": [
+        1122,
+        1402
+      ],
+      "reason": "Photographer unknown. Editorial portrait rather than an event image."
+    },
+    "assets/lynea-cello.webp": {
+      "status": "retired",
+      "category": "mmm",
+      "credit": "",
+      "approved": false,
+      "alt": "A masquerade figure in a tricorn hat holding a mask",
+      "intrinsic": [
+        1600,
+        1067
+      ],
+      "reason": "Used as the About hero, cropped so the frame is mostly a black hat and a bare shoulder. Not a founder portrait and does not meet the PDF's founder-photo criteria."
+    },
+    "assets/photos/division-signature-moments.webp": {
+      "status": "retired",
+      "category": "signature-moments",
+      "credit": "",
+      "approved": false,
+      "intrinsic": [
+        1005,
+        662
+      ],
+      "reason": "Novelty socks reading 'YOU ARE ALL YOU NEED' and red heart lollipops. Named in client feedback as reading discount. Will not ship."
+    },
+    "assets/photos/division-event-design.webp": {
+      "status": "retired",
+      "category": "event-design",
+      "credit": "",
+      "approved": false,
+      "intrinsic": [
+        1001,
+        666
+      ],
+      "reason": "Supermarket fruit tray under a balloon arch. Does not represent the division's work."
+    },
+    "assets/photos/division-weddings.webp": {
+      "status": "retired",
+      "category": "weddings",
+      "credit": "",
+      "approved": false,
+      "intrinsic": [
+        997,
+        662
+      ],
+      "reason": "Two rings on a rock. Generic; reads as stock."
+    },
+    "assets/photos/division-workshops.webp": {
+      "status": "retired",
+      "category": "workshops",
+      "credit": "",
+      "approved": false,
+      "intrinsic": [
+        892,
+        667
+      ],
+      "reason": "A tuxedo and dress on hangers beside a parking lot. Does not represent workshops or curated experiences."
+    },
+    "assets/photos/division-conferences.webp": {
+      "status": "retired",
+      "category": "conferences",
+      "credit": "",
+      "approved": false,
+      "intrinsic": [
+        815,
+        662
+      ],
+      "reason": "A beach gazebo. Wrong category entirely — this is the Conferences division."
+    },
+    "assets/photos/division-fundraising.webp": {
+      "status": "retired",
+      "category": "fundraising",
+      "credit": "",
+      "approved": false,
+      "intrinsic": [
+        675,
+        662
+      ],
+      "reason": "Beer bottles on banquet tables under purple uplighting."
+    },
+    "assets/photos/destination-wedding.webp": {
+      "status": "retired",
+      "category": "weddings",
+      "credit": "",
+      "approved": false,
+      "intrinsic": [
+        442,
+        650
+      ],
+      "reason": "442x650 used as the full-bleed homepage hero — roughly a 3x upscale at 1440px. Visibly soft."
+    },
+    "assets/photos/wedding-division.webp": {
+      "status": "retired",
+      "category": "weddings",
+      "credit": "",
+      "approved": false,
+      "intrinsic": [
+        442,
+        632
+      ],
+      "reason": "442x632 at 14 KB. Far below the minimum."
+    },
+    "assets/photos/world-in-vogue.webp": {
+      "status": "retired",
+      "category": "event-design",
+      "credit": "",
+      "approved": false,
+      "intrinsic": [
+        470,
+        577
+      ],
+      "reason": "470x577 used full-bleed in the homepage film. Far below the minimum."
+    },
+    "assets/photos/philosophy.webp": {
+      "status": "retired",
+      "category": "event-design",
+      "credit": "",
+      "approved": false,
+      "intrinsic": [
+        566,
+        412
+      ],
+      "reason": "566x412. Below the minimum, and a mural unrelated to Sol Vé's work."
+    },
+    "assets/photos/signature-moments-8v8a1157.webp": {
+      "status": "published",
+      "category": "signature-moments",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "A newly engaged couple embrace beside a lit Christmas tree",
+      "intrinsic": [
+        1866,
+        2800
+      ],
+      "source": "8V8A1157.jpg"
+    },
+    "assets/photos/signature-moments-8v8a1671.webp": {
+      "status": "published",
+      "category": "signature-moments",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "An engaged couple hold each other by candlelight",
+      "intrinsic": [
+        1867,
+        2800
+      ],
+      "source": "8V8A1671.jpg"
+    },
+    "assets/photos/signature-moments-8v8a3325.webp": {
+      "status": "published",
+      "category": "signature-moments",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "A couple kiss before a white floral arch ringed with candles",
+      "intrinsic": [
+        1866,
+        2800
+      ],
+      "source": "8V8A3325.jpg"
+    },
+    "assets/photos/signature-moments-8v8a3404.webp": {
+      "status": "published",
+      "category": "signature-moments",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "A couple share a kiss beneath a white rose arch",
+      "intrinsic": [
+        1866,
+        2800
+      ],
+      "source": "8V8A3404.jpg"
+    },
+    "assets/photos/signature-moments-esau24023-0437.webp": {
+      "status": "published",
+      "category": "signature-moments",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "An orange love sign with glittered hearts styled for a Valentine's shoot",
+      "intrinsic": [
+        1867,
+        2800
+      ],
+      "source": "ESAU24023-0437.jpg"
+    },
+    "assets/photos/weddings-04-04-2025marieandandre2025-edited-final-203.webp": {
+      "status": "published",
+      "category": "weddings",
+      "credit": "Brottrel Co. Photography Studio",
+      "approved": true,
+      "alt": "A bride and groom share a dip kiss in deep snow at their mountain ski elopement",
+      "intrinsic": [
+        1866,
+        2800
+      ],
+      "source": "04-04-2025MarieandAndre2025_edited_final-203.jpg"
+    },
+    "assets/photos/weddings-04-04-2025marieandandre2025-edited-final-255.webp": {
+      "status": "published",
+      "category": "weddings",
+      "credit": "Brottrel Co. Photography Studio",
+      "approved": true,
+      "alt": "A groom lifts his bride in a snowy clearing beneath a mountain ridge",
+      "intrinsic": [
+        1867,
+        2800
+      ],
+      "source": "04-04-2025MarieandAndre2025_edited_final-255.jpg"
+    },
+    "assets/photos/weddings-04-04-2025marieandandre2025-edited-final-77.webp": {
+      "status": "published",
+      "category": "weddings",
+      "credit": "Brottrel Co. Photography Studio",
+      "approved": true,
+      "alt": "A bride raises her bouquet overhead in an open snowfield",
+      "intrinsic": [
+        1867,
+        2800
+      ],
+      "source": "04-04-2025MarieandAndre2025_edited_final-77.jpg"
+    },
+    "assets/photos/weddings-0v7a2512.webp": {
+      "status": "published",
+      "category": "weddings",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "A bridal bouquet of white and yellow blooms resting on a tufted vintage bench",
+      "intrinsic": [
+        2800,
+        1867
+      ],
+      "source": "0V7A2512.jpg"
+    },
+    "assets/photos/weddings-0v7a2552.webp": {
+      "status": "published",
+      "category": "weddings",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "A candlelit sweetheart table styled with florals for an evening reception",
+      "intrinsic": [
+        2800,
+        1866
+      ],
+      "source": "0V7A2552.jpg"
+    },
+    "assets/photos/weddings-0v7a2610.webp": {
+      "status": "published",
+      "category": "weddings",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "A bride and groom seated together on a vintage settee beneath a tree",
+      "intrinsic": [
+        1867,
+        2800
+      ],
+      "source": "0V7A2610.jpg"
+    },
+    "assets/photos/weddings-0v7a2611.webp": {
+      "status": "published",
+      "category": "weddings",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "A bride's portrait on a vintage settee beneath a tree, framed by sheer drapery",
+      "intrinsic": [
+        1866,
+        2800
+      ],
+      "source": "0V7A2611.jpg"
+    },
+    "assets/photos/weddings-0v7a2624-1.webp": {
+      "status": "published",
+      "category": "weddings",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "A groom in the barber's chair getting ready before the ceremony",
+      "intrinsic": [
+        2800,
+        1867
+      ],
+      "source": "0V7A2624 (1).jpg"
+    },
+    "assets/photos/weddings-0v7a2752-1.webp": {
+      "status": "published",
+      "category": "weddings",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "A wedding stationery suite of menu, RSVP and day-of cards arranged against tree bark",
+      "intrinsic": [
+        2800,
+        1867
+      ],
+      "source": "0V7A2752 (1).jpg"
+    },
+    "assets/photos/weddings-0v7a3745.webp": {
+      "status": "published",
+      "category": "weddings",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "Two grooms share a dip kiss in a riverside meadow",
+      "intrinsic": [
+        2800,
+        1867
+      ],
+      "source": "0V7A3745.jpg"
+    },
+    "assets/photos/weddings-0v7a3757.webp": {
+      "status": "published",
+      "category": "weddings",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "Two grooms embrace beside a creek, one dipping the other mid-laugh",
+      "intrinsic": [
+        2800,
+        1867
+      ],
+      "source": "0V7A3757.jpg"
+    },
+    "assets/photos/weddings-8v8a0995.webp": {
+      "status": "published",
+      "category": "weddings",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "A bride and groom climb a sweeping staircase hand in hand beneath a timber ceiling",
+      "intrinsic": [
+        1866,
+        2800
+      ],
+      "source": "8V8A0995.jpg"
+    },
+    "assets/photos/weddings-8v8a9042.webp": {
+      "status": "published",
+      "category": "weddings",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "Gold letters spelling love, votive candles and a citrus drink dispenser styled on a black bar cart",
+      "intrinsic": [
+        1867,
+        2800
+      ],
+      "source": "8V8A9042.jpg"
+    },
+    "assets/photos/weddings-ka7a0023.webp": {
+      "status": "published",
+      "category": "weddings",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "A bride seated with a guitar while her groom stands beside her in a prairie field",
+      "intrinsic": [
+        1867,
+        2800
+      ],
+      "source": "KA7A0023.jpg"
+    },
+    "assets/photos/weddings-ka7a1644.webp": {
+      "status": "published",
+      "category": "weddings",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "A close portrait of a bride and groom cheek to cheek in evening light",
+      "intrinsic": [
+        1866,
+        2800
+      ],
+      "source": "KA7A1644.jpg"
+    },
+    "assets/photos/weddings-ka7a1647.webp": {
+      "status": "published",
+      "category": "weddings",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "A bride and groom in a close embrace among green leaves",
+      "intrinsic": [
+        2800,
+        1867
+      ],
+      "source": "KA7A1647.jpg"
+    },
+    "assets/photos/weddings-ka7a1666.webp": {
+      "status": "published",
+      "category": "weddings",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "A groom's portrait in a lace shirt and black vest at the treeline",
+      "intrinsic": [
+        1867,
+        2800
+      ],
+      "source": "KA7A1666.jpg"
+    },
+    "assets/photos/weddings-ka7a9983.webp": {
+      "status": "published",
+      "category": "weddings",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "A bride and groom walk a prairie path carrying vintage suitcases",
+      "intrinsic": [
+        1867,
+        2800
+      ],
+      "source": "KA7A9983.jpg"
+    },
+    "assets/photos/weddings-ka7a9985.webp": {
+      "status": "published",
+      "category": "weddings",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "A couple walk hand in hand down a field track with suitcases and a guitar case",
+      "intrinsic": [
+        1867,
+        2800
+      ],
+      "source": "KA7A9985.jpg"
+    },
+    "assets/photos/weddings-ka7a9992.webp": {
+      "status": "published",
+      "category": "weddings",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "A bride and groom pause with a suitcase in a ripened wheat field",
+      "intrinsic": [
+        2800,
+        1867
+      ],
+      "source": "KA7A9992.jpg"
+    },
+    "assets/photos/weddings-hero.webp": {
+      "status": "published",
+      "category": "weddings",
+      "credit": "Brottrel Co. Photography Studio",
+      "approved": true,
+      "alt": "A bride and groom share a dip kiss in deep snow at their mountain ski elopement",
+      "intrinsic": [
+        2800,
+        1750
+      ],
+      "source": "landscape crop of 04-04-2025MarieandAndre2025_edited_final-203.jpg"
+    },
+    "assets/photos/weddings-portfolio.webp": {
+      "status": "published",
+      "category": "weddings",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "A couple walk hand in hand down a field track with suitcases and a guitar case",
+      "intrinsic": [
+        1867,
+        2800
+      ],
+      "source": "alias of weddings-ka7a9985.webp"
+    },
+    "assets/photos/signature-moments-hero.webp": {
+      "status": "published",
+      "category": "signature-moments",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "A couple kiss before a white floral arch ringed with candles",
+      "intrinsic": [
+        2800,
+        1750
+      ],
+      "source": "landscape crop of 8V8A3325.jpg"
+    },
+    "assets/photos/signature-moments-portfolio.webp": {
+      "status": "published",
+      "category": "signature-moments",
+      "credit": "Abbey Raine Photography",
+      "approved": true,
+      "alt": "A couple share a kiss beneath a white rose arch",
+      "intrinsic": [
+        1866,
+        2800
+      ],
+      "source": "alias of signature-moments-8v8a3404.webp"
+    }
+  },
+  "removed_with_the_summit": {
+    "_note": "Deleted when SOLVÉ Global Summit came off the site per the messaging PDF. Restore alongside SOLVE_ENABLED in build_site.py.",
+    "files": [
+      "assets/solve-summit-logo.webp",
+      "assets/solve-five-pillars.webp",
+      "assets/photos/solve-hero.webp"
+    ]
+  },
+  "removed_stock": {
+    "_note": "Six division page heroes plus one band were hotlinked Unsplash stock photographs. Removed: they are generic, uncredited, and depended on a third-party host staying up.",
+    "urls": [
+      "https://images.unsplash.com/photo-1469371670807-013ccf25f16a",
+      "https://images.unsplash.com/photo-1519741497674-611481863552",
+      "https://images.unsplash.com/photo-1518895949257-7621c3c786d7",
+      "https://images.unsplash.com/photo-1582719508461-905c673771fd",
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87",
+      "https://images.unsplash.com/photo-1514525253161-7a46d19cd819"
+    ]
+  }
+}

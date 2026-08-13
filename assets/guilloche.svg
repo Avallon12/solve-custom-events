@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" fill="none" stroke="#000">
+  <circle cx="500" cy="500" r="286" stroke-width="1.2"/>
+  <circle cx="500" cy="500" r="278" stroke-width="0.5"/>
+  <g stroke-width="0.85" stroke-opacity="1.0">
+  <ellipse id="e250" cx="500" cy="500" rx="250" ry="96"/>
+  <use href="#e250" transform="rotate(12.000 500 500)"/>
+  <use href="#e250" transform="rotate(24.000 500 500)"/>
+  <use href="#e250" transform="rotate(36.000 500 500)"/>
+  <use href="#e250" transform="rotate(48.000 500 500)"/>
+  <use href="#e250" transform="rotate(60.000 500 500)"/>
+  <use href="#e250" transform="rotate(72.000 500 500)"/>
+  <use href="#e250" transform="rotate(84.000 500 500)"/>
+  <use href="#e250" transform="rotate(96.000 500 500)"/>
+  <use href="#e250" transform="rotate(108.000 500 500)"/>
+  <use href="#e250" transform="rotate(120.000 500 500)"/>
+  <use href="#e250" transform="rotate(132.000 500 500)"/>
+  <use href="#e250" transform="rotate(144.000 500 500)"/>
+  <use href="#e250" transform="rotate(156.000 500 500)"/>
+  <use href="#e250" transform="rotate(168.000 500 500)"/>
+  <use href="#e250" transform="rotate(180.000 500 500)"/>
+  <use href="#e250" transform="rotate(192.000 500 500)"/>
+  <use href="#e250" transform="rotate(204.000 500 500)"/>
+  <use href="#e250" transform="rotate(216.000 500 500)"/>
+  <use href="#e250" transform="rotate(228.000 500 500)"/>
+  <use href="#e250" transform="rotate(240.000 500 500)"/>
+  <use href="#e250" transform="rotate(252.000 500 500)"/>
+  <use href="#e250" transform="rotate(264.000 500 500)"/>
+  <use href="#e250" transform="rotate(276.000 500 500)"/>
+  <use href="#e250" transform="rotate(288.000 500 500)"/>
+  <use href="#e250" transform="rotate(300.000 500 500)"/>
+  <use href="#e250" transform="rotate(312.000 500 500)"/>
+  <use href="#e250" transform="rotate(324.000 500 500)"/>
+  <use href="#e250" transform="rotate(336.000 500 500)"/>
+  <use href="#e250" transform="rotate(348.000 500 500)"/>
+  </g>
+  <g stroke-width="0.7" stroke-opacity="0.85">
+  <ellipse id="e196" cx="500" cy="500" rx="196" ry="74"/>
+  <use href="#e196" transform="rotate(15.000 500 500)"/>
+  <use href="#e196" transform="rotate(30.000 500 500)"/>
+  <use href="#e196" transform="rotate(45.000 500 500)"/>
+  <use href="#e196" transform="rotate(60.000 500 500)"/>
+  <use href="#e196" transform="rotate(75.000 500 500)"/>
+  <use href="#e196" transform="rotate(90.000 500 500)"/>
+  <use href="#e196" transform="rotate(105.000 500 500)"/>
+  <use href="#e196" transform="rotate(120.000 500 500)"/>
+  <use href="#e196" transform="rotate(135.000 500 500)"/>
+  <use href="#e196" transform="rotate(150.000 500 500)"/>
+  <use href="#e196" transform="rotate(165.000 500 500)"/>
+  <use href="#e196" transform="rotate(180.000 500 500)"/>
+  <use href="#e196" transform="rotate(195.000 500 500)"/>
+  <use href="#e196" transform="rotate(210.000 500 500)"/>
+  <use href="#e196" transform="rotate(225.000 500 500)"/>
+  <use href="#e196" transform="rotate(240.000 500 500)"/>
+  <use href="#e196" transform="rotate(255.000 500 500)"/>
+  <use href="#e196" transform="rotate(270.000 500 500)"/>
+  <use href="#e196" transform="rotate(285.000 500 500)"/>
+  <use href="#e196" transform="rotate(300.000 500 500)"/>
+  <use href="#e196" transform="rotate(315.000 500 500)"/>
+  <use href="#e196" transform="rotate(330.000 500 500)"/>
+  <use href="#e196" transform="rotate(345.000 500 500)"/>
+  </g>
+  <g stroke-width="0.55" stroke-opacity="0.7">
+  <ellipse id="e140" cx="500" cy="500" rx="140" ry="52"/>
+  <use href="#e140" transform="rotate(20.000 500 500)"/>
+  <use href="#e140" transform="rotate(40.000 500 500)"/>
+  <use href="#e140" transform="rotate(60.000 500 500)"/>
+  <use href="#e140" transform="rotate(80.000 500 500)"/>
+  <use href="#e140" transform="rotate(100.000 500 500)"/>
+  <use href="#e140" transform="rotate(120.000 500 500)"/>
+  <use href="#e140" transform="rotate(140.000 500 500)"/>
+  <use href="#e140" transform="rotate(160.000 500 500)"/>
+  <use href="#e140" transform="rotate(180.000 500 500)"/>
+  <use href="#e140" transform="rotate(200.000 500 500)"/>
+  <use href="#e140" transform="rotate(220.000 500 500)"/>
+  <use href="#e140" transform="rotate(240.000 500 500)"/>
+  <use href="#e140" transform="rotate(260.000 500 500)"/>
+  <use href="#e140" transform="rotate(280.000 500 500)"/>
+  <use href="#e140" transform="rotate(300.000 500 500)"/>
+  <use href="#e140" transform="rotate(320.000 500 500)"/>
+  <use href="#e140" transform="rotate(340.000 500 500)"/>
+  </g>
+  <circle cx="500" cy="500" r="54" stroke-width="0.8"/>
+  <circle cx="500" cy="500" r="47" stroke-width="0.4"/>
+</svg>

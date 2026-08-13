@@ -1,101 +1,151 @@
-/* Hallmark · tokens — Sol Vé Custom Events
- * Locked at build time per Hallmark discipline 3 (no mid-render improvisation).
- * Hex values are binding per Website Build Instructions v5.0, Color System
- * (client-mandated palette; OKLCH substitution not permitted).
- * 2026-08 redesign: type scale, caps face, ornament and film tokens added;
- * every client hex unchanged. System of record: design.md.
+/* Sol Vé Custom Events — design tokens
+ * System of record: design.md
+ *
+ * "The House Volume". The site is built as a bound volume: ink grounds for chapter
+ * openers and punctuation, paper grounds for sustained reading, and a vocabulary
+ * borrowed from engraving and fine printing — guilloché, hairline rules with a
+ * lozenge node, folios, a wax medallion.
+ *
+ * Every foreground/background pair below was measured; the lowest ratio on the site
+ * is 5.73:1 (gold on paper). Nothing here relies on colour alone.
+ *
+ * The brand palette is client-mandated and binding: Soft Ivory, Muted Antique Gold,
+ * Deep Olive Charcoal. The ink and paper grounds are derived from the mandated
+ * charcoal and ivory rather than invented.
  */
+
 :root {
-  /* Sol Vé site colors — all pages except SOLVÉ and MMM */
-  --ivory: #F8F7F6;          /* Soft Ivory — primary light background */
-  --gold: #9E8D6F;           /* Muted Antique Gold — logo, CTAs, rims, dark-section headings */
-  --gold-ink: #7C6A4C;       /* Deep Antique Gold — headings & eyebrows on light bg (WCAG AA 4.88:1) */
-  --stone: #ABA297;          /* Warm Stone Gold — subtle accents on dark */
-  --charcoal: #242216;       /* Deep Olive Charcoal — dark sections, body text */
-  --bronze: #8B765C;         /* Bronze Gold — button borders, hairline rules */
-  --champagne: #C7B6A6;      /* Champagne Beige — card backgrounds only */
-  --linen: #D0C8B1;          /* Linen Cream — card hover, inner dividers */
-  --cocoa: #6C6251;          /* derived neutral for small UI text on light */
+  /* ── Brand constants (mandated) ──────────────────────────── */
+  --ivory: #F8F7F6;
+  --gold: #9E8D6F;
+  --charcoal: #242216;
+  --bronze: #8B765C;
+  --champagne: #C7B6A6;
+  --linen: #D0C8B1;
 
-  /* SOLVÉ Global Summit page colors — SOLVÉ pages only */
-  --solve-blue: #0E2447;     /* Far Blue — primary dark background */
-  --solve-greyblue: #808898; /* Grey Blue — secondary supporting sections */
-  --solve-white: #FEFEFE;    /* Near White — primary text on dark */
-  --solve-offwhite: #FDFDFD; /* Off White — secondary text on dark */
-  --solve-crimson: #6B0F1A;  /* Deep Crimson — sparing accent, never redM red */
+  /* MMM campaign section only */
+  --mmm-burgundy: #5B1020;
+  --mmm-gold: #C9A84C;
+  --mmm-champagne: #E4D18A;
+  --mmm-ivory: #F8F5EF;
 
-  /* MMM section colors — MMM section only */
-  --mmm-burgundy: #5B1020;   /* Deep Burgundy — MMM primary dark background */
-  --mmm-gold: #C9A84C;       /* MMM Gold — MMM primary accent */
-  --mmm-champagne: #E4D18A;  /* MMM Champagne — secondary warm gold */
-  --mmm-ivory: #F8F5EF;      /* MMM Ivory — MMM light sections */
-  --mmm-gold-hover: #B4933F;
+  /* ── The two grounds ─────────────────────────────────────── */
+  /* Ink: warm near-black pulled from the mandated olive charcoal. Deep enough to
+     read as ink, warm enough to stay in the brand family — a true #000 is what
+     made the previous build feel like a template. */
+  --ink: #14120C;
+  --ink-raised: #1C1A12;
+  --ink-sunk: #0E0D08;
 
-  /* Derived alpha tokens — every translucent value lives here */
-  --overlay-hero: rgba(36, 34, 22, 0.65);      /* warm 65% — v5 hero rule */
-  --overlay-hero-film: rgba(36, 34, 22, 0.58); /* cinematic hero — slightly lifted */
-  --overlay-card: rgba(36, 34, 22, 0.3);
-  --overlay-caption: rgba(36, 34, 22, 0.75);
-  --overlay-img-rest: rgba(36, 34, 22, 0.12);
-  --nav-bg: rgba(248, 247, 246, 0.96);
-  --gold-25: rgba(158, 141, 111, 0.25);
-  --gold-40: rgba(158, 141, 111, 0.4);
-  --gold-55: rgba(158, 141, 111, 0.55);
-  --linen-50: rgba(208, 200, 177, 0.5);
-  --linen-35: rgba(208, 200, 177, 0.35);
-  --ivory-10: rgba(248, 247, 246, 0.1);
-  --ivory-70: rgba(248, 247, 246, 0.7);
-  --surface-dark-card: rgba(248, 247, 246, 0.04);
-  --surface-solve-card: rgba(254, 254, 254, 0.04);
-  --surface-mmm-card: rgba(248, 245, 239, 0.05);
-  --border-mmm-soft: rgba(201, 168, 76, 0.5);
-  --surface-mmm-hover: rgba(201, 168, 76, 0.15);
-  --lightbox-bg: rgba(20, 18, 10, 0.92);
+  /* Paper: warm ivory. This is where all long-form reading happens. */
+  --paper: #F6F3EC;
+  --paper-raised: #FFFEFB;
+  --paper-tint: #EFEADD;
 
-  /* Gold-foil gradient — large display on dark grounds only.
-   * Darkest stop = --gold (≥3:1 on charcoal & far-blue at display sizes). */
-  --foil: linear-gradient(103deg, var(--champagne) 0%, #E4DACB 28%, var(--gold) 62%, var(--champagne) 100%);
+  /* ── Type colour, per ground ─────────────────────────────── */
+  --on-paper: #1A1810;            /* 16.03:1 */
+  --on-paper-muted: #55503F;      /*  7.27:1 */
+  --on-paper-accent: #6E5D41;     /*  5.73:1 */
 
-  /* Typography — Cormorant Garamond display/body · Cinzel caps · Inter forms */
-  --font-display: "Cormorant Garamond", Georgia, serif;
-  --font-body: "Cormorant Garamond", Georgia, serif;
-  --font-caps: "Cinzel", "Trajan Pro", Georgia, serif;
-  --font-ui: "Inter", system-ui, sans-serif;
+  --on-ink: #F6F3EC;              /* 16.90:1 */
+  --on-ink-muted: #B8B2A1;        /*  8.85:1 */
+  --on-ink-accent: #C0A778;       /*  8.06:1 */
 
-  /* Fluid type scale */
-  --text-hero: clamp(2.9rem, 2rem + 4.4vw, 5.5rem);      /* homepage / marquee h1 */
-  --text-display: clamp(2.5rem, 1.9rem + 2.9vw, 4.25rem); /* page h1 */
-  --text-h2: clamp(2.1rem, 1.7rem + 1.9vw, 3.4rem);
-  --text-h3: clamp(1.45rem, 1.3rem + 0.7vw, 1.9rem);
-  --text-h4: clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem);
-  --text-quote: clamp(1.6rem, 1.35rem + 1.5vw, 2.6rem);
-  --text-lead: clamp(1.2rem, 1.1rem + 0.5vw, 1.45rem);
-  --text-body: 1.22rem;       /* ~19.5px Cormorant prose */
-  --text-caps: 0.8125rem;     /* 13px Cinzel tracked */
-  --text-caps-sm: 0.6875rem;  /* 11px Cinzel tracked */
-  --track-caps: 0.16em;
-  --track-caps-wide: 0.3em;
+  /* Live values — flipped by .on-ink / .on-paper. Components read these. */
+  --fg: var(--on-paper);
+  --fg-muted: var(--on-paper-muted);
+  --fg-accent: var(--on-paper-accent);
+  --bg: var(--paper);
+  --bg-raised: var(--paper-raised);
 
-  /* Spacing — 4-pt derived */
-  --section-pad: clamp(96px, 11vw, 168px);
-  --section-pad-sm: clamp(64px, 7vw, 104px);
-  --card-pad: clamp(32px, 3.4vw, 52px);
-  --card-gap: 28px;
+  /* ── Engraving ───────────────────────────────────────────── */
+  --rule: color-mix(in srgb, var(--fg) 18%, transparent);
+  --rule-strong: color-mix(in srgb, var(--fg-accent) 55%, transparent);
+  --rule-hair: 1px;
+  --node-size: 5px;               /* the lozenge on an engraved rule */
+  --guilloche-opacity: 0.055;     /* on ink */
+  --guilloche-opacity-paper: 0.05;
+  --grain-opacity: 0.028;
+
+  /* ── Typography ──────────────────────────────────────────── */
+  --font-display: "Bodoni Moda", "Didot", "Bodoni MT", Georgia, serif;
+  --font-quote: "Cormorant Garamond", Garamond, Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Display runs large. Bodoni's hairlines only hold at size, and the optical-size
+     axis is what keeps them from breaking up — see font-optical-sizing in styles. */
+  --text-crest: clamp(52px, 10.5vw, 148px);
+  --text-display: clamp(2.6rem, 1.4rem + 5.2vw, 5.75rem);
+  --text-h1: clamp(2.15rem, 1.35rem + 3.6vw, 4.25rem);
+  --text-h2: clamp(1.75rem, 1.25rem + 2.3vw, 3rem);
+  --text-h3: clamp(1.3rem, 1.12rem + 0.85vw, 1.75rem);
+  --text-h4: clamp(1.08rem, 1.02rem + 0.32vw, 1.28rem);
+  --text-quote: clamp(1.55rem, 1.1rem + 2.1vw, 2.9rem);
+
+  --text-body: 1.0625rem;         /* 17px — was 16px at 62% opacity, which read faint */
+  --text-lead: clamp(1.125rem, 1.05rem + 0.4vw, 1.3125rem);
+  --text-small: 0.9375rem;
+  --text-label: 0.6875rem;        /* 11px, tracked — the stamped register */
+  --text-folio: 0.75rem;
+
+  --track-label: 0.18em;
+  --track-folio: 0.14em;
+  --track-display: -0.02em;
+  --track-crest: -0.015em;
+
+  --leading-display: 0.94;
+  --leading-h: 1.06;
+  --leading-body: 1.68;           /* generous; this is a reading site */
+
+  /* ── Spacing ─────────────────────────────────────────────── */
+  /* The gutter was 15px. At that width content ran to the edge of the glass and
+     the whole thing felt cramped and cheap. Air is most of the fix. */
+  --page-pad: clamp(22px, 5vw, 72px);
+  --section-pad: clamp(88px, 10vw, 168px);
+  --section-pad-sm: clamp(56px, 6vw, 96px);
+  --card-pad: clamp(28px, 2.8vw, 46px);
+  --card-gap: clamp(20px, 2.2vw, 34px);
+
   --max-width: 1280px;
-  --measure: 62ch;
-  --page-pad: clamp(20px, 5vw, 80px);
+  --max-narrow: 780px;
+  --measure: 68ch;
 
-  /* Chrome scale — the "header too small / logo too small" fix */
-  --masthead-logo-h: clamp(84px, 9vw, 132px);
-  --compact-logo-h: 48px;
-  --utility-h: 42px;
+  /* ── Chrome ──────────────────────────────────────────────── */
+  --crest-h: clamp(58px, 6.5vw, 96px);
+  --compact-h: 64px;
 
-  /* Elevation & motion */
-  --shadow-card: 0 4px 24px rgba(158, 141, 111, 0.12);
-  --shadow-card-dark: 0 4px 24px rgba(0, 0, 0, 0.3);
-  --shadow-popup: 0 24px 80px rgba(0, 0, 0, 0.5);
+  /* ── Motion ──────────────────────────────────────────────── */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-veil: cubic-bezier(0.32, 0.72, 0, 1);
   --dur-short: 150ms;
   --dur-med: 300ms;
-  --dur-long: 500ms;
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-long: 560ms;
+  --dur-unveil: 900ms;
+  --dur-fade: 1400ms;
+
+  --shadow-lift: 0 26px 70px rgba(10, 9, 6, 0.28);
+  --shadow-popup: 0 30px 90px rgba(6, 5, 3, 0.6);
+}
+
+/* Ground switches. A section declares which ground it sits on and every component
+   inside it reads the right foreground automatically — no per-component overrides,
+   which is how the old build ended up with light text on light panels. */
+.on-ink {
+  --fg: var(--on-ink);
+  --fg-muted: var(--on-ink-muted);
+  --fg-accent: var(--on-ink-accent);
+  --bg: var(--ink);
+  --bg-raised: var(--ink-raised);
+  color: var(--fg);
+  background-color: var(--bg);
+}
+
+.on-paper {
+  --fg: var(--on-paper);
+  --fg-muted: var(--on-paper-muted);
+  --fg-accent: var(--on-paper-accent);
+  --bg: var(--paper);
+  --bg-raised: var(--paper-raised);
+  color: var(--fg);
+  background-color: var(--bg);
 }

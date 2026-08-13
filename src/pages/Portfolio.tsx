@@ -59,6 +59,12 @@ const GALLERY: MediaId[] = [
   'portfolio-valentines-1',
   'portfolio-valentines-2',
   'portfolio-valentines-3',
+  'wed-paula-and-ever-1',
+  'wed-rob-and-lynea-1',
+  'wed-erin-and-rick-3',
+  'wed-christina-and-vince-1',
+  'sig-proposal-meegan-and-logan-1',
+  'sig-bridal-shower-vegas-1',
 ]
 
 export default function Portfolio() {

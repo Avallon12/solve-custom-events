@@ -52,6 +52,7 @@ const socialIcons = {
 export default function Nav() {
   const [open, setOpen] = useState(false)
   const [openMenu, setOpenMenu] = useState<string | null>(null)
+  const [openSection, setOpenSection] = useState<string | null>(null)
   const [scrolled, setScrolled] = useState(false)
   const closeTimer = useRef<number | undefined>(undefined)
   const { pathname } = useLocation()
@@ -59,6 +60,7 @@ export default function Nav() {
   useEffect(() => {
     setOpen(false)
     setOpenMenu(null)
+    setOpenSection(null)
   }, [pathname])
 
   const hoverOpen = (label: string) => {
@@ -305,6 +307,69 @@ export default function Nav() {
                     >
                       {division.label}
                     </Link>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="my-7">
+                <Ornament tone="light" />
+              </div>
+
+              {/*
+                The six header sections with their dropdown pages. The header
+                bar is hidden below lg and hover never fires on touch, so this
+                is where phones and tablets reach every dropdown destination.
+              */}
+              <p
+                className="font-ui text-[11px] uppercase text-stone"
+                style={{ letterSpacing: '0.3em' }}
+              >
+                Sections
+              </p>
+              <ul className="mt-4">
+                {header.map((item) => (
+                  <li key={item.to} className="border-b border-ivory/10">
+                    <div className="flex items-center justify-between gap-2">
+                      <Link
+                        to={item.to}
+                        className="flex-1 py-3 font-ui text-[12px] uppercase text-champagne transition-colors duration-300 hover:text-gold"
+                        style={{ letterSpacing: '0.18em' }}
+                      >
+                        {item.label}
+                      </Link>
+                      {item.children?.length ? (
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setOpenSection(openSection === item.label ? null : item.label)
+                          }
+                          aria-label={`${openSection === item.label ? 'Hide' : 'Show'} ${item.label} pages`}
+                          aria-expanded={openSection === item.label}
+                          className="grid h-11 w-11 shrink-0 place-items-center text-gold transition-colors duration-300 hover:text-champagne"
+                        >
+                          <ChevronDown
+                            size={15}
+                            className={`transition-transform duration-300 ${
+                              openSection === item.label ? 'rotate-180' : ''
+                            }`}
+                          />
+                        </button>
+                      ) : null}
+                    </div>
+                    {item.children?.length && openSection === item.label ? (
+                      <ul className="pb-3">
+                        {item.children.map((child) => (
+                          <li key={child.to}>
+                            <Link
+                              to={child.to}
+                              className="block py-2 pl-4 font-body text-[16px] text-champagne transition-colors duration-300 hover:text-gold"
+                            >
+                              {child.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
                   </li>
                 ))}
               </ul>

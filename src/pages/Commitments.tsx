@@ -72,14 +72,16 @@ export default function Commitments() {
         </Container>
       </Section>
 
-      {/* Three boxes — equal size, equal spacing, equal weight */}
+      {/* Three boxes — equal width and spacing; each takes its natural height.
+          Stretching them all to the tallest (Belonging for All) left the other
+          two mostly empty, which read as dead space rather than parity. */}
       <Section tone="linen">
         <Container width="wide">
-          <div className="grid items-stretch gap-6 md:gap-8 lg:grid-cols-3">
+          <div className="grid items-start gap-6 md:gap-8 lg:grid-cols-3">
             {commitments.pillars.map((pillar, i) => (
-              <Reveal key={pillar.id} delay={i * 110} className="h-full">
-                <div id={pillar.id} className="h-full scroll-mt-32">
-                  <Card tone="ivory" className="flex h-full flex-col">
+              <Reveal key={pillar.id} delay={i * 110}>
+                <div id={pillar.id} className="scroll-mt-32">
+                  <Card tone="ivory" className="flex flex-col">
                     <p
                       className="font-ui text-[11px] uppercase text-bronze"
                       style={{ letterSpacing: '0.3em' }}

@@ -17,7 +17,7 @@ export default function Testimonials() {
         size="page"
         eyebrow="Testimonials"
         headline="Testimonials"
-        media="division-signature-moments"
+        media="sig-vow-renewal-lisa-and-john-1"
       />
 
       <Section tone="ivory" rule>

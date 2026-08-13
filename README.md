@@ -1,90 +1,198 @@
 # Sol Vé Custom Events — website
 
-Static site. No build step beyond one Python script, no dependencies to install, no
-framework. Every page is generated; nothing is hand-edited in an `index.html`.
+React + Vite + TypeScript + Tailwind. No UI framework, no page builder.
+
+Deployed on Vercel. Vercel blocks a deployment when the commit email cannot be
+matched to a GitHub account, so commits from this repository are authored as
+`hello@avallon.ca` — set locally, in `.git/config`, not globally:
 
 ```bash
-python3 build_site.py        # regenerate every page + sitemap.xml
-python3 check_site.py        # the delivery gate — must exit 0 before shipping
-python3 -m http.server 8899  # preview at http://localhost:8899
+git config user.email "hello@avallon.ca"
+git config user.name  "Avallon"
 ```
 
-The site uses root-relative URLs, so it must be served — opening the HTML from disk
-will not load the CSS.
+```bash
+npm install
+npm run dev      # local preview
+npm run build    # type-check + production build
+npm run smoke    # renders every route and reports failures
+npm run audit    # fails on summit references or photographer-credit lines
+npm run lint
+```
 
-## Where things are
+---
 
-| Path | What it is |
+## What this site is
+
+Exactly the client's document — "Sol Vé Custom Events Website order and
+messaging" — in its wording and its sequence, and nothing else.
+
+Her instruction, verbatim: *"I want the EXACT writing in the EXACT same order
+that is in the document I sent you. Both the messaging and sequence is
+explicitly determined by where my brand is going and directly correlates to
+upcoming expansions. Please do not add extra areas or explanations. Simply use
+what has been provided."*
+
+So the twelve pages are her twelve, in her order:
+
+`Home · Foundation · The Sol Vé Way · Beyond the Occasion · Our Commitments ·
+Sol Vé Principles · Where It Began · What We Create · Signature Experiences ·
+Meet the Founder · Portfolio / Journal · Connect`
+
+**Removed**, because it came from the Creative Direction Manual or Build v5
+rather than from her document: the six division sub-pages, the Press page,
+the Mystic Moonlight page and nav dialog, "What Sol Vé Is", the four-card
+values strip, "Who we are", Mission/Vision/Values, the first-person biography,
+Notable Work, the founder pull-quote, and the homepage sections beneath the
+hero. Her document gives the Home page one block of copy; that is what it has.
+
+**Removed, on her explicit instruction:** SOLVÉ Global Summit, in full — the
+page, both forms, its data, colours and assets. `npm run audit` renders every
+route and fails the build if a reference reappears, including in alt text and
+metadata.
+
+Her brand architecture, in her words, is why the sequence matters:
+
+> There is Sol Vé Custom Events. There is Mystic Moonlight Masquerade Ball &
+> Gala Fundraising Campaign (a production of Sol Vé Custom Events). There is
+> SOLVÉ the branded institution. There is SOLVÉ Global Summit in production.
+
+Nothing in `src/data/content.ts` is invented or paraphrased. Before adding a
+section, check it exists in her document.
+
+---
+
+## Before this goes live
+
+### 1. Photographer credits — `src/data/media.ts`
+
+**Every image slot is filled with real Sol Vé photography.** Most of it comes
+from the *Exact Banner-by-Banner Photo Guide* — the photographs are embedded in
+that PDF, so they were extracted at full resolution and placed in the exact
+slots Lynea assigns them. The rest came from solvecustomevents.com. All of it is
+re-encoded to WebP (3 MB for the whole site) and defined once in `media.ts`.
+
+**Credit lines are switched off.** Lynea asked for every photographer-credit
+mention to come off the site until she supplies the names herself. The display
+is gated behind `SHOW_CREDITS` in `src/components/Media.tsx`, currently `false`.
+
+The data is intact. `creditPending: true` still records which photographs are
+waiting on a name, and one photograph — the Mike Hopkins frame on *Where It
+Began*, credited from its own filename — still carries a real `credit`. Nothing
+was deleted, only hidden.
+
+When the names arrive: fill in `credit: 'by …'` on each slot, flip
+`SHOW_CREDITS` to `true`, and remove the credit patterns from
+`scripts/audit.tsx`. Every line returns in place.
+
+```ts
+'home-hero': {
+  label: 'Homepage hero',
+  alt: 'A Sol Vé ballroom set beneath blossom trees…',
+  tone: 'dark',
+  src: '/media/home-hero.webp',
+  credit: 'by Jane Doe',   // ← replaces creditPending: true
+},
+```
+
+**Deliberately excluded:** the "Matt & Ann: A Touch of Magic" gallery and several
+others carry a visible *Faithful* photographer watermark. Manual 6.2 forbids
+watermarked images, so none of them were used.
+
+**No placeholders remain.** If a slot is ever emptied it falls back to a warm
+gradient, film grain and the Sol Vé emblem rather than a broken image, so
+nothing is ever presented as Sol Vé's work when it isn't.
+
+**Reels:** set `video: '/media/clip.mp4'` instead of `src`. It plays muted and
+looping. Luxury footage only — no animation, no cartoon.
+
+### 2. Social links — done
+
+LinkedIn (the company page, not a personal profile), Instagram and Facebook are
+live in the footer and the menu, and all three were checked to resolve. Any
+future entry left as an empty string renders as a dimmed, non-clickable icon
+marked "link pending" rather than a broken link.
+
+### 3. Form routing — `src/pages/Connect.tsx`
+
+`FORM_ENDPOINT` is empty. Paste a Formspree / HubSpot / Netlify endpoint and
+submissions POST to it. Until then the form composes the same submission as an
+email to `lynea@solvecustomevents.com` (Build v5: all forms route to Lynea only)
+so no enquiry is silently lost. `info@solvecustomevents.com` remains the
+public-facing address.
+
+### 4. Logos — done
+
+Both real marks are in place: `public/media/logo.webp` (Sol Vé, gold on
+transparent, so it works on ivory and on charcoal) and
+`public/media/solve-summit-logo.webp` (SOLVÉ Global Summit). The Sol Vé mark
+renders 56px in the bar and 92px in the footer, well above the old 44px ceiling
+that made it "lost and irrelevant".
+
+### 5. Still needed from Lynea
+
+- **One decision on the Land Acknowledgement.** Two of her documents give
+  different versions. Build v5 (copied from solvecustomevents.com/values-1)
+  names *Moh'kinsstis* and the *Otipemisiwak Métis Government of the Métis
+  Nation within Alberta District 6*. The newer document names the *Îyârhe
+  Nakoda Nations (Bearspaw, Chiniki, Goodstoney)* and the *Métis Nation of
+  Alberta, Region 3*. The site currently uses the newer, fuller territory
+  paragraph, with v5's opening and closing lines around it. Lynea should confirm
+  which naming is current — this is not text to guess at.
+- **Testimonial quotes.** Her document names seven categories — Bride & Groom,
+  Corporate Executive, Charity Partner, Performer, Venue Partner, Sponsor,
+  Community Leader — with no quotes written. No section was built rather than
+  invent any.
+- **Per-project detail for the Portfolio.** The newest document asks each
+  project to carry its purpose, story, design philosophy, photography and client
+  outcome. The gallery is in place; the written detail per project is not,
+  because none was supplied.
+- **Photographer names** for the photographs marked `creditPending` — credit
+  lines stay hidden site-wide until they arrive (see section 1)
+- Mystic Moonlight Masquerade photography — lion dancers, performers, event scenes
+- Press and publication article links, award imagery
+- Confirmation of the two unnamed publications and the "Best Decoration" award body
+- CRM platform choice
+
+---
+
+## Design system
+
+| | |
 |---|---|
-| `content.py` | **All site copy**, verbatim from the client's messaging PDF. Edit words here. |
-| `build_site.py` | The generator: templates, page assembly, routes, redirects. |
-| `check_site.py` | The delivery gate. Eleven rules, each one a client requirement. |
-| `design.md` | The design system, and the reasoning behind it. Read before changing CSS. |
-| `tokens.css` | Colour, type scale, spacing, motion tokens. |
-| `css/styles.css` | Components. |
-| `js/main.js` | Menu, dialogs, reveals, film, lightbox, filters, forms. |
-| `assets/photos/manifest.json` | **Source of truth for imagery.** Nothing publishes without a credit. |
-| `tools/import_photos.py` | Import client photography from the drop folder. |
-| `tools/import_film.py` | Encode client footage to mp4 + webm with a poster frame. |
+| Ivory `#F8F7F6` | page ground |
+| Muted Antique Gold `#9E8D6F` | logo, headings, primary CTA, rules |
+| Warm Stone `#ABA297` | secondary accents |
+| Deep Olive Charcoal `#242216` | dark sections, body text |
+| Bronze `#8B765C` | borders, hairlines, hover |
+| Champagne `#C7B6A6` · Linen `#D0C8B1` · Cocoa `#6C6251` | supporting |
+| MMM Burgundy `#5B1020` · MMM Gold `#C9A84C` | campaign section only |
+| SOLVÉ Far Blue `#0E2447` · Grey Blue `#808898` · Deep Crimson `#6B0F1A` | `/solve` only |
 
-## Adding photographs
+Playfair Display for headings, Cormorant Garamond for body, Inter for labels
+and buttons. Type scale, spacing and button specs follow the Manual.
 
-1. Drop originals into `assets/photos/incoming/<division>/` — at least 2000px on the
-   long edge.
-2. Optionally add a `credits.txt` beside them: `filename.jpg = Photographer Name`
-3. Run `python3 tools/import_photos.py`
-4. Run `python3 build_site.py && python3 check_site.py`
+Contrast rule is absolute: light type only on dark grounds, dark type only on
+light. Sections alternate ivory → linen → charcoal so no two adjacent sections
+share a ground.
 
-Anything without a photographer's name is imported but **held unpublished** and listed
-in `CREDITS-NEEDED.md`. Add the name, re-run, and it goes live. Until then a composed
-reserved plate stands in its place.
+## Structure
 
-This is deliberate: every photograph and artwork on the site carries a named artist.
+```
+src/
+  data/         all copy and configuration — no strings live in components
+    site.ts       nav, contact, socials, CTA wording
+    media.ts      every image/video slot
+    divisions.ts  the six divisions + Mystic campaign facts
+    content.ts    foundation, commitments, founder, perspectives, press
+  components/
+    Nav · Footer · ContactRail · MysticDialog
+    Hero · ScrollFeature · Media · ClosingCTA · Logo · BrandIcons · ui
+  pages/        one file per route (incl. Solve, SolveDelegate, SolveSponsor)
+  lib/meta.ts   per-page SEO title + description
+scripts/smoke.tsx   renders all 20 routes, catches runtime errors
+```
 
-## Adding film
-
-Drop clips into `assets/film/incoming/`, name the videographer in a `credits.txt`
-there, then `python3 tools/import_film.py`. Requires `ffmpeg`.
-
-## The delivery gate
-
-`check_site.py` fails the build on any of:
-
-1. an image that is unregistered, uncredited, unapproved, or has no alt attribute
-2. an internal link that does not resolve
-3. an external link that does not answer (`--skip-external` to skip when offline)
-4. adjective-selling — *luxury, world-class, opulent, high-end*
-5. any surviving SOLVÉ Global Summit reference outside the redirect stubs
-6. placeholder text (`credit to be confirmed`, `pending confirmation`, …)
-7. a page without a contact button in the masthead and a contact route in the footer
-8. an image too low-resolution for the role it is filling
-9. a LinkedIn URL that is a personal profile rather than the company page
-10. a `lynea@` address on a public page
-11. a video without a poster frame or a credited videographer
-
-Rules 1, 7, 9 and 10 exist because they were explicitly asked for. Rule 8 exists
-because a 442×650 photograph was being stretched across the homepage.
-
-## Known outstanding
-
-- **`content.py` → `LINKEDIN_URL`** is a placeholder. The build intentionally fails
-  rule 9 until the Sol Vé Custom Events company page URL replaces it. That is what
-  stops the personal profile shipping again.
-- Photography and film: all plates are currently reserved, awaiting client assets.
-- The logo is a 287×200 raster. Fine at the sizes used, but a vector (SVG/AI/EPS) is
-  needed before it can be set any larger.
-- Testimonial quotes: seven role slots are reserved in `content.py`.
-
-## Routes
-
-`/` · `/foundation/` · `/values/` (Our Commitments) · `/divisions/` (What We Create)
-· six division pages · `/portfolio/` · `/journal/` + seven essays · `/about/`
-· `/press/` · `/contact/` · `/mystic/`
-
-Redirects kept alive: `/solve/`, `/solve/delegate/`, `/solve/sponsor/` →
-`/divisions/conferences/`; `/divisions/proposals/` → `/divisions/signature-moments/`;
-`/divisions/retreats/` → `/divisions/workshops/`.
-
-**SOLVÉ Global Summit is off the site** per the client's messaging PDF, until it has
-finalized positioning, identity, messaging, governance, website and launch strategy.
-The code is parked behind `SOLVE_ENABLED = False` in `build_site.py`.
+Contact is reachable from anywhere: the nav button, a floating rail that appears
+on scroll on every page except `/connect`, and a closing call to action at the
+foot of every page.

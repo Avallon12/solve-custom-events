@@ -1,0 +1,43 @@
+import Hero from '../components/Hero'
+import ClosingCTA from '../components/ClosingCTA'
+import { Container, Reveal, Section } from '../components/primitives'
+import { portfolio } from '../data/content'
+import { usePageMeta } from '../lib/meta'
+
+/** "Testimonials" — the categories exactly as given. */
+export default function Testimonials() {
+  usePageMeta(
+    'Testimonials — Sol Vé Custom Events',
+    'Voices from the gatherings entrusted to Sol Vé Custom Events.',
+  )
+
+  return (
+    <>
+      <Hero
+        size="page"
+        eyebrow="Testimonials"
+        headline="Testimonials"
+        media="division-signature-moments"
+      />
+
+      <Section tone="ivory" rule>
+        <Container>
+          <div className="grid border-t border-stone/40 sm:grid-cols-2 lg:grid-cols-3">
+            {portfolio.testimonials.map((voice, i) => (
+              <Reveal key={voice} delay={(i % 3) * 70}>
+                <p
+                  id={voice.toLowerCase().replace(/[^a-z]+/g, '-')}
+                  className="h-full scroll-mt-32 border-b border-stone/40 px-7 py-8 font-display text-[22px] text-charcoal sm:border-r md:text-[25px]"
+                >
+                  {voice}
+                </p>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      <ClosingCTA />
+    </>
+  )
+}

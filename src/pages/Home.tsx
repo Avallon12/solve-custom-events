@@ -19,6 +19,7 @@ const FRAMES = [
   { id: 'portfolio-italiano-3', start: 0, end: -500, className: 'ml-[12%] w-3/4 sm:w-5/12' },
   { id: 'portfolio-proposal-1', start: -200, end: 200, className: 'w-2/3 sm:w-1/3' },
   { id: 'portfolio-nathan-allan-3', start: 200, end: -250, className: 'mx-auto w-[85%] sm:w-2/3' },
+  { id: 'reel-weddings', start: 0, end: -500, className: 'ml-[12%] w-3/4 sm:w-5/12' },
 ] as const
 
 

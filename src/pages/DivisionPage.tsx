@@ -87,6 +87,38 @@ export default function DivisionPage() {
         </Container>
       </Section>
 
+      {(experience.reel || experience.gallery) && (
+        <Section tone="ivory" rule>
+          <Container>
+            <Reveal>
+              <Eyebrow>Gallery</Eyebrow>
+            </Reveal>
+
+            {experience.reel && (
+              <Reveal className="mt-12">
+                <Media id={experience.reel} className="aspect-video w-full" />
+              </Reveal>
+            )}
+
+            {experience.gallery && (
+              <div className="mt-14 grid auto-rows-fr grid-cols-2 gap-5 md:gap-8 lg:grid-cols-3">
+                {experience.gallery.map((id, i) => (
+                  <Reveal key={id} delay={(i % 3) * 80} className="h-full">
+                    <div className="overflow-hidden rounded-[2px]">
+                      <Media
+                        id={id}
+                        className="aspect-square w-full"
+                        imgClassName="transition-transform duration-[1200ms] hover:scale-105"
+                      />
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            )}
+          </Container>
+        </Section>
+      )}
+
       <Section tone="ivory" rule>
         <Container width="narrow">
           <Reveal>

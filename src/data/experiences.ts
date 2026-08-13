@@ -16,6 +16,10 @@ export type Experience = {
   services: ServiceGroup[]
   idealFor: string
   because: string
+  /** A reel that plays above the gallery. */
+  reel?: MediaId
+  /** Client photography shown in a grid beneath the services. */
+  gallery?: readonly MediaId[]
 }
 
 export const signatureExperiences = {
@@ -94,6 +98,30 @@ export const experiences: Experience[] = [
     idealFor:
       'Couples seeking thoughtful guidance, professional leadership, and an experience that reflects who they are.',
     because: 'Because the way we gather becomes the memories we carry for a lifetime.',
+    reel: 'reel-weddings',
+    gallery: [
+      'portfolio-italiano-1',
+      'portfolio-italiano-2',
+      'portfolio-italiano-3',
+      'portfolio-italiano-4',
+      'portfolio-italiano-5',
+      'portfolio-italiano-6',
+      'portfolio-italiano-7',
+      'portfolio-nathan-allan-1',
+      'portfolio-nathan-allan-2',
+      'portfolio-nathan-allan-3',
+      'portfolio-nathan-allan-4',
+      'portfolio-dirt-roads-1',
+      'portfolio-dirt-roads-2',
+      'portfolio-dirt-roads-3',
+      'portfolio-dirt-roads-4',
+      'portfolio-marie-andre-1',
+      'portfolio-marie-andre-2',
+      'portfolio-marie-andre-3',
+      'portfolio-marie-andre-4',
+      'portfolio-claudia-ali-2',
+      'portfolio-claudia-ali-3',
+    ],
   },
   {
     slug: 'signature-moments',
@@ -149,6 +177,14 @@ export const experiences: Experience[] = [
     ],
     idealFor: "Families and individuals celebrating life's most meaningful milestones.",
     because: "Because life's most meaningful moments deserve to be experienced with intention.",
+    reel: 'reel-signature-moments',
+    gallery: [
+      'portfolio-proposal-1',
+      'portfolio-proposal-2',
+      'portfolio-valentines-1',
+      'portfolio-valentines-2',
+      'portfolio-valentines-3',
+    ],
   },
   {
     slug: 'design-stylization',

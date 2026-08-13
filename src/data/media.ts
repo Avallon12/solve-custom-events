@@ -267,6 +267,25 @@ export const media = {
     creditPending: true,
   },
 
+  // ── Reels assembled from the client's photography (no footage exists yet;
+  //    each is a slow Ken Burns pass over the credited photographs) ───────────
+  'reel-weddings': {
+    label: 'Weddings in Motion',
+    alt: 'A slow-moving reel of Sol Vé wedding and elopement photography',
+    tone: 'light',
+    video: '/media/reel-weddings.mp4',
+    credit: 'by Abbey Raine Photography and Brottrel Co. Photography Studio',
+    caption: 'Weddings in Motion',
+  },
+  'reel-signature-moments': {
+    label: 'Signature Moments in Motion',
+    alt: 'A slow-moving reel of proposal and Valentine’s photography',
+    tone: 'light',
+    video: '/media/reel-signature-moments.mp4',
+    credit: 'by Abbey Raine Photography',
+    caption: 'Signature Moments in Motion',
+  },
+
   // ── Client photography recovered from the iMessage archives, Aug 2026 ──────
   'portfolio-italiano-1': {
     label: 'Elopement Italiano Vibes',

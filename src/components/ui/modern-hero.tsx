@@ -280,19 +280,37 @@ function ParallaxFrame({
         up mispositioned and pre-faded, which is what the glitch was.
         Eager, not lazy — these are part of the hero, not below the fold.
       */}
-      <img
-        src={slot.src}
-        alt={slot.alt}
-        {...size}
-        loading="eager"
-        decoding="async"
-        style={
-          size.width && size.height
-            ? { aspectRatio: `${size.width} / ${size.height}` }
-            : undefined
-        }
-        className="h-auto w-full rounded-[2px] shadow-[0_20px_60px_rgba(36,34,22,0.18)] ring-1 ring-inset ring-gold/25"
-      />
+      {slot.video ? (
+        <video
+          src={slot.video}
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-label={slot.alt}
+          {...size}
+          style={
+            size.width && size.height
+              ? { aspectRatio: `${size.width} / ${size.height}` }
+              : undefined
+          }
+          className="h-auto w-full rounded-[2px] object-cover shadow-[0_20px_60px_rgba(36,34,22,0.18)] ring-1 ring-inset ring-gold/25"
+        />
+      ) : (
+        <img
+          src={slot.src}
+          alt={slot.alt}
+          {...size}
+          loading="eager"
+          decoding="async"
+          style={
+            size.width && size.height
+              ? { aspectRatio: `${size.width} / ${size.height}` }
+              : undefined
+          }
+          className="h-auto w-full rounded-[2px] shadow-[0_20px_60px_rgba(36,34,22,0.18)] ring-1 ring-inset ring-gold/25"
+        />
+      )}
     </motion.div>
   )
 }

@@ -1,4 +1,5 @@
 import Hero from '../components/Hero'
+import PhotoBand from '../components/PhotoBand'
 import ClosingCTA from '../components/ClosingCTA'
 import { Container, Reveal, Section } from '../components/primitives'
 import { portfolio } from '../data/content'
@@ -36,6 +37,8 @@ export default function Testimonials() {
           </div>
         </Container>
       </Section>
+
+      <PhotoBand ids={['sig-vow-renewal-lisa-and-john-2', 'portfolio-italiano-5', 'sig-proposal-niki-and-mervin-1']} />
 
       <ClosingCTA />
     </>

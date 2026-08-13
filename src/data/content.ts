@@ -114,19 +114,36 @@ export const portfolio = {
   // URLs point at each publication until Lynea supplies the exact article
   // links; swap `url` per entry and nothing else moves.
   features: [
-    { name: 'AVOLA Magazine', note: 'Editorial article', url: 'https://avolamag.com/' },
+    {
+      name: 'AVOLA Magazine',
+      note: 'Editorial article',
+      url: 'https://avolamag.com/',
+      images: ['portfolio-mmm', 'portfolio-threads'],
+    },
     {
       name: 'REDTV Canada',
       note: 'Broadcast feature — YouTube',
       url: 'https://www.youtube.com/user/redtvcanada',
+      images: ['portfolio-mingle', 'portfolio-vogue'],
     },
     {
       name: 'Bridal Fantasy',
       note: 'Print features — two years, two cities, 2019 / 2020',
       url: 'https://bridalfantasy.com/magazine/',
+      images: ['feature-bridal-fantasy-1', 'feature-bridal-fantasy-2'],
     },
-    { name: 'Dancing With Her', note: 'Blog feature', url: 'https://dancingwithher.com/' },
-    { name: 'Men`s Vow Magazine', note: 'Editorial feature', url: 'https://mensvows.com/' },
+    {
+      name: 'Dancing With Her',
+      note: 'Blog feature',
+      url: 'https://dancingwithher.com/',
+      images: ['portfolio-marie-andre-2', 'portfolio-italiano-6'],
+    },
+    {
+      name: 'Men`s Vow Magazine',
+      note: 'Editorial feature',
+      url: 'https://mensvows.com/',
+      images: ['portfolio-nathan-allan-3', 'portfolio-nathan-allan-4'],
+    },
   ],
   testimonials: [
     'Bride & Groom',

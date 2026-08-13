@@ -1,4 +1,5 @@
 import Hero from '../components/Hero'
+import PhotoBand from '../components/PhotoBand'
 import ClosingCTA from '../components/ClosingCTA'
 import { Container, Display, Eyebrow, Ornament, Reveal, Section } from '../components/primitives'
 import { howWeWorkTogether, solVeDifference } from '../data/experiences'
@@ -106,6 +107,8 @@ export default function ServiceCapabilities() {
           </Reveal>
         </Container>
       </Section>
+
+      <PhotoBand ids={['wed-hannah-and-zach-1', 'wed-christina-and-vince-2', 'sig-engagement-c-and-a-2']} />
 
       <ClosingCTA />
     </>

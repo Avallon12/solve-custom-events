@@ -1,5 +1,6 @@
 import { ArrowUpRight } from 'lucide-react'
 import Hero from '../components/Hero'
+import PhotoBand from '../components/PhotoBand'
 import ClosingCTA from '../components/ClosingCTA'
 import {
   Accent,
@@ -147,6 +148,8 @@ export default function Commitments() {
           </div>
         </Container>
       </Section>
+
+      <PhotoBand ids={['portfolio-nathan-allan-4', 'portfolio-multicultural', 'wed-rob-and-lynea-2']} />
 
       <ClosingCTA
         eyebrow="Gather with us"

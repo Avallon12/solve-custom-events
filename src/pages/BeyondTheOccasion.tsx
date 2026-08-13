@@ -1,4 +1,5 @@
 import Hero from '../components/Hero'
+import PhotoBand from '../components/PhotoBand'
 import ClosingCTA from '../components/ClosingCTA'
 import { Container, Prose, Reveal, Section } from '../components/primitives'
 import { foundation } from '../data/content'
@@ -50,6 +51,8 @@ export default function BeyondTheOccasion() {
           </Reveal>
         </Container>
       </Section>
+
+      <PhotoBand ids={['corp-hull-services-winter-holiday-party-1', 'sig-galentines-1', 'wed-rob-and-lynea-1']} />
 
       <ClosingCTA />
     </>

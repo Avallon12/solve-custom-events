@@ -1,4 +1,5 @@
 import Hero from '../components/Hero'
+import PhotoBand from '../components/PhotoBand'
 import ClosingCTA from '../components/ClosingCTA'
 import {
   Accent,
@@ -40,6 +41,8 @@ export default function Foundation() {
           </Reveal>
         </Container>
       </Section>
+
+      <PhotoBand ids={['wed-claudia-and-ali-1', 'portfolio-italiano-1', 'wed-erin-and-rick-1']} />
 
       <ClosingCTA
         eyebrow="Begin the conversation"

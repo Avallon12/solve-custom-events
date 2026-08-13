@@ -41,6 +41,8 @@ export const dimensions: Record<string, [number, number]> = {
   'portfolio-vogue': [470, 577],
   'portfolio-weddings': [442, 632],
   'portfolio-workshops': [892, 667],
+  'feature-bridal-fantasy-1': [648, 799],
+  'feature-bridal-fantasy-2': [648, 795],
   'reel-signature-moments': [1920, 1080],
   'reel-weddings': [1920, 1080],
   'portfolio-claudia-ali-2': [1866, 2800],

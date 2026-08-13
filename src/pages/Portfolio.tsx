@@ -130,10 +130,15 @@ export default function Portfolio() {
           </Reveal>
           <div className="mt-10 divide-y divide-bronze/30 border-y border-bronze/30">
             {portfolio.features.map((feature, i) => (
-              <Reveal key={feature} delay={i * 70}>
-                <p className="py-7 font-display text-[24px] text-charcoal md:text-[30px]">
-                  {feature}
-                </p>
+              <Reveal key={feature.name} delay={i * 70}>
+                <a
+                  href={feature.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block py-7 font-display text-[24px] text-charcoal transition-colors duration-300 hover:text-gold md:text-[30px]"
+                >
+                  {feature.name}
+                </a>
               </Reveal>
             ))}
           </div>

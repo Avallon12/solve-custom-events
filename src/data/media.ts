@@ -267,6 +267,24 @@ export const media = {
     creditPending: true,
   },
 
+  // ── Published press tear sheets ────────────────────────────────────────────
+  'feature-bridal-fantasy-1': {
+    label: 'Bridal Fantasy — Upcycled Grunge cover spread',
+    alt: 'Bridal Fantasy magazine page: a couple embrace in a weathered green pickup, gown spilling to the ground, titled Upcycled Grunge',
+    tone: 'light',
+    src: '/media/feature-bridal-fantasy-1.webp',
+    credit: 'by Abbey Raine Photography',
+    caption: 'Bridal Fantasy Magazine — print feature',
+  },
+  'feature-bridal-fantasy-2': {
+    label: 'Bridal Fantasy — Upcycled Grunge credits spread',
+    alt: 'Bridal Fantasy magazine page of the Upcycled Grunge shoot crediting Sol Vé Custom Event Décor for floral, décor and styling',
+    tone: 'light',
+    src: '/media/feature-bridal-fantasy-2.webp',
+    credit: 'by Abbey Raine Photography',
+    caption: 'Bridal Fantasy Magazine — print feature',
+  },
+
   // ── Reels assembled from the client's photography (no footage exists yet;
   //    each is a slow Ken Burns pass over the credited photographs) ───────────
   'reel-weddings': {

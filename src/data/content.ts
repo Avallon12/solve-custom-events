@@ -111,12 +111,22 @@ export const portfolio = {
     'Professional photography',
     'Client outcomes (where appropriate)',
   ],
+  // URLs point at each publication until Lynea supplies the exact article
+  // links; swap `url` per entry and nothing else moves.
   features: [
-    'AVOLA Magazine',
-    'REDTV Canada',
-    'Bridal Fantasy',
-    'Dancing With Her',
-    'Men`s Vow Magazine',
+    { name: 'AVOLA Magazine', note: 'Editorial article', url: 'https://avolamag.com/' },
+    {
+      name: 'REDTV Canada',
+      note: 'Broadcast feature — YouTube',
+      url: 'https://www.youtube.com/user/redtvcanada',
+    },
+    {
+      name: 'Bridal Fantasy',
+      note: 'Print features — two years, two cities, 2019 / 2020',
+      url: 'https://bridalfantasy.com/magazine/',
+    },
+    { name: 'Dancing With Her', note: 'Blog feature', url: 'https://dancingwithher.com/' },
+    { name: 'Men`s Vow Magazine', note: 'Editorial feature', url: 'https://mensvows.com/' },
   ],
   testimonials: [
     'Bride & Groom',

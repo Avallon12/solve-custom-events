@@ -89,7 +89,9 @@ function Hero({
   frames: readonly Frame[]
 }) {
   return (
-    <div style={{ height: `calc(${SECTION_HEIGHT}px + 100vh)` }} className="relative w-full">
+    // minHeight, not height: the frame stack defines the true height, so more
+    // frames lengthen the drift instead of spilling over whatever follows.
+    <div style={{ minHeight: `calc(${SECTION_HEIGHT}px + 100vh)` }} className="relative w-full">
       <CentreFrame
         eyebrow={eyebrow}
         headline={headline}

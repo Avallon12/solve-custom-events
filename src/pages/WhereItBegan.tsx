@@ -1,5 +1,4 @@
 import Hero from '../components/Hero'
-import PhotoBand from '../components/PhotoBand'
 import ClosingCTA from '../components/ClosingCTA'
 import { Container, Ornament, Prose, Reveal, Section } from '../components/primitives'
 import { foundation } from '../data/content'
@@ -26,8 +25,6 @@ export default function WhereItBegan() {
           </Reveal>
         </Container>
       </Section>
-
-      <PhotoBand ids={['portfolio-dirt-roads-1', 'wed-farah-1', 'portfolio-claudia-ali']} />
 
       <ClosingCTA />
     </>

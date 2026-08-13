@@ -1,5 +1,4 @@
 import Hero from '../components/Hero'
-import PhotoBand from '../components/PhotoBand'
 import ClosingCTA from '../components/ClosingCTA'
 import { Container, Ornament, Prose, Reveal, Section } from '../components/primitives'
 import { foundation } from '../data/content'
@@ -29,8 +28,6 @@ export default function SolVeWay() {
           </Reveal>
         </Container>
       </Section>
-
-      <PhotoBand ids={['sig-engagement-c-and-a-1', 'wed-marisol-1', 'wed-hannah-and-zach-2']} />
 
       <ClosingCTA />
     </>

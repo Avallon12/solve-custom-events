@@ -1,5 +1,4 @@
 import Hero from '../components/Hero'
-import PhotoBand from '../components/PhotoBand'
 import ClosingCTA from '../components/ClosingCTA'
 import { Container, Reveal, Section } from '../components/primitives'
 import { commitments } from '../data/content'
@@ -43,8 +42,6 @@ export default function Principles() {
           </div>
         </Container>
       </Section>
-
-      <PhotoBand ids={['sig-vow-renewal-lisa-and-john-3', 'wed-claudia-and-ali-2', 'portfolio-valentines-3']} />
 
       <ClosingCTA />
     </>

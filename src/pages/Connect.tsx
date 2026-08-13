@@ -1,7 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import { Mail, MapPin, Phone } from 'lucide-react'
 import Hero from '../components/Hero'
-import PhotoBand from '../components/PhotoBand'
 import { Accent, Btn, Container, Display, Eyebrow, Ornament, Reveal, Section } from '../components/primitives'
 import { contact, socials } from '../data/site'
 import { divisions } from '../data/divisions'
@@ -252,8 +251,6 @@ export default function Connect() {
           </div>
         </Container>
       </Section>
-
-      <PhotoBand ids={['portfolio-marie-andre-1', 'sig-bridal-shower-vegas-1', 'wed-paula-and-ever-2']} />
 
       <Section tone="charcoal" className="!py-[60px] md:!py-[90px]">
         <div className="grain absolute inset-0 opacity-40" />

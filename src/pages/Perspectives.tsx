@@ -1,5 +1,4 @@
 import Hero from '../components/Hero'
-import PhotoBand from '../components/PhotoBand'
 import ClosingCTA from '../components/ClosingCTA'
 import { Container, Display, Ornament, Reveal, Section } from '../components/primitives'
 import { perspectives } from '../data/content'
@@ -43,8 +42,6 @@ export default function Perspectives() {
           </div>
         </Container>
       </Section>
-
-      <PhotoBand ids={['portfolio-conferences', 'corp-hull-services-winter-holiday-party-2', 'portfolio-mingle']} />
 
       <ClosingCTA />
     </>

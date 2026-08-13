@@ -45,11 +45,10 @@ export default function Features() {
                     {feature.note}
                   </p>
 
-                  {feature.images && (
+                  {feature.name === 'Bridal Fantasy' && (
                     <div className="mt-8 grid gap-6 sm:grid-cols-2">
-                      {feature.images.map((id) => (
-                        <Media key={id} id={id} className="w-full" />
-                      ))}
+                      <Media id="feature-bridal-fantasy-1" className="w-full" />
+                      <Media id="feature-bridal-fantasy-2" className="w-full" />
                     </div>
                   )}
                 </div>

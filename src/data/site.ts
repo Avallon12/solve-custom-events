@@ -120,7 +120,7 @@ export const header: NavItem[] = [
       { label: 'REDTV Canada', to: '/features#redtv-canada' },
       { label: 'Bridal Fantasy', to: '/features#bridal-fantasy' },
       { label: 'Dancing With Her', to: '/features#dancing-with-her' },
-      { label: 'Men`s Vow Magazine', to: '/features#men-s-vow-magazine' },
+      { label: "Men's Vow Magazine", to: '/features#men-s-vow-magazine' },
     ],
   },
   {
@@ -152,8 +152,9 @@ export const navigation: NavItem[] = [
   { label: 'What We Create', to: '/what-we-create' },
   { label: 'Signature Experiences', to: '/divisions' },
   { label: 'Meet the Founder', to: '/founder' },
-  { label: 'Portfolio / Journal', to: '/portfolio' },
+  { label: 'Portfolio', to: '/portfolio' },
   { label: 'Connect', to: '/connect' },
+  { label: 'FAQ', to: '/faq' },
 ]
 
 /** Wording approved in the Manual, Chapter 4.1 — never invent new CTA copy. */

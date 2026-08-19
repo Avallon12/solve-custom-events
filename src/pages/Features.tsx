@@ -10,7 +10,7 @@ import { usePageMeta } from '../lib/meta'
 export default function Features() {
   usePageMeta(
     'Features — Sol Vé Custom Events',
-    'AVOLA Magazine, REDTV Canada, Bridal Fantasy, Dancing With Her and Men`s Vow Magazine.',
+    "AVOLA Magazine, REDTV Canada, Bridal Fantasy, Dancing With Her and Men's Vow Magazine.",
   )
 
   return (

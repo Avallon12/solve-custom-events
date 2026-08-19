@@ -58,7 +58,7 @@ export default function Divisions() {
                   </Display>
 
                   <p className="mt-4 font-body text-[18px] leading-relaxed text-espresso">
-                    {experience.tagline}
+                    {experience.listingTagline ?? experience.tagline}
                   </p>
 
                   <p className="mt-4 font-body text-[17px] leading-relaxed text-charcoal">

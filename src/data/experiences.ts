@@ -11,6 +11,12 @@ export type Experience = {
   slug: string
   name: string
   tagline: string
+  /**
+   * The client's two documents spell one division blurb differently
+   * ("Purpose-driven" on the divisions listing, "Purpose driven" on the
+   * division's own page). Where they differ, this carries the listing wording.
+   */
+  listingTagline?: string
   intro: string
   media: MediaId
   services: ServiceGroup[]
@@ -331,6 +337,8 @@ export const experiences: Experience[] = [
     name: 'Conferences & International Events',
     tagline:
       'Purpose driven convenings where ideas are exchanged, partnerships are formed, and meaningful progress begins.',
+    listingTagline:
+      'Purpose-driven convenings where ideas are exchanged, partnerships are formed, and meaningful progress begins.',
     intro:
       'Whether bringing together twenty delegates or thousands of attendees, every conference is thoughtfully designed to encourage collaboration, strengthen relationships, and create lasting impact.',
     media: 'division-conferences',

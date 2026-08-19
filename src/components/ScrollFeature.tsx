@@ -148,7 +148,7 @@ export default function ScrollFeature() {
                 </p>
 
                 <Link
-                  to={`/what-we-create/${division.slug}`}
+                  to={`/divisions/${division.slug}`}
                   className="group mt-7 inline-flex items-center gap-2 font-ui text-[12px] uppercase text-ivory transition-colors duration-300 hover:text-gold"
                   style={{ letterSpacing: '0.22em' }}
                 >

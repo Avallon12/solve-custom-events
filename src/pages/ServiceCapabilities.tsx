@@ -1,7 +1,6 @@
 import Hero from '../components/Hero'
-import ClosingCTA from '../components/ClosingCTA'
-import { Container, Display, Eyebrow, Ornament, Reveal, Section } from '../components/primitives'
-import { howWeWorkTogether, solVeDifference } from '../data/experiences'
+import { Btn, Container, Display, Eyebrow, Ornament, Reveal, Section } from '../components/primitives'
+import { beginTheConversation, howWeWorkTogether, solVeDifference } from '../data/experiences'
 import { usePageMeta } from '../lib/meta'
 
 /** "How We Work Together" and "The Sol Vé Difference", word for word. */
@@ -107,7 +106,31 @@ export default function ServiceCapabilities() {
         </Container>
       </Section>
 
-      <ClosingCTA />
+      <Section tone="linen">
+        <Container width="narrow">
+          <Reveal className="flex flex-col items-center text-center">
+            <Display as="h2" size="lg" className="text-charcoal">
+              {beginTheConversation.title}
+            </Display>
+            <div className="mt-8 space-y-6 font-body text-[18px] leading-[1.7] text-espresso md:text-[20px]">
+              {beginTheConversation.body.map((paragraph) => (
+                <p key={paragraph.slice(0, 30)}>{paragraph}</p>
+              ))}
+            </div>
+            <div className="mt-9 space-y-1 font-display text-[21px] italic leading-snug text-espresso md:text-[24px]">
+              {beginTheConversation.close.map((line) => (
+                <p key={line}>{line}</p>
+              ))}
+            </div>
+            <div className="mt-10">
+              <Btn to="/connect">Begin the Conversation</Btn>
+            </div>
+            <div className="mt-12 w-full max-w-sm">
+              <Ornament />
+            </div>
+          </Reveal>
+        </Container>
+      </Section>
     </>
   )
 }

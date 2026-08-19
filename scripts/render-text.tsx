@@ -1,10 +1,10 @@
 /**
- * Content audit. Renders every Sol Vé route and fails on anything that must not
- * appear there — currently any SOLVÉ Global Summit reference, which the client's
- * newest document asks be kept off the site until the summit is finalised.
- *
- * Run with: npm run audit
+ * Renders every route server-side and writes each page's visible text to
+ * dist-smoke/route-text.json, for the verbatim-copy check against the
+ * client's content document. Run via:
+ *   vite build --ssr scripts/render-text.tsx --outDir dist-smoke && node dist-smoke/render-text.js
  */
+import { writeFileSync } from 'node:fs'
 import { renderToString } from 'react-dom/server'
 import { MemoryRouter, Route, Routes } from 'react-router-dom'
 import Nav from '../src/components/Nav'
@@ -31,7 +31,6 @@ import Connect from '../src/pages/Connect'
 import FAQ from '../src/pages/FAQ'
 import NotFound from '../src/pages/NotFound'
 
-/** Every Sol Vé route. /solve is excluded — it is the summit's own page. */
 const ROUTES = [
   '/',
   '/foundation',
@@ -52,19 +51,6 @@ const ROUTES = [
   '/portfolio',
   '/connect',
   '/faq',
-  '/nowhere',
-]
-
-/** Case-insensitive; catches alt text, metadata and hidden markup alike. */
-const BANNED = [
-  // SOLVÉ Global Summit — off the Sol Vé site until the client says otherwise.
-  /solv[ée]\s+global/i,
-  /global\s+summit/i,
-  /\bSOLV[ÉE]\b(?!\s*(Custom|Vé))/,
-  // Photographer credits — off the site until Lynea supplies the names.
-  /credit to be confirmed/i,
-  /artist credit/i,
-  /photography by/i,
 ]
 
 function Tree({ path }: { path: string }) {
@@ -98,25 +84,11 @@ function Tree({ path }: { path: string }) {
   )
 }
 
-let failures = 0
+const out: Record<string, string> = {}
 for (const path of ROUTES) {
-  // Markup, not just visible text — alt attributes and hidden nodes count.
   const html = renderToString(<Tree path={path} />)
-  const hits = BANNED.flatMap((re) => {
-    const m = html.match(new RegExp(re.source, re.flags.includes('g') ? re.flags : re.flags + 'g'))
-    return m ?? []
-  })
-  if (hits.length) {
-    failures += 1
-    console.log(`FAIL ${path.padEnd(34)} ${[...new Set(hits)].join(', ')}`)
-  } else {
-    console.log(`ok   ${path.padEnd(34)} clean`)
-  }
+  out[path] = html.replace(/<[^>]+>/g, ' ')
 }
 
-console.log(
-  failures === 0
-    ? '\nClean: no summit reference and no photographer-credit line on any route.'
-    : `\n${failures} route(s) contain banned content.`,
-)
-process.exit(failures === 0 ? 0 : 1)
+writeFileSync(new URL('./route-text.json', import.meta.url), JSON.stringify(out))
+console.log(`Wrote text for ${ROUTES.length} routes.`)

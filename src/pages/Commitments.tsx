@@ -148,11 +148,7 @@ export default function Commitments() {
         </Container>
       </Section>
 
-      <ClosingCTA
-        eyebrow="Gather with us"
-        heading="Build something that belongs to everyone in the room."
-        body="If these commitments reflect how you want your people to feel, we would be honoured to hear your story."
-      />
+      <ClosingCTA />
     </>
   )
 }

@@ -10,7 +10,8 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "smoke": "vite build --ssr scripts/smoke.tsx --outDir dist-smoke --logLevel error && node dist-smoke/smoke.js",
-    "audit": "vite build --ssr scripts/audit.tsx --outDir dist-smoke --logLevel error && node dist-smoke/audit.js"
+    "audit": "vite build --ssr scripts/audit.tsx --outDir dist-smoke --logLevel error && node dist-smoke/audit.js",
+    "check:media": "vite build --ssr scripts/placeholder-check.tsx --outDir dist-smoke --logLevel error && node dist-smoke/placeholder-check.js"
   },
   "dependencies": {
     "framer-motion": "^12.43.0",

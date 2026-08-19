@@ -1,9 +1,9 @@
 /**
- * Content audit. Renders every Sol Vé route and fails on anything that must not
- * appear there — currently any SOLVÉ Global Summit reference, which the client's
- * newest document asks be kept off the site until the summit is finalised.
- *
- * Run with: npm run audit
+ * One-off verification for the photo→placeholder conversion.
+ * Renders every route server-side and reports, per route:
+ *  - any <img> whose src points at /media/ other than the logo (must be zero)
+ *  - how many placeholder slots rendered
+ *  - any internal link that does not resolve to a registered route
  */
 import { renderToString } from 'react-dom/server'
 import { MemoryRouter, Route, Routes } from 'react-router-dom'
@@ -31,7 +31,6 @@ import Connect from '../src/pages/Connect'
 import FAQ from '../src/pages/FAQ'
 import NotFound from '../src/pages/NotFound'
 
-/** Every Sol Vé route. /solve is excluded — it is the summit's own page. */
 const ROUTES = [
   '/',
   '/foundation',
@@ -52,20 +51,9 @@ const ROUTES = [
   '/portfolio',
   '/connect',
   '/faq',
-  '/nowhere',
 ]
 
-/** Case-insensitive; catches alt text, metadata and hidden markup alike. */
-const BANNED = [
-  // SOLVÉ Global Summit — off the Sol Vé site until the client says otherwise.
-  /solv[ée]\s+global/i,
-  /global\s+summit/i,
-  /\bSOLV[ÉE]\b(?!\s*(Custom|Vé))/,
-  // Photographer credits — off the site until Lynea supplies the names.
-  /credit to be confirmed/i,
-  /artist credit/i,
-  /photography by/i,
-]
+const KNOWN = new Set(ROUTES)
 
 function Tree({ path }: { path: string }) {
   return (
@@ -98,25 +86,28 @@ function Tree({ path }: { path: string }) {
   )
 }
 
-let failures = 0
+let failed = 0
 for (const path of ROUTES) {
-  // Markup, not just visible text — alt attributes and hidden nodes count.
   const html = renderToString(<Tree path={path} />)
-  const hits = BANNED.flatMap((re) => {
-    const m = html.match(new RegExp(re.source, re.flags.includes('g') ? re.flags : re.flags + 'g'))
-    return m ?? []
-  })
-  if (hits.length) {
-    failures += 1
-    console.log(`FAIL ${path.padEnd(34)} ${[...new Set(hits)].join(', ')}`)
-  } else {
-    console.log(`ok   ${path.padEnd(34)} clean`)
-  }
+
+  const photoImgs = [...html.matchAll(/<(?:img|video)[^>]+src="(\/media\/[^"]+)"/g)]
+    .map((m) => m[1])
+    .filter((src) => src !== '/media/logo.webp')
+
+  const placeholders =
+    (html.match(/Photograph to be provided/g) || []).length +
+    (html.match(/photograph pending/g) || []).length
+
+  const deadLinks = [...html.matchAll(/href="(\/[^"#]*)"/g)]
+    .map((m) => m[1])
+    .filter((href) => !KNOWN.has(href) && !href.startsWith('/media/'))
+
+  const bad = photoImgs.length > 0 || deadLinks.length > 0
+  if (bad) failed++
+  console.log(
+    `${bad ? 'BAD ' : 'ok  '} ${path.padEnd(34)} placeholders=${String(placeholders).padStart(2)}  photo-imgs=${photoImgs.length}  dead-links=${deadLinks.length ? deadLinks.join(',') : 0}`,
+  )
 }
 
-console.log(
-  failures === 0
-    ? '\nClean: no summit reference and no photographer-credit line on any route.'
-    : `\n${failures} route(s) contain banned content.`,
-)
-process.exit(failures === 0 ? 0 : 1)
+console.log(failed === 0 ? '\nClean: no photography shipped, no dead internal links.' : `\n${failed} route(s) need attention.`)
+process.exit(failed === 0 ? 0 : 1)

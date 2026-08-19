@@ -3,11 +3,13 @@ import { Btn, Container, Display, Eyebrow, Ornament, Reveal } from './primitives
 /**
  * The last thing on every page. Lynea asked for a contact route that is
  * impossible to miss — this, plus the nav button and the floating rail.
+ * The default wording is hers, verbatim from the Connect copy — never
+ * substitute invented lines here.
  */
 export default function ClosingCTA({
-  eyebrow = 'Begin the conversation',
-  heading = 'Tell us what you are building.',
-  body = 'Every extraordinary event begins with a conversation. Tell us your vision and we will tell you what is possible.',
+  eyebrow = 'Connect',
+  heading = "Let's Begin the Conversation",
+  body = 'Every meaningful gathering begins with a conversation.',
   cta = 'Begin the Conversation',
 }: {
   eyebrow?: string

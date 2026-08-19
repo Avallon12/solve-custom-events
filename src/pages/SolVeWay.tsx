@@ -19,7 +19,7 @@ export default function SolVeWay() {
         <Container width="narrow">
           <Reveal>
             <Prose paragraphs={foundation.way.body} />
-            <p className="mt-10 font-display text-[26px] italic text-espresso md:text-[32px]">
+            <p className="mt-10 font-body text-[26px] italic text-espresso md:text-[32px]">
               {foundation.way.close}
             </p>
           </Reveal>

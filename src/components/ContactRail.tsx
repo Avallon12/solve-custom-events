@@ -21,7 +21,8 @@ export default function ContactRail() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  if (pathname === '/connect') return null
+  // Trailing-slash tolerant: prerendered pages are served as /connect/.
+  if (pathname.replace(/\/+$/, '') === '/connect') return null
 
   return (
     <div

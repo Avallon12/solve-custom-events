@@ -99,7 +99,7 @@ export default function Founder() {
               <Prose paragraphs={founder.trust.after} />
             </div>
 
-            <p className="mt-6 font-display text-[22px] italic leading-snug text-espresso md:text-[26px]">
+            <p className="mt-6 font-body text-[22px] italic leading-snug text-espresso md:text-[26px]">
               {founder.trust.close}
             </p>
           </Reveal>

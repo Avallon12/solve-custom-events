@@ -34,6 +34,11 @@ export type MediaSlot = {
   credit?: string
   /** True when the photograph is in use but its photographer is unconfirmed. */
   creditPending?: boolean
+  /**
+   * Required aspect ratio shown on the placeholder (e.g. '21:9') for slots
+   * with no entry in media-dimensions. Slots with known dimensions derive it.
+   */
+  ratioHint?: string
   /** Optional caption — event name and year. */
   caption?: string
   /** Set instead of `src` for a reel. Muted, looping. */
@@ -56,6 +61,12 @@ export const media = {
     alt: 'A mural of an eye surrounded by butterflies, flowers and mountains',
     tone: 'warm',
     creditPending: true,
+  },
+  'home-band': {
+    label: 'Home — Editorial Band',
+    alt: 'A wide view across a Sol Vé room in full evening light, tables dressed and candles lit',
+    tone: 'warm',
+    ratioHint: '21:9',
   },
   'foundation-hero': {
     label: 'Foundation hero',

@@ -94,9 +94,7 @@ for (const path of ROUTES) {
     .map((m) => m[1])
     .filter((src) => src !== '/media/logo.webp')
 
-  const placeholders =
-    (html.match(/Photograph to be provided/g) || []).length +
-    (html.match(/photograph pending/g) || []).length
+  const placeholders = (html.match(/Photography to be supplied/g) || []).length
 
   const deadLinks = [...html.matchAll(/href="(\/[^"#]*)"/g)]
     .map((m) => m[1])

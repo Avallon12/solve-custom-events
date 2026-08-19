@@ -5,7 +5,7 @@ import { FiArrowDown } from 'react-icons/fi'
 import { media } from '../../data/media'
 import type { MediaId, MediaSlot } from '../../data/media'
 import { sizeOf } from '../../data/media-dimensions'
-import { Placeholder } from '../Media'
+import { Placeholder, ratioLabelOf } from '../Media'
 import { Container, Eyebrow } from '../primitives'
 
 /**
@@ -188,7 +188,7 @@ function CentreFrame({
         />
       ) : (
         <motion.div className="absolute inset-0" style={{ scale, willChange: 'transform' }}>
-          <Placeholder slot={slot} subtle />
+          <Placeholder slot={slot} ratio={ratioLabelOf(centre, slot)} subtle />
         </motion.div>
       )}
 
@@ -208,7 +208,7 @@ function CentreFrame({
       >
         <Eyebrow tone="light">{eyebrow}</Eyebrow>
 
-        <h1 className="mt-6 font-display text-[34px] font-normal leading-[1.08] text-ivory sm:text-[52px] md:text-[68px] lg:text-[80px]">
+        <h1 className="mt-6 font-display text-[38px] leading-[1.02] text-ivory sm:text-[56px] md:text-[74px] lg:text-[88px]">
           {headline}
         </h1>
 
@@ -355,7 +355,7 @@ function ParallaxFrame({
           }}
           className="w-full overflow-hidden rounded-[2px] shadow-[0_20px_60px_rgba(36,34,22,0.18)] ring-1 ring-inset ring-gold/25"
         >
-          <Placeholder slot={slot} />
+          <Placeholder slot={slot} ratio={ratioLabelOf(id, slot)} />
         </div>
       )}
     </motion.div>

@@ -1,6 +1,27 @@
 import { media, type MediaId, type MediaSlot } from '../data/media'
-import { sizeOf } from '../data/media-dimensions'
+import { dimensions, sizeOf } from '../data/media-dimensions'
 import { Emblem } from './Logo'
+
+/**
+ * Human aspect-ratio label for a slot — "3:2", "4:5", or "1600 × 1067 px"
+ * when no common ratio fits. Shown on the placeholder so whoever supplies
+ * the photograph knows the frame they are filling.
+ */
+const COMMON_RATIOS: Array<[number, number]> = [
+  [1, 1], [5, 4], [4, 3], [3, 2], [8, 5], [16, 9], [2, 1], [21, 9],
+  [4, 5], [3, 4], [2, 3], [5, 8], [9, 16],
+]
+
+export function ratioLabelOf(id: string, slot?: MediaSlot): string | null {
+  if (slot?.ratioHint) return slot.ratioHint
+  const size = dimensions[id]
+  if (!size) return null
+  const value = size[0] / size[1]
+  for (const [w, h] of COMMON_RATIOS) {
+    if (Math.abs(value - w / h) / (w / h) < 0.015) return `${w}:${h}`
+  }
+  return `${size[0]} × ${size[1]} px`
+}
 
 /**
  * Every photograph, reel and image slot on the site renders through here.
@@ -25,10 +46,13 @@ const tones = {
 
 export function Placeholder({
   slot,
+  ratio = null,
   className = '',
   subtle = false,
 }: {
   slot: MediaSlot
+  /** Required aspect ratio of the eventual photograph, e.g. "3:2". */
+  ratio?: string | null
   className?: string
   /** Hero use: watermark only, so the headline is never competed with. */
   subtle?: boolean
@@ -39,44 +63,75 @@ export function Placeholder({
     return (
       <div
         role="img"
-        aria-label={`${slot.label} — photograph to be provided`}
+        aria-label={`${slot.label} — photography to be supplied`}
         className={`grain relative h-full w-full overflow-hidden ${tones[slot.tone]} ${className}`}
       >
         <Emblem className="absolute left-1/2 top-1/2 h-[52vh] w-[52vh] -translate-x-1/2 -translate-y-1/2 text-gold/[0.07]" />
         <span
-          className="absolute bottom-5 right-5 font-ui text-[9px] uppercase text-champagne/25 md:text-[10px]"
-          style={{ letterSpacing: '0.3em' }}
+          className="absolute bottom-5 right-5 text-right font-ui text-[9px] uppercase leading-[1.9] text-champagne/30 md:text-[10px]"
+          style={{ letterSpacing: '0.26em' }}
         >
-          {slot.label} · photograph pending
+          {slot.label}
+          {ratio ? ` · ${ratio}` : ''} · Photography to be supplied
+          <br />
+          Photo: [credit pending]
         </span>
       </div>
     )
   }
 
+  const inkStrong = isLight ? 'text-espresso/75' : 'text-champagne/75'
+  const inkSoft = isLight ? 'text-espresso/55' : 'text-champagne/50'
+
   return (
     <div
       role="img"
-      aria-label={`${slot.label} — photograph to be provided`}
+      aria-label={`${slot.label} — photography to be supplied`}
       className={`grain relative flex h-full w-full items-center justify-center overflow-hidden ${
         tones[slot.tone]
       } ${className}`}
     >
-      <div className="relative z-10 flex flex-col items-center px-6 text-center">
-        <Emblem className={`h-12 w-12 ${isLight ? 'text-espresso/50' : 'text-gold/50'}`} />
+      {/* Hairline inner frame — the placeholder is a designed state, not a gap. */}
+      <div
+        aria-hidden="true"
+        className={`pointer-events-none absolute inset-2.5 border md:inset-4 ${
+          isLight ? 'border-espresso/20' : 'border-gold/25'
+        }`}
+      />
+
+      <div className="relative z-10 flex flex-col items-center px-8 py-6 text-center">
+        <Emblem className={`h-10 w-10 md:h-12 md:w-12 ${isLight ? 'text-espresso/50' : 'text-gold/55'}`} />
+
         <span
-          className={`mt-5 font-ui text-[10px] uppercase md:text-[11px] ${
-            isLight ? 'text-espresso/70' : 'text-champagne/70'
-          }`}
+          className={`mt-5 font-ui text-[10px] font-semibold uppercase md:text-[11px] ${inkStrong}`}
           style={{ letterSpacing: '0.3em' }}
         >
           {slot.label}
         </span>
+
+        {ratio && (
+          <span
+            className={`mt-2 font-ui text-[9px] uppercase md:text-[10px] ${inkSoft}`}
+            style={{ letterSpacing: '0.24em' }}
+          >
+            Aspect {ratio}
+          </span>
+        )}
+
         <span
-          className={`mt-2 font-body text-[13px] italic ${
-            isLight ? 'text-espresso/60' : 'text-champagne/50'
-          }`}
+          aria-hidden="true"
+          className={`mt-4 h-px w-10 ${isLight ? 'bg-espresso/30' : 'bg-gold/40'}`}
+        />
+
+        <span className={`mt-4 font-body text-[14px] italic md:text-[15px] ${inkStrong}`}>
+          Photography to be supplied
+        </span>
+
+        <span
+          className={`mt-2 font-ui text-[9px] uppercase md:text-[10px] ${inkSoft}`}
+          style={{ letterSpacing: '0.22em' }}
         >
-          Photograph to be provided
+          Photo: [credit pending]
         </span>
       </div>
     </div>
@@ -124,7 +179,7 @@ export default function Media({
             className={`h-full w-full object-cover ${drift ? 'animate-drift' : ''} ${imgClassName}`}
           />
         ) : (
-          <Placeholder slot={slot} subtle={subtle} />
+          <Placeholder slot={slot} ratio={ratioLabelOf(id, slot)} subtle={subtle} />
         )}
       </div>
 

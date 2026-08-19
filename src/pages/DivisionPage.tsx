@@ -126,7 +126,7 @@ export default function DivisionPage() {
             <Display as="h2" size="md" className="mt-6 text-charcoal">
               {experience.idealFor}
             </Display>
-            <p className="mt-9 font-display text-[22px] italic leading-snug text-espresso md:text-[26px]">
+            <p className="mt-9 font-body text-[22px] italic leading-snug text-espresso md:text-[26px]">
               {experience.because}
             </p>
             <div className="mt-14">

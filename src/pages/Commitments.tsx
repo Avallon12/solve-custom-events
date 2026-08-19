@@ -47,7 +47,7 @@ export default function Commitments() {
         <Container width="narrow">
           <Reveal className="text-center">
             <blockquote>
-              <p className="font-display text-[24px] italic leading-[1.4] text-charcoal md:text-[36px]">
+              <p className="font-body text-[24px] italic leading-[1.4] text-charcoal md:text-[36px]">
                 “{commitments.quote}”
               </p>
             </blockquote>
@@ -72,15 +72,16 @@ export default function Commitments() {
         </Container>
       </Section>
 
-      {/* Three boxes — equal width and spacing; each takes its natural height.
-          Stretching them all to the tallest (Belonging for All) left the other
-          two mostly empty, which read as dead space rather than parity. */}
+      {/* Three boxes — the client's spec is exact: all three EQUAL in size and
+          equal in spacing, so none reads as more important. The grid stretches
+          every box to the same height; measured, not eyeballed (see
+          scripts in the delivery report). */}
       <Section tone="linen">
         <Container width="wide">
-          <div className="grid items-start gap-6 md:gap-8 lg:grid-cols-3">
+          <div className="grid items-stretch gap-6 md:gap-8 lg:grid-cols-3">
             {commitments.pillars.map((pillar, i) => (
-              <Reveal key={pillar.id} delay={i * 110}>
-                <div id={pillar.id} className="scroll-mt-32">
+              <Reveal key={pillar.id} delay={i * 110} className="h-full">
+                <div id={pillar.id} className="h-full scroll-mt-32">
                   <Card tone="ivory" className="flex flex-col">
                     <p
                       className="font-ui text-[11px] uppercase text-bronze"
@@ -93,7 +94,7 @@ export default function Commitments() {
                       {pillar.title}
                     </h2>
 
-                    <p className="mt-6 font-display text-[19px] italic leading-snug text-espresso md:text-[21px]">
+                    <p className="mt-6 font-body text-[19px] italic leading-snug text-espresso md:text-[21px]">
                       {pillar.lead}
                     </p>
 
@@ -115,7 +116,7 @@ export default function Commitments() {
                           {pillar.link.label} <ArrowUpRight size={13} />
                         </a>
                       )}
-                      <p className="border-t border-stone/40 pt-6 font-display text-[18px] italic leading-snug text-charcoal">
+                      <p className="border-t border-stone/40 pt-6 font-body text-[18px] italic leading-snug text-charcoal">
                         {pillar.close}
                       </p>
                     </div>
@@ -140,7 +141,7 @@ export default function Commitments() {
             </Reveal>
             <Reveal delay={100}>
               <Prose paragraphs={commitments.community.body} tone="light" />
-              <p className="mt-8 font-display text-[22px] italic text-gold md:text-[26px]">
+              <p className="mt-8 font-body text-[22px] italic text-gold md:text-[26px]">
                 {commitments.community.close}
               </p>
             </Reveal>

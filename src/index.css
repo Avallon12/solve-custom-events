@@ -1,4 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+/* Hallmark · genre: editorial (luxury) · macrostructure: Marquee Hero family ·
+ * theme: custom (client palette — ivory paper · gold accent · charcoal ink) ·
+ * display: Fraunces Variable · body: EB Garamond · design-system: design.md ·
+ * designed-as-app */
+
+/* Self-hosted — no render-blocking third-party CSS, no font CDN dependency. */
+@import '@fontsource-variable/fraunces/full.css';
+@import '@fontsource/eb-garamond/400.css';
+@import '@fontsource/eb-garamond/400-italic.css';
+@import '@fontsource/eb-garamond/500.css';
+@import '@fontsource/eb-garamond/600.css';
 
 @tailwind base;
 @tailwind components;
@@ -9,11 +19,16 @@
     scroll-behavior: smooth;
   }
 
+  html {
+    overflow-x: clip;
+  }
+
   body {
     @apply bg-ivory font-body text-charcoal antialiased;
     overflow-x: clip;
     font-size: 18px;
     line-height: 1.6;
+    font-optical-sizing: auto;
   }
 
   h1,
@@ -21,7 +36,12 @@
   h3,
   h4 {
     @apply font-display;
-    font-weight: 400;
+    /* Fraunces at display sizes: light weight, optical sizing carries the
+       contrast. Weight is deliberately below body (340 vs 400) — the scale
+       difference does the talking. */
+    font-weight: 340;
+    font-optical-sizing: auto;
+    letter-spacing: -0.01em;
   }
 
   ::selection {

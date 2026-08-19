@@ -47,8 +47,8 @@ export default function Features() {
 
                   {feature.name === 'Bridal Fantasy' && (
                     <div className="mt-8 grid gap-6 sm:grid-cols-2">
-                      <Media id="feature-bridal-fantasy-1" className="w-full" />
-                      <Media id="feature-bridal-fantasy-2" className="w-full" />
+                      <Media id="feature-bridal-fantasy-1" className="aspect-[4/5] w-full" />
+                      <Media id="feature-bridal-fantasy-2" className="aspect-[4/5] w-full" />
                     </div>
                   )}
                 </div>

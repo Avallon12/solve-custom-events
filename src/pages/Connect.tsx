@@ -80,7 +80,7 @@ export default function Connect() {
                   to understand what matters most to you, the people you're bringing together, and the
                   purpose your gathering is meant to serve.
                 </p>
-                <p className="font-display text-[21px] italic text-espresso md:text-[24px]">
+                <p className="font-body text-[21px] italic text-espresso md:text-[24px]">
                   No two gatherings are ever the same. Neither is our approach.
                 </p>
                 <p>If our philosophy resonates with you, we invite you to begin the conversation.</p>
@@ -284,7 +284,7 @@ export default function Connect() {
             <p className="mt-10 font-body text-[19px] leading-relaxed text-champagne md:text-[21px]">
               Thank you for taking the time to learn about Sol Vé.
             </p>
-            <p className="mt-8 font-display text-[24px] italic leading-snug text-ivory md:text-[30px]">
+            <p className="mt-8 font-body text-[24px] italic leading-snug text-ivory md:text-[30px]">
               We never take for granted the trust it takes to invite someone into life's most
               meaningful moments.
             </p>

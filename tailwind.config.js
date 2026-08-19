@@ -33,9 +33,11 @@ export default {
         },
       },
       fontFamily: {
-        display: ['"Playfair Display"', 'Georgia', 'serif'],
-        body: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-        ui: ['Inter', 'system-ui', 'sans-serif'],
+        // One display face, one text face — repeated without exception.
+        // UI labels are the text face in caps, so the whole site is two families.
+        display: ['"Fraunces Variable"', 'Georgia', 'serif'],
+        body: ['"EB Garamond"', 'Georgia', 'serif'],
+        ui: ['"EB Garamond"', 'Georgia', 'serif'],
       },
       letterSpacing: {
         eyebrow: '0.3em',

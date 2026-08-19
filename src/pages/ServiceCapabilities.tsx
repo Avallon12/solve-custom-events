@@ -117,7 +117,7 @@ export default function ServiceCapabilities() {
                 <p key={paragraph.slice(0, 30)}>{paragraph}</p>
               ))}
             </div>
-            <div className="mt-9 space-y-1 font-display text-[21px] italic leading-snug text-espresso md:text-[24px]">
+            <div className="mt-9 space-y-1 font-body text-[21px] italic leading-snug text-espresso md:text-[24px]">
               {beginTheConversation.close.map((line) => (
                 <p key={line}>{line}</p>
               ))}

@@ -67,10 +67,10 @@ export default function Hero({
           <Eyebrow tone="light">{eyebrow}</Eyebrow>
 
           <h1
-            className={`mt-6 font-display font-normal text-ivory ${
+            className={`mt-6 font-display text-ivory ${
               full
-                ? 'text-[42px] leading-[1.05] sm:text-[64px] md:text-[80px] lg:text-[94px]'
-                : 'text-[34px] leading-[1.1] sm:text-[46px] md:text-[58px]'
+                ? 'text-[42px] leading-[1.02] sm:text-[60px] md:text-[76px] lg:text-[88px]'
+                : 'text-[36px] leading-[1.06] sm:text-[48px] md:text-[60px]'
             }`}
           >
             {headline}

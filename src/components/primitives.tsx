@@ -72,7 +72,7 @@ export function Eyebrow({
 }) {
   return (
     <p
-      className={`font-ui text-[11px] uppercase md:text-[13px] ${
+      className={`font-ui text-[12px] font-semibold uppercase md:text-[14px] ${
         tone === 'light' ? 'text-champagne' : 'text-walnut'
       } ${className}`}
       style={{ letterSpacing: '0.3em' }}
@@ -108,18 +108,22 @@ export function Display({
   className?: string
 }) {
   const sizes = {
-    // Manual 2.2 — H1 56/64 desktop, 38 mobile
-    xl: 'text-[38px] leading-[1.08] sm:text-[54px] md:text-[64px] lg:text-[76px]',
-    lg: 'text-[30px] leading-[1.15] sm:text-[38px] md:text-[46px]',
-    md: 'text-[24px] leading-[1.2] md:text-[32px]',
-    sm: 'text-[20px] leading-[1.25] md:text-[24px]',
+    // Dramatic scale contrast against 18px body — the display face carries
+    // the luxury; weight stays light and the size does the talking.
+    xl: 'text-[40px] leading-[1.04] sm:text-[56px] md:text-[72px] lg:text-[88px]',
+    lg: 'text-[32px] leading-[1.1] sm:text-[42px] md:text-[52px]',
+    md: 'text-[25px] leading-[1.18] md:text-[33px]',
+    sm: 'text-[21px] leading-[1.25] md:text-[25px]',
   }
-  return <Tag className={`font-display font-normal ${sizes[size]} ${className}`}>{children}</Tag>
+  return <Tag className={`font-display ${sizes[size]} ${className}`}>{children}</Tag>
 }
 
-/** The one flourish that carries the brand: a word set in Playfair italic. */
+/**
+ * The one flourish that carries the brand: a word held in gold.
+ * Roman, never italic — emphasis is carried by colour, not slant.
+ */
 export function Accent({ children }: { children: ReactNode }) {
-  return <em className="font-display italic">{children}</em>
+  return <span className="text-gold">{children}</span>
 }
 
 export function Lede({ children, className = '' }: { children: ReactNode; className?: string }) {
@@ -151,7 +155,7 @@ export function Prose({
 type ButtonVariant = 'primary' | 'outline' | 'outline-light'
 
 const base =
-  'inline-flex min-h-[52px] items-center justify-center gap-2 px-8 py-4 font-ui text-[14px] font-semibold uppercase transition-colors duration-300 md:text-[15px]'
+  'inline-flex min-h-[52px] items-center justify-center gap-2 px-8 py-4 font-ui text-[15px] font-semibold uppercase transition-colors duration-300 md:text-[16px]'
 /** Written out rather than computed so Tailwind's scanner sees every class. */
 function variantClass(v: ButtonVariant) {
   if (v === 'primary') return 'rounded-[2px] bg-gold text-ivory hover:bg-bronze'
@@ -177,7 +181,7 @@ export function Btn({
   type?: 'button' | 'submit'
 }) {
   const cls = `${base} ${variantClass(variant)} ${className}`
-  const style = { letterSpacing: '0.5px' }
+  const style = { letterSpacing: '0.12em' }
 
   if (to) {
     return (

@@ -1,4 +1,5 @@
 import Hero from '../components/Hero'
+import Media from '../components/Media'
 import ClosingCTA from '../components/ClosingCTA'
 import { Container, Prose, Reveal, Section } from '../components/primitives'
 import { foundation } from '../data/content'
@@ -47,6 +48,10 @@ export default function BeyondTheOccasion() {
 
           <Reveal className="mt-14">
             <Prose paragraphs={foundation.beyond.close} />
+          </Reveal>
+          {/* Reserved slot — photograph to come from the client. */}
+          <Reveal className="mt-14">
+            <Media id="beyond-occasion-band" showCaption={false} className="aspect-[16/9] w-full" />
           </Reveal>
         </Container>
       </Section>

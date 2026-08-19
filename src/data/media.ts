@@ -40,6 +40,8 @@ export type MediaSlot = {
   caption?: string
   /** Set instead of `src` for a reel. Muted, looping. */
   video?: string
+  /** 'film' marks a slot reserved for video — its placeholder says so. */
+  kind?: 'film'
 }
 
 const CREDIT_MIKE_HOPKINS = 'by Mike Hopkins Photography, 2019'
@@ -770,6 +772,190 @@ export const media = {
     src: '/media/portfolio-valentines-3.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Valentine\'s Styled Shoot',
+  },
+  // ── RESERVED SLOTS — added 2026-08-19, every one renders as a designed
+  // placeholder until the client supplies the asset. Photo slots publish by
+  // setting `src`; film slots by setting `video`. Nothing existing changed. ──
+
+  // Films — the client has footage to send; these are their places.
+  'film-weddings': {
+    label: 'Weddings — Feature Film',
+    alt: 'A cinematic film of a Sol Vé wedding, from preparation to the last dance',
+    tone: 'dark',
+    kind: 'film',
+  },
+  'reel-design-stylization': {
+    label: 'Design & Stylization — Reel',
+    alt: 'A reel of Sol Vé rooms being designed, styled and revealed',
+    tone: 'dark',
+    kind: 'film',
+  },
+  'reel-workshops': {
+    label: 'Workshops & Curated Experiences — Reel',
+    alt: 'A reel of guests engaged in a Sol Vé workshop and curated experience',
+    tone: 'dark',
+    kind: 'film',
+  },
+  'reel-conferences': {
+    label: 'Conferences & International Events — Reel',
+    alt: 'A reel of delegates gathering at a Sol Vé conference',
+    tone: 'dark',
+    kind: 'film',
+  },
+  'reel-fundraising': {
+    label: 'Fundraising Campaign Events — Reel',
+    alt: 'A reel of a Sol Vé fundraising gala in motion',
+    tone: 'dark',
+    kind: 'film',
+  },
+  'film-highlights': {
+    label: 'Portfolio — Event Film Highlights',
+    alt: 'Highlights filmed across Sol Vé gatherings',
+    tone: 'dark',
+    kind: 'film',
+  },
+
+  // Page bands — one per page, placed where a photograph will serve best.
+  'foundation-room': {
+    label: 'Foundation — The Room Before Guests',
+    alt: 'A Sol Vé room fully set in the quiet moments before the first guest arrives',
+    tone: 'warm',
+  },
+  'way-hospitality': {
+    label: 'The Sol Vé Way — Hospitality in Practice',
+    alt: 'A Sol Vé host welcoming guests as the gathering begins',
+    tone: 'warm',
+  },
+  'beyond-occasion-band': {
+    label: 'Beyond the Occasion — What Follows',
+    alt: 'Guests in conversation as a Sol Vé evening carries on beyond the programme',
+    tone: 'dark',
+  },
+  'principles-craft': {
+    label: 'Sol Vé Principles — Craftsmanship Detail',
+    alt: 'A close detail of Sol Vé table craftsmanship, place settings and florals',
+    tone: 'light',
+  },
+  'began-early': {
+    label: 'Where It Began — An Early Gathering',
+    alt: 'An early Sol Vé gathering, where the philosophy began',
+    tone: 'warm',
+  },
+  'community-impact': {
+    label: 'Community Impact — The Community Gathered',
+    alt: 'A community brought together at a Sol Vé philanthropic gathering',
+    tone: 'dark',
+  },
+  'capabilities-behind-scenes': {
+    label: 'Service Capabilities — Behind the Scenes',
+    alt: 'The Sol Vé team in production, building an event behind the scenes',
+    tone: 'warm',
+  },
+  'founder-candid': {
+    label: 'Meet the Founder — Greeting Guests, Candid',
+    alt: 'Lynea greeting guests as they arrive at a Sol Vé gathering',
+    tone: 'warm',
+  },
+  'testimonials-band': {
+    label: 'Testimonials — Guests Gathered',
+    alt: 'Guests gathered and at ease at a Sol Vé event',
+    tone: 'warm',
+  },
+  'perspectives-band': {
+    label: 'Perspectives — A Room in Conversation',
+    alt: 'A room arranged by Sol Vé for open conversation',
+    tone: 'light',
+  },
+
+  // Division galleries — the corporate-facing divisions have no photography
+  // yet (flagged to the client); these labels double as the shot list.
+  'gal-design-3': {
+    label: 'Design & Stylization — Tablescape Detail',
+    alt: 'A styled Sol Vé tablescape in close detail',
+    tone: 'light',
+  },
+  'gal-workshops-1': {
+    label: 'Workshops — Facilitated Session',
+    alt: 'A facilitator leading a Sol Vé workshop session',
+    tone: 'warm',
+  },
+  'gal-workshops-2': {
+    label: 'Workshops — Executive Retreat Setting',
+    alt: 'An executive retreat room prepared by Sol Vé',
+    tone: 'light',
+  },
+  'gal-workshops-3': {
+    label: 'Workshops — Creative Materials Detail',
+    alt: 'Creative materials laid out for a Sol Vé curated experience',
+    tone: 'warm',
+  },
+  'gal-conferences-1': {
+    label: 'Conferences — Plenary Room',
+    alt: 'A plenary room staged by Sol Vé before delegates arrive',
+    tone: 'dark',
+  },
+  'gal-conferences-2': {
+    label: 'Conferences — Delegates in Session',
+    alt: 'Delegates in session at a Sol Vé conference',
+    tone: 'warm',
+  },
+  'gal-conferences-3': {
+    label: 'Conferences — Evening Reception',
+    alt: 'An evening reception following a Sol Vé conference day',
+    tone: 'dark',
+  },
+  'gal-fundraising-1': {
+    label: 'Fundraising — Gala Room',
+    alt: 'A gala room dressed by Sol Vé for a fundraising campaign evening',
+    tone: 'dark',
+  },
+  'gal-fundraising-2': {
+    label: 'Fundraising — Live Auction Moment',
+    alt: 'A live auction moment at a Sol Vé fundraising gala',
+    tone: 'warm',
+  },
+  'gal-fundraising-3': {
+    label: 'Fundraising — Donor Recognition',
+    alt: 'Donors recognised on stage at a Sol Vé fundraising event',
+    tone: 'dark',
+  },
+
+  // Portfolio — the categories still awaiting photography.
+  'portfolio-conf-lead-1': {
+    label: 'Portfolio — Conferences & Leadership Events I',
+    alt: 'A Sol Vé conference or leadership gathering',
+    tone: 'dark',
+    caption: 'Conferences & Leadership Events',
+  },
+  'portfolio-conf-lead-2': {
+    label: 'Portfolio — Conferences & Leadership Events II',
+    alt: 'Leaders convened at a Sol Vé event',
+    tone: 'warm',
+    caption: 'Conferences & Leadership Events',
+  },
+  'portfolio-fund-camp-1': {
+    label: 'Portfolio — Fundraising Campaigns I',
+    alt: 'A Sol Vé fundraising campaign evening',
+    tone: 'dark',
+    caption: 'Fundraising Campaigns',
+  },
+  'portfolio-fund-camp-2': {
+    label: 'Portfolio — Fundraising Campaigns II',
+    alt: 'Generosity celebrated at a Sol Vé fundraising campaign',
+    tone: 'warm',
+    caption: 'Fundraising Campaigns',
+  },
+  'portfolio-workshops-cur-1': {
+    label: 'Portfolio — Workshops & Curated Experiences I',
+    alt: 'A Sol Vé workshop or curated experience in progress',
+    tone: 'light',
+    caption: 'Workshops & Curated Experiences',
+  },
+  'portfolio-workshops-cur-2': {
+    label: 'Portfolio — Workshops & Curated Experiences II',
+    alt: 'Guests immersed in a Sol Vé curated experience',
+    tone: 'warm',
+    caption: 'Workshops & Curated Experiences',
   },
 } satisfies Record<string, MediaSlot>
 

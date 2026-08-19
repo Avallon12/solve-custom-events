@@ -1,4 +1,5 @@
 import Hero from '../components/Hero'
+import Media from '../components/Media'
 import ClosingCTA from '../components/ClosingCTA'
 import { Container, Ornament, Prose, Reveal, Section } from '../components/primitives'
 import { foundation } from '../data/content'
@@ -25,6 +26,10 @@ export default function SolVeWay() {
           </Reveal>
           <Reveal className="mt-14">
             <Ornament />
+          </Reveal>
+          {/* Reserved slot — photograph to come from the client. */}
+          <Reveal className="mt-14">
+            <Media id="way-hospitality" showCaption={false} className="aspect-[16/9] w-full" />
           </Reveal>
         </Container>
       </Section>

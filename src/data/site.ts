@@ -154,6 +154,7 @@ export const navigation: NavItem[] = [
   { label: 'Meet the Founder', to: '/founder' },
   { label: 'Portfolio / Journal', to: '/portfolio' },
   { label: 'Connect', to: '/connect' },
+  { label: 'FAQ', to: '/faq' },
 ]
 
 /** Wording approved in the Manual, Chapter 4.1 — never invent new CTA copy. */

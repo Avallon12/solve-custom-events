@@ -1,4 +1,5 @@
 import Hero from '../components/Hero'
+import Media from '../components/Media'
 import ClosingCTA from '../components/ClosingCTA'
 import { Container, Display, Ornament, Reveal, Section } from '../components/primitives'
 import { perspectives } from '../data/content'
@@ -40,6 +41,15 @@ export default function Perspectives() {
               </article>
             ))}
           </div>
+        </Container>
+      </Section>
+
+      {/* Reserved slot — photograph to come from the client. */}
+      <Section tone="ivory" className="!pt-0">
+        <Container width="narrow">
+          <Reveal>
+            <Media id="perspectives-band" showCaption={false} className="aspect-[16/9] w-full" />
+          </Reveal>
         </Container>
       </Section>
 

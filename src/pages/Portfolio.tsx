@@ -65,6 +65,13 @@ const GALLERY: MediaId[] = [
   'wed-christina-and-vince-1',
   'sig-proposal-meegan-and-logan-1',
   'sig-bridal-shower-vegas-1',
+  // Reserved slots — the categories still awaiting the client's photography.
+  'portfolio-conf-lead-1',
+  'portfolio-conf-lead-2',
+  'portfolio-fund-camp-1',
+  'portfolio-fund-camp-2',
+  'portfolio-workshops-cur-1',
+  'portfolio-workshops-cur-2',
 ]
 
 export default function Portfolio() {
@@ -115,6 +122,11 @@ export default function Portfolio() {
               </Reveal>
             ))}
           </div>
+
+          {/* Reserved slot — event film highlights, footage to come from the client. */}
+          <Reveal className="mt-8 md:mt-12">
+            <Media id="film-highlights" showCaption={false} className="aspect-video w-full" />
+          </Reveal>
 
           <Reveal className="mt-16">
             <p className="font-body text-[18px] text-espresso">Each project should include:</p>

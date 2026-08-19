@@ -1,4 +1,5 @@
 import { HeroLink, SmoothScrollHero } from '../components/ui/modern-hero'
+import Media from '../components/Media'
 import { Accent } from '../components/primitives'
 import { home } from '../data/content'
 import { usePageMeta } from '../lib/meta'
@@ -53,8 +54,18 @@ export default function Home() {
 
       {/*
         The document gives the Home page one block of copy — the eyebrow,
-        headline, subheadline and two buttons above. Nothing else belongs here.
+        headline, subheadline and two buttons above. No copy is added below:
+        the film band is a reserved media slot only, awaiting the client's
+        wedding footage.
       */}
+      <section aria-label="Feature film" className="relative">
+        <Media
+          id="film-weddings"
+          showCaption={false}
+          className="aspect-video w-full md:aspect-[21/9]"
+          imgClassName="h-full w-full"
+        />
+      </section>
     </>
   )
 }

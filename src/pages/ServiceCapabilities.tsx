@@ -1,4 +1,5 @@
 import Hero from '../components/Hero'
+import Media from '../components/Media'
 import ClosingCTA from '../components/ClosingCTA'
 import { Container, Display, Eyebrow, Ornament, Reveal, Section } from '../components/primitives'
 import { howWeWorkTogether, solVeDifference } from '../data/experiences'
@@ -103,6 +104,19 @@ export default function ServiceCapabilities() {
             <div className="mt-14">
               <Ornament tone="light" />
             </div>
+          </Reveal>
+        </Container>
+      </Section>
+
+      {/* Reserved slot — photograph to come from the client. */}
+      <Section tone="ivory" rule className="!py-[60px] md:!py-[80px]">
+        <Container>
+          <Reveal>
+            <Media
+              id="capabilities-behind-scenes"
+              showCaption={false}
+              className="aspect-[21/9] w-full"
+            />
           </Reveal>
         </Container>
       </Section>

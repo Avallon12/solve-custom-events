@@ -272,9 +272,11 @@ export const experiences: Experience[] = [
     idealFor:
       'Clients seeking a cohesive, professionally designed environment that reflects both purpose and personality.',
     because: 'Because the room begins the conversation before anyone speaks.',
+    reel: 'reel-design-stylization',
     gallery: [
       'corp-hull-services-winter-holiday-party-1',
       'corp-hull-services-winter-holiday-party-2',
+      'gal-design-3',
     ],
   },
   {
@@ -325,6 +327,8 @@ export const experiences: Experience[] = [
       'Organizations, businesses, educational institutions, and community groups seeking meaningful learning experiences.',
     because:
       'Because the way people gather shapes the relationships, ideas, and leadership that move organizations forward.',
+    reel: 'reel-workshops',
+    gallery: ['gal-workshops-1', 'gal-workshops-2', 'gal-workshops-3'],
   },
   {
     slug: 'conferences',
@@ -397,6 +401,8 @@ export const experiences: Experience[] = [
       'Governments, corporations, associations, educational institutions, Indigenous organizations, nonprofit organizations, and international partners seeking professionally managed gatherings.',
     because:
       'Because the way leaders gather shapes the conversations, collaborations, and decisions that influence the world.',
+    reel: 'reel-conferences',
+    gallery: ['gal-conferences-1', 'gal-conferences-2', 'gal-conferences-3'],
   },
   {
     slug: 'fundraising',
@@ -452,6 +458,8 @@ export const experiences: Experience[] = [
     idealFor:
       'Charitable organizations, foundations, community organizations, businesses, sponsors, and social impact initiatives seeking to strengthen relationships while inspiring generosity.',
     because: 'Because the way communities gather shapes the future they create together.',
+    reel: 'reel-fundraising',
+    gallery: ['gal-fundraising-1', 'gal-fundraising-2', 'gal-fundraising-3'],
   },
 ]
 

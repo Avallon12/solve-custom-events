@@ -34,12 +34,15 @@ export function Placeholder({
   subtle?: boolean
 }) {
   const isLight = slot.tone === 'light'
+  // Film slots await footage, photo slots await photography — same design.
+  const pendingWord = slot.kind === 'film' ? 'film' : 'photograph'
+  const pendingLine = slot.kind === 'film' ? 'Film to be provided' : 'Photograph to be provided'
 
   if (subtle) {
     return (
       <div
         role="img"
-        aria-label={`${slot.label} — photograph to be provided`}
+        aria-label={`${slot.label} — ${pendingWord} to be provided`}
         className={`grain relative h-full w-full overflow-hidden ${tones[slot.tone]} ${className}`}
       >
         <Emblem className="absolute left-1/2 top-1/2 h-[52vh] w-[52vh] -translate-x-1/2 -translate-y-1/2 text-gold/[0.07]" />
@@ -47,7 +50,7 @@ export function Placeholder({
           className="absolute bottom-5 right-5 font-ui text-[9px] uppercase text-champagne/25 md:text-[10px]"
           style={{ letterSpacing: '0.3em' }}
         >
-          {slot.label} · photograph pending
+          {slot.label} · {pendingWord} pending
         </span>
       </div>
     )
@@ -56,7 +59,7 @@ export function Placeholder({
   return (
     <div
       role="img"
-      aria-label={`${slot.label} — photograph to be provided`}
+      aria-label={`${slot.label} — ${pendingWord} to be provided`}
       className={`grain relative flex h-full w-full items-center justify-center overflow-hidden ${
         tones[slot.tone]
       } ${className}`}
@@ -76,7 +79,7 @@ export function Placeholder({
             isLight ? 'text-espresso/60' : 'text-champagne/50'
           }`}
         >
-          Photograph to be provided
+          {pendingLine}
         </span>
       </div>
     </div>

@@ -102,6 +102,11 @@ export default function Founder() {
             <p className="mt-6 font-display text-[22px] italic leading-snug text-espresso md:text-[26px]">
               {founder.trust.close}
             </p>
+            {/* Reserved slot — a candid of Lynea greeting guests, per the
+                portrait direction. Photograph to come from the client. */}
+            <div className="mt-14">
+              <Media id="founder-candid" showCaption={false} className="aspect-[16/9] w-full" />
+            </div>
           </Reveal>
         </Container>
       </Section>

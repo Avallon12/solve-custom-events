@@ -28,6 +28,7 @@ import WhatWeCreate from '../src/pages/WhatWeCreate'
 import Founder from '../src/pages/Founder'
 import Portfolio from '../src/pages/Portfolio'
 import Connect from '../src/pages/Connect'
+import FAQ from '../src/pages/FAQ'
 import NotFound from '../src/pages/NotFound'
 
 /** Every Sol Vé route. /solve is excluded — it is the summit's own page. */
@@ -50,6 +51,7 @@ const ROUTES = [
   '/founder',
   '/portfolio',
   '/connect',
+  '/faq',
   '/nowhere',
 ]
 
@@ -88,6 +90,7 @@ function Tree({ path }: { path: string }) {
         <Route path="/founder" element={<Founder />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/connect" element={<Connect />} />
+        <Route path="/faq" element={<FAQ />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

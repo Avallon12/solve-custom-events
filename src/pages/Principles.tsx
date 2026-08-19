@@ -1,4 +1,5 @@
 import Hero from '../components/Hero'
+import Media from '../components/Media'
 import ClosingCTA from '../components/ClosingCTA'
 import { Container, Reveal, Section } from '../components/primitives'
 import { commitments } from '../data/content'
@@ -40,6 +41,10 @@ export default function Principles() {
               </Reveal>
             ))}
           </div>
+          {/* Reserved slot — photograph to come from the client. */}
+          <Reveal className="mt-14">
+            <Media id="principles-craft" showCaption={false} className="aspect-[21/9] w-full" />
+          </Reveal>
         </Container>
       </Section>
 

@@ -74,6 +74,16 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link to="/founder" className="font-body text-[17px] hover:text-gold">
+                  Meet the Founder
+                </Link>
+              </li>
+              <li>
+                <Link to="/connect" className="font-body text-[17px] hover:text-gold">
+                  Connect
+                </Link>
+              </li>
             </ul>
           </div>
 

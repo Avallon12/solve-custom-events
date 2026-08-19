@@ -10,7 +10,7 @@ import { usePageMeta } from '../lib/meta'
 export default function Features() {
   usePageMeta(
     'Features — Sol Vé Custom Events',
-    "AVOLA Magazine, REDTV Canada, Bridal Fantasy, Dancing With Her and Men's Vow Magazine.",
+    'AVOLA Magazine, REDTV Canada, Bridal Fantasy, Dancing With Her and Men`s Vow Magazine.',
   )
 
   return (
@@ -47,8 +47,8 @@ export default function Features() {
 
                   {feature.name === 'Bridal Fantasy' && (
                     <div className="mt-8 grid gap-6 sm:grid-cols-2">
-                      <Media id="feature-bridal-fantasy-1" className="aspect-[4/5] w-full" />
-                      <Media id="feature-bridal-fantasy-2" className="aspect-[4/5] w-full" />
+                      <Media id="feature-bridal-fantasy-1" className="w-full" />
+                      <Media id="feature-bridal-fantasy-2" className="w-full" />
                     </div>
                   )}
                 </div>

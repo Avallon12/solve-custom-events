@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import { Mail, MapPin, Phone } from 'lucide-react'
 import Hero from '../components/Hero'
-import { Btn, Container, Display, Eyebrow, Ornament, Reveal, Section } from '../components/primitives'
+import { Accent, Btn, Container, Display, Eyebrow, Ornament, Reveal, Section } from '../components/primitives'
 import { contact, socials } from '../data/site'
 import { divisions } from '../data/divisions'
 import { usePageMeta } from '../lib/meta'
@@ -33,7 +33,7 @@ export default function Connect() {
   const [sent, setSent] = useState(false)
   usePageMeta(
     'Connect — Sol Vé Custom Events, Calgary Alberta',
-    'Every meaningful gathering begins with a conversation. Reach Sol Vé Custom Events in Calgary, Alberta — serving clients throughout Canada and internationally.',
+    'Tell us what you are building. Every extraordinary event begins with a conversation with Sol Vé Custom Events, Calgary, Alberta.',
   )
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
@@ -59,8 +59,12 @@ export default function Connect() {
       <Hero
         size="page"
         eyebrow="Connect"
-        headline="Let's Begin the Conversation"
-        subheadline="Every meaningful gathering begins with a conversation."
+        headline={
+          <>
+            Tell us what you are <Accent>building.</Accent>
+          </>
+        }
+        subheadline="Every extraordinary event begins with a conversation."
         media="connect-hero"
       />
 
@@ -68,7 +72,12 @@ export default function Connect() {
         <Container>
           <div className="grid gap-14 lg:grid-cols-[55fr_45fr] lg:gap-20">
             <Reveal>
-              <div className="max-w-xl space-y-6 font-body text-[18px] leading-[1.7] text-espresso md:text-[20px]">
+              <Eyebrow>Let's begin the conversation</Eyebrow>
+              <Display as="h2" size="lg" className="mt-6 max-w-lg text-charcoal">
+                We would be honoured to hear your story.
+              </Display>
+
+              <div className="mt-8 max-w-xl space-y-6 font-body text-[18px] leading-[1.7] text-espresso md:text-[20px]">
                 <p>
                   Whether you're celebrating a milestone, bringing people together around a shared
                   purpose, creating an unforgettable experience, or exploring an idea that has yet to
@@ -80,68 +89,35 @@ export default function Connect() {
                   to understand what matters most to you, the people you're bringing together, and the
                   purpose your gathering is meant to serve.
                 </p>
-                <p className="font-body text-[21px] italic text-espresso md:text-[24px]">
+                <p className="font-display text-[21px] italic text-espresso md:text-[24px]">
                   No two gatherings are ever the same. Neither is our approach.
                 </p>
-                <p>If our philosophy resonates with you, we invite you to begin the conversation.</p>
-                <p>
-                  Together, we'll explore what is possible and thoughtfully create an experience that
-                  reflects your vision, your values, and the story you want to tell.
-                </p>
               </div>
 
-              <div className="mt-14 border-t border-stone/40 pt-10">
-                <Display as="h2" size="sm" className="text-charcoal">
-                  Get in Touch
-                </Display>
-                <p className="mt-5 max-w-xl font-body text-[18px] leading-[1.7] text-espresso md:text-[20px]">
-                  Whether you're planning a wedding, designing a signature celebration, creating a
-                  workshop or curated experience, organizing a conference, developing a fundraising
-                  initiative, or simply exploring an idea, we'd love to connect.
+              <div className="mt-12 space-y-5 border-t border-stone/40 pt-10">
+                <a
+                  href={`mailto:${contact.email}`}
+                  className="flex items-center gap-4 font-body text-[19px] text-charcoal hover:text-gold"
+                >
+                  <Mail size={18} className="text-gold" />
+                  {contact.email}
+                </a>
+                <a
+                  href={contact.phoneHref}
+                  className="flex items-center gap-4 font-body text-[19px] text-charcoal hover:text-gold"
+                >
+                  <Phone size={18} className="text-gold" />
+                  {contact.phone}
+                </a>
+                <p className="flex items-center gap-4 font-body text-[19px] text-charcoal">
+                  <MapPin size={18} className="text-gold" />
+                  {contact.location}
                 </p>
-              </div>
-
-              <div className="mt-10 space-y-7">
-                <div>
-                  <p className={labelClass} style={{ letterSpacing: '0.22em' }}>
-                    Email
-                  </p>
-                  <a
-                    href={`mailto:${contact.email}`}
-                    className="mt-2 flex items-center gap-4 font-body text-[19px] text-charcoal hover:text-gold"
-                  >
-                    <Mail size={18} className="text-gold" />
-                    {contact.email}
-                  </a>
-                </div>
-                <div>
-                  <p className={labelClass} style={{ letterSpacing: '0.22em' }}>
-                    Phone
-                  </p>
-                  <a
-                    href={contact.phoneHref}
-                    className="mt-2 flex items-center gap-4 font-body text-[19px] text-charcoal hover:text-gold"
-                  >
-                    <Phone size={18} className="text-gold" />
-                    {contact.phone}
-                  </a>
-                </div>
-                <div>
-                  <p className={labelClass} style={{ letterSpacing: '0.22em' }}>
-                    Location
-                  </p>
-                  <p className="mt-2 flex items-center gap-4 font-body text-[19px] text-charcoal">
-                    <MapPin size={18} className="text-gold" />
-                    {contact.location}
-                  </p>
-                  <p className="mt-1 pl-9 font-body text-[17px] italic text-espresso">
-                    {contact.serving}
-                  </p>
-                </div>
+                <p className="pl-9 font-body text-[17px] italic text-espresso">{contact.serving}</p>
               </div>
 
               <div className="mt-12">
-                <Eyebrow>Follow Along</Eyebrow>
+                <Eyebrow>Follow along</Eyebrow>
                 <p className="mt-5 max-w-md font-body text-[17px] leading-relaxed text-espresso">
                   Stay connected as we continue to share stories, perspectives, behind-the-scenes
                   moments, and the experiences that continue to shape the way people gather.
@@ -280,20 +256,13 @@ export default function Connect() {
         <div className="grain absolute inset-0 opacity-40" />
         <Container width="narrow" className="relative z-10 text-center">
           <Reveal>
-            <Eyebrow tone="light">A Final Thought</Eyebrow>
-            <p className="mt-10 font-body text-[19px] leading-relaxed text-champagne md:text-[21px]">
-              Thank you for taking the time to learn about Sol Vé.
-            </p>
-            <p className="mt-8 font-body text-[24px] italic leading-snug text-ivory md:text-[30px]">
+            <p className="font-display text-[24px] italic leading-snug text-ivory md:text-[30px]">
               We never take for granted the trust it takes to invite someone into life's most
               meaningful moments.
             </p>
             <p className="mx-auto mt-8 max-w-xl font-body text-[18px] leading-relaxed text-champagne/85">
               Should you choose to gather with us, we promise to honour that trust with thoughtful
               stewardship, genuine hospitality, and intentional care.
-            </p>
-            <p className="mt-8 font-body text-[18px] italic leading-relaxed text-champagne/85">
-              Because the way people gather shapes everything that follows.
             </p>
             <p className="mt-8 font-display text-[20px] text-gold md:text-[24px]">
               We look forward to what we'll create together.

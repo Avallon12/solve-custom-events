@@ -21,7 +21,6 @@ import Testimonials from './pages/Testimonials'
 import Founder from './pages/Founder'
 import Portfolio from './pages/Portfolio'
 import Connect from './pages/Connect'
-import FAQ from './pages/FAQ'
 import NotFound from './pages/NotFound'
 
 /** New page: top of page. Same page with a hash: scroll to that section. */
@@ -42,7 +41,7 @@ function ScrollManager() {
   return null
 }
 
-export function Shell() {
+function Shell() {
   return (
     <>
       <ScrollManager />
@@ -75,7 +74,6 @@ export function Shell() {
           <Route path="/founder" element={<Founder />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/connect" element={<Connect />} />
-          <Route path="/faq" element={<FAQ />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

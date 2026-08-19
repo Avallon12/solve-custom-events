@@ -69,8 +69,8 @@ const GALLERY: MediaId[] = [
 
 export default function Portfolio() {
   usePageMeta(
-    'Portfolio — Sol Vé Custom Events',
-    'The portfolio of Sol Vé Custom Events, Calgary, Alberta.',
+    'Portfolio / Journal — Sol Vé Custom Events',
+    'The portfolio and perspectives of Sol Vé Custom Events, Calgary, Alberta.',
   )
 
   return (

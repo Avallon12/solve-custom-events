@@ -5,7 +5,6 @@ import { FiArrowDown } from 'react-icons/fi'
 import { media } from '../../data/media'
 import type { MediaId, MediaSlot } from '../../data/media'
 import { sizeOf } from '../../data/media-dimensions'
-import { Placeholder, ratioLabelOf } from '../Media'
 import { Container, Eyebrow } from '../primitives'
 
 /**
@@ -174,23 +173,17 @@ function CentreFrame({
       className="sticky top-0 flex h-screen w-full items-center justify-center overflow-hidden"
       style={{ clipPath, opacity, willChange: 'clip-path, opacity' }}
     >
-      {slot.src ? (
-        <motion.div
-          className="absolute inset-0"
-          style={{
-            scale,
-            backgroundImage: `url(${slot.src})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            willChange: 'transform',
-          }}
-        />
-      ) : (
-        <motion.div className="absolute inset-0" style={{ scale, willChange: 'transform' }}>
-          <Placeholder slot={slot} ratio={ratioLabelOf(centre, slot)} subtle />
-        </motion.div>
-      )}
+      <motion.div
+        className="absolute inset-0"
+        style={{
+          scale,
+          backgroundImage: `url(${slot.src ?? ''})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          willChange: 'transform',
+        }}
+      />
 
       {/* Warm scrim — never cold black, and enough of it to clear 4.5:1 */}
       <div className="absolute inset-0 bg-charcoal/50" />
@@ -208,7 +201,7 @@ function CentreFrame({
       >
         <Eyebrow tone="light">{eyebrow}</Eyebrow>
 
-        <h1 className="mt-6 font-display text-[38px] leading-[1.02] text-ivory sm:text-[56px] md:text-[74px] lg:text-[88px]">
+        <h1 className="mt-6 font-display text-[34px] font-normal leading-[1.08] text-ivory sm:text-[52px] md:text-[68px] lg:text-[80px]">
           {headline}
         </h1>
 
@@ -333,7 +326,7 @@ function ParallaxFrame({
           }
           className="h-auto w-full rounded-[2px] object-cover shadow-[0_20px_60px_rgba(36,34,22,0.18)] ring-1 ring-inset ring-gold/25"
         />
-      ) : slot.src ? (
+      ) : (
         <img
           src={slot.src}
           alt={slot.alt}
@@ -347,16 +340,6 @@ function ParallaxFrame({
           }
           className="h-auto w-full rounded-[2px] shadow-[0_20px_60px_rgba(36,34,22,0.18)] ring-1 ring-inset ring-gold/25"
         />
-      ) : (
-        <div
-          style={{
-            aspectRatio:
-              size.width && size.height ? `${size.width} / ${size.height}` : '3 / 2',
-          }}
-          className="w-full overflow-hidden rounded-[2px] shadow-[0_20px_60px_rgba(36,34,22,0.18)] ring-1 ring-inset ring-gold/25"
-        >
-          <Placeholder slot={slot} ratio={ratioLabelOf(id, slot)} />
-        </div>
       )}
     </motion.div>
   )

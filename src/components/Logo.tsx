@@ -15,15 +15,13 @@ export function Emblem({ className = '' }: { className?: string }) {
         const angle = (i * Math.PI * 2) / RAYS.length
         const inner = i % 2 === 0 ? 19 : 20.5
         const outer = i % 2 === 0 ? 26 : 23.5
-        // toFixed: Node and Chrome disagree in the last float digit of
-        // Math.sin/cos, which breaks hydration of prerendered pages.
         return (
           <line
             key={i}
-            x1={(32 + Math.cos(angle) * inner).toFixed(3)}
-            y1={(32 + Math.sin(angle) * inner).toFixed(3)}
-            x2={(32 + Math.cos(angle) * outer).toFixed(3)}
-            y2={(32 + Math.sin(angle) * outer).toFixed(3)}
+            x1={32 + Math.cos(angle) * inner}
+            y1={32 + Math.sin(angle) * inner}
+            x2={32 + Math.cos(angle) * outer}
+            y2={32 + Math.sin(angle) * outer}
             stroke="currentColor"
             strokeWidth="0.9"
             strokeLinecap="round"

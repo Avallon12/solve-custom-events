@@ -86,9 +86,6 @@ export default function WhatWeCreate() {
             <p className="font-body text-[19px] leading-relaxed text-champagne md:text-[21px]">
               {whatWeCreate.everyExperience}
             </p>
-            <p className="mt-4 font-body text-[19px] leading-relaxed text-champagne md:text-[21px]">
-              {whatWeCreate.guides}
-            </p>
             <p className="mt-8 font-display text-[26px] text-gold md:text-[32px]">
               {whatWeCreate.philosophy}
             </p>

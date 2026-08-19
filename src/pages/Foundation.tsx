@@ -1,6 +1,7 @@
 import Hero from '../components/Hero'
 import ClosingCTA from '../components/ClosingCTA'
 import {
+  Accent,
   Container,
   Ornament,
   Prose,
@@ -18,7 +19,16 @@ export default function Foundation() {
 
   return (
     <>
-      <Hero size="page" eyebrow="Sol Vé Custom Events" headline="Foundation" media="foundation-hero" />
+      <Hero
+        size="page"
+        eyebrow="Foundation"
+        headline={
+          <>
+            Every meaningful gathering begins long before people <Accent>arrive.</Accent>
+          </>
+        }
+        media="foundation-hero"
+      />
 
       <Section tone="ivory" rule>
         <Container width="narrow">
@@ -31,7 +41,11 @@ export default function Foundation() {
         </Container>
       </Section>
 
-      <ClosingCTA body="If our philosophy resonates with you, we invite you to begin the conversation." />
+      <ClosingCTA
+        eyebrow="Begin the conversation"
+        heading="If our philosophy resonates with you."
+        body="No two gatherings are ever the same. Neither is our approach. We invite you to begin the conversation."
+      />
     </>
   )
 }

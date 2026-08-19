@@ -7,6 +7,15 @@ export const home = {
   eyebrow: 'Sol Vé Custom Events',
   headline: ['We design how people', 'gather.'],
   subheadline: 'Because the way people gather shapes everything that follows.',
+  philosophyEyebrow: 'Our Philosophy',
+  philosophyHeadline: 'Every meaningful gathering begins long before people arrive.',
+  philosophyBody: [
+    'It influences relationships, ideas, cultures, communities, and the possibilities that emerge when people come together with intention.',
+    'At Sol Vé, we believe thoughtful design and genuine hospitality are not simply acts of service — they are acts of stewardship. Every environment we create is an opportunity to foster belonging, encourage meaningful connection, and shape experiences that extend far beyond the occasion itself.',
+  ],
+  closingHeadline: 'Let us begin the conversation.',
+  closingBody:
+    'Whether you are celebrating a milestone, bringing people together around a shared purpose, creating an unforgettable experience, or exploring an idea that has yet to take shape, we would be honoured to hear your story.',
 } as const
 
 
@@ -81,7 +90,6 @@ export const whatWeCreate = {
     },
   ],
   everyExperience: 'Every experience is uniquely its own.',
-  guides: 'The philosophy that guides it remains the same.',
   philosophy: 'We design how people gather.',
   because: 'Because the way people gather shapes everything that follows.',
 } as const
@@ -118,7 +126,7 @@ export const portfolio = {
       url: 'https://bridalfantasy.com/magazine/',
     },
     { name: 'Dancing With Her', note: 'Blog feature', url: 'https://dancingwithher.com/' },
-    { name: "Men's Vow Magazine", note: 'Editorial feature', url: 'https://mensvows.com/' },
+    { name: 'Men`s Vow Magazine', note: 'Editorial feature', url: 'https://mensvows.com/' },
   ],
   testimonials: [
     'Bride & Groom',
@@ -135,7 +143,7 @@ export const foundation = {
   headline: 'Every meaningful gathering begins long before people arrive.',
   intro: [
     'Every meaningful gathering begins long before people arrive and continues long after they leave. It influences relationships, ideas, cultures, communities, and the possibilities that emerge when people come together with intention.',
-    'At Sol Vé, we believe thoughtful design and genuine hospitality are not simply acts of service—they are acts of stewardship. Every environment we create is an opportunity to foster belonging, encourage meaningful connection, and shape experiences that extend far beyond the occasion itself.',
+    'At Sol Vé, we believe thoughtful design and genuine hospitality are not simply acts of service — they are acts of stewardship. Every environment we create is an opportunity to foster belonging, encourage meaningful connection, and shape experiences that extend far beyond the occasion itself.',
     'This is the foundation upon which every Sol Vé experience is created, every partnership is formed, and every future initiative is built.',
   ],
   way: {
@@ -168,8 +176,7 @@ export const foundation = {
       ['Design is never decoration.', 'It is the intentional creation of experiences that reflect purpose, strengthen connection, and create the conditions for what comes next.'],
     ],
     close: [
-      'Whether welcoming two families into one, bringing communities together around a shared purpose, or convening leaders to address global challenges, our role remains the same:',
-      'To thoughtfully design how people gather so that what follows is worthy of why they came together in the first place.',
+      'Whether welcoming two families into one, bringing communities together around a shared purpose, or convening leaders to address global challenges, our role remains the same: to thoughtfully design how people gather so that what follows is worthy of why they came together in the first place.',
       'We are entrusted with moments that shape what follows.',
       'That is why Sol Vé.',
     ],
@@ -234,8 +241,7 @@ export const commitments = {
     },
     {
       id: 'inclusion',
-      // Renamed from the old 2SLGBTQIA+ eyebrow per the client's revision note.
-      label: 'Inclusion',
+      label: '2SLGBTQIA+',
       title: 'Belonging for All',
       lead: 'We believe every person deserves to experience genuine belonging and be welcomed with dignity.',
       body: [
@@ -259,7 +265,7 @@ export const commitments = {
         'From the beginning, Sol Vé has believed that creating meaningful experiences also carries a responsibility to care for the communities and environments that make those gatherings possible. While no event is without impact, we believe every thoughtful decision can contribute to a more sustainable future.',
         'We are committed to making environmentally conscious choices wherever possible. From responsible sourcing and reusable décor to reducing waste and thoughtfully considering the materials we use, we continually look for opportunities to lessen the environmental footprint of the experiences we create without compromising quality, creativity, or the guest experience.',
         'Our commitment extends beyond the events themselves. We believe that caring for our environment is an extension of caring for one another, recognizing that healthy communities and a healthy planet are deeply connected.',
-        'As Sol Vé continues to grow, we remain committed to learning, evolving, and embracing sustainable practices that are practical, responsible, and meaningful. We understand that sustainability is a journey of continuous improvement, and we believe every positive step contributes to something greater.',
+        'As Sol Vé continues to grow, we remain committed to learning, evolving, and embracing sustainable practices that are practical, responsible, and meaningful.',
       ],
       close: 'By making thoughtful choices today, we help preserve the places where future generations will gather tomorrow.',
     },
@@ -272,7 +278,6 @@ export const commitments = {
       'We are committed to building long-lasting relationships with like-minded individuals, businesses, charitable organizations, artists, community groups, and leaders who share our belief that when people work together with purpose, everyone benefits.',
       'Community impact is not something we do alongside our work. It is woven into how we work.',
       'This commitment has inspired collaborations that celebrate the arts, support charitable organizations, strengthen local businesses, elevate diverse voices, and create experiences that encourage people to connect with one another and contribute to something greater than themselves.',
-      'As Sol Vé continues to evolve, so too will our commitment to supporting stronger, healthier, more connected communities. We believe every gathering has the potential to leave more than a memory, it has the potential to leave a legacy.',
     ],
     close: 'Because what communities create together begins with how they come together.',
   },
@@ -352,7 +357,6 @@ export const perspectives: Perspective[] = [
       'When people gather with mutual respect rather than assumed hierarchy, something remarkable begins to happen. People stop defending positions and start exploring possibilities. They ask better questions. They listen differently. They become curious instead of certain.',
       'That doesn’t diminish leadership. It strengthens it. The best leaders I’ve met are rarely the people who speak the most. They are the people who create the conditions for others to speak.',
       'Perhaps the future of leadership isn’t about standing above the conversation. Perhaps it’s about thoughtfully designing the space where the conversation can happen.',
-      'Because the most important voice in the room is often the one that hasn’t been heard yet.',
     ],
   },
   {
@@ -360,7 +364,6 @@ export const perspectives: Perspective[] = [
     title: 'Why Environment Shapes Dialogue',
     standfirst: 'Before anyone says a word, the environment has already begun the conversation.',
     body: [
-      'Before anyone says a word, the environment has already begun the conversation.',
       'The room tells us whether we should feel welcome. Whether we should be inspired. Whether we should celebrate. Whether we should listen. Whether it is safe to speak honestly.',
       'We often think dialogue begins with language. I don’t believe it does. I think dialogue begins with experience.',
       'How close the chairs are placed. Whether people can see one another. The light in the room. The pace of the gathering. The music before the first guest arrives. The feeling created before the first introduction is made.',
@@ -373,7 +376,7 @@ export const perspectives: Perspective[] = [
   {
     slug: 'designing-spaces-for-difficult-conversations',
     title: 'Designing Spaces for Difficult Conversations',
-    standfirst: 'Because progress rarely begins with agreement. It begins with the willingness to remain at the table together.',
+    standfirst: 'Progress rarely begins with agreement. It begins with the willingness to remain at the table together.',
     body: [
       'Not every meaningful gathering is a celebration. Some begin with uncertainty. Some with disagreement. Some with grief. Some with questions that have no easy answers.',
       'Those are often the gatherings that matter most.',
@@ -382,13 +385,12 @@ export const perspectives: Perspective[] = [
       'That is why thoughtful gathering matters. Not because it removes discomfort. But because it creates enough trust for people to remain present through it.',
       'Sometimes the greatest act of hospitality isn’t serving a meal. It’s creating a space where someone feels safe enough to tell the truth.',
       'I’ve come to believe that the role of a host is not to control the conversation. It is to care for the conditions in which honest conversation becomes possible.',
-      'Because progress rarely begins with agreement. It begins with the willingness to remain at the table together.',
     ],
   },
   {
     slug: 'the-future-of-global-collaboration',
     title: 'The Future of Global Collaboration',
-    standfirst: 'Because every meaningful collaboration begins the same way. With people choosing to gather.',
+    standfirst: 'Every meaningful collaboration begins the same way. With people choosing to gather.',
     body: [
       'The world’s greatest challenges rarely exist within a single profession, a single organization, or a single country. Why should we expect the solutions to?',
       'For generations, we’ve become increasingly specialized. We’ve developed extraordinary expertise in individual disciplines. But the challenges we face today ask something different of us.',
@@ -396,7 +398,6 @@ export const perspectives: Perspective[] = [
       'Collaboration is often described as working together. I think it begins much earlier than that. It begins with creating the conditions where people are willing to trust one another enough to imagine something they could never accomplish alone.',
       'That kind of collaboration cannot be rushed. It cannot be manufactured. It must be thoughtfully designed.',
       'Perhaps the future won’t be shaped by the organizations with the greatest resources. Perhaps it will be shaped by the people who become the best at bringing others together with purpose.',
-      'Because every meaningful collaboration begins the same way. With people choosing to gather.',
     ],
   },
   {
@@ -409,19 +410,17 @@ export const perspectives: Perspective[] = [
       'But beauty alone is never enough.',
       'The most extraordinary experiences are remembered not simply because they were beautiful, but because they created something meaningful. A conversation that changed a perspective. A reunion that strengthened a family. A celebration that honoured generations. A gathering that inspired generosity. A room that made every guest feel they belonged.',
       'Thoughtful design has the power to influence how people experience one another. Every detail matters because every detail contributes to the feeling people carry with them long after the gathering has ended.',
-      'At Sol Vé, beauty is never the destination. It is where meaningful experiences begin.',
     ],
   },
   {
     slug: 'the-most-important-thing-we-design',
     title: 'The Most Important Thing We Design Is Not the Décor',
-    standfirst: 'Because great design is not measured by how impressive a room looks. It is measured by how naturally people connect within it.',
+    standfirst: 'Great design is not measured by how impressive a room looks. It is measured by how naturally people connect within it.',
     body: [
       'When people think about event design, they often think about flowers, lighting, tablescapes, colour palettes, or architecture.',
       'We think about people.',
       'Before selecting a single flower or placing a single chair, we ask different questions. How should people feel when they arrive? How can this space encourage conversation? How can it honour culture, family, or tradition? How can it create a sense of belonging?',
       'The answers to those questions shape every design decision that follows.',
-      'Because great design is not measured by how impressive a room looks. It is measured by how naturally people connect within it.',
       'When design is intentional, beauty becomes more than something people admire. It becomes something they experience.',
       'That is the difference between decorating a room and designing how people gather.',
     ],
@@ -429,13 +428,12 @@ export const perspectives: Perspective[] = [
   {
     slug: 'why-we-still-gather',
     title: 'Why We Still Gather',
-    standfirst: 'Perhaps that is why people have always gathered. Not simply to celebrate what already exists. But to create what comes next.',
+    standfirst: 'Perhaps that is why people have always gathered. Not simply to celebrate what already exists, but to create what comes next.',
     body: [
       'In a world increasingly connected through technology, gathering in person has never been more valuable.',
       'Some of life’s most important moments cannot be experienced through a screen. A grandparent embracing a grandchild for the first time. Two families becoming one. Friends celebrating decades of shared memories. Communities rallying around a cause. Leaders sitting together to solve problems that no single organization can solve alone.',
       'Gathering reminds us that relationships are built through presence. That ideas grow through conversation. That trust develops over shared experiences. That belonging begins when people feel seen, heard, and welcomed.',
       'Every meaningful gathering becomes part of a larger story. It influences the memories people carry, the relationships they strengthen, and the possibilities they create together.',
-      'Perhaps that is why people have always gathered. Not simply to celebrate what already exists. But to create what comes next.',
     ],
   },
 ]

@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import { createRoot, hydrateRoot } from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 
@@ -17,20 +17,8 @@ if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual'
 }
 
-/**
- * Every route ships prerendered HTML (scripts/prerender.tsx) so crawlers and
- * link previews see real content — hydrate it. The empty-root branch keeps
- * `vite dev` working, where no prerendered markup exists.
- */
-const root = document.getElementById('root')!
-const app = (
+createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />
-  </StrictMode>
+  </StrictMode>,
 )
-
-if (root.hasChildNodes()) {
-  hydrateRoot(root, app)
-} else {
-  createRoot(root).render(app)
-}

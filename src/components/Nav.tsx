@@ -223,7 +223,7 @@ export default function Nav() {
             </button>
           </div>
 
-          <div className="mt-10 grid flex-1 items-start gap-11 md:mt-16 lg:grid-cols-[3fr_2fr] lg:gap-24">
+          <div className="mt-8 grid flex-1 items-start gap-11 md:mt-10 lg:grid-cols-[3fr_2fr] lg:gap-24">
             <nav aria-label="Primary">
               <ul>
                 {OVERLAY_LINKS.map((link, i) => (
@@ -248,7 +248,7 @@ export default function Nav() {
                       to={link.to}
                       end={link.to === '/'}
                       className={({ isActive }) =>
-                        `group relative inline-block py-[0.22em] font-display text-[26px] leading-[1.15] transition-colors duration-300 sm:text-[34px] lg:text-[46px] ${
+                        `group relative inline-block py-[0.16em] font-display text-[21px] leading-[1.12] transition-colors duration-300 sm:text-[25px] lg:text-[30px] ${
                           isActive ? 'text-gold' : 'text-ivory hover:text-gold'
                         }`
                       }

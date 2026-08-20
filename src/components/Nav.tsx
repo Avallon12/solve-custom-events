@@ -248,7 +248,7 @@ export default function Nav() {
                       to={link.to}
                       end={link.to === '/'}
                       className={({ isActive }) =>
-                        `group relative inline-block py-[0.16em] font-display text-[21px] leading-[1.12] transition-colors duration-300 sm:text-[25px] lg:text-[30px] ${
+                        `group relative inline-block py-[0.16em] font-display text-[clamp(22px,3.4vh,26px)] leading-[1.12] transition-colors duration-300 sm:text-[clamp(24px,3.9vh,42px)] ${
                           isActive ? 'text-gold' : 'text-ivory hover:text-gold'
                         }`
                       }

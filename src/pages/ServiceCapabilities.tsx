@@ -3,7 +3,16 @@ import Media from '../components/Media'
 import ClosingCTA from '../components/ClosingCTA'
 import { Container, Display, Eyebrow, Ornament, Reveal, Section } from '../components/primitives'
 import { howWeWorkTogether, solVeDifference } from '../data/experiences'
+import type { MediaId } from '../data/media'
 import { usePageMeta } from '../lib/meta'
+
+/** One reserved photograph per capability — labels are the shot list. */
+const CAP_MEDIA: Record<string, MediaId> = {
+  'consultation-strategy': 'cap-consultation-strategy',
+  'planning-coordination': 'cap-planning-coordination',
+  'design-production': 'cap-design-production',
+  'full-experience-management': 'cap-full-experience-management',
+}
 
 /** "How We Work Together" and "The Sol Vé Difference", word for word. */
 export default function ServiceCapabilities() {
@@ -78,6 +87,14 @@ export default function ServiceCapabilities() {
                 )}
               </Reveal>
             </div>
+            {/* Reserved slot — one photograph per capability, from the client. */}
+            <Reveal className="mt-12">
+              <Media
+                id={CAP_MEDIA[capability.slug]}
+                showCaption={false}
+                className="aspect-[21/9] w-full"
+              />
+            </Reveal>
           </Container>
         </Section>
       ))}

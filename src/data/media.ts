@@ -957,6 +957,105 @@ export const media = {
     tone: 'warm',
     caption: 'Workshops & Curated Experiences',
   },
+
+  // ── ROUND TWO — added at the client's request for more photography.
+  // Every slot renders the designed placeholder; each label is the shot. ──
+
+  // Home gallery strip
+  'home-gal-1': { label: 'Home Gallery — Ceremony Detail', alt: 'A ceremony detail at a Sol Vé wedding', tone: 'light' },
+  'home-gal-2': { label: 'Home Gallery — Guests Arriving', alt: 'Guests arriving at a Sol Vé gathering', tone: 'warm' },
+  'home-gal-3': { label: 'Home Gallery — Tablescape', alt: 'A dressed Sol Vé tablescape at golden hour', tone: 'warm' },
+  'home-gal-4': { label: 'Home Gallery — Speeches & Toasts', alt: 'A toast raised during a Sol Vé evening', tone: 'dark' },
+  'home-gal-5': { label: 'Home Gallery — The Dance Floor', alt: 'The dance floor in motion at a Sol Vé celebration', tone: 'dark' },
+  'home-gal-6': { label: 'Home Gallery — The Send-Off', alt: 'Guests sending off the couple at the end of a Sol Vé night', tone: 'warm' },
+
+  // Foundation detail triptych
+  'foundation-detail-1': { label: 'Foundation — Place Setting Detail', alt: 'A single place setting laid by Sol Vé', tone: 'light' },
+  'foundation-detail-2': { label: 'Foundation — Floral Detail', alt: 'A floral arrangement detail from a Sol Vé room', tone: 'warm' },
+  'foundation-detail-3': { label: 'Foundation — Candlelight Detail', alt: 'Candlelight along a Sol Vé table at dusk', tone: 'dark' },
+
+  // The Sol Vé Way pair
+  'way-welcome': { label: 'The Sol Vé Way — Guests Welcomed', alt: 'Guests being welcomed into a Sol Vé gathering', tone: 'warm' },
+  'way-service': { label: 'The Sol Vé Way — Service in Motion', alt: 'The Sol Vé team serving guests during an event', tone: 'dark' },
+
+  // Beyond the Occasion pair
+  'beyond-family': { label: 'Beyond the Occasion — Two Families, One', alt: 'Two families celebrating together at a Sol Vé wedding', tone: 'warm' },
+  'beyond-toast': { label: 'Beyond the Occasion — The Toast', alt: 'A heartfelt toast during a Sol Vé gathering', tone: 'dark' },
+
+  // Commitments strip — one image per box, equal treatment
+  'commitments-gal-1': { label: 'Reconciliation — Cultural Performance', alt: 'A cultural performance honoured at a Sol Vé gathering', tone: 'dark' },
+  'commitments-gal-2': { label: 'Inclusion — A Celebration for All', alt: 'A celebration where every guest belongs, by Sol Vé', tone: 'warm' },
+  'commitments-gal-3': { label: 'Conservation — Sustainable Décor', alt: 'Reusable and responsibly sourced décor at a Sol Vé event', tone: 'light' },
+
+  // Principles — one image per principle
+  'principles-gal-1': { label: 'Principles — Stewardship in Practice', alt: 'The Sol Vé team stewarding a gathering', tone: 'warm' },
+  'principles-gal-2': { label: 'Principles — Intention in the Details', alt: 'An intentional detail from a Sol Vé design', tone: 'light' },
+  'principles-gal-3': { label: 'Principles — Hospitality at the Door', alt: 'A guest welcomed by name at a Sol Vé event', tone: 'warm' },
+  'principles-gal-4': { label: 'Principles — Craftsmanship Up Close', alt: 'Hands at work on a Sol Vé installation', tone: 'light' },
+  'principles-gal-5': { label: 'Principles — Collaboration Backstage', alt: 'The team collaborating behind the scenes at a Sol Vé event', tone: 'dark' },
+  'principles-gal-6': { label: 'Principles — Legacy, After the Gathering', alt: 'A quiet room after a meaningful Sol Vé gathering', tone: 'dark' },
+
+  // Where It Began pair
+  'began-detail-1': { label: 'Where It Began — First Celebrations', alt: 'One of the first celebrations Sol Vé designed', tone: 'warm' },
+  'began-detail-2': { label: 'Where It Began — The Work in Progress', alt: 'Early Sol Vé work in progress, a room half-built', tone: 'light' },
+
+  // What We Create + Divisions overview bands
+  'create-band': { label: 'What We Create — The Room Revealed', alt: 'A finished Sol Vé room revealed before guests enter', tone: 'dark' },
+  'divisions-band': { label: 'Signature Experiences — Overview', alt: 'A wide view across a signature Sol Vé experience', tone: 'warm' },
+
+  // Division galleries — round two
+  'gal-weddings-p1': { label: 'Weddings — The Ceremony', alt: 'A Sol Vé wedding ceremony in progress', tone: 'light' },
+  'gal-weddings-p2': { label: 'Weddings — The First Dance', alt: 'A first dance at a Sol Vé wedding', tone: 'dark' },
+  'gal-weddings-p3': { label: 'Weddings — The Details', alt: 'Wedding details styled by Sol Vé', tone: 'warm' },
+  'gal-signature-p1': { label: 'Signature Moments — The Milestone Toast', alt: 'A milestone toast at a Sol Vé signature moment', tone: 'warm' },
+  'gal-signature-p2': { label: 'Signature Moments — Family Gathered', alt: 'A family gathered for a Sol Vé milestone celebration', tone: 'warm' },
+  'gal-signature-p3': { label: 'Signature Moments — Décor Detail', alt: 'Celebration décor detail by Sol Vé', tone: 'light' },
+  'gal-design-4': { label: 'Design & Stylization — Custom Installation', alt: 'A custom Sol Vé installation being admired', tone: 'warm' },
+  'gal-design-5': { label: 'Design & Stylization — Lighting Concept', alt: 'A lighting concept transforming a Sol Vé room', tone: 'dark' },
+  'gal-design-6': { label: 'Design & Stylization — Lounge Design', alt: 'A lounge setting designed by Sol Vé', tone: 'warm' },
+  'gal-workshops-4': { label: 'Workshops — Team Building', alt: 'A team building exercise at a Sol Vé workshop', tone: 'warm' },
+  'gal-workshops-5': { label: 'Workshops — Wellness Retreat', alt: 'A wellness retreat setting prepared by Sol Vé', tone: 'light' },
+  'gal-workshops-6': { label: 'Workshops — Networking Evening', alt: 'Guests connecting at a Sol Vé networking evening', tone: 'dark' },
+  'gal-conferences-4': { label: 'Conferences — Keynote Stage', alt: 'A keynote stage designed by Sol Vé', tone: 'dark' },
+  'gal-conferences-5': { label: 'Conferences — VIP Hospitality', alt: 'VIP hospitality at a Sol Vé conference', tone: 'warm' },
+  'gal-conferences-6': { label: 'Conferences — Awards Gala', alt: 'An awards gala evening produced by Sol Vé', tone: 'dark' },
+  'gal-fundraising-4': { label: 'Fundraising — Sponsor Activation', alt: 'A sponsor activation at a Sol Vé fundraising event', tone: 'warm' },
+  'gal-fundraising-5': { label: 'Fundraising — The Entertainment', alt: 'Entertainment performing at a Sol Vé gala', tone: 'dark' },
+  'gal-fundraising-6': { label: 'Fundraising — Community Celebration', alt: 'A community celebrating at a Sol Vé fundraising evening', tone: 'warm' },
+
+  // Service Capabilities — one image per capability
+  'cap-consultation-strategy': { label: 'Consultation & Strategy — At the Table', alt: 'A Sol Vé consultation in progress', tone: 'light' },
+  'cap-planning-coordination': { label: 'Planning & Coordination — The Run Sheet', alt: 'Sol Vé coordinating an event day', tone: 'warm' },
+  'cap-design-production': { label: 'Design & Production — The Build', alt: 'A Sol Vé production build in progress', tone: 'dark' },
+  'cap-full-experience-management': { label: 'Full Experience Management — Every Detail', alt: 'Sol Vé managing every detail of a gathering', tone: 'warm' },
+
+  // Meet the Founder — the remaining authenticity criteria
+  'founder-team': { label: 'Meet the Founder — Collaborating with the Team', alt: 'Lynea collaborating with her team during an event build', tone: 'warm' },
+  'founder-room': { label: 'Meet the Founder — Observing the Room', alt: 'Lynea quietly observing a room she has helped create', tone: 'dark' },
+
+  // Portfolio — round two tiles
+  'portfolio-conf-lead-3': { label: 'Portfolio — Conferences & Leadership Events III', alt: 'A leadership convening produced by Sol Vé', tone: 'light', caption: 'Conferences & Leadership Events' },
+  'portfolio-fund-camp-3': { label: 'Portfolio — Fundraising Campaigns III', alt: 'A fundraising campaign evening by Sol Vé', tone: 'dark', caption: 'Fundraising Campaigns' },
+  'portfolio-workshops-cur-3': { label: 'Portfolio — Workshops & Curated Experiences III', alt: 'A curated Sol Vé experience underway', tone: 'warm', caption: 'Workshops & Curated Experiences' },
+  'portfolio-design-styl-1': { label: 'Portfolio — Design & Stylization I', alt: 'A styled Sol Vé environment', tone: 'light', caption: 'Design & Stylization' },
+  'portfolio-design-styl-2': { label: 'Portfolio — Design & Stylization II', alt: 'A Sol Vé design concept realised', tone: 'warm', caption: 'Design & Stylization' },
+  'portfolio-sig-mom-1': { label: 'Portfolio — Signature Moments I', alt: 'A signature moment celebrated with Sol Vé', tone: 'warm', caption: 'Signature Moments' },
+
+  // Testimonials strip
+  'testimonials-gal-1': { label: 'Testimonials — The Couples', alt: 'A couple celebrating at their Sol Vé wedding', tone: 'light' },
+  'testimonials-gal-2': { label: 'Testimonials — Corporate Partners', alt: 'Corporate partners gathered at a Sol Vé event', tone: 'dark' },
+  'testimonials-gal-3': { label: 'Testimonials — Community Partners', alt: 'Community partners celebrating at a Sol Vé gathering', tone: 'warm' },
+
+  // Perspectives — images between the essays
+  'perspectives-inline-1': { label: 'Perspectives — Convening in the Round', alt: 'People convened in the round at a Sol Vé gathering', tone: 'warm' },
+  'perspectives-inline-2': { label: 'Perspectives — The Conversation Table', alt: 'A table set by Sol Vé for open conversation', tone: 'light' },
+
+  // Connect pair
+  'connect-gal-1': { label: 'Connect — The First Meeting', alt: 'A first planning conversation with Sol Vé', tone: 'warm' },
+  'connect-gal-2': { label: 'Connect — Studio & Materials', alt: 'Sol Vé design materials and samples in the studio', tone: 'light' },
+
+  // Features band
+  'features-band': { label: 'Features — Press & Publications Spread', alt: 'Sol Vé press features and publications spread out', tone: 'light' },
 } satisfies Record<string, MediaSlot>
 
 export type MediaId = keyof typeof media

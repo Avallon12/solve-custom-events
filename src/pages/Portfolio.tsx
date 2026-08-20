@@ -68,10 +68,16 @@ const GALLERY: MediaId[] = [
   // Reserved slots — the categories still awaiting the client's photography.
   'portfolio-conf-lead-1',
   'portfolio-conf-lead-2',
+  'portfolio-conf-lead-3',
   'portfolio-fund-camp-1',
   'portfolio-fund-camp-2',
+  'portfolio-fund-camp-3',
   'portfolio-workshops-cur-1',
   'portfolio-workshops-cur-2',
+  'portfolio-workshops-cur-3',
+  'portfolio-design-styl-1',
+  'portfolio-design-styl-2',
+  'portfolio-sig-mom-1',
 ]
 
 export default function Portfolio() {

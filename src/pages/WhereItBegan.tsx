@@ -24,9 +24,15 @@ export default function WhereItBegan() {
           <Reveal className="mt-14">
             <Ornament />
           </Reveal>
-          {/* Reserved slot — photograph to come from the client. */}
+          {/* Reserved slots — photographs to come from the client. */}
           <Reveal className="mt-14">
             <Media id="began-early" showCaption={false} className="aspect-[16/9] w-full" />
+          </Reveal>
+          <Reveal className="mt-8">
+            <div className="grid grid-cols-2 gap-4 md:gap-6">
+              <Media id="began-detail-1" showCaption={false} className="aspect-[4/3] w-full" />
+              <Media id="began-detail-2" showCaption={false} className="aspect-[4/3] w-full" />
+            </div>
           </Reveal>
         </Container>
       </Section>

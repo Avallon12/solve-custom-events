@@ -32,6 +32,16 @@ export default function Perspectives() {
                     ))}
                   </div>
 
+                  {/* Reserved slots — photographs between the essays. */}
+                  {(i === 1 || i === 3) && (
+                    <div className="mt-12">
+                      <Media
+                        id={i === 1 ? 'perspectives-inline-1' : 'perspectives-inline-2'}
+                        showCaption={false}
+                        className="aspect-[16/9] w-full"
+                      />
+                    </div>
+                  )}
                   {i < perspectives.length - 1 && (
                     <div className="mt-12">
                       <Ornament />

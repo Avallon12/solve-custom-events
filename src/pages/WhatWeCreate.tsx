@@ -79,6 +79,15 @@ export default function WhatWeCreate() {
         </Section>
       ))}
 
+      {/* Reserved slot — photograph to come from the client. */}
+      <Section tone="ivory" rule className="!py-[60px] md:!py-[80px]">
+        <Container>
+          <Reveal>
+            <Media id="create-band" showCaption={false} className="aspect-[21/9] w-full" />
+          </Reveal>
+        </Container>
+      </Section>
+
       <Section tone="charcoal">
         <div className="grain absolute inset-0 opacity-45" />
         <Container width="narrow" className="relative z-10 text-center">

@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import { Mail, MapPin, Phone } from 'lucide-react'
 import Hero from '../components/Hero'
+import Media from '../components/Media'
 import { Accent, Btn, Container, Display, Eyebrow, Ornament, Reveal, Section } from '../components/primitives'
 import { contact, socials } from '../data/site'
 import { divisions } from '../data/divisions'
@@ -249,6 +250,13 @@ export default function Connect() {
               </div>
             </Reveal>
           </div>
+          {/* Reserved slots — photographs to come from the client. */}
+          <Reveal className="mt-16">
+            <div className="grid grid-cols-2 gap-4 md:gap-6">
+              <Media id="connect-gal-1" showCaption={false} className="aspect-[4/3] w-full" />
+              <Media id="connect-gal-2" showCaption={false} className="aspect-[4/3] w-full" />
+            </div>
+          </Reveal>
         </Container>
       </Section>
 

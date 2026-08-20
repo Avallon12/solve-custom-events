@@ -32,6 +32,10 @@ export default function Divisions() {
               ))}
             </div>
           </Reveal>
+          {/* Reserved slot — photograph to come from the client. */}
+          <Reveal className="mt-14">
+            <Media id="divisions-band" showCaption={false} className="aspect-[21/9] w-full" />
+          </Reveal>
         </Container>
       </Section>
 

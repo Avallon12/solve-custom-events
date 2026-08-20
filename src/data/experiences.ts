@@ -138,6 +138,9 @@ export const experiences: Experience[] = [
       'wed-hannah-and-zach-2',
       'wed-farah-1',
       'wed-marisol-1',
+      'gal-weddings-p1',
+      'gal-weddings-p2',
+      'gal-weddings-p3',
     ],
   },
   {
@@ -214,6 +217,9 @@ export const experiences: Experience[] = [
       'sig-galentines-2',
       'sig-bridal-shower-vegas-1',
       'sig-bridal-shower-vegas-2',
+      'gal-signature-p1',
+      'gal-signature-p2',
+      'gal-signature-p3',
     ],
   },
   {
@@ -277,6 +283,9 @@ export const experiences: Experience[] = [
       'corp-hull-services-winter-holiday-party-1',
       'corp-hull-services-winter-holiday-party-2',
       'gal-design-3',
+      'gal-design-4',
+      'gal-design-5',
+      'gal-design-6',
     ],
   },
   {
@@ -328,7 +337,14 @@ export const experiences: Experience[] = [
     because:
       'Because the way people gather shapes the relationships, ideas, and leadership that move organizations forward.',
     reel: 'reel-workshops',
-    gallery: ['gal-workshops-1', 'gal-workshops-2', 'gal-workshops-3'],
+    gallery: [
+      'gal-workshops-1',
+      'gal-workshops-2',
+      'gal-workshops-3',
+      'gal-workshops-4',
+      'gal-workshops-5',
+      'gal-workshops-6',
+    ],
   },
   {
     slug: 'conferences',
@@ -402,7 +418,14 @@ export const experiences: Experience[] = [
     because:
       'Because the way leaders gather shapes the conversations, collaborations, and decisions that influence the world.',
     reel: 'reel-conferences',
-    gallery: ['gal-conferences-1', 'gal-conferences-2', 'gal-conferences-3'],
+    gallery: [
+      'gal-conferences-1',
+      'gal-conferences-2',
+      'gal-conferences-3',
+      'gal-conferences-4',
+      'gal-conferences-5',
+      'gal-conferences-6',
+    ],
   },
   {
     slug: 'fundraising',
@@ -459,7 +482,14 @@ export const experiences: Experience[] = [
       'Charitable organizations, foundations, community organizations, businesses, sponsors, and social impact initiatives seeking to strengthen relationships while inspiring generosity.',
     because: 'Because the way communities gather shapes the future they create together.',
     reel: 'reel-fundraising',
-    gallery: ['gal-fundraising-1', 'gal-fundraising-2', 'gal-fundraising-3'],
+    gallery: [
+      'gal-fundraising-1',
+      'gal-fundraising-2',
+      'gal-fundraising-3',
+      'gal-fundraising-4',
+      'gal-fundraising-5',
+      'gal-fundraising-6',
+    ],
   },
 ]
 

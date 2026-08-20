@@ -146,9 +146,17 @@ export default function Commitments() {
               </p>
             </Reveal>
           </div>
-          {/* Reserved slot — photograph to come from the client. */}
+          {/* Reserved slots — photographs to come from the client; the strip
+              mirrors the three commitments with equal treatment. */}
           <Reveal className="mt-14">
             <Media id="community-impact" showCaption={false} className="aspect-[21/9] w-full" />
+          </Reveal>
+          <Reveal className="mt-8">
+            <div className="grid grid-cols-3 gap-4 md:gap-6">
+              <Media id="commitments-gal-1" showCaption={false} className="aspect-[4/5] w-full" />
+              <Media id="commitments-gal-2" showCaption={false} className="aspect-[4/5] w-full" />
+              <Media id="commitments-gal-3" showCaption={false} className="aspect-[4/5] w-full" />
+            </div>
           </Reveal>
         </Container>
       </Section>

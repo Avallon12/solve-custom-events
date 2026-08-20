@@ -55,6 +55,10 @@ export default function Features() {
               </Reveal>
             ))}
           </div>
+          {/* Reserved slot — photograph to come from the client. */}
+          <Reveal className="mt-14">
+            <Media id="features-band" showCaption={false} className="aspect-[21/9] w-full" />
+          </Reveal>
         </Container>
       </Section>
 

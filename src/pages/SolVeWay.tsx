@@ -27,9 +27,15 @@ export default function SolVeWay() {
           <Reveal className="mt-14">
             <Ornament />
           </Reveal>
-          {/* Reserved slot — photograph to come from the client. */}
+          {/* Reserved slots — photographs to come from the client. */}
           <Reveal className="mt-14">
             <Media id="way-hospitality" showCaption={false} className="aspect-[16/9] w-full" />
+          </Reveal>
+          <Reveal className="mt-8">
+            <div className="grid grid-cols-2 gap-4 md:gap-6">
+              <Media id="way-welcome" showCaption={false} className="aspect-[4/3] w-full" />
+              <Media id="way-service" showCaption={false} className="aspect-[4/3] w-full" />
+            </div>
           </Reveal>
         </Container>
       </Section>

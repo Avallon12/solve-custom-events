@@ -41,9 +41,26 @@ export default function Principles() {
               </Reveal>
             ))}
           </div>
-          {/* Reserved slot — photograph to come from the client. */}
+          {/* Reserved slots — photographs to come from the client; one image
+              per principle, in the principles' own order. */}
           <Reveal className="mt-14">
             <Media id="principles-craft" showCaption={false} className="aspect-[21/9] w-full" />
+          </Reveal>
+          <Reveal className="mt-8">
+            <div className="grid grid-cols-2 gap-4 md:gap-6 lg:grid-cols-3">
+              {(
+                [
+                  'principles-gal-1',
+                  'principles-gal-2',
+                  'principles-gal-3',
+                  'principles-gal-4',
+                  'principles-gal-5',
+                  'principles-gal-6',
+                ] as const
+              ).map((id) => (
+                <Media key={id} id={id} showCaption={false} className="aspect-[16/10] w-full" />
+              ))}
+            </div>
           </Reveal>
         </Container>
       </Section>

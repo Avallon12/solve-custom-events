@@ -66,6 +66,28 @@ export default function Home() {
           imgClassName="h-full w-full"
         />
       </section>
+
+      {/* Reserved gallery strip — six photographs to come from the client. */}
+      <section aria-label="Photo gallery" className="bg-ivory py-[60px] md:py-[100px]">
+        <div className="mx-auto w-full max-w-content px-5 md:px-10 lg:px-20">
+          <div className="grid grid-cols-2 gap-5 md:gap-8 lg:grid-cols-3">
+            {(
+              [
+                'home-gal-1',
+                'home-gal-2',
+                'home-gal-3',
+                'home-gal-4',
+                'home-gal-5',
+                'home-gal-6',
+              ] as const
+            ).map((id) => (
+              <div key={id} className="overflow-hidden rounded-[2px]">
+                <Media id={id} showCaption={false} className="aspect-square w-full" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   )
 }

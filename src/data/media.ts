@@ -887,7 +887,7 @@ export const media = {
   // yet (flagged to the client); these labels double as the shot list.
   'gal-design-3': {
     label: 'Design & Stylization — Tablescape Detail',
-    alt: 'A styled Sol Vé tablescape in close detail',
+    alt: 'A styled Valentines tablescape in close detail',
     tone: 'light',
     src: '/media/gal-design-3.jpg',
   },
@@ -949,7 +949,7 @@ export const media = {
   // Portfolio — the categories still awaiting photography.
   'portfolio-conf-lead-1': {
     label: 'Portfolio — Conferences & Leadership Events I',
-    alt: 'A Sol Vé conference or leadership gathering',
+    alt: 'An ornate banquet hall staged for a Sol Vé evening programme',
     tone: 'dark',
     caption: 'Conferences & Leadership Events',
     src: '/media/portfolio-conf-lead-1.jpg',
@@ -995,7 +995,7 @@ export const media = {
 
   // Home gallery strip
   'home-gal-1': { label: 'Home Gallery — Ceremony Detail', alt: 'A ceremony detail at a Sol Vé wedding', tone: 'light', src: '/media/home-gal-1.jpg' },
-  'home-gal-2': { label: 'Home Gallery — Guests Arriving', alt: 'Guests arriving at a Sol Vé gathering', tone: 'warm', src: '/media/home-gal-2.jpg' },
+  'home-gal-2': { label: 'Home Gallery — Guests Arriving', alt: 'Guests celebrating beneath a balloon arch at a Sol Vé shower', tone: 'warm', src: '/media/home-gal-2.jpg' },
   'home-gal-3': { label: 'Home Gallery — Tablescape', alt: 'A dressed Sol Vé tablescape at golden hour', tone: 'warm', src: '/media/home-gal-3.jpg' },
   'home-gal-4': { label: 'Home Gallery — Speeches & Toasts', alt: 'A toast raised during a Sol Vé evening', tone: 'dark', src: '/media/home-gal-4.jpg' },
   'home-gal-5': { label: 'Home Gallery — The Dance Floor', alt: 'The dance floor in motion at a Sol Vé celebration', tone: 'dark', src: '/media/home-gal-5.jpg' },
@@ -1033,7 +1033,7 @@ export const media = {
 
   // What We Create + Divisions overview bands
   'create-band': { label: 'What We Create — The Room Revealed', alt: 'A finished Sol Vé room revealed before guests enter', tone: 'dark', src: '/media/create-band.jpg' },
-  'divisions-band': { label: 'Signature Experiences — Overview', alt: 'A wide view across a signature Sol Vé experience', tone: 'warm', src: '/media/divisions-band.jpg' },
+  'divisions-band': { label: 'Signature Experiences — Overview', alt: 'A rooftop proposal setting with drapery and petals, designed by Sol Vé', tone: 'warm', src: '/media/divisions-band.jpg' },
 
   // Division galleries — round two
   'gal-weddings-p1': { label: 'Weddings — The Ceremony', alt: 'A Sol Vé wedding ceremony in progress', tone: 'light', src: '/media/gal-weddings-p1.jpg' },
@@ -1047,7 +1047,7 @@ export const media = {
   'gal-design-6': { label: 'Design & Stylization — Lounge Design', alt: 'A lounge setting designed by Sol Vé', tone: 'warm', src: '/media/gal-design-6.jpg' },
   'gal-workshops-4': { label: 'Workshops — Team Building', alt: 'A team building exercise at a Sol Vé workshop', tone: 'warm', src: '/media/gal-workshops-4.jpg' },
   'gal-workshops-5': { label: 'Workshops — Wellness Retreat', alt: 'A wellness retreat setting prepared by Sol Vé', tone: 'light', src: '/media/gal-workshops-5.jpg' },
-  'gal-workshops-6': { label: 'Workshops — Networking Evening', alt: 'Guests connecting at a Sol Vé networking evening', tone: 'dark', src: '/media/gal-workshops-6.jpg' },
+  'gal-workshops-6': { label: 'Workshops — Networking Evening', alt: 'Guests connecting at an evening Sol Vé gathering', tone: 'dark', src: '/media/gal-workshops-6.jpg' },
   'gal-conferences-4': { label: 'Conferences — Keynote Stage', alt: 'A keynote stage designed by Sol Vé', tone: 'dark', src: '/media/gal-conferences-4.jpg' },
   'gal-conferences-5': { label: 'Conferences — VIP Hospitality', alt: 'VIP hospitality at a Sol Vé conference', tone: 'warm', src: '/media/gal-conferences-5.jpg' },
   'gal-conferences-6': { label: 'Conferences — Awards Gala', alt: 'An awards gala evening produced by Sol Vé', tone: 'dark', src: '/media/gal-conferences-6.jpg' },
@@ -1057,9 +1057,9 @@ export const media = {
 
   // Service Capabilities — one image per capability
   'cap-consultation-strategy': { label: 'Consultation & Strategy — At the Table', alt: 'A Sol Vé consultation in progress', tone: 'light', src: '/media/cap-consultation-strategy.jpg' },
-  'cap-planning-coordination': { label: 'Planning & Coordination — The Run Sheet', alt: 'Sol Vé coordinating an event day', tone: 'warm', src: '/media/cap-planning-coordination.jpg' },
-  'cap-design-production': { label: 'Design & Production — The Build', alt: 'A Sol Vé production build in progress', tone: 'dark', src: '/media/cap-design-production.jpg' },
-  'cap-full-experience-management': { label: 'Full Experience Management — Every Detail', alt: 'Sol Vé managing every detail of a gathering', tone: 'warm', src: '/media/cap-full-experience-management.jpg' },
+  'cap-planning-coordination': { label: 'Planning & Coordination — The Run Sheet', alt: 'A hand-lettered invitation suite laid out in the planning stage', tone: 'warm', src: '/media/cap-planning-coordination.jpg' },
+  'cap-design-production': { label: 'Design & Production — The Build', alt: 'A proposal room mid-build, florals and gold styling going into place', tone: 'dark', src: '/media/cap-design-production.jpg' },
+  'cap-full-experience-management': { label: 'Full Experience Management — Every Detail', alt: 'A balloon-arched celebration room, fully managed by Sol Vé', tone: 'warm', src: '/media/cap-full-experience-management.jpg' },
 
   // Meet the Founder — the remaining authenticity criteria
   'founder-team': { label: 'Meet the Founder — Collaborating with the Team', alt: 'The Sol Vé studio at work, building florals for an event', tone: 'warm', src: '/media/founder-team.jpg' },
@@ -1079,7 +1079,7 @@ export const media = {
   'testimonials-gal-3': { label: 'Testimonials — Community Partners', alt: 'Community partners celebrating at a Sol Vé gathering', tone: 'warm', src: '/media/testimonials-gal-3.jpg' },
 
   // Perspectives — images between the essays
-  'perspectives-inline-1': { label: 'Perspectives — Convening in the Round', alt: 'People convened in the round at a Sol Vé gathering', tone: 'warm', src: '/media/perspectives-inline-1.jpg' },
+  'perspectives-inline-1': { label: 'Perspectives — Convening in the Round', alt: 'A quiet conversation at a table set beside the water', tone: 'warm', src: '/media/perspectives-inline-1.jpg' },
   'perspectives-inline-2': { label: 'Perspectives — The Conversation Table', alt: 'A table set by Sol Vé for open conversation', tone: 'light', src: '/media/perspectives-inline-2.jpg' },
 
   // Connect pair
@@ -1087,7 +1087,7 @@ export const media = {
   'connect-gal-2': { label: 'Connect — Studio & Materials', alt: 'Sol Vé design materials and samples in the studio', tone: 'light', src: '/media/connect-gal-2.jpg' },
 
   // Features band
-  'features-band': { label: 'Features — Press & Publications Spread', alt: 'Sol Vé press features and publications spread out', tone: 'light', src: '/media/features-band.jpg' },
+  'features-band': { label: 'Features — Press & Publications Spread', alt: 'Two brides with their styled cake in the mountains, from a featured Sol Vé shoot', tone: 'light', src: '/media/features-band.jpg' },
 } satisfies Record<string, MediaSlot>
 
 export type MediaId = keyof typeof media

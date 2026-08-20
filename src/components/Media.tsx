@@ -124,7 +124,7 @@ export default function Media({
             {...sizeOf(id)}
             loading="lazy"
             decoding="async"
-            className={`h-full w-full object-cover ${drift ? 'animate-drift' : ''} ${imgClassName}`}
+            className={`h-full w-full object-cover object-[50%_30%] ${drift ? 'animate-drift' : ''} ${imgClassName}`}
           />
         ) : (
           <Placeholder slot={slot} subtle={subtle} />

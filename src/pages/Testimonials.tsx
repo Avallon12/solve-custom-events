@@ -23,15 +23,37 @@ export default function Testimonials() {
 
       <Section tone="ivory" rule>
         <Container>
-          <div className="grid border-t border-stone/40 sm:grid-cols-2 lg:grid-cols-3">
+          {/*
+            Blank quote cards — one per category, ready to receive the
+            client's testimonials. No quote text is invented: the space
+            waits for her words; the category stands as the attribution.
+          */}
+          <div className="grid gap-5 sm:grid-cols-2 md:gap-8 lg:grid-cols-3">
             {portfolio.testimonials.map((voice, i) => (
-              <Reveal key={voice} delay={(i % 3) * 70}>
-                <p
+              <Reveal key={voice} delay={(i % 3) * 70} className="h-full">
+                <figure
                   id={voice.toLowerCase().replace(/[^a-z]+/g, '-')}
-                  className="h-full scroll-mt-32 border-b border-stone/40 px-7 py-8 font-display text-[22px] text-charcoal sm:border-r md:text-[25px]"
+                  className="flex h-full scroll-mt-32 flex-col rounded-[2px] border border-stone/40 bg-linen/30 p-8 md:p-10"
                 >
-                  {voice}
-                </p>
+                  <span
+                    aria-hidden="true"
+                    className="font-display text-[64px] leading-none text-gold/60"
+                  >
+                    &ldquo;
+                  </span>
+                  <blockquote
+                    aria-label="Testimonial to come"
+                    className="mt-2 min-h-[96px] flex-1"
+                  />
+                  <figcaption className="mt-6 border-t border-stone/40 pt-5">
+                    <span
+                      className="font-ui text-[11px] font-semibold uppercase text-walnut"
+                      style={{ letterSpacing: '0.24em' }}
+                    >
+                      — {voice}
+                    </span>
+                  </figcaption>
+                </figure>
               </Reveal>
             ))}
           </div>

@@ -780,9 +780,10 @@ export const media = {
   // Films — the client has footage to send; these are their places.
   'film-weddings': {
     label: 'Weddings — Feature Film',
-    alt: 'A cinematic film of a Sol Vé wedding, from preparation to the last dance',
+    alt: 'A violinist playing beside candlelit tables in a Sol Vé wedding reception room',
     tone: 'dark',
     kind: 'film',
+    video: '/media/film-weddings.mp4',
   },
   'reel-design-stylization': {
     label: 'Design & Stylization — Reel',

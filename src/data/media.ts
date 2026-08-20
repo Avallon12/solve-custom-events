@@ -42,6 +42,12 @@ export type MediaSlot = {
   video?: string
   /** 'film' marks a slot reserved for video — its placeholder says so. */
   kind?: 'film'
+  /**
+   * How the photograph sits in its frame when cropped. 'top' keeps faces in
+   * frame on portraits of people; unset keeps the subject centred (rooms,
+   * tablescapes, details).
+   */
+  focus?: 'top'
 }
 
 const CREDIT_MIKE_HOPKINS = 'by Mike Hopkins Photography, 2019'
@@ -161,6 +167,7 @@ export const media = {
     src: '/media/portfolio-claudia-ali.webp',
     creditPending: true,
     caption: 'Claudia and Ali — White Wedding',
+    focus: 'top',
   },
   'portfolio-florals': {
     label: 'Floral Design',
@@ -211,6 +218,7 @@ export const media = {
     src: '/media/portfolio-weddings.webp',
     creditPending: true,
     caption: 'Weddings Division',
+    focus: 'top',
   },
   'portfolio-destination': {
     label: 'Portfolio — Destination Weddings',
@@ -219,6 +227,7 @@ export const media = {
     src: '/media/portfolio-destination.webp',
     creditPending: true,
     caption: 'Destination Weddings',
+    focus: 'top',
   },
   'portfolio-multicultural': {
     label: 'Portfolio — Multicultural Weddings',
@@ -277,6 +286,7 @@ export const media = {
     src: '/media/wed-claudia-and-ali-1.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Claudia and Ali — White Wedding',
+    focus: 'top',
   },
   'wed-claudia-and-ali-2': {
     label: 'Claudia and Ali — White Wedding',
@@ -285,6 +295,7 @@ export const media = {
     src: '/media/wed-claudia-and-ali-2.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Claudia and Ali — White Wedding',
+    focus: 'top',
   },
   'wed-claudia-and-ali-3': {
     label: 'Claudia and Ali — White Wedding',
@@ -301,6 +312,7 @@ export const media = {
     src: '/media/wed-paula-and-ever-1.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Paula and Ever — Wedding',
+    focus: 'top',
   },
   'wed-paula-and-ever-2': {
     label: 'Paula and Ever — Wedding',
@@ -309,6 +321,7 @@ export const media = {
     src: '/media/wed-paula-and-ever-2.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Paula and Ever — Wedding',
+    focus: 'top',
   },
   'wed-rob-and-lynea-1': {
     label: 'Rob and Lynea — Surprise Wedding',
@@ -317,6 +330,7 @@ export const media = {
     src: '/media/wed-rob-and-lynea-1.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Rob and Lynea — Surprise Wedding',
+    focus: 'top',
   },
   'wed-rob-and-lynea-2': {
     label: 'Rob and Lynea — Surprise Wedding',
@@ -325,6 +339,7 @@ export const media = {
     src: '/media/wed-rob-and-lynea-2.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Rob and Lynea — Surprise Wedding',
+    focus: 'top',
   },
   'wed-erin-and-rick-1': {
     label: 'Erin and Rick — Wedding',
@@ -333,6 +348,7 @@ export const media = {
     src: '/media/wed-erin-and-rick-1.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Erin and Rick — Wedding',
+    focus: 'top',
   },
   'wed-erin-and-rick-2': {
     label: 'Erin and Rick — Wedding',
@@ -341,6 +357,7 @@ export const media = {
     src: '/media/wed-erin-and-rick-2.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Erin and Rick — Wedding',
+    focus: 'top',
   },
   'wed-erin-and-rick-3': {
     label: 'Erin and Rick — Wedding',
@@ -349,6 +366,7 @@ export const media = {
     src: '/media/wed-erin-and-rick-3.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Erin and Rick — Wedding',
+    focus: 'top',
   },
   'wed-christina-and-vince-1': {
     label: 'Christina and Vince — Wedding',
@@ -357,6 +375,7 @@ export const media = {
     src: '/media/wed-christina-and-vince-1.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Christina and Vince — Wedding',
+    focus: 'top',
   },
   'wed-christina-and-vince-2': {
     label: 'Christina and Vince — Wedding',
@@ -365,6 +384,7 @@ export const media = {
     src: '/media/wed-christina-and-vince-2.webp',
     credit: 'by Mike Hopkins Photography',
     caption: 'Christina and Vince — Wedding',
+    focus: 'top',
   },
   'wed-christina-and-vince-3': {
     label: 'Christina and Vince — Wedding',
@@ -373,6 +393,7 @@ export const media = {
     src: '/media/wed-christina-and-vince-3.webp',
     credit: 'by Mike Hopkins Photography',
     caption: 'Christina and Vince — Wedding',
+    focus: 'top',
   },
   'wed-hannah-and-zach-1': {
     label: 'Hannah and Zach — Wedding',
@@ -413,6 +434,7 @@ export const media = {
     src: '/media/sig-vow-renewal-lisa-and-john-1.webp',
     creditPending: true,
     caption: 'Lisa and John — Vow Renewal',
+    focus: 'top',
   },
   'sig-vow-renewal-lisa-and-john-2': {
     label: 'Lisa and John — Vow Renewal',
@@ -421,6 +443,7 @@ export const media = {
     src: '/media/sig-vow-renewal-lisa-and-john-2.webp',
     creditPending: true,
     caption: 'Lisa and John — Vow Renewal',
+    focus: 'top',
   },
   'sig-vow-renewal-lisa-and-john-3': {
     label: 'Lisa and John — Vow Renewal',
@@ -429,6 +452,7 @@ export const media = {
     src: '/media/sig-vow-renewal-lisa-and-john-3.webp',
     creditPending: true,
     caption: 'Lisa and John — Vow Renewal',
+    focus: 'top',
   },
   'sig-engagement-c-and-a-1': {
     label: 'Claudia\'s Bridal Shower',
@@ -437,6 +461,7 @@ export const media = {
     src: '/media/sig-engagement-c-and-a-1.webp',
     creditPending: true,
     caption: 'Claudia\'s Bridal Shower',
+    focus: 'top',
   },
   'sig-engagement-c-and-a-2': {
     label: 'Claudia\'s Bridal Shower',
@@ -445,6 +470,7 @@ export const media = {
     src: '/media/sig-engagement-c-and-a-2.webp',
     creditPending: true,
     caption: 'Claudia\'s Bridal Shower',
+    focus: 'top',
   },
   'sig-proposal-niki-and-mervin-1': {
     label: 'Niki and Mervin — Proposal',
@@ -453,6 +479,7 @@ export const media = {
     src: '/media/sig-proposal-niki-and-mervin-1.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Niki and Mervin — Proposal',
+    focus: 'top',
   },
   'sig-proposal-niki-and-mervin-2': {
     label: 'Niki and Mervin — Proposal',
@@ -461,6 +488,7 @@ export const media = {
     src: '/media/sig-proposal-niki-and-mervin-2.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Niki and Mervin — Proposal',
+    focus: 'top',
   },
   'sig-proposal-meegan-and-logan-1': {
     label: 'Meegan and Logan — Proposal',
@@ -469,6 +497,7 @@ export const media = {
     src: '/media/sig-proposal-meegan-and-logan-1.webp',
     credit: 'by Connor Eseau',
     caption: 'Meegan and Logan — Proposal',
+    focus: 'top',
   },
   'sig-proposal-tasnia-and-nick-1': {
     label: 'Tasnia and Nick — Proposal',
@@ -477,6 +506,7 @@ export const media = {
     src: '/media/sig-proposal-tasnia-and-nick-1.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Tasnia and Nick — Proposal',
+    focus: 'top',
   },
   'sig-galentines-1': {
     label: 'Galentine\'s Styled Shoot',
@@ -485,6 +515,7 @@ export const media = {
     src: '/media/sig-galentines-1.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Galentine\'s Styled Shoot',
+    focus: 'top',
   },
   'sig-galentines-2': {
     label: 'Galentine\'s Styled Shoot',
@@ -493,6 +524,7 @@ export const media = {
     src: '/media/sig-galentines-2.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Galentine\'s Styled Shoot',
+    focus: 'top',
   },
   'sig-bridal-shower-vegas-1': {
     label: 'Tasnia\'s Bridal Shower — Las Vegas',
@@ -501,6 +533,7 @@ export const media = {
     src: '/media/sig-bridal-shower-vegas-1.webp',
     credit: 'by The Wild Vow',
     caption: 'Tasnia\'s Bridal Shower — Las Vegas',
+    focus: 'top',
   },
   'sig-bridal-shower-vegas-2': {
     label: 'Tasnia\'s Bridal Shower — Las Vegas',
@@ -509,6 +542,7 @@ export const media = {
     src: '/media/sig-bridal-shower-vegas-2.webp',
     credit: 'by The Wild Vow',
     caption: 'Tasnia\'s Bridal Shower — Las Vegas',
+    focus: 'top',
   },
   'corp-hull-services-winter-holiday-party-1': {
     label: 'Hull Services — Winter Holiday Party',
@@ -572,6 +606,7 @@ export const media = {
     src: '/media/portfolio-italiano-1.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Elopement Italiano Vibes',
+    focus: 'top',
   },
   'portfolio-italiano-2': {
     label: 'Elopement Italiano Vibes',
@@ -580,6 +615,7 @@ export const media = {
     src: '/media/portfolio-italiano-2.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Elopement Italiano Vibes',
+    focus: 'top',
   },
   'portfolio-italiano-3': {
     label: 'Elopement Italiano Vibes',
@@ -588,6 +624,7 @@ export const media = {
     src: '/media/portfolio-italiano-3.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Elopement Italiano Vibes',
+    focus: 'top',
   },
   'portfolio-italiano-4': {
     label: 'Elopement Italiano Vibes',
@@ -596,6 +633,7 @@ export const media = {
     src: '/media/portfolio-italiano-4.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Elopement Italiano Vibes',
+    focus: 'top',
   },
   'portfolio-italiano-5': {
     label: 'Elopement Italiano Vibes',
@@ -604,6 +642,7 @@ export const media = {
     src: '/media/portfolio-italiano-5.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Elopement Italiano Vibes',
+    focus: 'top',
   },
   'portfolio-italiano-6': {
     label: 'Elopement Italiano Vibes',
@@ -612,6 +651,7 @@ export const media = {
     src: '/media/portfolio-italiano-6.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Elopement Italiano Vibes',
+    focus: 'top',
   },
   'portfolio-italiano-7': {
     label: 'Elopement Italiano Vibes',
@@ -620,6 +660,7 @@ export const media = {
     src: '/media/portfolio-italiano-7.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Elopement Italiano Vibes',
+    focus: 'top',
   },
   'portfolio-nathan-allan-1': {
     label: 'Nathan and Allan — Elopement',
@@ -628,6 +669,7 @@ export const media = {
     src: '/media/portfolio-nathan-allan-1.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Nathan and Allan — Elopement',
+    focus: 'top',
   },
   'portfolio-nathan-allan-2': {
     label: 'Nathan and Allan — Elopement',
@@ -636,6 +678,7 @@ export const media = {
     src: '/media/portfolio-nathan-allan-2.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Nathan and Allan — Elopement',
+    focus: 'top',
   },
   'portfolio-nathan-allan-3': {
     label: 'Nathan and Allan — Elopement',
@@ -644,6 +687,7 @@ export const media = {
     src: '/media/portfolio-nathan-allan-3.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Nathan and Allan — Elopement',
+    focus: 'top',
   },
   'portfolio-nathan-allan-4': {
     label: 'Nathan and Allan — Elopement',
@@ -652,6 +696,7 @@ export const media = {
     src: '/media/portfolio-nathan-allan-4.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Nathan and Allan — Elopement',
+    focus: 'top',
   },
   'portfolio-dirt-roads-1': {
     label: 'Elopement Styled Shoot — Dirt Roads',
@@ -660,6 +705,7 @@ export const media = {
     src: '/media/portfolio-dirt-roads-1.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Elopement Styled Shoot — Dirt Roads',
+    focus: 'top',
   },
   'portfolio-dirt-roads-2': {
     label: 'Elopement Styled Shoot — Dirt Roads',
@@ -668,6 +714,7 @@ export const media = {
     src: '/media/portfolio-dirt-roads-2.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Elopement Styled Shoot — Dirt Roads',
+    focus: 'top',
   },
   'portfolio-dirt-roads-3': {
     label: 'Elopement Styled Shoot — Dirt Roads',
@@ -676,6 +723,7 @@ export const media = {
     src: '/media/portfolio-dirt-roads-3.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Elopement Styled Shoot — Dirt Roads',
+    focus: 'top',
   },
   'portfolio-dirt-roads-4': {
     label: 'Elopement Styled Shoot — Dirt Roads',
@@ -684,6 +732,7 @@ export const media = {
     src: '/media/portfolio-dirt-roads-4.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Elopement Styled Shoot — Dirt Roads',
+    focus: 'top',
   },
   'portfolio-marie-andre-1': {
     label: 'Marie and Andre — Ski Elopement',
@@ -692,6 +741,7 @@ export const media = {
     src: '/media/portfolio-marie-andre-1.webp',
     credit: 'by Brottrel Co. Photography Studio',
     caption: 'Marie and Andre — Ski Elopement',
+    focus: 'top',
   },
   'portfolio-marie-andre-2': {
     label: 'Marie and Andre — Ski Elopement',
@@ -700,6 +750,7 @@ export const media = {
     src: '/media/portfolio-marie-andre-2.webp',
     credit: 'by Brottrel Co. Photography Studio',
     caption: 'Marie and Andre — Ski Elopement',
+    focus: 'top',
   },
   'portfolio-marie-andre-3': {
     label: 'Marie and Andre — Ski Elopement',
@@ -708,6 +759,7 @@ export const media = {
     src: '/media/portfolio-marie-andre-3.webp',
     credit: 'by Brottrel Co. Photography Studio',
     caption: 'Marie and Andre — Ski Elopement',
+    focus: 'top',
   },
   'portfolio-marie-andre-4': {
     label: 'Marie and Andre — Ski Elopement',
@@ -716,6 +768,7 @@ export const media = {
     src: '/media/portfolio-marie-andre-4.webp',
     credit: 'by Brottrel Co. Photography Studio',
     caption: 'Marie and Andre — Ski Elopement',
+    focus: 'top',
   },
   'portfolio-claudia-ali-2': {
     label: 'Claudia and Ali — White Wedding',
@@ -724,6 +777,7 @@ export const media = {
     src: '/media/portfolio-claudia-ali-2.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Claudia and Ali — White Wedding',
+    focus: 'top',
   },
   'portfolio-claudia-ali-3': {
     label: 'Claudia and Ali — White Wedding',
@@ -732,6 +786,7 @@ export const media = {
     src: '/media/portfolio-claudia-ali-3.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Claudia and Ali — White Wedding',
+    focus: 'top',
   },
   'portfolio-proposal-1': {
     label: 'Tasnia and Nick — Proposal',
@@ -740,6 +795,7 @@ export const media = {
     src: '/media/portfolio-proposal-1.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Tasnia and Nick — Proposal',
+    focus: 'top',
   },
   'portfolio-proposal-2': {
     label: 'Tasnia and Nick — Proposal',
@@ -748,6 +804,7 @@ export const media = {
     src: '/media/portfolio-proposal-2.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Tasnia and Nick — Proposal',
+    focus: 'top',
   },
   'portfolio-valentines-1': {
     label: 'Valentine\'s Styled Shoot',
@@ -756,6 +813,7 @@ export const media = {
     src: '/media/portfolio-valentines-1.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Valentine\'s Styled Shoot',
+    focus: 'top',
   },
   'portfolio-valentines-2': {
     label: 'Valentine\'s Styled Shoot',
@@ -764,6 +822,7 @@ export const media = {
     src: '/media/portfolio-valentines-2.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Valentine\'s Styled Shoot',
+    focus: 'top',
   },
   'portfolio-valentines-3': {
     label: 'Valentine\'s Styled Shoot',
@@ -772,6 +831,7 @@ export const media = {
     src: '/media/portfolio-valentines-3.webp',
     credit: 'by Abbey Raine Photography',
     caption: 'Valentine\'s Styled Shoot',
+    focus: 'top',
   },
   // ── RESERVED SLOTS — added 2026-08-19, every one renders as a designed
   // placeholder until the client supplies the asset. Photo slots publish by
@@ -869,6 +929,7 @@ export const media = {
     alt: 'Guests welcomed at the Mystic Moonlight Masquerade Gala and Ball, a Sol Vé Custom Events production',
     tone: 'warm',
     src: '/media/founder-candid.jpg',
+    focus: 'top',
   },
   'testimonials-band': {
     label: 'Testimonials — Guests Gathered',
@@ -881,6 +942,7 @@ export const media = {
     alt: 'A room arranged by Sol Vé for open conversation',
     tone: 'light',
     src: '/media/perspectives-band.jpg',
+    focus: 'top',
   },
 
   // Division galleries — the corporate-facing divisions have no photography
@@ -896,6 +958,7 @@ export const media = {
     alt: 'A facilitator leading a Sol Vé workshop session',
     tone: 'warm',
     src: '/media/gal-workshops-1.jpg',
+    focus: 'top',
   },
   'gal-workshops-2': {
     label: 'Workshops — Executive Retreat Setting',
@@ -920,12 +983,14 @@ export const media = {
     alt: 'Delegates in session at a Sol Vé conference',
     tone: 'warm',
     src: '/media/gal-conferences-2.jpg',
+    focus: 'top',
   },
   'gal-conferences-3': {
     label: 'Conferences — Evening Reception',
     alt: 'An evening reception following a Sol Vé conference day',
     tone: 'dark',
     src: '/media/gal-conferences-3.jpg',
+    focus: 'top',
   },
   'gal-fundraising-1': {
     label: 'Fundraising — Gala Room',
@@ -938,12 +1003,14 @@ export const media = {
     alt: 'A live auction moment at a Sol Vé fundraising gala',
     tone: 'warm',
     src: '/media/gal-fundraising-2.jpg',
+    focus: 'top',
   },
   'gal-fundraising-3': {
     label: 'Fundraising — Donor Recognition',
     alt: 'Donors recognised on stage at a Sol Vé fundraising event',
     tone: 'dark',
     src: '/media/gal-fundraising-3.jpg',
+    focus: 'top',
   },
 
   // Portfolio — the categories still awaiting photography.
@@ -967,6 +1034,7 @@ export const media = {
     tone: 'dark',
     caption: 'Fundraising Campaigns',
     src: '/media/portfolio-fund-camp-1.jpg',
+    focus: 'top',
   },
   'portfolio-fund-camp-2': {
     label: 'Portfolio — Fundraising Campaigns II',
@@ -974,6 +1042,7 @@ export const media = {
     tone: 'warm',
     caption: 'Fundraising Campaigns',
     src: '/media/portfolio-fund-camp-2.jpg',
+    focus: 'top',
   },
   'portfolio-workshops-cur-1': {
     label: 'Portfolio — Workshops & Curated Experiences I',
@@ -988,6 +1057,7 @@ export const media = {
     tone: 'warm',
     caption: 'Workshops & Curated Experiences',
     src: '/media/portfolio-workshops-cur-2.jpg',
+    focus: 'top',
   },
 
   // ── ROUND TWO — added at the client's request for more photography.
@@ -995,11 +1065,11 @@ export const media = {
 
   // Home gallery strip
   'home-gal-1': { label: 'Home Gallery — Ceremony Detail', alt: 'A ceremony detail at a Sol Vé wedding', tone: 'light', src: '/media/home-gal-1.jpg' },
-  'home-gal-2': { label: 'Home Gallery — Guests Arriving', alt: 'Guests celebrating beneath a balloon arch at a Sol Vé shower', tone: 'warm', src: '/media/home-gal-2.jpg' },
+  'home-gal-2': { label: 'Home Gallery — Guests Arriving', alt: 'Guests celebrating beneath a balloon arch at a Sol Vé shower', tone: 'warm', src: '/media/home-gal-2.jpg', focus: 'top' },
   'home-gal-3': { label: 'Home Gallery — Tablescape', alt: 'A dressed Sol Vé tablescape at golden hour', tone: 'warm', src: '/media/home-gal-3.jpg' },
-  'home-gal-4': { label: 'Home Gallery — Speeches & Toasts', alt: 'A toast raised during a Sol Vé evening', tone: 'dark', src: '/media/home-gal-4.jpg' },
-  'home-gal-5': { label: 'Home Gallery — The Dance Floor', alt: 'The dance floor in motion at a Sol Vé celebration', tone: 'dark', src: '/media/home-gal-5.jpg' },
-  'home-gal-6': { label: 'Home Gallery — The Send-Off', alt: 'Guests sending off the couple at the end of a Sol Vé night', tone: 'warm', src: '/media/home-gal-6.jpg' },
+  'home-gal-4': { label: 'Home Gallery — Speeches & Toasts', alt: 'A toast raised during a Sol Vé evening', tone: 'dark', src: '/media/home-gal-4.jpg', focus: 'top' },
+  'home-gal-5': { label: 'Home Gallery — The Dance Floor', alt: 'The dance floor in motion at a Sol Vé celebration', tone: 'dark', src: '/media/home-gal-5.jpg', focus: 'top' },
+  'home-gal-6': { label: 'Home Gallery — The Send-Off', alt: 'Guests sending off the couple at the end of a Sol Vé night', tone: 'warm', src: '/media/home-gal-6.jpg', focus: 'top' },
 
   // Foundation detail triptych
   'foundation-detail-1': { label: 'Foundation — Place Setting Detail', alt: 'A single place setting laid by Sol Vé', tone: 'light', src: '/media/foundation-detail-1.jpg' },
@@ -1011,20 +1081,20 @@ export const media = {
   'way-service': { label: 'The Sol Vé Way — Service in Motion', alt: 'The Sol Vé team serving guests during an event', tone: 'dark', src: '/media/way-service.jpg' },
 
   // Beyond the Occasion pair
-  'beyond-family': { label: 'Beyond the Occasion — Two Families, One', alt: 'Two families celebrating together at a Sol Vé wedding', tone: 'warm', src: '/media/beyond-family.jpg' },
+  'beyond-family': { label: 'Beyond the Occasion — Two Families, One', alt: 'Two families celebrating together at a Sol Vé wedding', tone: 'warm', src: '/media/beyond-family.jpg', focus: 'top' },
   'beyond-toast': { label: 'Beyond the Occasion — The Toast', alt: 'A heartfelt toast during a Sol Vé gathering', tone: 'dark', src: '/media/beyond-toast.jpg' },
 
   // Commitments strip — one image per box, equal treatment
-  'commitments-gal-1': { label: 'Reconciliation — Cultural Performance', alt: 'Costumed performers welcoming guests at a Sol Vé gathering', tone: 'dark', src: '/media/commitments-gal-1.jpg' },
-  'commitments-gal-2': { label: 'Inclusion — A Celebration for All', alt: 'A celebration where every guest belongs, by Sol Vé', tone: 'warm', src: '/media/commitments-gal-2.jpg' },
+  'commitments-gal-1': { label: 'Reconciliation — Cultural Performance', alt: 'Costumed performers welcoming guests at a Sol Vé gathering', tone: 'dark', src: '/media/commitments-gal-1.jpg', focus: 'top' },
+  'commitments-gal-2': { label: 'Inclusion — A Celebration for All', alt: 'A celebration where every guest belongs, by Sol Vé', tone: 'warm', src: '/media/commitments-gal-2.jpg', focus: 'top' },
   'commitments-gal-3': { label: 'Conservation — Sustainable Décor', alt: 'Reusable and responsibly sourced décor at a Sol Vé event', tone: 'light', src: '/media/commitments-gal-3.jpg' },
 
   // Principles — one image per principle
   'principles-gal-1': { label: 'Principles — Stewardship in Practice', alt: 'The Sol Vé team stewarding a gathering', tone: 'warm', src: '/media/principles-gal-1.jpg' },
   'principles-gal-2': { label: 'Principles — Intention in the Details', alt: 'An intentional detail from a Sol Vé design', tone: 'light', src: '/media/principles-gal-2.jpg' },
-  'principles-gal-3': { label: 'Principles — Hospitality at the Door', alt: 'A guest welcomed by name at a Sol Vé event', tone: 'warm', src: '/media/principles-gal-3.jpg' },
+  'principles-gal-3': { label: 'Principles — Hospitality at the Door', alt: 'A guest welcomed by name at a Sol Vé event', tone: 'warm', src: '/media/principles-gal-3.jpg', focus: 'top' },
   'principles-gal-4': { label: 'Principles — Craftsmanship Up Close', alt: 'Hands at work on a Sol Vé installation', tone: 'light', src: '/media/principles-gal-4.jpg' },
-  'principles-gal-5': { label: 'Principles — Collaboration Backstage', alt: 'The team collaborating behind the scenes at a Sol Vé event', tone: 'dark', src: '/media/principles-gal-5.jpg' },
+  'principles-gal-5': { label: 'Principles — Collaboration Backstage', alt: 'The team collaborating behind the scenes at a Sol Vé event', tone: 'dark', src: '/media/principles-gal-5.jpg', focus: 'top' },
   'principles-gal-6': { label: 'Principles — Legacy, After the Gathering', alt: 'A quiet room after a meaningful Sol Vé gathering', tone: 'dark', src: '/media/principles-gal-6.jpg' },
 
   // Where It Began pair
@@ -1036,24 +1106,24 @@ export const media = {
   'divisions-band': { label: 'Signature Experiences — Overview', alt: 'A rooftop proposal setting with drapery and petals, designed by Sol Vé', tone: 'warm', src: '/media/divisions-band.jpg' },
 
   // Division galleries — round two
-  'gal-weddings-p1': { label: 'Weddings — The Ceremony', alt: 'A Sol Vé wedding ceremony in progress', tone: 'light', src: '/media/gal-weddings-p1.jpg' },
-  'gal-weddings-p2': { label: 'Weddings — The First Dance', alt: 'A first dance at a Sol Vé wedding', tone: 'dark', src: '/media/gal-weddings-p2.jpg' },
+  'gal-weddings-p1': { label: 'Weddings — The Ceremony', alt: 'A Sol Vé wedding ceremony in progress', tone: 'light', src: '/media/gal-weddings-p1.jpg', focus: 'top' },
+  'gal-weddings-p2': { label: 'Weddings — The First Dance', alt: 'A first dance at a Sol Vé wedding', tone: 'dark', src: '/media/gal-weddings-p2.jpg', focus: 'top' },
   'gal-weddings-p3': { label: 'Weddings — The Details', alt: 'Wedding details styled by Sol Vé', tone: 'warm', src: '/media/gal-weddings-p3.jpg' },
   'gal-signature-p1': { label: 'Signature Moments — The Milestone Toast', alt: 'A milestone toast at a Sol Vé signature moment', tone: 'warm', src: '/media/gal-signature-p1.jpg' },
-  'gal-signature-p2': { label: 'Signature Moments — Family Gathered', alt: 'A family gathered for a Sol Vé milestone celebration', tone: 'warm', src: '/media/gal-signature-p2.jpg' },
+  'gal-signature-p2': { label: 'Signature Moments — Family Gathered', alt: 'A family gathered for a Sol Vé milestone celebration', tone: 'warm', src: '/media/gal-signature-p2.jpg', focus: 'top' },
   'gal-signature-p3': { label: 'Signature Moments — Décor Detail', alt: 'Celebration décor detail by Sol Vé', tone: 'light', src: '/media/gal-signature-p3.jpg' },
   'gal-design-4': { label: 'Design & Stylization — Custom Installation', alt: 'A custom Sol Vé installation being admired', tone: 'warm', src: '/media/gal-design-4.jpg' },
   'gal-design-5': { label: 'Design & Stylization — Lighting Concept', alt: 'A lighting concept transforming a Sol Vé room', tone: 'dark', src: '/media/gal-design-5.jpg' },
   'gal-design-6': { label: 'Design & Stylization — Lounge Design', alt: 'A lounge setting designed by Sol Vé', tone: 'warm', src: '/media/gal-design-6.jpg' },
   'gal-workshops-4': { label: 'Workshops — Team Building', alt: 'A team building exercise at a Sol Vé workshop', tone: 'warm', src: '/media/gal-workshops-4.jpg' },
   'gal-workshops-5': { label: 'Workshops — Wellness Retreat', alt: 'A wellness retreat setting prepared by Sol Vé', tone: 'light', src: '/media/gal-workshops-5.jpg' },
-  'gal-workshops-6': { label: 'Workshops — Networking Evening', alt: 'Guests connecting at an evening Sol Vé gathering', tone: 'dark', src: '/media/gal-workshops-6.jpg' },
-  'gal-conferences-4': { label: 'Conferences — Keynote Stage', alt: 'A keynote stage designed by Sol Vé', tone: 'dark', src: '/media/gal-conferences-4.jpg' },
+  'gal-workshops-6': { label: 'Workshops — Networking Evening', alt: 'Guests connecting at an evening Sol Vé gathering', tone: 'dark', src: '/media/gal-workshops-6.jpg', focus: 'top' },
+  'gal-conferences-4': { label: 'Conferences — Keynote Stage', alt: 'A keynote stage designed by Sol Vé', tone: 'dark', src: '/media/gal-conferences-4.jpg', focus: 'top' },
   'gal-conferences-5': { label: 'Conferences — VIP Hospitality', alt: 'VIP hospitality at a Sol Vé conference', tone: 'warm', src: '/media/gal-conferences-5.jpg' },
-  'gal-conferences-6': { label: 'Conferences — Awards Gala', alt: 'An awards gala evening produced by Sol Vé', tone: 'dark', src: '/media/gal-conferences-6.jpg' },
+  'gal-conferences-6': { label: 'Conferences — Awards Gala', alt: 'An awards gala evening produced by Sol Vé', tone: 'dark', src: '/media/gal-conferences-6.jpg', focus: 'top' },
   'gal-fundraising-4': { label: 'Fundraising — Sponsor Activation', alt: 'A sponsor activation at a Sol Vé fundraising event', tone: 'warm', src: '/media/gal-fundraising-4.jpg' },
   'gal-fundraising-5': { label: 'Fundraising — The Entertainment', alt: 'Entertainment performing at a Sol Vé gala', tone: 'dark', src: '/media/gal-fundraising-5.jpg' },
-  'gal-fundraising-6': { label: 'Fundraising — Community Celebration', alt: 'A community celebrating at a Sol Vé fundraising evening', tone: 'warm', src: '/media/gal-fundraising-6.jpg' },
+  'gal-fundraising-6': { label: 'Fundraising — Community Celebration', alt: 'A community celebrating at a Sol Vé fundraising evening', tone: 'warm', src: '/media/gal-fundraising-6.jpg', focus: 'top' },
 
   // Service Capabilities — one image per capability
   'cap-consultation-strategy': { label: 'Consultation & Strategy — At the Table', alt: 'A Sol Vé consultation in progress', tone: 'light', src: '/media/cap-consultation-strategy.jpg' },
@@ -1063,27 +1133,27 @@ export const media = {
 
   // Meet the Founder — the remaining authenticity criteria
   'founder-team': { label: 'Meet the Founder — Collaborating with the Team', alt: 'The Sol Vé studio at work, building florals for an event', tone: 'warm', src: '/media/founder-team.jpg' },
-  'founder-room': { label: 'Meet the Founder — Observing the Room', alt: 'A masked guest taking in the ballroom at the Mystic Moonlight Masquerade', tone: 'dark', src: '/media/founder-room.jpg' },
+  'founder-room': { label: 'Meet the Founder — Observing the Room', alt: 'A masked guest taking in the ballroom at the Mystic Moonlight Masquerade', tone: 'dark', src: '/media/founder-room.jpg', focus: 'top' },
 
   // Portfolio — round two tiles
-  'portfolio-conf-lead-3': { label: 'Portfolio — Conferences & Leadership Events III', alt: 'A leadership convening produced by Sol Vé', tone: 'light', caption: 'Conferences & Leadership Events', src: '/media/portfolio-conf-lead-3.jpg' },
-  'portfolio-fund-camp-3': { label: 'Portfolio — Fundraising Campaigns III', alt: 'A fundraising campaign evening by Sol Vé', tone: 'dark', caption: 'Fundraising Campaigns', src: '/media/portfolio-fund-camp-3.jpg' },
-  'portfolio-workshops-cur-3': { label: 'Portfolio — Workshops & Curated Experiences III', alt: 'A curated Sol Vé experience underway', tone: 'warm', caption: 'Workshops & Curated Experiences', src: '/media/portfolio-workshops-cur-3.jpg' },
+  'portfolio-conf-lead-3': { label: 'Portfolio — Conferences & Leadership Events III', alt: 'A leadership convening produced by Sol Vé', tone: 'light', caption: 'Conferences & Leadership Events', src: '/media/portfolio-conf-lead-3.jpg', focus: 'top' },
+  'portfolio-fund-camp-3': { label: 'Portfolio — Fundraising Campaigns III', alt: 'A fundraising campaign evening by Sol Vé', tone: 'dark', caption: 'Fundraising Campaigns', src: '/media/portfolio-fund-camp-3.jpg', focus: 'top' },
+  'portfolio-workshops-cur-3': { label: 'Portfolio — Workshops & Curated Experiences III', alt: 'A curated Sol Vé experience underway', tone: 'warm', caption: 'Workshops & Curated Experiences', src: '/media/portfolio-workshops-cur-3.jpg', focus: 'top' },
   'portfolio-design-styl-1': { label: 'Portfolio — Design & Stylization I', alt: 'A styled Sol Vé environment', tone: 'light', caption: 'Design & Stylization', src: '/media/portfolio-design-styl-1.jpg' },
   'portfolio-design-styl-2': { label: 'Portfolio — Design & Stylization II', alt: 'A Sol Vé design concept realised', tone: 'warm', caption: 'Design & Stylization', src: '/media/portfolio-design-styl-2.jpg' },
   'portfolio-sig-mom-1': { label: 'Portfolio — Signature Moments I', alt: 'A signature moment celebrated with Sol Vé', tone: 'warm', caption: 'Signature Moments', src: '/media/portfolio-sig-mom-1.jpg' },
 
   // Testimonials strip
-  'testimonials-gal-1': { label: 'Testimonials — The Couples', alt: 'A couple celebrating at their Sol Vé wedding', tone: 'light', src: '/media/testimonials-gal-1.jpg' },
+  'testimonials-gal-1': { label: 'Testimonials — The Couples', alt: 'A couple celebrating at their Sol Vé wedding', tone: 'light', src: '/media/testimonials-gal-1.jpg', focus: 'top' },
   'testimonials-gal-2': { label: 'Testimonials — Corporate Partners', alt: 'Corporate partners gathered at a Sol Vé event', tone: 'dark', src: '/media/testimonials-gal-2.jpg' },
-  'testimonials-gal-3': { label: 'Testimonials — Community Partners', alt: 'Community partners celebrating at a Sol Vé gathering', tone: 'warm', src: '/media/testimonials-gal-3.jpg' },
+  'testimonials-gal-3': { label: 'Testimonials — Community Partners', alt: 'Community partners celebrating at a Sol Vé gathering', tone: 'warm', src: '/media/testimonials-gal-3.jpg', focus: 'top' },
 
   // Perspectives — images between the essays
   'perspectives-inline-1': { label: 'Perspectives — Convening in the Round', alt: 'A quiet conversation at a table set beside the water', tone: 'warm', src: '/media/perspectives-inline-1.jpg' },
   'perspectives-inline-2': { label: 'Perspectives — The Conversation Table', alt: 'A table set by Sol Vé for open conversation', tone: 'light', src: '/media/perspectives-inline-2.jpg' },
 
   // Connect pair
-  'connect-gal-1': { label: 'Connect — The First Meeting', alt: 'A first conversation at a community gathering', tone: 'warm', src: '/media/connect-gal-1.jpg' },
+  'connect-gal-1': { label: 'Connect — The First Meeting', alt: 'A first conversation at a community gathering', tone: 'warm', src: '/media/connect-gal-1.jpg', focus: 'top' },
   'connect-gal-2': { label: 'Connect — Studio & Materials', alt: 'Sol Vé design materials and samples in the studio', tone: 'light', src: '/media/connect-gal-2.jpg' },
 
   // Features band

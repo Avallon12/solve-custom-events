@@ -18,7 +18,7 @@ export default function Testimonials() {
         size="page"
         eyebrow="Testimonials"
         headline="Testimonials"
-        media="sig-vow-renewal-lisa-and-john-1"
+        media="testimonials-hero"
       />
 
       <Section tone="ivory" rule>
@@ -57,7 +57,6 @@ export default function Testimonials() {
               </Reveal>
             ))}
           </div>
-          {/* Reserved slots — photographs to come from the client. */}
           <Reveal className="mt-14">
             <Media id="testimonials-band" showCaption={false} className="aspect-[21/9] w-full" />
           </Reveal>

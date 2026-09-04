@@ -3,15 +3,34 @@ import Media from '../components/Media'
 import ClosingCTA from '../components/ClosingCTA'
 import { Container, Display, Eyebrow, Ornament, Reveal, Section } from '../components/primitives'
 import { howWeWorkTogether, solVeDifference } from '../data/experiences'
+import {
+  capConsultationGallery,
+  capDesignProductionGallery,
+  capFullExperienceGallery,
+  capPlanningGallery,
+} from '../data/galleries'
 import type { MediaId } from '../data/media'
 import { usePageMeta } from '../lib/meta'
 
-/** One reserved photograph per capability — labels are the shot list. */
+/** One lead photograph per capability, from the client's matching folder. */
 const CAP_MEDIA: Record<string, MediaId> = {
   'consultation-strategy': 'cap-consultation-strategy',
   'planning-coordination': 'cap-planning-coordination',
   'design-production': 'cap-design-production',
   'full-experience-management': 'cap-full-experience-management',
+}
+
+/** The client's folder for each capability, shown in full beneath it. */
+const CAP_GALLERY: Record<string, readonly MediaId[]> = {
+  'consultation-strategy': capConsultationGallery,
+  'planning-coordination': capPlanningGallery,
+  'design-production': capDesignProductionGallery,
+  'full-experience-management': capFullExperienceGallery,
+}
+
+/** Footage supplied for a capability plays above its gallery. */
+const CAP_REEL: Partial<Record<string, MediaId>> = {
+  'consultation-strategy': 'reel-consultation',
 }
 
 /** "How We Work Together" and "The Sol Vé Difference", word for word. */
@@ -27,7 +46,7 @@ export default function ServiceCapabilities() {
         size="page"
         eyebrow="Service Capabilities"
         headline="How We Work Together"
-        media="foundation-hero"
+        media="capabilities-hero"
       />
 
       <Section tone="ivory" rule>
@@ -87,7 +106,6 @@ export default function ServiceCapabilities() {
                 )}
               </Reveal>
             </div>
-            {/* Reserved slot — one photograph per capability, from the client. */}
             <Reveal className="mt-12">
               <Media
                 id={CAP_MEDIA[capability.slug]}
@@ -95,6 +113,25 @@ export default function ServiceCapabilities() {
                 className="aspect-[21/9] w-full"
               />
             </Reveal>
+            {CAP_REEL[capability.slug] && (
+              <Reveal className="mt-8">
+                <Media id={CAP_REEL[capability.slug]!} showCaption={false} className="aspect-video w-full" />
+              </Reveal>
+            )}
+            <div className="mt-8 grid auto-rows-fr grid-cols-2 gap-5 md:gap-8 lg:grid-cols-3">
+              {CAP_GALLERY[capability.slug].map((id, i) => (
+                <Reveal key={id} delay={(i % 3) * 80} className="h-full">
+                  <div className="overflow-hidden rounded-[2px]">
+                    <Media
+                      id={id}
+                      showCaption={false}
+                      className="aspect-square w-full"
+                      imgClassName="transition-transform duration-[1200ms] hover:scale-105"
+                    />
+                  </div>
+                </Reveal>
+              ))}
+            </div>
           </Container>
         </Section>
       ))}
@@ -125,7 +162,6 @@ export default function ServiceCapabilities() {
         </Container>
       </Section>
 
-      {/* Reserved slot — photograph to come from the client. */}
       <Section tone="ivory" rule className="!py-[60px] md:!py-[80px]">
         <Container>
           <Reveal>

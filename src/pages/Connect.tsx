@@ -250,7 +250,6 @@ export default function Connect() {
               </div>
             </Reveal>
           </div>
-          {/* Reserved slots — photographs to come from the client. */}
           <Reveal className="mt-16">
             <div className="grid grid-cols-2 gap-4 md:gap-6">
               <Media id="connect-gal-1" showCaption={false} className="aspect-[4/3] w-full" />

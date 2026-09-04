@@ -4,7 +4,20 @@ import Media from '../components/Media'
 import ClosingCTA from '../components/ClosingCTA'
 import { Container, Reveal, Section } from '../components/primitives'
 import { portfolio } from '../data/content'
+import {
+  featureBridalFantasyGallery,
+  featureDancingWithHerGallery,
+  featureMensVowGallery,
+} from '../data/galleries'
+import type { MediaId } from '../data/media'
 import { usePageMeta } from '../lib/meta'
+
+/** The client's photographs for each published feature, from her Features folder. */
+const FEATURE_GALLERIES: Record<string, readonly MediaId[]> = {
+  'Bridal Fantasy': featureBridalFantasyGallery,
+  'Dancing With Her': featureDancingWithHerGallery,
+  'Men`s Vow Magazine': featureMensVowGallery,
+}
 
 /** "Features" — the list exactly as given, each linking to its publication. */
 export default function Features() {
@@ -15,7 +28,7 @@ export default function Features() {
 
   return (
     <>
-      <Hero size="page" eyebrow="Features" headline="Features" media="portfolio-vogue" />
+      <Hero size="page" eyebrow="Features" headline="Features" media="features-hero" />
 
       <Section tone="ivory" rule>
         <Container width="narrow">
@@ -45,17 +58,31 @@ export default function Features() {
                     {feature.note}
                   </p>
 
-                  {feature.name === 'Bridal Fantasy' && (
+                  {feature.name === 'Bridal Fantasy' ? (
+                    // Magazine pages keep their own proportions — nothing is cropped.
                     <div className="mt-8 grid gap-6 sm:grid-cols-2">
-                      <Media id="feature-bridal-fantasy-1" className="w-full" />
-                      <Media id="feature-bridal-fantasy-2" className="w-full" />
+                      {FEATURE_GALLERIES[feature.name].map((id) => (
+                        <Media key={id} id={id} showCaption={false} className="w-full" />
+                      ))}
                     </div>
-                  )}
+                  ) : FEATURE_GALLERIES[feature.name] ? (
+                    <div className="mt-8 grid grid-cols-2 gap-4 md:gap-6 lg:grid-cols-3">
+                      {FEATURE_GALLERIES[feature.name].map((id) => (
+                        <div key={id} className="overflow-hidden rounded-[2px]">
+                          <Media
+                            id={id}
+                            showCaption={false}
+                            className="aspect-[4/5] w-full"
+                            imgClassName="transition-transform duration-[1200ms] hover:scale-105"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  ) : null}
                 </div>
               </Reveal>
             ))}
           </div>
-          {/* Reserved slot — photograph to come from the client. */}
           <Reveal className="mt-14">
             <Media id="features-band" showCaption={false} className="aspect-[21/9] w-full" />
           </Reveal>

@@ -14,7 +14,7 @@ export default function Perspectives() {
 
   return (
     <>
-      <Hero size="page" eyebrow="Perspectives" headline="Perspectives" media="foundation-began" />
+      <Hero size="page" eyebrow="Perspectives" headline="Perspectives" media="perspectives-hero" />
 
       <Section tone="ivory" rule>
         <Container width="narrow">
@@ -32,7 +32,7 @@ export default function Perspectives() {
                     ))}
                   </div>
 
-                  {/* Reserved slots — photographs between the essays. */}
+                  {/* Photographs between the essays. */}
                   {(i === 1 || i === 3) && (
                     <div className="mt-12">
                       <Media
@@ -54,7 +54,6 @@ export default function Perspectives() {
         </Container>
       </Section>
 
-      {/* Reserved slot — photograph to come from the client. */}
       <Section tone="ivory" className="!pt-0">
         <Container width="narrow">
           <Reveal>

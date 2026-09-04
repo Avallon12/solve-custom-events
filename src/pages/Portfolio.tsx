@@ -11,7 +11,7 @@ import {
   Section,
 } from '../components/primitives'
 import { perspectives, portfolio } from '../data/content'
-import type { MediaId } from '../data/media'
+import { portfolioGallery } from '../data/galleries'
 import { usePageMeta } from '../lib/meta'
 
 /**
@@ -19,66 +19,6 @@ import { usePageMeta } from '../lib/meta'
  * then Testimonials, then Perspectives. Nothing added.
  */
 
-/** Photography placed by the Exact Banner-by-Banner Photo Guide. */
-const GALLERY: MediaId[] = [
-  'portfolio-mmm',
-  'portfolio-mingle',
-  'portfolio-threads',
-  'portfolio-weddings',
-  'portfolio-destination',
-  'portfolio-multicultural',
-  'portfolio-vogue',
-  'portfolio-signature',
-  'portfolio-workshops',
-  'portfolio-conferences',
-  'portfolio-fundraising',
-  'portfolio-claudia-ali',
-  'portfolio-italiano-1',
-  'portfolio-italiano-2',
-  'portfolio-italiano-3',
-  'portfolio-italiano-4',
-  'portfolio-italiano-5',
-  'portfolio-italiano-6',
-  'portfolio-italiano-7',
-  'portfolio-nathan-allan-1',
-  'portfolio-nathan-allan-2',
-  'portfolio-nathan-allan-3',
-  'portfolio-nathan-allan-4',
-  'portfolio-dirt-roads-1',
-  'portfolio-dirt-roads-2',
-  'portfolio-dirt-roads-3',
-  'portfolio-dirt-roads-4',
-  'portfolio-marie-andre-1',
-  'portfolio-marie-andre-2',
-  'portfolio-marie-andre-3',
-  'portfolio-marie-andre-4',
-  'portfolio-claudia-ali-2',
-  'portfolio-claudia-ali-3',
-  'portfolio-proposal-1',
-  'portfolio-proposal-2',
-  'portfolio-valentines-1',
-  'portfolio-valentines-2',
-  'portfolio-valentines-3',
-  'wed-paula-and-ever-1',
-  'wed-rob-and-lynea-1',
-  'wed-erin-and-rick-3',
-  'wed-christina-and-vince-1',
-  'sig-proposal-meegan-and-logan-1',
-  'sig-bridal-shower-vegas-1',
-  // Reserved slots — the categories still awaiting the client's photography.
-  'portfolio-conf-lead-1',
-  'portfolio-conf-lead-2',
-  'portfolio-conf-lead-3',
-  'portfolio-fund-camp-1',
-  'portfolio-fund-camp-2',
-  'portfolio-fund-camp-3',
-  'portfolio-workshops-cur-1',
-  'portfolio-workshops-cur-2',
-  'portfolio-workshops-cur-3',
-  'portfolio-design-styl-1',
-  'portfolio-design-styl-2',
-  'portfolio-sig-mom-1',
-]
 
 export default function Portfolio() {
   usePageMeta(
@@ -96,7 +36,7 @@ export default function Portfolio() {
             Portfolio and <Accent>Perspectives.</Accent>
           </>
         }
-        media="portfolio-mmm"
+        media="portfolio-hero"
       />
 
       <Section tone="ivory" rule>
@@ -116,7 +56,7 @@ export default function Portfolio() {
           </Reveal>
 
           <div className="mt-14 grid auto-rows-fr grid-cols-2 gap-5 md:gap-8 lg:grid-cols-3">
-            {GALLERY.map((id, i) => (
+            {portfolioGallery.map((id, i) => (
               <Reveal key={id} delay={(i % 3) * 80} className="h-full">
                 <div className="overflow-hidden rounded-[2px]">
                   <Media
@@ -129,9 +69,9 @@ export default function Portfolio() {
             ))}
           </div>
 
-          {/* Reserved slot — event film highlights, footage to come from the client. */}
+          {/* Event film highlights — the client's Mystic Menagerie film. */}
           <Reveal className="mt-8 md:mt-12">
-            <Media id="film-highlights" showCaption={false} className="aspect-video w-full" />
+            <Media id="home-film" showCaption={false} className="aspect-video w-full" />
           </Reveal>
 
           <Reveal className="mt-16">

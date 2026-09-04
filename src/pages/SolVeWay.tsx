@@ -14,7 +14,7 @@ export default function SolVeWay() {
 
   return (
     <>
-      <Hero size="page" eyebrow="The Sol Vé Way" headline="The Sol Vé Way" media="foundation-hero" />
+      <Hero size="page" eyebrow="The Sol Vé Way" headline="The Sol Vé Way" media="way-hero" />
 
       <Section tone="ivory" rule>
         <Container width="narrow">
@@ -27,7 +27,6 @@ export default function SolVeWay() {
           <Reveal className="mt-14">
             <Ornament />
           </Reveal>
-          {/* Reserved slots — photographs to come from the client. */}
           <Reveal className="mt-14">
             <Media id="way-hospitality" showCaption={false} className="aspect-[16/9] w-full" />
           </Reveal>

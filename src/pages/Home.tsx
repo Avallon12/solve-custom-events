@@ -2,25 +2,25 @@ import { HeroLink, SmoothScrollHero } from '../components/ui/modern-hero'
 import Media from '../components/Media'
 import { Accent } from '../components/primitives'
 import { home } from '../data/content'
+import { homeStrip } from '../data/galleries'
 import { usePageMeta } from '../lib/meta'
 
 /**
  * The frames that drift up over the opening hero, at four different speeds.
- * Widths and offsets follow the source component; the photography is Sol Vé's.
+ * Widths and offsets follow the source component; the photography is the
+ * client's own "Home Page" folder — the two portrait frames take the narrow
+ * slots, the landscapes the wide ones.
  */
 const FRAMES = [
-  { id: 'portfolio-florals', start: -200, end: 200, className: 'w-2/3 sm:w-1/3' },
-  { id: 'division-design-stylization', start: 200, end: -250, className: 'mx-auto w-[85%] sm:w-2/3' },
-  { id: 'portfolio-claudia-ali', start: -200, end: 200, className: 'ml-auto w-2/3 sm:w-1/3' },
-  { id: 'division-signature-moments', start: 0, end: -500, className: 'ml-[12%] w-3/4 sm:w-5/12' },
-  // The client's recovered photography continues the drift, same rhythm.
-  { id: 'portfolio-dirt-roads-2', start: -200, end: 200, className: 'w-2/3 sm:w-1/3' },
-  { id: 'portfolio-marie-andre-2', start: 200, end: -250, className: 'mx-auto w-[85%] sm:w-2/3' },
-  { id: 'portfolio-valentines-1', start: -200, end: 200, className: 'ml-auto w-2/3 sm:w-1/3' },
-  { id: 'portfolio-italiano-3', start: 0, end: -500, className: 'ml-[12%] w-3/4 sm:w-5/12' },
-  { id: 'portfolio-proposal-1', start: -200, end: 200, className: 'w-2/3 sm:w-1/3' },
-  { id: 'portfolio-nathan-allan-3', start: 200, end: -250, className: 'mx-auto w-[85%] sm:w-2/3' },
-  { id: 'reel-weddings', start: 0, end: -500, className: 'ml-[12%] w-3/4 sm:w-5/12' },
+  { id: 'home-002', start: -200, end: 200, className: 'w-2/3 sm:w-1/3' },
+  { id: 'home-001', start: 200, end: -250, className: 'mx-auto w-[85%] sm:w-2/3' },
+  { id: 'home-003', start: -200, end: 200, className: 'ml-auto w-2/3 sm:w-1/3' },
+  { id: 'home-005', start: 0, end: -500, className: 'ml-[12%] w-3/4 sm:w-5/12' },
+  { id: 'home-010', start: -200, end: 200, className: 'w-2/3 sm:w-1/3' },
+  { id: 'home-007', start: 200, end: -250, className: 'mx-auto w-[85%] sm:w-2/3' },
+  { id: 'home-004', start: -200, end: 200, className: 'ml-auto w-2/3 sm:w-1/3' },
+  { id: 'home-006', start: 0, end: -500, className: 'ml-[12%] w-3/4 sm:w-5/12' },
+  { id: 'home-009', start: -200, end: 200, className: 'w-2/3 sm:w-1/3' },
 ] as const
 
 
@@ -36,7 +36,7 @@ export default function Home() {
         eyebrow={home.eyebrow}
         headline={
           <>
-            We design how people <Accent>gather.</Accent>
+            Designing how you <Accent>gather.</Accent>
           </>
         }
         subheadline={home.subheadline}
@@ -46,7 +46,7 @@ export default function Home() {
           <>
             <HeroLink to="/connect">Begin your Journey</HeroLink>
             <HeroLink to="/what-we-create" variant="outline">
-              Discover Experiences
+              Discover Your Experiences
             </HeroLink>
           </>
         }
@@ -55,32 +55,22 @@ export default function Home() {
       {/*
         The document gives the Home page one block of copy — the eyebrow,
         headline, subheadline and two buttons above. No copy is added below:
-        the film band is a reserved media slot only, awaiting the client's
-        wedding footage.
+        the film band carries the one reel the client chose for the Home page.
       */}
       <section aria-label="Feature film" className="relative">
         <Media
-          id="film-weddings"
+          id="home-film"
           showCaption={false}
           className="aspect-video w-full md:aspect-[21/9]"
           imgClassName="h-full w-full"
         />
       </section>
 
-      {/* Reserved gallery strip — six photographs to come from the client. */}
+      {/* Gallery strip — one photograph from each of the client's divisions. */}
       <section aria-label="Photo gallery" className="bg-ivory py-[60px] md:py-[100px]">
         <div className="mx-auto w-full max-w-content px-5 md:px-10 lg:px-20">
           <div className="grid grid-cols-2 gap-5 md:gap-8 lg:grid-cols-3">
-            {(
-              [
-                'home-gal-1',
-                'home-gal-2',
-                'home-gal-3',
-                'home-gal-4',
-                'home-gal-5',
-                'home-gal-6',
-              ] as const
-            ).map((id) => (
+            {homeStrip.map((id) => (
               <div key={id} className="overflow-hidden rounded-[2px]">
                 <Media id={id} showCaption={false} className="aspect-square w-full" />
               </div>

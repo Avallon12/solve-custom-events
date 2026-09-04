@@ -185,13 +185,14 @@ function CentreFrame({
         }}
       />
 
-      {/* Warm scrim — never cold black, and enough of it to clear 4.5:1 */}
-      <div className="absolute inset-0 bg-charcoal/50" />
+      {/* Warm scrim — never cold black. Lightened at the client's request so the
+          photograph reads through more; the radial keeps the type legible. */}
+      <div className="absolute inset-0 bg-charcoal/35" />
       <div
         className="absolute inset-0"
         style={{
           background:
-            'radial-gradient(70% 60% at 50% 55%, rgba(36,34,22,0.55) 0%, rgba(36,34,22,0) 100%)',
+            'radial-gradient(70% 60% at 50% 55%, rgba(36,34,22,0.45) 0%, rgba(36,34,22,0) 100%)',
         }}
       />
 

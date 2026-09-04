@@ -1,4 +1,11 @@
 import type { MediaId } from './media'
+import {
+  conferencesGallery,
+  designStylizationGallery,
+  signatureMomentsGallery,
+  weddingsGallery,
+  workshopsGallery,
+} from './galleries'
 
 /**
  * "Signature Experiences" — transcribed word for word from the client's
@@ -16,17 +23,17 @@ export type Experience = {
   services: ServiceGroup[]
   idealFor: string
   because: string
-  /** A reel that plays above the gallery. */
+  /** A film cut from the client's footage, played above the gallery. */
   reel?: MediaId
-  /** Client photography shown in a grid beneath the services. */
+  /** The client's photography for this division, shown in full beneath the services. */
   gallery?: readonly MediaId[]
 }
 
 export const signatureExperiences = {
   intro: [
     'Every gathering begins with a purpose.',
-    'Whether celebrating a marriage, marking a milestone, strengthening a community, inspiring generosity, or bringing leaders together, every Sol Vé experience is thoughtfully designed around the people, purpose, and relationships at its heart.',
-    'From intimate celebrations to international conferences, our Signature Experiences combine thoughtful design, professional planning, genuine hospitality, and careful stewardship to create experiences that are remembered long after the gathering has ended.',
+    'Whether celebrating your marriage, marking a milestone, strengthening your community, inspiring generosity, or bringing our leaders together, every Sol Vé experience is thoughtfully designed around you and your guests, your purpose, and your relationships at its heart.',
+    'From intimate celebrations to international conferences, our Signature Experiences combine thoughtful design, professional planning, genuine hospitality, and careful stewardship to create your experiences that are remembered long after the gathering has ended.',
   ],
 } as const
 
@@ -35,9 +42,9 @@ export const experiences: Experience[] = [
     slug: 'weddings',
     name: 'Weddings',
     tagline:
-      'Celebrations that honour love, family, culture, and the beginning of a shared future.',
+      'Your celebration that honour love, family, culture, and the beginning of a shared future.',
     intro:
-      'Every wedding tells a unique story. We thoughtfully steward each celebration with care, professionalism, and respect, creating an experience that honours your traditions, relationships, and the memories your family will carry for generations.',
+      'Your wedding tells a unique story. We thoughtfully steward that celebration with care, professionalism, and respect, creating an experience that honours your traditions, relationships, and the memories your family will carry for generations.',
     media: 'division-weddings',
     services: [
       {
@@ -97,51 +104,9 @@ export const experiences: Experience[] = [
     ],
     idealFor:
       'Couples seeking thoughtful guidance, professional leadership, and an experience that reflects who they are.',
-    because: 'Because the way we gather becomes the memories we carry for a lifetime.',
+    because: 'Because the way you gather becomes the memories you carry for a lifetime.',
     reel: 'reel-weddings',
-    gallery: [
-      'portfolio-italiano-1',
-      'portfolio-italiano-2',
-      'portfolio-italiano-3',
-      'portfolio-italiano-4',
-      'portfolio-italiano-5',
-      'portfolio-italiano-6',
-      'portfolio-italiano-7',
-      'portfolio-nathan-allan-1',
-      'portfolio-nathan-allan-2',
-      'portfolio-nathan-allan-3',
-      'portfolio-nathan-allan-4',
-      'portfolio-dirt-roads-1',
-      'portfolio-dirt-roads-2',
-      'portfolio-dirt-roads-3',
-      'portfolio-dirt-roads-4',
-      'portfolio-marie-andre-1',
-      'portfolio-marie-andre-2',
-      'portfolio-marie-andre-3',
-      'portfolio-marie-andre-4',
-      'portfolio-claudia-ali-2',
-      'portfolio-claudia-ali-3',
-      'wed-claudia-and-ali-1',
-      'wed-claudia-and-ali-2',
-      'wed-claudia-and-ali-3',
-      'wed-paula-and-ever-1',
-      'wed-paula-and-ever-2',
-      'wed-rob-and-lynea-1',
-      'wed-rob-and-lynea-2',
-      'wed-erin-and-rick-1',
-      'wed-erin-and-rick-2',
-      'wed-erin-and-rick-3',
-      'wed-christina-and-vince-1',
-      'wed-christina-and-vince-2',
-      'wed-christina-and-vince-3',
-      'wed-hannah-and-zach-1',
-      'wed-hannah-and-zach-2',
-      'wed-farah-1',
-      'wed-marisol-1',
-      'gal-weddings-p1',
-      'gal-weddings-p2',
-      'gal-weddings-p3',
-    ],
+    gallery: weddingsGallery,
   },
   {
     slug: 'signature-moments',
@@ -197,30 +162,7 @@ export const experiences: Experience[] = [
     ],
     idealFor: "Families and individuals celebrating life's most meaningful milestones.",
     because: "Because life's most meaningful moments deserve to be experienced with intention.",
-    reel: 'reel-signature-moments',
-    gallery: [
-      'portfolio-proposal-1',
-      'portfolio-proposal-2',
-      'portfolio-valentines-1',
-      'portfolio-valentines-2',
-      'portfolio-valentines-3',
-      'sig-vow-renewal-lisa-and-john-1',
-      'sig-vow-renewal-lisa-and-john-2',
-      'sig-vow-renewal-lisa-and-john-3',
-      'sig-engagement-c-and-a-1',
-      'sig-engagement-c-and-a-2',
-      'sig-proposal-niki-and-mervin-1',
-      'sig-proposal-niki-and-mervin-2',
-      'sig-proposal-meegan-and-logan-1',
-      'sig-proposal-tasnia-and-nick-1',
-      'sig-galentines-1',
-      'sig-galentines-2',
-      'sig-bridal-shower-vegas-1',
-      'sig-bridal-shower-vegas-2',
-      'gal-signature-p1',
-      'gal-signature-p2',
-      'gal-signature-p3',
-    ],
+    gallery: signatureMomentsGallery,
   },
   {
     slug: 'design-stylization',
@@ -279,14 +221,7 @@ export const experiences: Experience[] = [
       'Clients seeking a cohesive, professionally designed environment that reflects both purpose and personality.',
     because: 'Because the room begins the conversation before anyone speaks.',
     reel: 'reel-design-stylization',
-    gallery: [
-      'corp-hull-services-winter-holiday-party-1',
-      'corp-hull-services-winter-holiday-party-2',
-      'gal-design-3',
-      'gal-design-4',
-      'gal-design-5',
-      'gal-design-6',
-    ],
+    gallery: designStylizationGallery,
   },
   {
     slug: 'workshops',
@@ -336,15 +271,7 @@ export const experiences: Experience[] = [
       'Organizations, businesses, educational institutions, and community groups seeking meaningful learning experiences.',
     because:
       'Because the way people gather shapes the relationships, ideas, and leadership that move organizations forward.',
-    reel: 'reel-workshops',
-    gallery: [
-      'gal-workshops-1',
-      'gal-workshops-2',
-      'gal-workshops-3',
-      'gal-workshops-4',
-      'gal-workshops-5',
-      'gal-workshops-6',
-    ],
+    gallery: workshopsGallery,
   },
   {
     slug: 'conferences',
@@ -418,14 +345,7 @@ export const experiences: Experience[] = [
     because:
       'Because the way leaders gather shapes the conversations, collaborations, and decisions that influence the world.',
     reel: 'reel-conferences',
-    gallery: [
-      'gal-conferences-1',
-      'gal-conferences-2',
-      'gal-conferences-3',
-      'gal-conferences-4',
-      'gal-conferences-5',
-      'gal-conferences-6',
-    ],
+    gallery: conferencesGallery,
   },
   {
     slug: 'fundraising',

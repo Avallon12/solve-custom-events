@@ -15,7 +15,7 @@ import { usePageMeta } from '../lib/meta'
 export default function Foundation() {
   usePageMeta(
     'The Foundation — Sol Vé Custom Events',
-    'Every meaningful gathering begins long before people arrive. The philosophy, the standard and the origin of Sol Vé Custom Events.',
+    'Every meaningful gathering begins long before you arrive. The philosophy, the standard and the origin of Sol Vé Custom Events.',
   )
 
   return (
@@ -25,7 +25,7 @@ export default function Foundation() {
         eyebrow="Foundation"
         headline={
           <>
-            Every meaningful gathering begins long before people <Accent>arrive.</Accent>
+            Every meaningful gathering begins long before you <Accent>arrive.</Accent>
           </>
         }
         media="foundation-hero"
@@ -39,7 +39,6 @@ export default function Foundation() {
           <Reveal className="mt-14">
             <Ornament />
           </Reveal>
-          {/* Reserved slots — photographs to come from the client. */}
           <Reveal className="mt-14">
             <Media id="foundation-room" showCaption={false} className="aspect-[16/9] w-full" />
           </Reveal>
@@ -54,9 +53,9 @@ export default function Foundation() {
       </Section>
 
       <ClosingCTA
-        eyebrow="Begin the conversation"
-        heading="If our philosophy resonates with you."
-        body="No two gatherings are ever the same. Neither is our approach. We invite you to begin the conversation."
+        eyebrow={foundation.closing.eyebrow}
+        heading={foundation.closing.heading}
+        body={foundation.closing.body}
       />
     </>
   )

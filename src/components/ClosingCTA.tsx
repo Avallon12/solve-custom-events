@@ -12,9 +12,10 @@ export default function ClosingCTA({
 }: {
   eyebrow?: string
   heading?: string
-  body?: string
+  body?: string | readonly string[]
   cta?: string
 }) {
+  const lines = typeof body === 'string' ? [body] : body
   return (
     <section className="relative bg-linen py-[64px] md:py-[110px]">
       <Container width="narrow">
@@ -23,9 +24,11 @@ export default function ClosingCTA({
           <Display as="h2" size="lg" className="mt-6 text-charcoal">
             {heading}
           </Display>
-          <p className="mt-6 max-w-xl font-body text-[19px] leading-relaxed text-espresso md:text-[21px]">
-            {body}
-          </p>
+          <div className="mt-6 max-w-xl space-y-3 font-body text-[19px] leading-relaxed text-espresso md:text-[21px]">
+            {lines.map((line) => (
+              <p key={line}>{line}</p>
+            ))}
+          </div>
           <div className="mt-9">
             <Btn to="/connect">{cta}</Btn>
           </div>

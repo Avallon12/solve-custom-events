@@ -25,8 +25,8 @@ export default function Footer() {
               <Logo size="lg" />
             </Link>
             <p className="mt-8 max-w-sm font-body text-[19px] italic leading-relaxed text-champagne/90">
-              We design how people gather. Because the way people gather shapes everything that
-              follows.
+              Designing how you gather. Because designing the way you gather shapes everything
+              that follows.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-3">

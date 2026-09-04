@@ -5,8 +5,8 @@
 
 export const home = {
   eyebrow: 'Sol Vé Custom Events',
-  headline: ['We design how people', 'gather.'],
-  subheadline: 'Because the way people gather shapes everything that follows.',
+  headline: ['Designing how you', 'gather.'],
+  subheadline: 'Because designing the way you gather shapes everything that follows.',
   philosophyEyebrow: 'Our Philosophy',
   philosophyHeadline: 'Every meaningful gathering begins long before people arrive.',
   philosophyBody: [
@@ -25,24 +25,24 @@ export const home = {
 /** "What We Create" — verbatim, in the document's order. */
 export const whatWeCreate = {
   purposes: [
-    'Some celebrate love.',
-    "Some honour life's defining moments.",
+    'Some celebrate your love.',
+    "Some honour yours or a loved one's life defining moments.",
     'Some inspire learning, creativity, and personal growth.',
-    'Some strengthen organizations and teams.',
-    'Some unite communities around a shared cause.',
+    'Some strengthen your organizations and teams.',
+    'Some unite our communities around a shared cause.',
     'Others bring together leaders to shape meaningful change.',
   ],
   lead: 'While every experience is unique, each is guided by the same belief:',
   belief:
-    'We design how people gather because the way people gather shapes everything that follows.',
+    'We design how you gather because the way you gather shapes everything that follows.',
   close:
-    'From intimate celebrations to international convenings, Sol Vé creates experiences where people connect more deeply, cultures are celebrated, ideas are exchanged, communities are strengthened, and new possibilities begin.',
+    'From intimate celebrations to international convenings, Sol Vé creates experiences where your guests connect more deeply, cultures are celebrated, ideas are exchanged, communities are strengthened, and new possibilities begin.',
   divisions: [
     {
       title: 'Design & Stylization',
       media: 'division-design-stylization',
       body: [
-        'Beautiful spaces do more than capture attention—they shape how people experience a gathering.',
+        'Beautiful spaces do more than capture your attention, they shape how you experience a gathering.',
         'Our custom design and stylization services transform ideas into thoughtfully curated environments where every detail serves a purpose. From concept development and décor to floral design, furnishings, lighting, and visual storytelling, we create spaces that reflect your vision while enhancing the experience of every guest.',
       ],
     },
@@ -50,9 +50,9 @@ export const whatWeCreate = {
       title: 'Weddings',
       media: 'division-weddings',
       body: [
-        'A wedding is more than a celebration.',
-        "It is the beginning of a family's story.",
-        'We create timeless wedding experiences that honour love, family, culture, and tradition with thoughtful planning, genuine hospitality, and intentional design. Every celebration is crafted to reflect the people at its heart, creating memories that will be treasured for generations.',
+        'Your wedding is more than a celebration.',
+        "It is the beginning of your family's story.",
+        'We create timeless wedding experiences that honours your love, family, culture, and tradition with thoughtful planning, genuine hospitality, and intentional design. Every celebration is crafted to reflect you at its heart, creating memories that will be treasured for generations.',
       ],
     },
     {
@@ -68,7 +68,7 @@ export const whatWeCreate = {
       title: 'Workshops & Curated Experiences',
       media: 'division-workshops',
       body: [
-        'The most meaningful learning happens when people feel inspired to participate.',
+        'The most meaningful learning happens when you and your guests feel inspired to participate.',
         'We design immersive workshops and curated experiences that encourage creativity, collaboration, wellness, discovery, and authentic human connection. Every experience is thoughtfully developed to foster engagement, meaningful conversation, and lasting impact.',
       ],
     },
@@ -76,7 +76,7 @@ export const whatWeCreate = {
       title: 'Conferences & International Events',
       media: 'division-conferences',
       body: [
-        'The way leaders gather influences what becomes possible together.',
+        'The way our leaders gather influences what becomes possible together.',
         'From executive retreats and industry conferences to international summits and multi-day experiences, we create environments where ideas become partnerships, conversations become collaboration, and shared purpose inspires meaningful progress.',
       ],
     },
@@ -84,14 +84,14 @@ export const whatWeCreate = {
       title: 'Fundraising Campaign Events',
       media: 'division-fundraising',
       body: [
-        'Celebration has the power to strengthen communities.',
-        'We believe fundraising should inspire connection as much as generosity. By thoughtfully bringing together charitable organizations, businesses, artists, sponsors, volunteers, and communities, we create experiences that celebrate purpose, encourage collaboration, and help build sustainable support for causes that create lasting social impact.',
+        'Celebration has the power to strengthen our communities.',
+        'Fundraising should inspire your connection as much as generosity. By thoughtfully bringing together your charitable organizations, businesses, artists, sponsors, volunteers, and communities, we create experiences that celebrate purpose, encourage collaboration, and help build sustainable support for causes that create lasting social impact.',
       ],
     },
   ],
-  everyExperience: 'Every experience is uniquely its own.',
-  philosophy: 'We design how people gather.',
-  because: 'Because the way people gather shapes everything that follows.',
+  everyExperience: 'Every experience is uniquely your own.',
+  philosophy: 'We design how you gather.',
+  because: 'Because the way you gather shapes everything that follows.',
 } as const
 
 /** Portfolio / Journal — the document's own categories and requirements. */
@@ -114,11 +114,15 @@ export const portfolio = {
   // URLs point at each publication until Lynea supplies the exact article
   // links; swap `url` per entry and nothing else moves.
   features: [
-    { name: 'AVOLA Magazine', note: 'Editorial article', url: 'https://avolamag.com/' },
+    {
+      name: 'AVOLA Magazine',
+      note: 'Editorial article',
+      url: 'https://avolamag.com/mystic-threads-and-the-return-of-rococo-why-calgarys-fashion-renaissance-is-closer-than-you-think/',
+    },
     {
       name: 'REDTV Canada',
       note: 'Broadcast feature — YouTube',
-      url: 'https://www.youtube.com/user/redtvcanada',
+      url: 'https://www.youtube.com/live/e4QDDrogt98?si=lMkzgreEhADjhgEG',
     },
     {
       name: 'Bridal Fantasy',
@@ -140,21 +144,26 @@ export const portfolio = {
 } as const
 
 export const foundation = {
-  headline: 'Every meaningful gathering begins long before people arrive.',
+  headline: 'Every meaningful gathering begins long before you arrive.',
   intro: [
-    'Every meaningful gathering begins long before people arrive and continues long after they leave. It influences relationships, ideas, cultures, communities, and the possibilities that emerge when people come together with intention.',
-    'At Sol Vé, we believe thoughtful design and genuine hospitality are not simply acts of service — they are acts of stewardship. Every environment we create is an opportunity to foster belonging, encourage meaningful connection, and shape experiences that extend far beyond the occasion itself.',
+    'Every meaningful gathering begins long before you arrive and continues long after you and your guests leave. It influences relationships, ideas, cultures, communities, and the possibilities that emerge when you and your guests come together with intention.',
+    'At Sol Vé, thoughtful design and genuine hospitality are not simply acts of service, they are acts of stewardship. Every environment created is an opportunity to foster belonging, encourage meaningful connection, and shape experiences that extend far beyond the occasion itself.',
     'This is the foundation upon which every Sol Vé experience is created, every partnership is formed, and every future initiative is built.',
   ],
+  closing: {
+    eyebrow: 'Begin the conversation',
+    heading: 'If our philosophy resonates with you.',
+    body: ['No two gatherings are ever the same. Neither is the approach.', "Let's have a conversation."],
+  },
   way: {
     title: 'The Sol Vé Way',
     body: [
-      'We design how people gather because we believe the way people come together shapes everything that follows.',
-      'Every gathering is entrusted to us with purpose. Whether celebrating a milestone, strengthening a relationship, advancing an idea, supporting a community, or convening leaders to address the world’s most pressing challenges, we recognize that what happens within those moments has the potential to extend far beyond the occasion itself.',
+      'We design how you gather because of the believe that the way you come together shapes everything that follows.',
+      'Your gathering is entrusted to us with purpose. Whether you are celebrating a milestone, strengthening a relationship, advancing an idea, supporting a community, or convening leaders to address the world’s most pressing challenges, we recognize that what happens within those moments has the potential to extend far beyond the occasion itself.',
       'That responsibility shapes the way we work.',
-      'We approach every experience as stewards of the moments entrusted to us. Through thoughtful design, genuine hospitality, careful craftsmanship, and intentional collaboration, we create environments where people feel welcomed, valued, and inspired to be fully present.',
-      'We believe the most meaningful experiences are never measured solely by their beauty or complexity. They are measured by the connections they strengthen, the conversations they inspire, and the lasting impact they have on the people who share them.',
-      'This is the standard that guides every decision we make, every relationship we build, and every experience we are privileged to create.',
+      'We approach your experience as stewards of the moments and memories you entrusted to us. Through thoughtful design, genuine hospitality, careful craftsmanship, and intentional collaboration, we create environments where you and your guests feel welcomed, valued, and inspired to be fully present.',
+      'The most meaningful experiences are never measured solely by their beauty or complexity. They are measured by the connections you strengthen, the conversations inspired, and the lasting impact they have on all your guests who share them.',
+      'This is the standard that guides every decision made, every relationship built, and every experience we are privileged to create.',
     ],
     close: 'This is the Sol Vé Way.',
   },
@@ -162,22 +171,22 @@ export const foundation = {
     title: 'Beyond the Occasion',
     opening: [
       'Not every gathering shapes what follows.',
-      'The ones that do are never left to chance.',
+      'The ones that do, are never left to chance.',
       'They are thoughtfully designed. Carefully stewarded. Intentionally experienced.',
     ],
     body: [
-      'At Sol Vé, we understand that every gathering carries something greater than the occasion itself. A wedding becomes the beginning of a family. A celebration becomes part of a personal story. A workshop becomes the beginning of a new perspective. A philanthropic event becomes an opportunity to strengthen a community. A conference becomes the place where conversations become collaboration and ideas become action.',
+      "At Sol Vé, we understand that every gathering carries something greater than the occasion itself. Your wedding becomes the beginning of your family. Family celebrations becomes part of your personal story. Your workshop becomes the beginning of a new perspective. That philanthropic event becomes an opportunity to strengthen your community. A conference becomes the place where colleague's and friend's conversations become collaboration and ideas become action.",
       'These are the moments entrusted to us. They deserve more than exceptional planning. They deserve thoughtful stewardship.',
-      'This belief shapes every decision we make. Every environment we create. Every relationship we build. Every detail we consider.',
+      'This belief shapes every decision made. Every environment created. Every relationship built. Every detail considered.',
     ],
     couplets: [
-      ['Beauty is never the destination.', 'It is the invitation.'],
-      ['Hospitality is never a service.', 'It is how people know they belong.'],
-      ['Design is never decoration.', 'It is the intentional creation of experiences that reflect purpose, strengthen connection, and create the conditions for what comes next.'],
+      ['Beauty is never the destination.', 'It is your invitation.'],
+      ['Hospitality is never a service.', 'It is how you and your guests know you belong.'],
+      ['Design is never decoration.', 'It is the intentional creation of your experiences that reflect purpose, strengthen connection, and create the conditions for what comes next.'],
     ],
     close: [
-      'Whether welcoming two families into one, bringing communities together around a shared purpose, or convening leaders to address global challenges, our role remains the same: to thoughtfully design how people gather so that what follows is worthy of why they came together in the first place.',
-      'We are entrusted with moments that shape what follows.',
+      'Whether welcoming two families into one, bringing your communities together around a shared purpose, or convening leaders to address global challenges, our role remains the same: to thoughtfully design how you gather so that what follows is worthy of why you came together in the first place.',
+      'You trust us with moments that shape what follows.',
       'That is why Sol Vé.',
     ],
   },

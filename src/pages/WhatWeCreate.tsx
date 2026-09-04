@@ -79,7 +79,6 @@ export default function WhatWeCreate() {
         </Section>
       ))}
 
-      {/* Reserved slot — photograph to come from the client. */}
       <Section tone="ivory" rule className="!py-[60px] md:!py-[80px]">
         <Container>
           <Reveal>

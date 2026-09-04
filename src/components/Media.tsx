@@ -132,7 +132,7 @@ export default function Media({
         )}
       </div>
 
-      {showCaption && (slot.caption || (SHOW_CREDITS && slot.credit)) && (
+      {showCaption && (slot.caption || slot.license || (SHOW_CREDITS && slot.credit)) && (
         <figcaption
           className="mt-3 font-ui text-[10px] uppercase text-walnut md:text-[11px]"
           style={{ letterSpacing: '0.22em' }}
@@ -140,6 +140,8 @@ export default function Media({
           {slot.caption}
           {slot.caption && SHOW_CREDITS && slot.credit ? ' · ' : ''}
           {SHOW_CREDITS && slot.credit ? `Photography ${slot.credit}` : null}
+          {/* A stock licence that requires attribution is not a photographer credit. */}
+          {slot.license ? slot.license : null}
         </figcaption>
       )}
     </figure>

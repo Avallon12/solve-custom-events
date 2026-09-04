@@ -14,7 +14,7 @@ export default function BeyondTheOccasion() {
 
   return (
     <>
-      <Hero size="page" eyebrow="Beyond the Occasion" headline="Beyond the Occasion" media="experiences-hero" />
+      <Hero size="page" eyebrow="Beyond the Occasion" headline="Beyond the Occasion" media="beyond-hero" />
 
       <Section tone="ivory" rule>
         <Container width="narrow">
@@ -49,7 +49,6 @@ export default function BeyondTheOccasion() {
           <Reveal className="mt-14">
             <Prose paragraphs={foundation.beyond.close} />
           </Reveal>
-          {/* Reserved slots — photographs to come from the client. */}
           <Reveal className="mt-14">
             <Media id="beyond-occasion-band" showCaption={false} className="aspect-[16/9] w-full" />
           </Reveal>

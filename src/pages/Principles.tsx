@@ -18,7 +18,7 @@ export default function Principles() {
         size="page"
         eyebrow="Sol Vé Principles"
         headline="Our Principles"
-        media="commitments-hero"
+        media="principles-hero"
       />
 
       <Section tone="ivory" rule>
@@ -41,8 +41,7 @@ export default function Principles() {
               </Reveal>
             ))}
           </div>
-          {/* Reserved slots — photographs to come from the client; one image
-              per principle, in the principles' own order. */}
+          {/* One image per principle, in the principles' own order. */}
           <Reveal className="mt-14">
             <Media id="principles-craft" showCaption={false} className="aspect-[21/9] w-full" />
           </Reveal>

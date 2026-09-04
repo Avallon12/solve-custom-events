@@ -14,7 +14,19 @@ import {
   Section,
 } from '../components/primitives'
 import { commitments } from '../data/content'
+import type { MediaId } from '../data/media'
 import { usePageMeta } from '../lib/meta'
+
+/**
+ * The stock photograph the client asked for in each box: bison from Elk Island
+ * for Reconciliation, the fully inclusive Pride flag for Belonging, and the
+ * Alberta Rocky Mountain range for Environmental Responsibility.
+ */
+const PILLAR_MEDIA: Record<string, MediaId> = {
+  reconciliation: 'commitment-reconciliation',
+  inclusion: 'commitment-inclusion',
+  conservation: 'commitment-conservation',
+}
 
 /**
  * Layout is fixed by Lynea and must not be rearranged:
@@ -83,6 +95,9 @@ export default function Commitments() {
               <Reveal key={pillar.id} delay={i * 110}>
                 <div id={pillar.id} className="scroll-mt-32">
                   <Card tone="ivory" className="flex flex-col">
+                    <div className="mb-7 overflow-hidden rounded-[2px]">
+                      <Media id={PILLAR_MEDIA[pillar.id]} className="aspect-[4/3] w-full" />
+                    </div>
                     <p
                       className="font-ui text-[11px] uppercase text-bronze"
                       style={{ letterSpacing: '0.3em' }}
@@ -146,8 +161,8 @@ export default function Commitments() {
               </p>
             </Reveal>
           </div>
-          {/* Reserved slots — photographs to come from the client; the strip
-              mirrors the three commitments with equal treatment. */}
+          {/* The community gathered — the strip mirrors the three commitments
+              with equal treatment. */}
           <Reveal className="mt-14">
             <Media id="community-impact" showCaption={false} className="aspect-[21/9] w-full" />
           </Reveal>

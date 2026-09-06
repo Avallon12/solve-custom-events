@@ -99,6 +99,11 @@ export default function DivisionPage() {
                 <Media id={experience.reel} className="aspect-video w-full" />
               </Reveal>
             )}
+            {experience.moreReels?.map((id) => (
+              <Reveal key={id} className="mt-8">
+                <Media id={id} className="aspect-video w-full" />
+              </Reveal>
+            ))}
 
             {experience.gallery && (
               <div className="mt-14 grid auto-rows-fr grid-cols-2 gap-5 md:gap-8 lg:grid-cols-3">

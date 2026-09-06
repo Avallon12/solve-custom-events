@@ -2,6 +2,7 @@ import type { MediaId } from './media'
 import {
   conferencesGallery,
   designStylizationGallery,
+  fundraisingGallery,
   signatureMomentsGallery,
   weddingsGallery,
   workshopsGallery,
@@ -25,6 +26,8 @@ export type Experience = {
   because: string
   /** A film cut from the client's footage, played above the gallery. */
   reel?: MediaId
+  /** Further films, played beneath the first. */
+  moreReels?: readonly MediaId[]
   /** The client's photography for this division, shown in full beneath the services. */
   gallery?: readonly MediaId[]
 }
@@ -402,14 +405,8 @@ export const experiences: Experience[] = [
       'Charitable organizations, foundations, community organizations, businesses, sponsors, and social impact initiatives seeking to strengthen relationships while inspiring generosity.',
     because: 'Because the way communities gather shapes the future they create together.',
     reel: 'reel-fundraising',
-    gallery: [
-      'gal-fundraising-1',
-      'gal-fundraising-2',
-      'gal-fundraising-3',
-      'gal-fundraising-4',
-      'gal-fundraising-5',
-      'gal-fundraising-6',
-    ],
+    moreReels: ['reel-fundraising-2'],
+    gallery: fundraisingGallery,
   },
 ]
 

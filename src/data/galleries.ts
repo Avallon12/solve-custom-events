@@ -90,6 +90,20 @@ export const conferencesGallery: readonly MediaId[] = [
   'intl-022', 'intl-023', 'intl-024', 'intl-025', 'intl-026', 'intl-027',
 ]
 
+export const fundraisingGallery: readonly MediaId[] = [
+  'fund-001', 'fund-002', 'fund-003', 'fund-004', 'fund-005', 'fund-006',
+  'fund-007', 'fund-008', 'fund-009', 'fund-010', 'fund-011', 'fund-012',
+  'fund-013', 'fund-014', 'fund-015', 'fund-016', 'fund-017', 'fund-018',
+  'fund-019', 'fund-020', 'fund-021', 'fund-022', 'fund-023', 'fund-024',
+  'fund-025', 'fund-026', 'fund-027', 'fund-028', 'fund-029', 'fund-030',
+  'fund-031', 'fund-032', 'fund-033', 'fund-034', 'fund-035', 'fund-036',
+  'fund-037', 'fund-039', 'fund-040', 'fund-041', 'fund-042', 'fund-043',
+  'fund-044', 'fund-045', 'fund-046', 'fund-047', 'fund-048', 'fund-049',
+  'fund-050', 'fund-051', 'fund-052', 'fund-053', 'fund-054', 'fund-055',
+  'fund-056', 'fund-057', 'fund-058', 'fund-059', 'fund-060', 'fund-061',
+  'fund-062', 'fund-063', 'fund-064', 'fund-065', 'fund-066',
+]
+
 export const capConsultationGallery: readonly MediaId[] = [
   'consult-001', 'consult-002', 'consult-003',
 ]
@@ -132,7 +146,7 @@ export const featureMensVowGallery: readonly MediaId[] = [
 export const portfolioGallery: readonly MediaId[] = [
   'wed-028', 'wed-049', 'wed-059', 'wed-062', 'wed-036', 'wed-025',
   'sig-006', 'sig-009', 'sig-010', 'sig-013', 'sig-014', 'sig-022',
-  'home-005', 'home-007', 'design-089', 'design-100', 'home-004', 'design-092',
+  'fund-001', 'fund-008', 'fund-016', 'fund-023', 'fund-030', 'fund-033',
   'conf-009', 'conf-002', 'intl-001', 'intl-006', 'intl-021', 'work-005',
   'design-135', 'design-125', 'design-143', 'design-079', 'design-002', 'design-023',
   'work-001', 'work-009', 'work-010', 'work-011', 'work-003', 'work-006',
@@ -144,5 +158,5 @@ export const homeStrip: readonly MediaId[] = [
 
 export const homeFrames: readonly MediaId[] = [
   'home-001', 'home-002', 'home-003', 'home-004', 'home-005', 'home-006',
-  'home-008', 'home-009', 'home-010',
+  'home-007', 'home-009', 'home-010',
 ]

@@ -1,3 +1,5 @@
+import { portfolio } from './content'
+
 /**
  * Single source of truth for navigation, contact details and social links.
  *
@@ -126,15 +128,10 @@ export const header: NavItem[] = [
   {
     label: 'Testimonials',
     to: '/testimonials',
-    children: [
-      { label: 'Bride & Groom', to: '/testimonials#bride-groom' },
-      { label: 'Corporate Executive', to: '/testimonials#corporate-executive' },
-      { label: 'Charity Partner', to: '/testimonials#charity-partner' },
-      { label: 'Performer', to: '/testimonials#performer' },
-      { label: 'Venue Partner', to: '/testimonials#venue-partner' },
-      { label: 'Sponsor', to: '/testimonials#sponsor' },
-      { label: 'Community Leader', to: '/testimonials#community-leader' },
-    ],
+    children: portfolio.testimonials.map((voice) => ({
+      label: voice.name,
+      to: `/testimonials#${voice.slug}`,
+    })),
   },
 ]
 

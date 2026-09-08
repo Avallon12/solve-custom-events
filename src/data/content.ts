@@ -132,16 +132,57 @@ export const portfolio = {
     { name: 'Dancing With Her', note: 'Blog feature', url: 'https://dancingwithher.com/' },
     { name: 'Men`s Vow Magazine', note: 'Editorial feature', url: 'https://mensvows.com/' },
   ],
+  /**
+   * The client's four testimonials, exactly as supplied — not rewritten,
+   * corrected, shortened or paraphrased. Each `slug` is the anchor the header
+   * dropdown and the Portfolio page link to.
+   */
   testimonials: [
-    'Bride & Groom',
-    'Corporate Executive',
-    'Charity Partner',
-    'Performer',
-    'Venue Partner',
-    'Sponsor',
-    'Community Leader',
+    {
+      slug: 'rida-ghani',
+      name: 'Rida Ghani',
+      role: 'CEO, Revive by Design Inc.',
+      quote: [
+        'What sets Sol Vé apart is not just what we create, it is how we create it.',
+        'Every event we take on starts with the same question: what does this moment need to feel like? Not what fills the room, but what makes people feel truly present in it. That mindset shapes everything, from the first planning conversation to the final detail on event day.',
+        'We believe communication is the foundation of great events. Every partner, vendor, and client we work with is treated as part of the same team, not a transaction. That is intentional. When people feel genuinely included in the process, the result is always stronger.',
+        'Being part of this company means being part of something built on care as much as creativity. We do not just plan events, we build experiences people remember and relationships that outlast any single night.',
+        'That is what Sol Vé Custom Events stands for, and it is a privilege to help bring it to life.',
+      ],
+    },
+    {
+      slug: 'laura-darichuk',
+      name: 'Laura Darichuk',
+      role: 'Marketing Professional & Community Volunteer, redM',
+      quote: [
+        'My first introduction to Sol Vé was at the 2025 Mystic Moonlight Gala. I attended to support a charity and left that evening genuinely changed.',
+        "Since then, I've had the opportunity to get to know Lynea, volunteer as an ambassador for the 2026 Mystic Moonlight Gala, help bring our non-profit redM on as one of this year's beneficiaries, and support the event behind the scenes however I can, whether that's connecting sponsors, finding venues, sourcing entertainment, or simply introducing the right people to each other.",
+        "Why dedicate so much of my own time and energy to Sol Vé. The answer is simple: Lynea has built a company that lives its values. Inclusivity isn't just a word. Giving back isn't just part of a marketing strategy. Respect, honesty, trust, and doing what is right - even when it isn't the easiest path - are evident in everything she does.",
+        'In a world where values are often talked about more than they are lived, Sol Vé stands out because it consistently puts them into action.',
+      ],
+    },
+    {
+      slug: 'cora-strings',
+      name: 'Cora Strings',
+      role: 'Performing Arts Collaborator',
+      quote: [
+        "Working with Sol Vé Custom Events has been an absolute pleasure from the very beginning. Since our first collaboration at the Moonlight Masquerade & Gala, they have given us the opportunity to showcase the full range of Quora Strings' artistic experiences on one of the few platforms in Calgary that truly celebrates creativity and immersive entertainment.",
+        "Lynea's leadership stands out for her vision, professionalism, and genuine passion for creating unforgettable events. She brings inspiring artistic ideas to every project while also making performers feel heard and valued, fostering a truly collaborative environment. The care, communication, and shared commitment to excellence that define Sol Vé make every event a rewarding experience, and Quora Strings is more that honored and excited to be part of this beautiful artistic family.",
+      ],
+    },
+    {
+      slug: 'mike-g-guthrie',
+      name: 'Mike G. Guthrie',
+      role: 'Community Leader | Mental Health & Human Trafficking Awareness Advocate',
+      quote: [
+        'Working alongside Sol Vé Custom Events has been a genuinely positive and meaningful experience. Rida, Lynea, and their team bring professionalism, creativity, and heart into everything they do. Their communication is thoughtful, their attention to detail is exceptional, and they make everyone involved feel valued and included.',
+        'What I appreciate most is their belief that an event can be more than a beautiful evening,it can bring people together, strengthen community, and shine a light on important causes. That purpose has been evident throughout the Mystic Moonlight Masquerade Gala campaign, and I am proud to support Sol Vé and the meaningful work they are creating.',
+      ],
+    },
   ],
 } as const
+
+export type Testimonial = (typeof portfolio.testimonials)[number]
 
 export const foundation = {
   headline: 'Every meaningful gathering begins long before you arrive.',

@@ -1,15 +1,20 @@
 import Hero from '../components/Hero'
 import Media from '../components/Media'
 import ClosingCTA from '../components/ClosingCTA'
-import { Container, Reveal, Section } from '../components/primitives'
+import { Container, Ornament, Reveal, Section } from '../components/primitives'
 import { portfolio } from '../data/content'
 import { usePageMeta } from '../lib/meta'
 
-/** "Testimonials" — the categories exactly as given. */
+/**
+ * "Testimonials" — the client's four voices, each in the same layout: the
+ * opening mark, the quote in her exact wording, then name and role beneath a
+ * hairline. Nothing about the text is edited here; it comes straight from
+ * `portfolio.testimonials`.
+ */
 export default function Testimonials() {
   usePageMeta(
     'Testimonials — Sol Vé Custom Events',
-    'Voices from the gatherings entrusted to Sol Vé Custom Events.',
+    'Rida Ghani, Laura Darichuk, Cora Strings and Mike G. Guthrie on working with Sol Vé Custom Events.',
   )
 
   return (
@@ -22,42 +27,44 @@ export default function Testimonials() {
       />
 
       <Section tone="ivory" rule>
-        <Container>
-          {/*
-            Blank quote cards — one per category, ready to receive the
-            client's testimonials. No quote text is invented: the space
-            waits for her words; the category stands as the attribution.
-          */}
-          <div className="grid gap-5 sm:grid-cols-2 md:gap-8 lg:grid-cols-3">
+        <Container width="narrow">
+          <div className="flex flex-col gap-14 md:gap-20">
             {portfolio.testimonials.map((voice, i) => (
-              <Reveal key={voice} delay={(i % 3) * 70} className="h-full">
-                <figure
-                  id={voice.toLowerCase().replace(/[^a-z]+/g, '-')}
-                  className="flex h-full scroll-mt-32 flex-col rounded-[2px] border border-stone/40 bg-linen/30 p-8 md:p-10"
-                >
+              <Reveal key={voice.slug}>
+                {i > 0 && (
+                  <div className="mb-14 md:mb-20">
+                    <Ornament />
+                  </div>
+                )}
+                <figure id={voice.slug} className="scroll-mt-32">
                   <span
                     aria-hidden="true"
-                    className="font-display text-[64px] leading-none text-gold/60"
+                    className="block font-display text-[72px] leading-[0.6] text-gold/60 md:text-[88px]"
                   >
                     &ldquo;
                   </span>
-                  <blockquote
-                    aria-label="Testimonial to come"
-                    className="mt-2 min-h-[96px] flex-1"
-                  />
-                  <figcaption className="mt-6 border-t border-stone/40 pt-5">
+                  <blockquote className="mt-6 flex flex-col gap-5 font-body text-[19px] leading-[1.7] text-espresso md:text-[22px]">
+                    {voice.quote.map((paragraph) => (
+                      <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+                    ))}
+                  </blockquote>
+                  <figcaption className="mt-8 flex flex-col gap-2 border-t border-stone/40 pt-6">
+                    <span className="font-display text-[22px] text-charcoal md:text-[24px]">
+                      {voice.name}
+                    </span>
                     <span
-                      className="font-ui text-[11px] font-semibold uppercase text-walnut"
-                      style={{ letterSpacing: '0.24em' }}
+                      className="font-ui text-[11px] uppercase text-walnut"
+                      style={{ letterSpacing: '0.22em' }}
                     >
-                      — {voice}
+                      {voice.role}
                     </span>
                   </figcaption>
                 </figure>
               </Reveal>
             ))}
           </div>
-          <Reveal className="mt-14">
+
+          <Reveal className="mt-16 md:mt-24">
             <Media id="testimonials-band" showCaption={false} className="aspect-[21/9] w-full" />
           </Reveal>
           <Reveal className="mt-8">

@@ -139,10 +139,12 @@ that made it "lost and irrelevant".
   Alberta, Region 3*. The site currently uses the newer, fuller territory
   paragraph, with v5's opening and closing lines around it. Lynea should confirm
   which naming is current — this is not text to guess at.
-- **Testimonial quotes.** Her document names seven categories — Bride & Groom,
-  Corporate Executive, Charity Partner, Performer, Venue Partner, Sponsor,
-  Community Leader — with no quotes written. No section was built rather than
-  invent any.
+- **Testimonial quotes — done.** Four arrived (Rida Ghani, Laura Darichuk,
+  Cora Strings, Mike G. Guthrie) and are in `src/data/content.ts` word for
+  word, per her note: not rewritten, corrected, shortened or paraphrased. The
+  seven placeholder categories from the earlier document are gone. Any further
+  quote is one more entry in that array; the page, the header dropdown and the
+  Portfolio list all read from it.
 - **Per-project detail for the Portfolio.** The newest document asks each
   project to carry its purpose, story, design philosophy, photography and client
   outcome. The gallery is in place; the written detail per project is not,

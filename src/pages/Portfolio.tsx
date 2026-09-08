@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Hero from '../components/Hero'
 import Media from '../components/Media'
 import ClosingCTA from '../components/ClosingCTA'
@@ -114,12 +115,23 @@ export default function Portfolio() {
           <Reveal>
             <Eyebrow>Testimonials</Eyebrow>
           </Reveal>
-          <div className="mt-10 grid border-t border-stone/40 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid border-t border-stone/40 sm:grid-cols-2">
             {portfolio.testimonials.map((voice, i) => (
-              <Reveal key={voice} delay={(i % 3) * 70}>
-                <p className="h-full border-b border-stone/40 px-7 py-8 font-display text-[22px] text-charcoal sm:border-r md:text-[25px]">
-                  {voice}
-                </p>
+              <Reveal key={voice.slug} delay={(i % 2) * 70} className="h-full">
+                <Link
+                  to={`/testimonials#${voice.slug}`}
+                  className="group flex h-full flex-col gap-2 border-b border-stone/40 px-7 py-8 sm:border-r"
+                >
+                  <span className="font-display text-[22px] text-charcoal transition-colors duration-300 group-hover:text-gold md:text-[25px]">
+                    {voice.name}
+                  </span>
+                  <span
+                    className="font-ui text-[11px] uppercase text-walnut"
+                    style={{ letterSpacing: '0.22em' }}
+                  >
+                    {voice.role}
+                  </span>
+                </Link>
               </Reveal>
             ))}
           </div>

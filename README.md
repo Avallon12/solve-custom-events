@@ -140,11 +140,18 @@ that made it "lost and irrelevant".
   paragraph, with v5's opening and closing lines around it. Lynea should confirm
   which naming is current — this is not text to guess at.
 - **Testimonial quotes — done.** Four arrived (Rida Ghani, Laura Darichuk,
-  Cora Strings, Mike G. Guthrie) and are in `src/data/content.ts` word for
+  Quora Strings, Mike G. Guthrie) and are in `src/data/content.ts` word for
   word, per her note: not rewritten, corrected, shortened or paraphrased. The
   seven placeholder categories from the earlier document are gone. Any further
   quote is one more entry in that array; the page, the header dropdown and the
   Portfolio list all read from it.
+- **Public reviews — Google done, Facebook pending.** `portfolio.reviews` in
+  `src/data/content.ts` holds eight of the twelve five-star Google reviews,
+  copied word for word from the Google Business listing on 2026-09-08; each
+  card shows the stars, the platform mark and the reviewer's public name. The
+  `year` is read off Google's relative date that day. Facebook reviews need a
+  logged-in session to read, so none are in yet: add each as an entry with
+  `source: 'facebook'` and the card gets the Facebook mark automatically.
 - **Per-project detail for the Portfolio.** The newest document asks each
   project to carry its purpose, story, design philosophy, photography and client
   outcome. The gallery is in place; the written detail per project is not,

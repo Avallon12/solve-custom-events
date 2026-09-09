@@ -162,8 +162,8 @@ export const portfolio = {
       ],
     },
     {
-      slug: 'cora-strings',
-      name: 'Cora Strings',
+      slug: 'quora-strings',
+      name: 'Quora Strings',
       role: 'Performing Arts Collaborator',
       quote: [
         "Working with Sol Vé Custom Events has been an absolute pleasure from the very beginning. Since our first collaboration at the Moonlight Masquerade & Gala, they have given us the opportunity to showcase the full range of Quora Strings' artistic experiences on one of the few platforms in Calgary that truly celebrates creativity and immersive entertainment.",
@@ -180,9 +180,111 @@ export const portfolio = {
       ],
     },
   ],
+  /**
+   * Public reviews, copied verbatim from the Google Business listing on
+   * 2026-09-08 (5.0 from 12 reviews). `year` is derived from Google's relative
+   * date on that day ("a year ago" → 2025). Facebook reviews slot into the same
+   * array with `source: 'facebook'`.
+   */
+  reviews: [
+    {
+      slug: 'google-hannah-yu',
+      source: 'google',
+      name: 'Hannah Yu',
+      year: 2025,
+      stars: 5,
+      quote: [
+        'Wow I don\'t even know where to start, what a fantastic company!! Our wedding day was more perfect  than we could of imagined and it is all because of Lynea and her team.',
+        'They took our vision and made it a reality and we could not be anymore grateful for everything they done. we truly felt like guest at our own wedding and from the moment we started working with her every ounce of stress was lifted.',
+        'Even when bad weather hit they turned our ceremony from outdoors to indoors without a hiccup.',
+        'If you need a co-ordinator, a wedding planner or any other type of event I could not recommend Sol Vé enough. 10000/10 thank you so much',
+      ],
+    },
+    {
+      slug: 'google-wuraola-sogunle',
+      source: 'google',
+      name: 'Wuraola Sogunle',
+      year: 2025,
+      stars: 5,
+      quote: [
+        'Solve Events completely exceeded expectations with the Mystic Moonlight Masquerade Gala & Ball’s Mystic threads and Mystic Menagerie. From the moment we arrived, everything felt magical—the décor was elegant, the theme was beautifully carried throughout, and every little detail made the night feel unforgettable. The atmosphere they created was both classy and fun, and it was clear how much thought and passion went into planning every aspect. Guests were raving about the seamless flow of the evening, the entertainment, and the attention to detail that made the whole experience so special. It was one of those rare events where you could just relax and enjoy because everything was so well organized. Solve Events truly knows how to bring a vision to life, and I’d recommend them to anyone looking to host an event that leaves people talking long after it’s over! Can’t wait for the main ball on October 4th!',
+      ],
+    },
+    {
+      slug: 'google-molly-langton',
+      source: 'google',
+      name: 'Molly Langton',
+      year: 2024,
+      stars: 5,
+      quote: [
+        'I had the pleasure of working with Lynea for my wedding. She was professional, knowledgeable and had the most beautiful wedding decor that made our special day feel unique and special. Through the stress and chaos of the day, she made sure I was well prepared, comfortable and had the exact look we were going for - my family still talks about how gorgeous our wedding was. I will commend Lynea for staying one step ahead of the game - pointing out things from the day that would make things photograph better/worse - her experience has given her a keen eye for the small details that make all the difference!',
+        'Thank you for such a wonderful experience ❤️',
+      ],
+    },
+    {
+      slug: 'google-carol-mansur',
+      source: 'google',
+      name: 'Carol Mansur',
+      year: 2025,
+      stars: 5,
+      quote: [
+        'As a photographer, I had the opportunity to work with Lynea for a surprise proposal. I could see her amazing work and how she put together all the clients ideas.',
+        'Then, a few weeks later, I had to let go my wedding coordinator just 3 weeks before my wedding. I was at a loss and super anxious, then I contacted Lynea.',
+        'She promptly accepted to work with me and my now husband, even though it was last minute. Thankfully she had the date available.',
+        'She set up a meeting with me, then a final meeting with the both of us.',
+        'She coordinated everything amazingly and helped me with the decor and other wedding demands.',
+        'She had her husband as a support and he was incredible too.',
+        'I really appreciate their help and everything they’ve done for us. I highly recommend them!',
+      ],
+    },
+    {
+      slug: 'google-robin-o-grady',
+      source: 'google',
+      name: 'Robin O\'Grady',
+      year: 2025,
+      stars: 5,
+      quote: [
+        'I have had the pleasure of working with Lynea a few times over the last few months and it has been a wonderful experience. Her organization makes everything easier and her work ethic is amazing. Highly recommend!',
+      ],
+    },
+    {
+      slug: 'google-danielle-anderson',
+      source: 'google',
+      name: 'Danielle Anderson',
+      year: 2023,
+      stars: 5,
+      quote: [
+        'I’m a wedding photographer who has worked with Lynea on multiple events including ones that have been published because of Lynea’s brilliant vision! She has a way of turning the impossible into possible and turning any idea into reality! She is attentive, professional and kind with an attention to detail that is second to none. Trusting Lynea with the planning and executing of your event will be the best decision you can make, taking all the stress off your plate knowing you are in the most capable hands that will create an experience that is above and beyond!',
+      ],
+    },
+    {
+      slug: 'google-kylie-robinson',
+      source: 'google',
+      name: 'Kylie Robinson',
+      year: 2023,
+      stars: 5,
+      quote: [
+        'I have had the great pleasure of knowing and working with Lynea at Sol Vé Custom Events. Lynea has the most incredible attention to detail and a powerhouse skillset of vision creation. With Sol Vé, you can be confident that your event is not only unique and truly personable, but that you are fully supported along the way. Events, whether it be a corporate event of a wedding, are a time for people to gather to create lasting memories - Sol Vé ensures that your vision comes to life to foster the most incredible atmosphere for those memories to be made.',
+      ],
+    },
+    {
+      slug: 'google-rana-saleh',
+      source: 'google',
+      name: 'Rana Saleh',
+      year: 2023,
+      stars: 5,
+      quote: [
+        'Lynea and her team were absolutely wonderful to work with. Extremely professional, attentive, and highly experienced!',
+        'I had the pleasure of working with her for a clients wedding, and she was nothing but amazing! This industry is tough sometimes, and all I can remember is a big smile on her face throughout the whole process! Great work Lynea!',
+      ],
+    },
+  ],
 } as const
 
 export type Testimonial = (typeof portfolio.testimonials)[number]
+export type Review = (typeof portfolio.reviews)[number]
+/** Where a public review was copied from; each gets its own mark on the card. */
+export type ReviewSource = 'google' | 'facebook'
 
 export const foundation = {
   headline: 'Every meaningful gathering begins long before you arrive.',

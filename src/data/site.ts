@@ -128,10 +128,13 @@ export const header: NavItem[] = [
   {
     label: 'Testimonials',
     to: '/testimonials',
-    children: portfolio.testimonials.map((voice) => ({
-      label: voice.name,
-      to: `/testimonials#${voice.slug}`,
-    })),
+    children: [
+      ...portfolio.testimonials.map((voice) => ({
+        label: voice.name,
+        to: `/testimonials#${voice.slug}`,
+      })),
+      { label: 'Reviews', to: '/testimonials#reviews' },
+    ],
   },
 ]
 

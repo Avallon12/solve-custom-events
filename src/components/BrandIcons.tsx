@@ -48,3 +48,12 @@ export function FacebookIcon({ size = 17, className }: Props) {
     </svg>
   )
 }
+
+export function GoogleIcon({ size = 17, className }: Props) {
+  return (
+    <svg {...base(size)} className={className}>
+      <path d="M20.4 12H12" />
+      <path d="M20.4 12a8.4 8.4 0 1 1-2.5-6" />
+    </svg>
+  )
+}

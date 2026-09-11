@@ -127,7 +127,7 @@ export const portfolio = {
     {
       name: 'Bridal Fantasy',
       note: 'Print features — two years, two cities, 2019 / 2020',
-      url: 'https://bridalfantasy.com/magazine/',
+      url: 'https://www.facebook.com/MyBridalFantasy/',
     },
     { name: 'Dancing With Her', note: 'Blog feature', url: 'https://dancingwithher.com/' },
     { name: 'Men`s Vow Magazine', note: 'Editorial feature', url: 'https://mensvows.com/' },

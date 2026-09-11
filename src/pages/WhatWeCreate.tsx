@@ -8,8 +8,8 @@ import { usePageMeta } from '../lib/meta'
 /** Copy verbatim from "Website order and messaging" — nothing added. */
 export default function WhatWeCreate() {
   usePageMeta(
-    'What We Create — Sol Vé Custom Events',
-    'Every gathering begins with a different purpose. Sol Vé Custom Events, Calgary, Alberta.',
+    'What We Create | Sol Vé Custom Events',
+    'Every gathering begins with a different purpose: celebrating love, honouring milestones, inspiring learning, strengthening teams, uniting communities and shaping change.',
   )
 
   return (

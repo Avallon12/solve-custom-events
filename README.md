@@ -165,6 +165,42 @@ that made it "lost and irrelevant".
 
 ---
 
+## SEO
+
+Every route is prerendered to static HTML at build time, so crawlers and
+social scrapers receive the finished document rather than an empty shell.
+
+- `scripts/prerender.tsx` runs as the last step of `npm run build`. It renders
+  each route in `src/data/routes.ts` with React's static API (lazy chunks
+  resolve before the HTML is captured) and writes `dist/<route>.html`
+  with title, description, canonical, Open Graph, Twitter card, a preload for
+  the hero photograph, and JSON-LD. It also writes `404.html`, `sitemap.xml`
+  and `robots.txt`. **Add a route in App.tsx, add it to `routes.ts`.**
+- `src/lib/meta.ts` — `usePageMeta(title, description, { image, robots, type })`.
+  Every page calls it; the build fails if one does not. `SITE_URL` there is the
+  canonical origin used everywhere. Heroes register their photograph as the
+  page's preview image automatically.
+- `src/lib/structured-data.ts` — the JSON-LD graph: Organization + LocalBusiness
+  (address as published on the Google Business listing), WebSite, the page
+  with its breadcrumb, plus Service on each division, Person on the founder
+  page and Article on each Perspectives essay. Review markup is deliberately
+  left out: Google ignores self-published reviews.
+- `public/media/og/` — 1200×630 JPEG twins of the hero photographs, because
+  some scrapers will not read WebP. Generated on macOS with `sips`; regenerate
+  by deleting a file and running the same loop (see git history of this
+  section) after swapping a hero.
+- `main.tsx` hydrates the prerendered markup; `vite dev` still renders fresh.
+  Reveal blocks carry `data-reveal` so a no-script visitor still sees content.
+- `/faq` is `noindex` until Lynea supplies the questions and answers; the 404
+  page is `noindex, nofollow`. Both are excluded from the sitemap.
+- Fonts are linked from `index.html` (not `@import`) so they load alongside
+  the CSS bundle. Hero images load eagerly with high fetch priority; all other
+  photographs stay lazy. Routes other than Home are code-split.
+- `vercel.json`: clean URLs (`/foundation` serves `foundation.html`), no
+  trailing slashes, immutable caching for hashed assets, a
+  week for photographs. There is no SPA rewrite any more — unknown paths get a
+  real 404 from `404.html`.
+
 ## Design system
 
 | | |

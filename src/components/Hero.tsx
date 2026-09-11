@@ -1,7 +1,8 @@
 import type { ReactNode } from 'react'
 import Media from './Media'
 import { Container, Eyebrow } from './primitives'
-import type { MediaId } from '../data/media'
+import { media as registry, type MediaId, type MediaSlot } from '../data/media'
+import { registerHeroImage } from '../lib/meta'
 
 /**
  * Hero.
@@ -37,6 +38,8 @@ export default function Hero({
   size?: 'full' | 'page'
 }) {
   const full = size === 'full'
+  // The hero photograph is the page's social preview and its largest paint.
+  registerHeroImage((registry[media] as MediaSlot).src)
 
   return (
     <section
@@ -52,6 +55,7 @@ export default function Hero({
           showCaption={false}
           drift
           subtle
+          eager
           className="h-full w-full"
           imgClassName="h-full w-full"
         />

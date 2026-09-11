@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && npm run prerender",
+    "prerender": "vite build --ssr scripts/prerender.tsx --outDir dist-ssr --logLevel error && node dist-ssr/prerender.js",
     "lint": "oxlint",
     "preview": "vite preview",
     "smoke": "vite build --ssr scripts/smoke.tsx --outDir dist-smoke --logLevel error && node dist-smoke/smoke.js",

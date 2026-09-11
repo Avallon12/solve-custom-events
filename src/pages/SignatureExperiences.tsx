@@ -11,8 +11,8 @@ import { usePageMeta } from '../lib/meta'
  */
 export default function SignatureExperiences() {
   usePageMeta(
-    'Signature Experiences — Sol Vé Custom Events',
-    'Six divisions of experiences: Design & Stylization, Weddings, Signature Moments, Workshops & Curated Experiences, Conferences & International Events, and Fundraising Campaign Events.',
+    'Signature Experiences | Sol Vé Custom Events',
+    'Weddings, Signature Moments, Design & Stylization, Workshops & Curated Experiences, Conferences & International Events, and Fundraising Campaign Events by Sol Vé, Calgary.',
   )
 
   return (

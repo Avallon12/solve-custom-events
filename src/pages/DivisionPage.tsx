@@ -12,8 +12,9 @@ export default function DivisionPage() {
   const experience = slug ? experienceBySlug(slug) : undefined
 
   usePageMeta(
-    experience ? `${experience.name} — Sol Vé Custom Events` : 'Divisions — Sol Vé Custom Events',
-    experience ? experience.tagline : 'Sol Vé Custom Events.',
+    experience ? `${experience.name} | Sol Vé Custom Events, Calgary` : 'Divisions | Sol Vé Custom Events',
+    experience ? experience.tagline : 'The six divisions of Sol Vé Custom Events.',
+    experience ? {} : { robots: 'noindex, nofollow' },
   )
 
   if (!experience) return <Navigate to="/divisions" replace />

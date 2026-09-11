@@ -33,8 +33,8 @@ const labelClass = 'block font-ui text-[11px] uppercase text-espresso'
 export default function Connect() {
   const [sent, setSent] = useState(false)
   usePageMeta(
-    'Connect — Sol Vé Custom Events, Calgary Alberta',
-    'Tell us what you are building. Every extraordinary event begins with a conversation with Sol Vé Custom Events, Calgary, Alberta.',
+    'Connect | Sol Vé Custom Events, Calgary',
+    'Tell us what you are building. Every extraordinary event begins with a conversation with Sol Vé Custom Events, Calgary, Alberta, serving Canada and beyond.',
   )
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {

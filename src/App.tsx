@@ -1,28 +1,34 @@
-import { useEffect } from 'react'
+import { Suspense, lazy, useEffect } from 'react'
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import ContactRail from './components/ContactRail'
 import Home from './pages/Home'
-import Foundation from './pages/Foundation'
-import SolVeWay from './pages/SolVeWay'
-import BeyondTheOccasion from './pages/BeyondTheOccasion'
-import Commitments from './pages/Commitments'
-import Principles from './pages/Principles'
-import WhereItBegan from './pages/WhereItBegan'
-import WhatWeCreate from './pages/WhatWeCreate'
-import SignatureExperiences from './pages/SignatureExperiences'
-import Divisions from './pages/Divisions'
-import DivisionPage from './pages/DivisionPage'
-import ServiceCapabilities from './pages/ServiceCapabilities'
-import Perspectives from './pages/Perspectives'
-import Features from './pages/Features'
-import Testimonials from './pages/Testimonials'
-import Founder from './pages/Founder'
-import Portfolio from './pages/Portfolio'
-import Connect from './pages/Connect'
-import FAQ from './pages/FAQ'
-import NotFound from './pages/NotFound'
+
+/**
+ * Every page but Home loads on demand, so the first visit ships only the
+ * shell and the page requested. Prerendered HTML is already on screen while a
+ * chunk loads, so the fallback never shows on a cold start.
+ */
+const Foundation = lazy(() => import('./pages/Foundation'))
+const SolVeWay = lazy(() => import('./pages/SolVeWay'))
+const BeyondTheOccasion = lazy(() => import('./pages/BeyondTheOccasion'))
+const Commitments = lazy(() => import('./pages/Commitments'))
+const Principles = lazy(() => import('./pages/Principles'))
+const WhereItBegan = lazy(() => import('./pages/WhereItBegan'))
+const WhatWeCreate = lazy(() => import('./pages/WhatWeCreate'))
+const SignatureExperiences = lazy(() => import('./pages/SignatureExperiences'))
+const Divisions = lazy(() => import('./pages/Divisions'))
+const DivisionPage = lazy(() => import('./pages/DivisionPage'))
+const ServiceCapabilities = lazy(() => import('./pages/ServiceCapabilities'))
+const Perspectives = lazy(() => import('./pages/Perspectives'))
+const Features = lazy(() => import('./pages/Features'))
+const Testimonials = lazy(() => import('./pages/Testimonials'))
+const Founder = lazy(() => import('./pages/Founder'))
+const Portfolio = lazy(() => import('./pages/Portfolio'))
+const Connect = lazy(() => import('./pages/Connect'))
+const FAQ = lazy(() => import('./pages/FAQ'))
+const NotFound = lazy(() => import('./pages/NotFound'))
 
 /** New page: top of page. Same page with a hash: scroll to that section. */
 function ScrollManager() {
@@ -42,7 +48,8 @@ function ScrollManager() {
   return null
 }
 
-function Shell() {
+/** The whole app minus the router — shared by the browser entry and the prerender script. */
+export function Shell() {
   return (
     <>
       <ScrollManager />
@@ -54,6 +61,7 @@ function Shell() {
           said the sequence encodes where the brand is going, so nothing here
           is added, removed or reordered without her.
         */}
+        <Suspense fallback={null}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/foundation" element={<Foundation />} />
@@ -78,6 +86,7 @@ function Shell() {
           <Route path="/faq" element={<FAQ />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </Suspense>
       </main>
 
       <Footer />

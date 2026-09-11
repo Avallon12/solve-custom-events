@@ -14,8 +14,8 @@ import { usePageMeta } from '../lib/meta'
 
 export default function Foundation() {
   usePageMeta(
-    'The Foundation — Sol Vé Custom Events',
-    'Every meaningful gathering begins long before you arrive. The philosophy, the standard and the origin of Sol Vé Custom Events.',
+    'The Foundation | Sol Vé Custom Events',
+    'Every meaningful gathering begins long before you arrive. The philosophy of stewardship, thoughtful design and genuine hospitality behind every Sol Vé experience.',
   )
 
   return (

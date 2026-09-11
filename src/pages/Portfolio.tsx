@@ -23,8 +23,8 @@ import { usePageMeta } from '../lib/meta'
 
 export default function Portfolio() {
   usePageMeta(
-    'Portfolio / Journal — Sol Vé Custom Events',
-    'The portfolio and perspectives of Sol Vé Custom Events, Calgary, Alberta.',
+    'Portfolio & Journal | Sol Vé Custom Events',
+    'Weddings, signature moments, fundraising campaigns, conferences, design and stylization, and workshops from the Sol Vé Custom Events portfolio in Calgary.',
   )
 
   return (

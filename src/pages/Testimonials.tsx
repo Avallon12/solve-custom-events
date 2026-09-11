@@ -64,8 +64,8 @@ function ReviewCard({ review }: { review: Review }) {
  */
 export default function Testimonials() {
   usePageMeta(
-    'Testimonials — Sol Vé Custom Events',
-    'Rida Ghani, Laura Darichuk, Quora Strings and Mike G. Guthrie on working with Sol Vé Custom Events, with public reviews from Google.',
+    'Testimonials & Reviews | Sol Vé Custom Events',
+    'What clients, partners and performers say about working with Sol Vé Custom Events in Calgary, with five-star Google reviews of weddings, galas and events.',
   )
 
   return (

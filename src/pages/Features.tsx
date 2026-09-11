@@ -22,8 +22,8 @@ const FEATURE_GALLERIES: Record<string, readonly MediaId[]> = {
 /** "Features" — the list exactly as given, each linking to its publication. */
 export default function Features() {
   usePageMeta(
-    'Features — Sol Vé Custom Events',
-    'AVOLA Magazine, REDTV Canada, Bridal Fantasy, Dancing With Her and Men`s Vow Magazine.',
+    'Features & Press | Sol Vé Custom Events',
+    'Sol Vé Custom Events in AVOLA Magazine, REDTV Canada, Bridal Fantasy, Dancing With Her and Men`s Vow Magazine.',
   )
 
   return (

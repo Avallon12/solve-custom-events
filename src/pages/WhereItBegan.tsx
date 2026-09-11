@@ -8,8 +8,8 @@ import { usePageMeta } from '../lib/meta'
 /** Copy verbatim from "Website order and messaging" — nothing added. */
 export default function WhereItBegan() {
   usePageMeta(
-    'Where It Began — Sol Vé Custom Events',
-    'Where It Began. Sol Vé Custom Events, Calgary, Alberta.',
+    'Where It Began | Sol Vé Custom Events',
+    'Sol Vé began with a belief that thoughtfully designed gatherings can shape what follows. How a Calgary celebration designer became a practice for designing how people gather.',
   )
 
   return (

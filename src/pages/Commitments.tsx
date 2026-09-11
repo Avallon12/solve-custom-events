@@ -38,8 +38,8 @@ const PILLAR_MEDIA: Record<string, MediaId> = {
  */
 export default function Commitments() {
   usePageMeta(
-    'Our Commitments — Sol Vé Custom Events',
-    'Reconciliation and land acknowledgement, 2SLGBTQIA+ inclusion and belonging, and environmental responsibility. The commitments that guide how Sol Vé Custom Events works.',
+    'Our Commitments | Sol Vé Custom Events',
+    'Reconciliation and land acknowledgement, belonging for all, environmental responsibility and community impact: the commitments guiding Sol Vé Custom Events in Calgary.',
   )
 
   return (

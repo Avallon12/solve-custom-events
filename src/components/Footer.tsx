@@ -137,7 +137,7 @@ export default function Footer() {
             .
           </p>
           <div className="mt-7 flex flex-col gap-2 font-ui text-[11px] uppercase text-champagne/50 md:flex-row md:items-center md:justify-between">
-            <span style={{ letterSpacing: '0.22em' }}>
+            <span style={{ letterSpacing: '0.22em' }} suppressHydrationWarning>
               © {new Date().getFullYear()} Sol Vé Custom Events
             </span>
             <span style={{ letterSpacing: '0.22em' }}>{contact.serving}</span>

@@ -8,8 +8,8 @@ import { usePageMeta } from '../lib/meta'
 /** "Perspectives" — the essays, word for word. */
 export default function Perspectives() {
   usePageMeta(
-    'Perspectives — Sol Vé Custom Events',
-    'Essays from Sol Vé Custom Events on how people gather.',
+    'Perspectives | Sol Vé Custom Events',
+    'Seven essays on how people gather: convening without hierarchy, why environment shapes dialogue, designing spaces for difficult conversations, and why we still gather.',
   )
 
   return (

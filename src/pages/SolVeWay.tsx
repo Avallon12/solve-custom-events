@@ -8,8 +8,8 @@ import { usePageMeta } from '../lib/meta'
 /** Copy verbatim from "Website order and messaging" — nothing added. */
 export default function SolVeWay() {
   usePageMeta(
-    'The Sol Vé Way — Sol Vé Custom Events',
-    'The Sol Vé Way. Sol Vé Custom Events, Calgary, Alberta.',
+    'The Sol Vé Way | Sol Vé Custom Events',
+    'We design how you gather because the way you come together shapes everything that follows. The standard behind every Sol Vé Custom Events experience in Calgary.',
   )
 
   return (

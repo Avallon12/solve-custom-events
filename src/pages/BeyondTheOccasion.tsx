@@ -8,8 +8,8 @@ import { usePageMeta } from '../lib/meta'
 /** Copy verbatim from "Website order and messaging" — nothing added. */
 export default function BeyondTheOccasion() {
   usePageMeta(
-    'Beyond the Occasion — Sol Vé Custom Events',
-    'Beyond the Occasion. Sol Vé Custom Events, Calgary, Alberta.',
+    'Beyond the Occasion | Sol Vé Custom Events',
+    'Not every gathering shapes what follows. The ones that do are thoughtfully designed, carefully stewarded and intentionally experienced by Sol Vé Custom Events.',
   )
 
   return (

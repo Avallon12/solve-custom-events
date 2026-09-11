@@ -93,6 +93,7 @@ export default function Media({
   showCaption = true,
   drift = false,
   subtle = false,
+  eager = false,
 }: {
   id: MediaId
   className?: string
@@ -100,6 +101,8 @@ export default function Media({
   showCaption?: boolean
   drift?: boolean
   subtle?: boolean
+  /** Above the fold: fetch first instead of lazily. */
+  eager?: boolean
 }) {
   const slot = media[id] as MediaSlot
   const hasAsset = Boolean(slot.src)
@@ -122,7 +125,8 @@ export default function Media({
             src={slot.src}
             alt={slot.alt}
             {...sizeOf(id)}
-            loading="lazy"
+            loading={eager ? 'eager' : 'lazy'}
+            fetchPriority={eager ? 'high' : undefined}
             decoding="async"
             style={{ objectPosition: slot.focus === 'top' ? '50% 20%' : '50% 45%' }}
             className={`h-full w-full object-cover ${drift ? 'animate-drift' : ''} ${imgClassName}`}

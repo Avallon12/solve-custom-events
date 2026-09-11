@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 
@@ -17,8 +17,13 @@ if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual'
 }
 
-createRoot(document.getElementById('root')!).render(
+// Every route is prerendered to static HTML at build time, so the normal path
+// is hydration. An empty root (the dev server) falls back to a fresh render.
+const root = document.getElementById('root')!
+const app = (
   <StrictMode>
     <App />
-  </StrictMode>,
+  </StrictMode>
 )
+if (root.hasChildNodes()) hydrateRoot(root, app)
+else createRoot(root).render(app)

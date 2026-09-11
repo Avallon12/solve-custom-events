@@ -10,8 +10,9 @@ import { usePageMeta } from '../lib/meta'
  */
 export default function FAQ() {
   usePageMeta(
-    'FAQ — Sol Vé Custom Events',
+    'FAQ | Sol Vé Custom Events',
     'Frequently asked questions about Sol Vé Custom Events, Calgary, Alberta.',
+    { robots: 'noindex, follow' },
   )
 
   return (

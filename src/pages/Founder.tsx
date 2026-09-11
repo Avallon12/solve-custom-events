@@ -8,8 +8,9 @@ import { usePageMeta } from '../lib/meta'
 /** "Meet Lynea" — transcribed word for word. Nothing added. */
 export default function Founder() {
   usePageMeta(
-    'Meet Lynea — Sol Vé Custom Events',
+    'Meet Lynea Vaugeois Hetherington | Founder of Sol Vé Custom Events',
     'Lynea Vaugeois Hetherington, Founder of Sol Vé Custom Events, on stewardship, belonging and the way people gather.',
+    { type: 'profile' },
   )
 
   return (

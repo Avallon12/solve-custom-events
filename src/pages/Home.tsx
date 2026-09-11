@@ -2,6 +2,7 @@ import { HeroLink, SmoothScrollHero } from '../components/ui/modern-hero'
 import Media from '../components/Media'
 import { Accent } from '../components/primitives'
 import { home } from '../data/content'
+import { media, type MediaSlot } from '../data/media'
 import { homeStrip } from '../data/galleries'
 import { usePageMeta } from '../lib/meta'
 
@@ -26,8 +27,9 @@ const FRAMES = [
 
 export default function Home() {
   usePageMeta(
-    'Sol Vé Custom Events | Event Design & Production in Calgary',
-    'Sol Vé creates thoughtfully designed weddings, signature celebrations, workshops, conferences and fundraising experiences in Calgary, throughout Canada and internationally.',
+    'Sol Vé Custom Events | Event Design & Planning in Calgary',
+    'Calgary event design and planning studio for weddings, signature celebrations, workshops, conferences and fundraising galas, across Canada and internationally.',
+    { image: (media['home-hero'] as MediaSlot).src },
   )
 
   return (

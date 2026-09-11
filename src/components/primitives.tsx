@@ -234,6 +234,7 @@ export function Reveal({
   return (
     <div
       ref={ref}
+      data-reveal=""
       className={`transition-all duration-[900ms] ease-out ${
         shown ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
       } ${className}`}

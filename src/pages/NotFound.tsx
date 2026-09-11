@@ -2,7 +2,11 @@ import { Btn, Container, Display, Eyebrow, Ornament } from '../components/primit
 import { usePageMeta } from '../lib/meta'
 
 export default function NotFound() {
-  usePageMeta('Page not found — Sol Vé Custom Events', 'The page you are looking for has moved.')
+  usePageMeta(
+    'Page not found | Sol Vé Custom Events',
+    'The page you are looking for has moved.',
+    { robots: 'noindex, nofollow' },
+  )
 
   return (
     <section className="grain relative flex min-h-[80svh] items-center bg-charcoal py-32 text-ivory">

@@ -8,8 +8,8 @@ import { usePageMeta } from '../lib/meta'
 /** Copy verbatim from "Website order and messaging" — nothing added. */
 export default function Principles() {
   usePageMeta(
-    'Sol Vé Principles — Sol Vé Custom Events',
-    'Stewardship, intention, hospitality, craftsmanship, collaboration and legacy. The principles that guide Sol Vé Custom Events.',
+    'Sol Vé Principles | Sol Vé Custom Events',
+    'Stewardship, intention, hospitality, craftsmanship, collaboration and legacy. The principles that guide Sol Vé Custom Events, Calgary.',
   )
 
   return (

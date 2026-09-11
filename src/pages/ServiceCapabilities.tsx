@@ -36,8 +36,8 @@ const CAP_REEL: Partial<Record<string, MediaId>> = {
 /** "How We Work Together" and "The Sol Vé Difference", word for word. */
 export default function ServiceCapabilities() {
   usePageMeta(
-    'Service Capabilities — Sol Vé Custom Events',
-    'Consultation & Strategy, Planning & Coordination, Design & Production, and Full Experience Management.',
+    'Service Capabilities | Event Planning in Calgary | Sol Vé Custom Events',
+    'Consultation and strategy, planning and coordination, design and production, and full experience management from Sol Vé Custom Events in Calgary, Alberta.',
   )
 
   return (

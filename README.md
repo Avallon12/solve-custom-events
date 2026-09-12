@@ -58,7 +58,9 @@ Her brand architecture, in her words, is why the sequence matters:
 > SOLVÉ the branded institution. There is SOLVÉ Global Summit in production.
 
 Nothing in `src/data/content.ts` is invented or paraphrased. Before adding a
-section, check it exists in her document.
+section, check it exists in her document. One exception, at her request on
+2026-09-11: a grammar pass that fixed agreement, spelling and punctuation
+without changing a word's meaning (listed in that day's commit message).
 
 ---
 
@@ -178,7 +180,8 @@ social scrapers receive the finished document rather than an empty shell.
   and `robots.txt`. **Add a route in App.tsx, add it to `routes.ts`.**
 - `src/lib/meta.ts` — `usePageMeta(title, description, { image, robots, type })`.
   Every page calls it; the build fails if one does not. `SITE_URL` there is the
-  canonical origin used everywhere. Heroes register their photograph as the
+  canonical origin used everywhere — `https://www.solvecustomevents.com`, because
+  Vercel 308-redirects the apex to www. Heroes register their photograph as the
   page's preview image automatically.
 - `src/lib/structured-data.ts` — the JSON-LD graph: Organization + LocalBusiness
   (address as published on the Google Business listing), WebSite, the page
@@ -197,7 +200,9 @@ social scrapers receive the finished document rather than an empty shell.
   the CSS bundle. Hero images load eagerly with high fetch priority; all other
   photographs stay lazy. Routes other than Home are code-split.
 - `vercel.json`: clean URLs (`/foundation` serves `foundation.html`), no
-  trailing slashes, immutable caching for hashed assets, a
+  trailing slashes, permanent redirects from the old site's URLs (`/about`,
+  `/contact-us`, `/services`, `/rentals`, `/values-1`) to their successors,
+  immutable caching for hashed assets, a
   week for photographs. There is no SPA rewrite any more — unknown paths get a
   real 404 from `404.html`.
 

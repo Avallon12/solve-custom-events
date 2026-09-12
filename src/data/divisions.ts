@@ -84,18 +84,18 @@ export const divisions: Division[] = [
     whatWeDo: {
       heading: 'From the first conversation to the last dance.',
       body: [
-        'Our custom designs, creations, rentals and complimentary vendors ensure you have the unique event you want and deserve. From engagements, elopements, weddings, to anniversary parties, we assist you in the event that is defined by you.',
+        'Our custom designs, creations, rentals and complementary vendors ensure you have the unique event you want and deserve. From engagements, elopements, and weddings to anniversary parties, we assist you in the event that is defined by you.',
         'We are based in Calgary, Alberta, but organize and travel to worldwide destinations to ensure you have the personalized event services you deserve.',
       ],
     },
     faq: [
       {
         q: 'When should you hire an event planner?',
-        a: 'The best answer is as soon as possible. Event planners are great resources that can help you with vendor and location settings. In addition, they often save clients both financially and time.',
+        a: 'The best answer is as soon as possible. Event planners are great resources that can help you with vendor and location settings. In addition, they often save clients both time and money.',
       },
       {
         q: 'Are you able to do destination events and will the planner attend them personally?',
-        a: 'Yes, we do and yes they can. We offer a variety of planning and coordination services both within Canada, United States, and around the world. With global connections and our hands-on approach, we are able to ensure your event is spectacular in any location.',
+        a: 'Yes, we do, and yes, they can. We offer a variety of planning and coordination services within Canada, the United States, and around the world. With global connections and our hands-on approach, we are able to ensure your event is spectacular in any location.',
       },
       {
         q: 'Can you help me surprise my partner when I propose marriage?',

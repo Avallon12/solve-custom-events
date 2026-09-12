@@ -122,7 +122,7 @@ export const header: NavItem[] = [
       { label: 'REDTV Canada', to: '/features#redtv-canada' },
       { label: 'Bridal Fantasy', to: '/features#bridal-fantasy' },
       { label: 'Dancing With Her', to: '/features#dancing-with-her' },
-      { label: 'Men`s Vow Magazine', to: '/features#men-s-vow-magazine' },
+      { label: "Men's Vow Magazine", to: '/features#men-s-vow-magazine' },
     ],
   },
   {

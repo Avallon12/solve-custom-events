@@ -26,7 +26,7 @@ export const home = {
 export const whatWeCreate = {
   purposes: [
     'Some celebrate your love.',
-    "Some honour yours or a loved one's life defining moments.",
+    "Some honour yours or a loved one's life-defining moments.",
     'Some inspire learning, creativity, and personal growth.',
     'Some strengthen your organizations and teams.',
     'Some unite our communities around a shared cause.',
@@ -52,7 +52,7 @@ export const whatWeCreate = {
       body: [
         'Your wedding is more than a celebration.',
         "It is the beginning of your family's story.",
-        'We create timeless wedding experiences that honours your love, family, culture, and tradition with thoughtful planning, genuine hospitality, and intentional design. Every celebration is crafted to reflect you at its heart, creating memories that will be treasured for generations.',
+        'We create timeless wedding experiences that honour your love, family, culture, and tradition with thoughtful planning, genuine hospitality, and intentional design. Every celebration is crafted to reflect you at its heart, creating memories that will be treasured for generations.',
       ],
     },
     {
@@ -130,7 +130,7 @@ export const portfolio = {
       url: 'https://www.facebook.com/MyBridalFantasy/',
     },
     { name: 'Dancing With Her', note: 'Blog feature', url: 'https://dancingwithher.com/' },
-    { name: 'Men`s Vow Magazine', note: 'Editorial feature', url: 'https://mensvows.com/' },
+    { name: "Men's Vow Magazine", note: 'Editorial feature', url: 'https://mensvows.com/' },
   ],
   /**
    * The client's four testimonials, exactly as supplied — not rewritten,
@@ -290,7 +290,7 @@ export const foundation = {
   headline: 'Every meaningful gathering begins long before you arrive.',
   intro: [
     'Every meaningful gathering begins long before you arrive and continues long after you and your guests leave. It influences relationships, ideas, cultures, communities, and the possibilities that emerge when you and your guests come together with intention.',
-    'At Sol Vé, thoughtful design and genuine hospitality are not simply acts of service, they are acts of stewardship. Every environment created is an opportunity to foster belonging, encourage meaningful connection, and shape experiences that extend far beyond the occasion itself.',
+    'At Sol Vé, thoughtful design and genuine hospitality are not simply acts of service — they are acts of stewardship. Every environment created is an opportunity to foster belonging, encourage meaningful connection, and shape experiences that extend far beyond the occasion itself.',
     'This is the foundation upon which every Sol Vé experience is created, every partnership is formed, and every future initiative is built.',
   ],
   closing: {
@@ -301,7 +301,7 @@ export const foundation = {
   way: {
     title: 'The Sol Vé Way',
     body: [
-      'We design how you gather because of the believe that the way you come together shapes everything that follows.',
+      'We design how you gather because of the belief that the way you come together shapes everything that follows.',
       'Your gathering is entrusted to us with purpose. Whether you are celebrating a milestone, strengthening a relationship, advancing an idea, supporting a community, or convening leaders to address the world’s most pressing challenges, we recognize that what happens within those moments has the potential to extend far beyond the occasion itself.',
       'That responsibility shapes the way we work.',
       'We approach your experience as stewards of the moments and memories you entrusted to us. Through thoughtful design, genuine hospitality, careful craftsmanship, and intentional collaboration, we create environments where you and your guests feel welcomed, valued, and inspired to be fully present.',
@@ -314,11 +314,11 @@ export const foundation = {
     title: 'Beyond the Occasion',
     opening: [
       'Not every gathering shapes what follows.',
-      'The ones that do, are never left to chance.',
+      'The ones that do are never left to chance.',
       'They are thoughtfully designed. Carefully stewarded. Intentionally experienced.',
     ],
     body: [
-      "At Sol Vé, we understand that every gathering carries something greater than the occasion itself. Your wedding becomes the beginning of your family. Family celebrations becomes part of your personal story. Your workshop becomes the beginning of a new perspective. That philanthropic event becomes an opportunity to strengthen your community. A conference becomes the place where colleague's and friend's conversations become collaboration and ideas become action.",
+      "At Sol Vé, we understand that every gathering carries something greater than the occasion itself. Your wedding becomes the beginning of your family. Family celebrations become part of your personal story. Your workshop becomes the beginning of a new perspective. That philanthropic event becomes an opportunity to strengthen your community. A conference becomes the place where colleagues' and friends' conversations become collaboration and ideas become action.",
       'These are the moments entrusted to us. They deserve more than exceptional planning. They deserve thoughtful stewardship.',
       'This belief shapes every decision made. Every environment created. Every relationship built. Every detail considered.',
     ],
@@ -380,7 +380,7 @@ export const commitments = {
         // them that Lynea needs to settle.
         'We at Sol Vé Custom Events believe that all people share the responsibility to contribute to reconciliation.',
         'Sol Vé Custom Events respectfully acknowledges that we live, work, and gather on the traditional territories of the peoples of the Treaty 7 region in Southern Alberta, including the Blackfoot Confederacy (Siksika, Kainai, and Piikani Nations), the Tsuut’ina Nation, and the Îyârhe Nakoda Nations (Bearspaw, Chiniki, and Goodstoney First Nations). We also recognize the Métis Nation of Alberta, Region 3, whose history and contributions continue to enrich the communities we serve.',
-        'To support reconciliation we must truly hear Indigenous oral and written history, share their dreams and celebrate their culture and future endeavors.',
+        'To support reconciliation, we must truly hear Indigenous oral and written history, share their dreams and celebrate their culture and future endeavours.',
         'As Sol Vé creates experiences across Canada and internationally, we are committed to respectfully acknowledging and honouring the Indigenous Peoples, traditional territories, and cultural histories of every place where we gather.',
         'For us, acknowledgement is more than words spoken at the beginning of an event. It is a commitment to gathering with humility, respect, and a willingness to learn. We believe that bringing people together carries a responsibility to honour the histories, cultures, traditions, and relationships that have shaped the places where we gather.',
         'As we continue to grow, we remain committed to listening, learning, building meaningful relationships, and creating experiences where respect, understanding, and belonging are thoughtfully woven into every gathering.',
@@ -407,6 +407,10 @@ export const commitments = {
         'As Sol Vé continues to grow across communities, cultures, and countries, we remain committed to listening, learning, evolving, and creating environments where every person feels they belong.',
       ],
       close: 'Because the most meaningful gatherings are the ones where everyone belongs.',
+      link: {
+        label: 'Support the Canadian Queer Chamber of Commerce',
+        href: 'https://queerchamber.ca/',
+      },
     },
     {
       id: 'conservation',
@@ -420,6 +424,10 @@ export const commitments = {
         'As Sol Vé continues to grow, we remain committed to learning, evolving, and embracing sustainable practices that are practical, responsible, and meaningful.',
       ],
       close: 'By making thoughtful choices today, we help preserve the places where future generations will gather tomorrow.',
+      link: {
+        label: 'Support WWF-Canada',
+        href: 'https://wwf.ca/',
+      },
     },
   ],
   community: {
@@ -463,7 +471,7 @@ export const founder = {
     title: 'Every Gathering Represents a Moment of Trust',
     entrusts: [
       'A couple entrusts the beginning of a marriage.',
-      'A family entrusts a once in a lifetime celebration.',
+      'A family entrusts a once-in-a-lifetime celebration.',
       'An organization entrusts its vision.',
       'A charitable partner entrusts its mission.',
       'A government, corporation, or institution entrusts the environment where important conversations, relationships, and decisions may take shape.',

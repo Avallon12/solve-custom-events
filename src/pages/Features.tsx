@@ -16,14 +16,14 @@ import { usePageMeta } from '../lib/meta'
 const FEATURE_GALLERIES: Record<string, readonly MediaId[]> = {
   'Bridal Fantasy': featureBridalFantasyGallery,
   'Dancing With Her': featureDancingWithHerGallery,
-  'Men`s Vow Magazine': featureMensVowGallery,
+  "Men's Vow Magazine": featureMensVowGallery,
 }
 
 /** "Features" — the list exactly as given, each linking to its publication. */
 export default function Features() {
   usePageMeta(
     'Features & Press | Sol Vé Custom Events',
-    'Sol Vé Custom Events in AVOLA Magazine, REDTV Canada, Bridal Fantasy, Dancing With Her and Men`s Vow Magazine.',
+    'Sol Vé Custom Events in AVOLA Magazine, REDTV Canada, Bridal Fantasy, Dancing With Her and Men\'s Vow Magazine.',
   )
 
   return (

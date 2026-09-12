@@ -12,7 +12,7 @@ import { useEffect } from 'react'
  */
 
 /** Canonical origin — every canonical URL, sitemap entry and JSON-LD id starts here. */
-export const SITE_URL = 'https://solvecustomevents.com'
+export const SITE_URL = 'https://www.solvecustomevents.com'
 export const SITE_NAME = 'Sol Vé Custom Events'
 /** Social-preview image for pages without a hero photograph of their own. */
 export const DEFAULT_IMAGE = '/media/og/default.jpg'

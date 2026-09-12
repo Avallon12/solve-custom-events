@@ -45,7 +45,7 @@ export const experiences: Experience[] = [
     slug: 'weddings',
     name: 'Weddings',
     tagline:
-      'Your celebration that honour love, family, culture, and the beginning of a shared future.',
+      'Your celebration that honours love, family, culture, and the beginning of a shared future.',
     intro:
       'Your wedding tells a unique story. We thoughtfully steward that celebration with care, professionalism, and respect, creating an experience that honours your traditions, relationships, and the memories your family will carry for generations.',
     media: 'division-weddings',
@@ -68,7 +68,7 @@ export const experiences: Experience[] = [
         title: 'Coordination',
         lead: 'Professional coordination allows you to be fully present while we manage the details behind the scenes.',
         items: [
-          'Month of Coordination',
+          'Month-of Coordination',
           'Wedding Day Coordination',
           'Ceremony Coordination',
           'Reception Coordination',
@@ -280,7 +280,7 @@ export const experiences: Experience[] = [
     slug: 'conferences',
     name: 'Conferences & International Events',
     tagline:
-      'Purpose driven convenings where ideas are exchanged, partnerships are formed, and meaningful progress begins.',
+      'Purpose-driven convenings where ideas are exchanged, partnerships are formed, and meaningful progress begins.',
     intro:
       'Whether bringing together twenty delegates or thousands of attendees, every conference is thoughtfully designed to encourage collaboration, strengthen relationships, and create lasting impact.',
     media: 'division-conferences',
@@ -319,7 +319,7 @@ export const experiences: Experience[] = [
           'Breakout Session Management',
           'VIP Hospitality',
           'Protocol Coordination',
-          'On Site Management',
+          'On-Site Management',
         ],
       },
       {
@@ -397,7 +397,7 @@ export const experiences: Experience[] = [
           'Production',
           'Logistics',
           'Guest Experience',
-          'On Site Management',
+          'On-Site Management',
         ],
       },
     ],

@@ -7,13 +7,23 @@ import { experienceBySlug } from '../data/experiences'
 import { usePageMeta } from '../lib/meta'
 
 /** One division from "Signature Experiences", word for word. */
+/** Search descriptions per division, naming the services each one actually offers. */
+const SEO_DESCRIPTION: Record<string, string> = {
+  weddings: 'Full and partial wedding planning, day-of coordination, wedding design and destination weddings from Sol Vé Custom Events, Calgary, across Canada and abroad.',
+  'signature-moments': 'Milestone birthdays, anniversaries, engagement parties, private dinners and celebrations of life, planned and designed by Sol Vé Custom Events in Calgary.',
+  'design-stylization': 'Event design, styling, décor, tablescapes, custom installations and space planning for galas, weddings and brand events by Sol Vé Custom Events, Calgary.',
+  workshops: 'Workshops, executive and wellness retreats, team building and curated learning experiences designed and managed by Sol Vé Custom Events, Calgary.',
+  conferences: 'Conference planning and management in Calgary and internationally: summits, symposiums, government forums, stakeholder engagement, delegate and speaker management, sponsorship and protocol.',
+  fundraising: 'Charity galas, benefit dinners and multi-event fundraising campaigns with sponsor engagement, auctions and production, by Sol Vé Custom Events in Calgary.',
+}
+
 export default function DivisionPage() {
   const { slug } = useParams()
   const experience = slug ? experienceBySlug(slug) : undefined
 
   usePageMeta(
     experience ? `${experience.name} | Sol Vé Custom Events, Calgary` : 'Divisions | Sol Vé Custom Events',
-    experience ? experience.tagline : 'The six divisions of Sol Vé Custom Events.',
+    experience ? (SEO_DESCRIPTION[experience.slug] ?? experience.tagline) : 'The six divisions of Sol Vé Custom Events.',
     experience ? {} : { robots: 'noindex, nofollow' },
   )
 

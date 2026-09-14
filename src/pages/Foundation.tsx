@@ -53,6 +53,7 @@ export default function Foundation() {
       </Section>
 
       <ClosingCTA
+        explore
         eyebrow={foundation.closing.eyebrow}
         heading={foundation.closing.heading}
         body={foundation.closing.body}

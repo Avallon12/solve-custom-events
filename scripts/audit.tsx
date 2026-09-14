@@ -16,7 +16,6 @@ import SolVeWay from '../src/pages/SolVeWay'
 import BeyondTheOccasion from '../src/pages/BeyondTheOccasion'
 import Principles from '../src/pages/Principles'
 import WhereItBegan from '../src/pages/WhereItBegan'
-import SignatureExperiences from '../src/pages/SignatureExperiences'
 import Divisions from '../src/pages/Divisions'
 import DivisionPage from '../src/pages/DivisionPage'
 import ServiceCapabilities from '../src/pages/ServiceCapabilities'
@@ -41,7 +40,6 @@ const ROUTES = [
   '/principles',
   '/where-it-began',
   '/what-we-create',
-  '/signature-experiences',
   '/service-capabilities',
   '/divisions',
   ...experiences.map((e) => `/divisions/${e.slug}`),
@@ -79,7 +77,6 @@ function Tree({ path }: { path: string }) {
         <Route path="/commitments" element={<Commitments />} />
         <Route path="/principles" element={<Principles />} />
         <Route path="/where-it-began" element={<WhereItBegan />} />
-        <Route path="/signature-experiences" element={<SignatureExperiences />} />
         <Route path="/service-capabilities" element={<ServiceCapabilities />} />
         <Route path="/divisions" element={<Divisions />} />
         <Route path="/divisions/:slug" element={<DivisionPage />} />

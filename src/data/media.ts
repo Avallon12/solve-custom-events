@@ -2204,14 +2204,6 @@ export const media = {
     credit: 'by the client’s photographers (names to be confirmed)',
     focus: 'top',
   },
-  'feat-004': {
-    label: 'Features — Bridal Fantasy — Bridal Fantasy feature pages photographed open o',
-    alt: 'Bridal Fantasy feature pages photographed open on a counter',
-    tone: 'light',
-    src: '/media/feat-004.webp',
-    credit: 'by the client’s photographers (names to be confirmed)',
-    focus: 'top',
-  },
   'fem-001': {
     label: 'Full Experience Management — Two brides laughing together beneath a driftwood',
     alt: 'Two brides laughing together beneath a driftwood arch in the forest',

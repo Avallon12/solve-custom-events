@@ -97,9 +97,6 @@ export default function WhatWeCreate() {
             <p className="mt-8 font-display text-[26px] text-gold md:text-[32px]">
               {whatWeCreate.philosophy}
             </p>
-            <p className="mt-4 font-body text-[19px] italic text-champagne/90 md:text-[21px]">
-              {whatWeCreate.because}
-            </p>
           </Reveal>
         </Container>
       </Section>

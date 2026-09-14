@@ -35,8 +35,8 @@ export type Experience = {
 export const signatureExperiences = {
   intro: [
     'Every gathering begins with a purpose.',
-    'Whether celebrating your marriage, marking a milestone, strengthening your community, inspiring generosity, or bringing our leaders together, every Sol Vé experience is thoughtfully designed around you and your guests, your purpose, and your relationships at its heart.',
-    'From intimate celebrations to international conferences, our Signature Experiences combine thoughtful design, professional planning, genuine hospitality, and careful stewardship to create your experiences that are remembered long after the gathering has ended.',
+    'Whether celebrating your marriage, marking a milestone, strengthening your community, inspiring generosity, or bringing our leaders together, every Sol Vé experience is thoughtfully designed with people, purpose, and relationships at its heart.',
+    'From intimate celebrations to international conferences, our Signature Experiences combine thoughtful design, professional planning, genuine hospitality, and careful stewardship to create experiences that are remembered long after the gathering has ended.',
   ],
 } as const
 
@@ -45,7 +45,7 @@ export const experiences: Experience[] = [
     slug: 'weddings',
     name: 'Weddings',
     tagline:
-      'Your celebration that honours love, family, culture, and the beginning of a shared future.',
+      'Celebrations that honour love, family, culture, and the beginning of a shared future.',
     intro:
       'Your wedding tells a unique story. We thoughtfully steward that celebration with care, professionalism, and respect, creating an experience that honours your traditions, relationships, and the memories your family will carry for generations.',
     media: 'division-weddings',

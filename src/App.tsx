@@ -1,5 +1,5 @@
 import { Suspense, lazy, useEffect } from 'react'
-import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import ContactRail from './components/ContactRail'
@@ -17,7 +17,6 @@ const Commitments = lazy(() => import('./pages/Commitments'))
 const Principles = lazy(() => import('./pages/Principles'))
 const WhereItBegan = lazy(() => import('./pages/WhereItBegan'))
 const WhatWeCreate = lazy(() => import('./pages/WhatWeCreate'))
-const SignatureExperiences = lazy(() => import('./pages/SignatureExperiences'))
 const Divisions = lazy(() => import('./pages/Divisions'))
 const DivisionPage = lazy(() => import('./pages/DivisionPage'))
 const ServiceCapabilities = lazy(() => import('./pages/ServiceCapabilities'))
@@ -71,7 +70,8 @@ export function Shell() {
           <Route path="/principles" element={<Principles />} />
           <Route path="/where-it-began" element={<WhereItBegan />} />
           <Route path="/what-we-create" element={<WhatWeCreate />} />
-          <Route path="/signature-experiences" element={<SignatureExperiences />} />
+          {/* Was a second copy of the six-division page; the host redirects too. */}
+          <Route path="/signature-experiences" element={<Navigate to="/divisions" replace />} />
 
           {/* The six header sections */}
           <Route path="/service-capabilities" element={<ServiceCapabilities />} />

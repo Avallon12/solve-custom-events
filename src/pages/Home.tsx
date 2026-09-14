@@ -1,7 +1,10 @@
+import { Link } from 'react-router-dom'
 import { HeroLink, SmoothScrollHero } from '../components/ui/modern-hero'
 import Media from '../components/Media'
-import { Accent } from '../components/primitives'
+import ClosingCTA from '../components/ClosingCTA'
+import { Accent, Btn, Container, Eyebrow } from '../components/primitives'
 import { home } from '../data/content'
+import { cta, divisionNav } from '../data/site'
 import { media, type MediaSlot } from '../data/media'
 import { homeStrip } from '../data/galleries'
 import { usePageMeta } from '../lib/meta'
@@ -25,6 +28,10 @@ const FRAMES = [
 ] as const
 
 
+/** Proposed descriptor — new copy, to be approved or rewritten by Lynea. */
+const DESCRIPTOR =
+  'Event design, planning and production for weddings, galas, conferences and international convenings. Calgary, across Canada and worldwide.'
+
 export default function Home() {
   usePageMeta(
     'Sol Vé Custom Events | Event Design & Planning in Calgary',
@@ -46,19 +53,28 @@ export default function Home() {
         frames={FRAMES}
         actions={
           <>
-            <HeroLink to="/connect">Begin your Journey</HeroLink>
-            <HeroLink to="/what-we-create" variant="outline">
-              Discover Your Experiences
+            <HeroLink to="/connect">{cta.primary}</HeroLink>
+            <HeroLink to="/divisions" variant="outline">
+              {cta.secondary}
             </HeroLink>
           </>
         }
       />
 
       {/*
-        The document gives the Home page one block of copy — the eyebrow,
-        headline, subheadline and two buttons above. No copy is added below:
-        the film band carries the one reel the client chose for the Home page.
+        One line saying what the company is, before the film. Added in the
+        September 2026 refinement so a first-time visitor can place Sol Vé in
+        seconds; the wording is proposed and awaits Lynea's approval.
       */}
+      <section aria-label="What Sol Vé does" className="bg-ivory py-[52px] md:py-[76px]">
+        <Container width="narrow" className="text-center">
+          <Eyebrow>{home.eyebrow}</Eyebrow>
+          <p className="mx-auto mt-6 max-w-2xl font-body text-[21px] leading-[1.5] text-espresso md:text-[25px]">
+            {DESCRIPTOR}
+          </p>
+        </Container>
+      </section>
+
       <section aria-label="Feature film" className="relative">
         <Media
           id="home-film"
@@ -68,18 +84,36 @@ export default function Home() {
         />
       </section>
 
-      {/* Gallery strip — one photograph from each of the client's divisions. */}
-      <section aria-label="Photo gallery" className="bg-ivory py-[60px] md:py-[100px]">
+      {/* One photograph from each experience, each a door to its page. */}
+      <section aria-label="Signature Experiences" className="bg-ivory py-[60px] md:py-[100px]">
         <div className="mx-auto w-full max-w-content px-5 md:px-10 lg:px-20">
-          <div className="grid grid-cols-2 gap-5 md:gap-8 lg:grid-cols-3">
-            {homeStrip.map((id) => (
-              <div key={id} className="overflow-hidden rounded-[2px]">
-                <Media id={id} showCaption={false} className="aspect-square w-full" />
-              </div>
+          <Eyebrow className="text-center">Signature Experiences</Eyebrow>
+          <div className="mt-10 grid grid-cols-2 gap-5 md:gap-8 lg:grid-cols-3">
+            {homeStrip.map((id, i) => (
+              <Link key={id} to={divisionNav[i].to} className="group block">
+                <div className="overflow-hidden rounded-[2px]">
+                  <Media
+                    id={id}
+                    showCaption={false}
+                    className="aspect-square w-full"
+                    imgClassName="transition-transform duration-[1200ms] group-hover:scale-105"
+                  />
+                </div>
+                <p className="mt-4 font-display text-[19px] text-charcoal transition-colors duration-300 group-hover:text-gold md:text-[22px]">
+                  {divisionNav[i].label}
+                </p>
+              </Link>
             ))}
+          </div>
+          <div className="mt-12 text-center">
+            <Btn to="/divisions" variant="outline">
+              {cta.secondary}
+            </Btn>
           </div>
         </div>
       </section>
+
+      <ClosingCTA eyebrow="An invitation" heading={home.closingHeadline} body={home.closingBody} />
     </>
   )
 }

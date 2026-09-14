@@ -19,6 +19,14 @@ import { usePageMeta } from '../lib/meta'
 const FORM_ENDPOINT = ''
 const ROUTE_TO = 'lynea@solvecustomevents.com'
 
+/** The four steps every enquiry follows, in order. */
+const NEXT_STEPS = [
+  { title: 'Your enquiry', body: 'It reaches Lynea directly, not a shared inbox.' },
+  { title: 'A conversation', body: 'We arrange a call to understand your purpose, your people and your timing.' },
+  { title: 'A recommendation', body: 'We suggest an approach, or prepare a proposal where the scope calls for one.' },
+  { title: 'We begin', body: 'With the scope agreed, the planning starts.' },
+] as const
+
 const INQUIRY_TYPES = [
   ...divisions.map((d) => d.name),
   'Mystic Moonlight Masquerade Campaign',
@@ -93,6 +101,27 @@ export default function Connect() {
                 <p className="font-display text-[21px] italic text-espresso md:text-[24px]">
                   No two gatherings are ever the same. Neither is our approach.
                 </p>
+              </div>
+
+              {/* What happens next — so an enquirer knows the path before writing. */}
+              <div className="mt-12 border-t border-stone/40 pt-10">
+                <Eyebrow>What happens next</Eyebrow>
+                <ol className="mt-6 grid gap-4 sm:grid-cols-2">
+                  {NEXT_STEPS.map((step, i) => (
+                    <li key={step.title} className="flex gap-4">
+                      <span
+                        className="mt-1 font-ui text-[11px] text-gold"
+                        style={{ letterSpacing: '0.2em' }}
+                      >
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <div>
+                        <p className="font-display text-[19px] text-charcoal">{step.title}</p>
+                        <p className="mt-1 font-body text-[17px] leading-relaxed text-espresso">{step.body}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
               </div>
 
               <div className="mt-12 space-y-5 border-t border-stone/40 pt-10">

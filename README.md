@@ -167,6 +167,34 @@ that made it "lost and irrelevant".
 
 ---
 
+## September 2026 refinement
+
+An optimisation pass, not a redesign, from the combined Avallon / client
+critique of 13–14 September 2026. The brand, the twelve-page menu order and
+the six divisions are untouched.
+
+- **Desktop bar** is now organised around the buyer: Experiences, How We Work,
+  About, Work, Perspectives, Commitments (`header` in `src/data/site.ts`).
+  The enquiry button and phone sit in the masthead; the floating rail shows
+  only below `lg`. The full-screen menu keeps Lynea's twelve in her order and
+  lists the six groups once, so no page appears three times on a phone.
+- **FAQ** is out of the menu until it has content (route kept, noindex).
+- **/signature-experiences** duplicated /divisions and now redirects to it.
+- **Copy**: the forced second-person substitutions were reverted to her
+  earlier wording (or the word removed); the footer keeps only the signature
+  line; What We Create no longer repeats the mantra at its close; the home
+  hero uses only Manual-approved calls to action. See the 14 September commit
+  for every sentence.
+- **Home** gains a one-line descriptor beneath the hero (`DESCRIPTOR` in
+  `Home.tsx` — proposed, awaiting her approval), clickable experience tiles,
+  and her own closing invitation.
+- **Testimonials** are grouped: Partners & Collaborators, then Client Reviews.
+  One Google review with errors was swapped for a clean one; none is edited.
+- **Perspectives** carry a byline (confirm authorship with Lynea).
+- **Connect** explains what happens after an enquiry.
+- Still open: case studies (needs her material), conference photography of
+  people convening, FAQ content, Facebook reviews, a form endpoint.
+
 ## SEO
 
 Every route is prerendered to static HTML at build time, so crawlers and

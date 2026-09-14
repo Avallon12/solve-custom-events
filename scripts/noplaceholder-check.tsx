@@ -10,7 +10,6 @@ import SolVeWay from '../src/pages/SolVeWay'
 import BeyondTheOccasion from '../src/pages/BeyondTheOccasion'
 import Principles from '../src/pages/Principles'
 import WhereItBegan from '../src/pages/WhereItBegan'
-import SignatureExperiences from '../src/pages/SignatureExperiences'
 import Divisions from '../src/pages/Divisions'
 import DivisionPage from '../src/pages/DivisionPage'
 import ServiceCapabilities from '../src/pages/ServiceCapabilities'
@@ -25,7 +24,7 @@ import Connect from '../src/pages/Connect'
 import FAQ from '../src/pages/FAQ'
 import NotFound from '../src/pages/NotFound'
 
-const ROUTES = ['/', '/foundation', '/the-sol-ve-way', '/beyond-the-occasion', '/commitments', '/principles', '/where-it-began', '/what-we-create', '/signature-experiences', '/service-capabilities', '/divisions', ...experiences.map((e) => `/divisions/${e.slug}`), '/perspectives', '/features', '/testimonials', '/founder', '/portfolio', '/connect', '/faq']
+const ROUTES = ['/', '/foundation', '/the-sol-ve-way', '/beyond-the-occasion', '/commitments', '/principles', '/where-it-began', '/what-we-create', '/service-capabilities', '/divisions', ...experiences.map((e) => `/divisions/${e.slug}`), '/perspectives', '/features', '/testimonials', '/founder', '/portfolio', '/connect', '/faq']
 
 function Tree({ path }: { path: string }) {
   return (
@@ -39,7 +38,6 @@ function Tree({ path }: { path: string }) {
         <Route path="/commitments" element={<Commitments />} />
         <Route path="/principles" element={<Principles />} />
         <Route path="/where-it-began" element={<WhereItBegan />} />
-        <Route path="/signature-experiences" element={<SignatureExperiences />} />
         <Route path="/service-capabilities" element={<ServiceCapabilities />} />
         <Route path="/divisions" element={<Divisions />} />
         <Route path="/divisions/:slug" element={<DivisionPage />} />

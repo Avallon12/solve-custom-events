@@ -26,7 +26,7 @@ export const home = {
 export const whatWeCreate = {
   purposes: [
     'Some celebrate your love.',
-    "Some honour yours or a loved one's life-defining moments.",
+    'Some honour your life-defining moments or those of someone you love.',
     'Some inspire learning, creativity, and personal growth.',
     'Some strengthen your organizations and teams.',
     'Some unite our communities around a shared cause.',
@@ -36,13 +36,13 @@ export const whatWeCreate = {
   belief:
     'We design how you gather because the way you gather shapes everything that follows.',
   close:
-    'From intimate celebrations to international convenings, Sol Vé creates experiences where your guests connect more deeply, cultures are celebrated, ideas are exchanged, communities are strengthened, and new possibilities begin.',
+    'From intimate celebrations to international convenings, Sol Vé creates experiences where people connect more deeply, cultures are celebrated, ideas are exchanged, communities are strengthened, and new possibilities begin.',
   divisions: [
     {
       title: 'Design & Stylization',
       media: 'division-design-stylization',
       body: [
-        'Beautiful spaces do more than capture your attention, they shape how you experience a gathering.',
+        'Beautiful spaces do more than capture attention. They shape how people experience a gathering.',
         'Our custom design and stylization services transform ideas into thoughtfully curated environments where every detail serves a purpose. From concept development and décor to floral design, furnishings, lighting, and visual storytelling, we create spaces that reflect your vision while enhancing the experience of every guest.',
       ],
     },
@@ -52,7 +52,7 @@ export const whatWeCreate = {
       body: [
         'Your wedding is more than a celebration.',
         "It is the beginning of your family's story.",
-        'We create timeless wedding experiences that honour your love, family, culture, and tradition with thoughtful planning, genuine hospitality, and intentional design. Every celebration is crafted to reflect you at its heart, creating memories that will be treasured for generations.',
+        'We create timeless wedding experiences that honour your love, family, culture, and tradition with thoughtful planning, genuine hospitality, and intentional design. Every celebration is crafted to reflect the people at its heart, creating memories that will be treasured for generations.',
       ],
     },
     {
@@ -68,7 +68,7 @@ export const whatWeCreate = {
       title: 'Workshops & Curated Experiences',
       media: 'division-workshops',
       body: [
-        'The most meaningful learning happens when you and your guests feel inspired to participate.',
+        'The most meaningful learning happens when people feel inspired to participate.',
         'We design immersive workshops and curated experiences that encourage creativity, collaboration, wellness, discovery, and authentic human connection. Every experience is thoughtfully developed to foster engagement, meaningful conversation, and lasting impact.',
       ],
     },
@@ -76,7 +76,7 @@ export const whatWeCreate = {
       title: 'Conferences & International Events',
       media: 'division-conferences',
       body: [
-        'The way our leaders gather influences what becomes possible together.',
+        'The way leaders gather influences what becomes possible together.',
         'From executive retreats and industry conferences to international summits and multi-day experiences, we create environments where ideas become partnerships, conversations become collaboration, and shared purpose inspires meaningful progress.',
       ],
     },
@@ -84,8 +84,8 @@ export const whatWeCreate = {
       title: 'Fundraising Campaign Events',
       media: 'division-fundraising',
       body: [
-        'Celebration has the power to strengthen our communities.',
-        'Fundraising should inspire your connection as much as generosity. By thoughtfully bringing together your charitable organizations, businesses, artists, sponsors, volunteers, and communities, we create experiences that celebrate purpose, encourage collaboration, and help build sustainable support for causes that create lasting social impact.',
+        'Celebration has the power to strengthen communities.',
+        'We believe fundraising should inspire connection as much as generosity. By thoughtfully bringing together charitable organizations, businesses, artists, sponsors, volunteers, and communities, we create experiences that celebrate purpose, encourage collaboration, and help build sustainable support for causes that create lasting social impact.',
       ],
     },
   ],
@@ -182,22 +182,20 @@ export const portfolio = {
   ],
   /**
    * Public reviews, copied verbatim from the Google Business listing on
-   * 2026-09-08 (5.0 from 12 reviews). `year` is derived from Google's relative
+   * 2026-09-08 (5.0 from 12 reviews), chosen for endorsement and readability
+   * together; none is edited. `year` is derived from Google's relative
    * date on that day ("a year ago" → 2025). Facebook reviews slot into the same
    * array with `source: 'facebook'`.
    */
   reviews: [
     {
-      slug: 'google-hannah-yu',
+      slug: 'google-sheena-barbour',
       source: 'google',
-      name: 'Hannah Yu',
-      year: 2025,
+      name: 'Sheena Barbour',
+      year: 2023,
       stars: 5,
       quote: [
-        'Wow I don\'t even know where to start, what a fantastic company!! Our wedding day was more perfect  than we could of imagined and it is all because of Lynea and her team.',
-        'They took our vision and made it a reality and we could not be anymore grateful for everything they done. we truly felt like guest at our own wedding and from the moment we started working with her every ounce of stress was lifted.',
-        'Even when bad weather hit they turned our ceremony from outdoors to indoors without a hiccup.',
-        'If you need a co-ordinator, a wedding planner or any other type of event I could not recommend Sol Vé enough. 10000/10 thank you so much',
+        'Lynea was an absolute pleasure to work with. After planning her clients wedding together I felt like she was a new friend. She\'s very professional and so easy to work with. Highly recommend!',
       ],
     },
     {
@@ -301,11 +299,11 @@ export const foundation = {
   way: {
     title: 'The Sol Vé Way',
     body: [
-      'We design how you gather because of the belief that the way you come together shapes everything that follows.',
+      'We design how you gather because we believe the way you come together shapes everything that follows.',
       'Your gathering is entrusted to us with purpose. Whether you are celebrating a milestone, strengthening a relationship, advancing an idea, supporting a community, or convening leaders to address the world’s most pressing challenges, we recognize that what happens within those moments has the potential to extend far beyond the occasion itself.',
       'That responsibility shapes the way we work.',
-      'We approach your experience as stewards of the moments and memories you entrusted to us. Through thoughtful design, genuine hospitality, careful craftsmanship, and intentional collaboration, we create environments where you and your guests feel welcomed, valued, and inspired to be fully present.',
-      'The most meaningful experiences are never measured solely by their beauty or complexity. They are measured by the connections you strengthen, the conversations inspired, and the lasting impact they have on all your guests who share them.',
+      'We approach your experience as stewards of the moments and memories you entrusted to us. Through thoughtful design, genuine hospitality, careful craftsmanship, and intentional collaboration, we create environments where people feel welcomed, valued, and inspired to be fully present.',
+      'The most meaningful experiences are never measured solely by their beauty or complexity. They are measured by the connections you strengthen, the conversations inspired, and the lasting impact they have on everyone who shares them.',
       'This is the standard that guides every decision made, every relationship built, and every experience we are privileged to create.',
     ],
     close: 'This is the Sol Vé Way.',
@@ -324,8 +322,8 @@ export const foundation = {
     ],
     couplets: [
       ['Beauty is never the destination.', 'It is your invitation.'],
-      ['Hospitality is never a service.', 'It is how you and your guests know you belong.'],
-      ['Design is never decoration.', 'It is the intentional creation of your experiences that reflect purpose, strengthen connection, and create the conditions for what comes next.'],
+      ['Hospitality is never a service.', 'It is how people know they belong.'],
+      ['Design is never decoration.', 'It is the intentional creation of experiences that reflect purpose, strengthen connection, and create the conditions for what comes next.'],
     ],
     close: [
       'Whether welcoming two families into one, bringing your communities together around a shared purpose, or convening leaders to address global challenges, our role remains the same: to thoughtfully design how you gather so that what follows is worthy of why you came together in the first place.',
@@ -400,7 +398,7 @@ export const commitments = {
         'From the very beginning, Sol Vé has been founded on a simple belief: belonging is for all. That belief continues to guide every experience we create, every relationship we build, and every space we are entrusted to design.',
         'We proudly stand alongside Two-Spirit (an identity recognized by some Indigenous Peoples in North America), Lesbian, Gay, Bisexual, Transgender, Queer and/or Questioning, Intersex, Asexual, and all sexually and gender-diverse communities (2SLGBTQIA+), people with disabilities, Indigenous Peoples, and people of every culture, ethnicity, heritage, nationality, language, and lived experience. Every person deserves the opportunity to live, work, celebrate, and gather with dignity, respect, equal opportunity, and a genuine sense of belonging.',
         'Inclusivity, equality, dignity, respect, and love are not simply values we speak about: they are commitments we strive to demonstrate through our actions, our partnerships, and every experience we create.',
-        'Sol Vé Custom Events emphatically affirms our unwavering support for Two-Spirit, Lesbian, Gay, Bisexual, Transgender, Queer and/or Questioning, Intersex, Asexual, and all sexually and gender-diverse communities (2SLGBTQIA+). We are equally committed to creating welcoming, respectful, accessible, inclusive, and psychologically safe environments for people of every ability, disability, culture, ethnicity, heritage, nationality, language, identity, faith, age, family structure, socioeconomic background, and lived experience, together with their families, friends, colleagues, and allies.',
+        'Sol Vé Custom Events emphatically affirms its unwavering support for Two-Spirit, Lesbian, Gay, Bisexual, Transgender, Queer and/or Questioning, Intersex, Asexual, and all sexually and gender-diverse communities (2SLGBTQIA+). We are equally committed to creating welcoming, respectful, accessible, inclusive, and psychologically safe environments for people of every ability, disability, culture, ethnicity, heritage, nationality, language, identity, faith, age, family structure, socioeconomic background, and lived experience, together with their families, friends, colleagues, and allies.',
         'While meaningful progress continues to be made, prejudice, discrimination, harassment, exclusion, and systemic barriers still affect many individuals and communities. We reject discrimination in all its forms and are committed to creating experiences where diversity is celebrated, barriers are thoughtfully reduced wherever reasonably possible, and every individual feels seen, heard, respected, valued, welcomed, and free to be their authentic self.',
         'Accessibility, inclusion, and belonging are never afterthoughts: they are thoughtfully considered from the very beginning of every experience we create. We continually seek opportunities to identify and reduce barriers so that more people can participate fully, comfortably, and with dignity.',
         'We are equally committed to building lasting relationships with like-minded individuals, businesses, organizations, artists, community groups, and partners who share our belief that kindness, collaboration, equity, accessibility, and mutual respect create stronger experiences for everyone.',

@@ -4,7 +4,7 @@ import { ChevronDown, Mail, Phone } from 'lucide-react'
 import Logo from './Logo'
 import { FacebookIcon, InstagramIcon, LinkedInIcon } from './BrandIcons'
 import { GoldRule, Ornament } from './primitives'
-import { contact, cta, divisionNav, header, navigation, socials } from '../data/site'
+import { contact, cta, header, navigation, socials, type NavItem } from '../data/site'
 
 /**
  * Computed rather than listed — a hard-coded array ran out at VIII the moment a
@@ -56,6 +56,9 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const closeTimer = useRef<number | undefined>(undefined)
   const { pathname } = useLocation()
+  /** A bar item lights up on its own page and on any page in its dropdown. */
+  const isActive = (item: NavItem) =>
+    pathname === item.to || (item.children ?? []).some((c) => c.to.split('#')[0] === pathname)
 
   useEffect(() => {
     setOpen(false)
@@ -109,6 +112,22 @@ export default function Nav() {
               <Logo />
             </Link>
 
+            <div className="flex items-center gap-5 md:gap-7">
+              {/* The enquiry never leaves the masthead on desktop; the phone sits beside it. */}
+              <a
+                href={contact.phoneHref}
+                className="hidden font-ui text-[12px] text-espresso transition-colors duration-300 hover:text-gold lg:inline"
+                style={{ letterSpacing: '0.06em' }}
+              >
+                {contact.phone}
+              </a>
+              <Link
+                to="/connect"
+                className="hidden items-center rounded-[2px] bg-gold px-5 py-3 font-ui text-[11px] font-semibold uppercase text-ivory transition-colors duration-300 hover:bg-bronze md:inline-flex"
+                style={{ letterSpacing: '0.12em' }}
+              >
+                {cta.primary}
+              </Link>
             <button
               type="button"
               onClick={() => setOpen(true)}
@@ -129,10 +148,11 @@ export default function Nav() {
                 <span className="my-[7px] block h-[1.5px] w-full bg-current" />
               </span>
             </button>
+            </div>
           </div>
           {/*
-            The client's six header sections, each with a dropdown. Desktop
-            only; the full-screen menu carries everything at narrow widths.
+            Six groups in the buyer's words, each with a dropdown. Desktop only;
+            the full-screen menu carries everything at narrow widths.
           */}
           <nav
             aria-label="Sections"
@@ -151,7 +171,7 @@ export default function Nav() {
                     onFocus={() => hoverOpen(item.label)}
                     aria-expanded={openMenu === item.label}
                     className={`flex items-center gap-1.5 px-4 py-4 font-ui text-[11px] uppercase transition-colors duration-300 xl:text-[12px] ${
-                      pathname.startsWith(item.to) ? 'text-gold' : 'text-charcoal hover:text-gold'
+                      isActive(item) ? 'text-gold' : 'text-charcoal hover:text-gold'
                     }`}
                     style={{ letterSpacing: '0.18em' }}
                   >
@@ -165,7 +185,7 @@ export default function Nav() {
                   </Link>
 
                   <div
-                    className={`absolute left-1/2 top-full z-50 w-[300px] -translate-x-1/2 transition-all duration-300 ${
+                    className={`absolute left-1/2 top-full z-50 w-[380px] -translate-x-1/2 transition-all duration-300 ${
                       openMenu === item.label
                         ? 'pointer-events-auto translate-y-0 opacity-100'
                         : 'pointer-events-none -translate-y-2 opacity-0'
@@ -292,39 +312,17 @@ export default function Nav() {
                 <Ornament tone="light" />
               </div>
 
-              <p
-                className="font-ui text-[11px] uppercase text-stone"
-                style={{ letterSpacing: '0.3em' }}
-              >
-                Six Divisions
-              </p>
-              <ul className="mt-4 space-y-2.5">
-                {divisionNav.map((division) => (
-                  <li key={division.to}>
-                    <Link
-                      to={division.to}
-                      className="font-body text-[17px] text-champagne transition-colors duration-300 hover:text-gold md:text-[19px]"
-                    >
-                      {division.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="my-7">
-                <Ornament tone="light" />
-              </div>
-
               {/*
-                The six header sections with their dropdown pages. The header
-                bar is hidden below lg and hover never fires on touch, so this
-                is where phones and tablets reach every dropdown destination.
+                The six groups from the bar, each opening to its pages. The bar
+                is hidden below lg and hover never fires on touch, so this is
+                where phones and tablets reach every dropdown destination —
+                listed once, not three times.
               */}
               <p
                 className="font-ui text-[11px] uppercase text-stone"
                 style={{ letterSpacing: '0.3em' }}
               >
-                Sections
+                Explore
               </p>
               <ul className="mt-4">
                 {header.map((item) => (

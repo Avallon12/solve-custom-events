@@ -1,5 +1,3 @@
-import { portfolio } from './content'
-
 /**
  * Single source of truth for navigation, contact details and social links.
  *
@@ -14,7 +12,7 @@ import { portfolio } from './content'
 
 export const contact = {
   email: 'info@solvecustomevents.com',
-  phone: '1-587-582-3853',
+  phone: '+1 587 582 3853',
   phoneHref: 'tel:+15875823853',
   location: 'Calgary, Alberta, Canada',
   serving: 'Serving clients throughout Canada and internationally.',
@@ -57,9 +55,10 @@ export type NavChild = { label: string; to: string }
 export type NavItem = { label: string; to: string; children?: NavChild[] }
 
 /**
- * The header, as the client specified: Service Capabilities, Divisions,
- * Commitments, Perspectives, Features and Testimonials — each with a dropdown.
- * Every child below is a heading from her own documents; nothing is invented.
+ * The desktop bar, organised around what a prospective client is looking for
+ * (September 2026 refinement): Experiences, How We Work, About, Work,
+ * Perspectives, Commitments. Every child is one of her pages or a heading from
+ * her documents; the full-screen menu still carries her twelve in her order.
  */
 export const divisionNav: NavChild[] = [
   { label: 'Weddings', to: '/divisions/weddings' },
@@ -72,7 +71,12 @@ export const divisionNav: NavChild[] = [
 
 export const header: NavItem[] = [
   {
-    label: 'Service Capabilities',
+    label: 'Experiences',
+    to: '/divisions',
+    children: [{ label: 'What We Create', to: '/what-we-create' }, ...divisionNav],
+  },
+  {
+    label: 'How We Work',
     to: '/service-capabilities',
     children: [
       { label: 'Consultation & Strategy', to: '/service-capabilities#consultation-strategy' },
@@ -84,15 +88,25 @@ export const header: NavItem[] = [
       },
     ],
   },
-  { label: 'Divisions', to: '/divisions', children: divisionNav },
   {
-    label: 'Commitments',
-    to: '/commitments',
+    label: 'About',
+    to: '/foundation',
     children: [
-      { label: 'Reconciliation & Land Acknowledgement', to: '/commitments#reconciliation' },
-      { label: 'Belonging for All', to: '/commitments#inclusion' },
-      { label: 'Environmental Responsibility', to: '/commitments#conservation' },
-      { label: 'Community Impact', to: '/commitments#community' },
+      { label: 'Foundation', to: '/foundation' },
+      { label: 'The Sol Vé Way', to: '/the-sol-ve-way' },
+      { label: 'Beyond the Occasion', to: '/beyond-the-occasion' },
+      { label: 'Sol Vé Principles', to: '/principles' },
+      { label: 'Where It Began', to: '/where-it-began' },
+      { label: 'Meet the Founder', to: '/founder' },
+    ],
+  },
+  {
+    label: 'Work',
+    to: '/portfolio',
+    children: [
+      { label: 'Portfolio & Journal', to: '/portfolio' },
+      { label: 'Features & Press', to: '/features' },
+      { label: 'Client Voices', to: '/testimonials' },
     ],
   },
   {
@@ -115,25 +129,13 @@ export const header: NavItem[] = [
     ],
   },
   {
-    label: 'Features',
-    to: '/features',
+    label: 'Commitments',
+    to: '/commitments',
     children: [
-      { label: 'AVOLA Magazine', to: '/features#avola-magazine' },
-      { label: 'REDTV Canada', to: '/features#redtv-canada' },
-      { label: 'Bridal Fantasy', to: '/features#bridal-fantasy' },
-      { label: 'Dancing With Her', to: '/features#dancing-with-her' },
-      { label: "Men's Vow Magazine", to: '/features#men-s-vow-magazine' },
-    ],
-  },
-  {
-    label: 'Testimonials',
-    to: '/testimonials',
-    children: [
-      ...portfolio.testimonials.map((voice) => ({
-        label: voice.name,
-        to: `/testimonials#${voice.slug}`,
-      })),
-      { label: 'Reviews', to: '/testimonials#reviews' },
+      { label: 'Reconciliation & Land Acknowledgement', to: '/commitments#reconciliation' },
+      { label: 'Belonging for All', to: '/commitments#inclusion' },
+      { label: 'Environmental Responsibility', to: '/commitments#conservation' },
+      { label: 'Community Impact', to: '/commitments#community' },
     ],
   },
 ]
@@ -152,9 +154,9 @@ export const navigation: NavItem[] = [
   { label: 'What We Create', to: '/what-we-create' },
   { label: 'Signature Experiences', to: '/divisions' },
   { label: 'Meet the Founder', to: '/founder' },
-  { label: 'Portfolio / Journal', to: '/portfolio' },
+  { label: 'Portfolio & Journal', to: '/portfolio' },
   { label: 'Connect', to: '/connect' },
-  { label: 'FAQ', to: '/faq' },
+  // FAQ returns to the menu when Lynea supplies its content; the route stays, noindex.
 ]
 
 /** Wording approved in the Manual, Chapter 4.1 — never invent new CTA copy. */

@@ -36,7 +36,7 @@ export default function WhereItBegan() {
         </Container>
       </Section>
 
-      <ClosingCTA />
+      <ClosingCTA explore />
     </>
   )
 }

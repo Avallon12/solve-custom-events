@@ -61,8 +61,14 @@ export default function Features() {
                   {feature.name === 'Bridal Fantasy' ? (
                     // Magazine pages keep their own proportions — nothing is cropped.
                     <div className="mt-8 grid gap-6 sm:grid-cols-2">
-                      {FEATURE_GALLERIES[feature.name].map((id) => (
-                        <Media key={id} id={id} showCaption={false} className="w-full" />
+                      {FEATURE_GALLERIES[feature.name].map((id, i, all) => (
+                        <Media
+                          key={id}
+                          id={id}
+                          showCaption={false}
+                          // An odd last page spans the row rather than leaving a gap beside it.
+                          className={`w-full ${i === all.length - 1 && all.length % 2 === 1 ? 'sm:col-span-2' : ''}`}
+                        />
                       ))}
                     </div>
                   ) : FEATURE_GALLERIES[feature.name] ? (

@@ -14,7 +14,6 @@ export const ROUTES: readonly string[] = [
   '/principles',
   '/where-it-began',
   '/what-we-create',
-  '/signature-experiences',
   '/service-capabilities',
   '/divisions',
   ...experiences.map((e) => `/divisions/${e.slug}`),

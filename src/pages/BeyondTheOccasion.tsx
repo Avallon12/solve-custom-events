@@ -61,7 +61,7 @@ export default function BeyondTheOccasion() {
         </Container>
       </Section>
 
-      <ClosingCTA />
+      <ClosingCTA explore />
     </>
   )
 }

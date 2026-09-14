@@ -127,7 +127,7 @@ function extras(pathname: string) {
       headline: essay.title,
       description: essay.standfirst,
       url: `${url}#${essay.slug}`,
-      author: { '@id': ORG_ID },
+      author: { '@type': 'Person', name: FOUNDER, jobTitle: 'Founder', url: `${SITE_URL}/founder` },
       publisher: { '@id': ORG_ID },
       inLanguage: 'en-CA',
     }))

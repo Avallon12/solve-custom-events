@@ -31,10 +31,10 @@ export default function Portfolio() {
     <>
       <Hero
         size="page"
-        eyebrow="Portfolio / Journal"
+        eyebrow="Portfolio & Journal"
         headline={
           <>
-            Portfolio and <Accent>Perspectives.</Accent>
+            Portfolio & <Accent>Journal.</Accent>
           </>
         }
         media="portfolio-hero"

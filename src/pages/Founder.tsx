@@ -116,7 +116,7 @@ export default function Founder() {
         </Container>
       </Section>
 
-      <ClosingCTA />
+      <ClosingCTA explore />
     </>
   )
 }

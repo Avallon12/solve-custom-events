@@ -39,7 +39,7 @@ export default function SolVeWay() {
         </Container>
       </Section>
 
-      <ClosingCTA />
+      <ClosingCTA explore />
     </>
   )
 }

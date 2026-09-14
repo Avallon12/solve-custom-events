@@ -25,7 +25,7 @@ export default function ContactRail() {
 
   return (
     <div
-      className={`fixed inset-x-4 bottom-4 z-40 transition-all duration-500 md:inset-x-auto md:bottom-8 md:right-8 ${
+      className={`fixed inset-x-4 bottom-4 z-40 transition-all duration-500 md:inset-x-auto md:bottom-8 md:right-8 lg:hidden ${
         visible ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-4 opacity-0'
       }`}
     >

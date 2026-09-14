@@ -6,6 +6,9 @@ import { perspectives } from '../data/content'
 import { usePageMeta } from '../lib/meta'
 
 /** "Perspectives" — the essays, word for word. */
+/** The essays are written in the first person; they are the founder's. */
+const ESSAY_AUTHOR = 'Lynea Vaugeois Hetherington, Founder'
+
 export default function Perspectives() {
   usePageMeta(
     'Perspectives | Sol Vé Custom Events',
@@ -25,6 +28,12 @@ export default function Perspectives() {
                   <Display as="h2" size="lg" className="text-charcoal">
                     {essay.title}
                   </Display>
+                  <p
+                    className="mt-4 font-ui text-[11px] uppercase text-walnut"
+                    style={{ letterSpacing: '0.22em' }}
+                  >
+                    {ESSAY_AUTHOR}
+                  </p>
 
                   <div className="prose-solve mt-9 text-espresso">
                     {essay.body.map((paragraph) => (

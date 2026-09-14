@@ -1,4 +1,5 @@
 import { Btn, Container, Display, Eyebrow, Ornament, Reveal } from './primitives'
+import { cta as approved } from '../data/site'
 
 /**
  * The last thing on every page. Lynea asked for a contact route that is
@@ -8,12 +9,15 @@ export default function ClosingCTA({
   eyebrow = 'Begin the conversation',
   heading = 'Tell us what you are building.',
   body = 'Every extraordinary event begins with a conversation. Tell us your vision and we will tell you what is possible.',
-  cta = 'Begin the Conversation',
+  cta = approved.primary,
+  explore = false,
 }: {
   eyebrow?: string
   heading?: string
   body?: string | readonly string[]
   cta?: string
+  /** On the philosophy pages: a second, quieter route to the six experiences. */
+  explore?: boolean
 }) {
   const lines = typeof body === 'string' ? [body] : body
   return (
@@ -29,8 +33,13 @@ export default function ClosingCTA({
               <p key={line}>{line}</p>
             ))}
           </div>
-          <div className="mt-9">
+          <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
             <Btn to="/connect">{cta}</Btn>
+            {explore && (
+              <Btn to="/divisions" variant="outline">
+                {approved.secondary}
+              </Btn>
+            )}
           </div>
           <div className="mt-12 w-full max-w-sm">
             <Ornament />

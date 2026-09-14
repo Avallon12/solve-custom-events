@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/signature-experiences",
+      "destination": "/divisions",
+      "permanent": true
+    },
+    {
       "source": "/about",
       "destination": "/founder",
       "permanent": true

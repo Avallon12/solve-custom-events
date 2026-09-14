@@ -132,7 +132,8 @@ export const capFullExperienceGallery: readonly MediaId[] = [
 ]
 
 export const featureBridalFantasyGallery: readonly MediaId[] = [
-  'feature-bridal-fantasy-1', 'feature-bridal-fantasy-2', 'feat-001', 'feat-002', 'feat-003', 'feat-004',
+  // feat-004 was the same open spread as feat-003 from a second angle; one is enough.
+  'feature-bridal-fantasy-1', 'feature-bridal-fantasy-2', 'feat-001', 'feat-002', 'feat-003',
 ]
 
 export const featureDancingWithHerGallery: readonly MediaId[] = [

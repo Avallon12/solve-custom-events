@@ -10,7 +10,7 @@ import { usePageMeta } from '../lib/meta'
 /** "Signature Experiences" intro and the six divisions, word for word. */
 export default function Divisions() {
   usePageMeta(
-    'Divisions | Sol Vé Custom Events',
+    'Signature Experiences | Sol Vé Custom Events',
     'The six divisions of Sol Vé Custom Events: weddings, signature moments, design and stylization, workshops, conferences and international events, and fundraising campaign events.',
   )
 

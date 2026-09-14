@@ -77,8 +77,13 @@ export default function Testimonials() {
         media="testimonials-hero"
       />
 
-      <Section tone="ivory" rule>
+      <Section tone="ivory" id="partners" rule>
         <Container width="narrow">
+          {/* The four are partners, collaborators and community leaders, and are labelled so;
+              client voices follow in their own words below. */}
+          <Reveal className="mb-12 md:mb-16">
+            <Eyebrow>Partners &amp; Collaborators</Eyebrow>
+          </Reveal>
           <div className="flex flex-col gap-14 md:gap-20">
             {portfolio.testimonials.map((voice, i) => (
               <Reveal key={voice.slug}>
@@ -121,7 +126,7 @@ export default function Testimonials() {
       <Section tone="linen" id="reviews" rule>
         <Container>
           <Reveal>
-            <Eyebrow>Reviews</Eyebrow>
+            <Eyebrow>Client Reviews</Eyebrow>
           </Reveal>
           {/* Each card reveals on its own: one wrapper around all eight would be
               taller than a phone viewport and never cross the threshold. */}

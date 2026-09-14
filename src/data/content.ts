@@ -24,13 +24,15 @@ export const home = {
 
 /** "What We Create" — verbatim, in the document's order. */
 export const whatWeCreate = {
+  // Lynea, 2026-09-14: the repeated "Some" is gone; each line now answers the
+  // hero's "Every gathering begins with a different purpose."
   purposes: [
-    'Some celebrate your love.',
-    'Some honour your life-defining moments or those of someone you love.',
-    'Some inspire learning, creativity, and personal growth.',
-    'Some strengthen your organizations and teams.',
-    'Some unite our communities around a shared cause.',
-    'Others bring together leaders to shape meaningful change.',
+    'To celebrate your love.',
+    'To honour your life-defining moments or those of someone you love.',
+    'To inspire learning, creativity, and personal growth.',
+    'To strengthen your organizations and teams.',
+    'To unite our communities around a shared cause.',
+    'To bring together leaders to shape meaningful change.',
   ],
   lead: 'While every experience is unique, each is guided by the same belief:',
   belief:

@@ -7,39 +7,45 @@ import type { MediaId } from './media'
  * sheet of paperwork). Phone screenshots are cropped to their photograph.
  */
 
+// Weddings — every photograph in her folder, ordered so the ballroom, the cultures and the couples of every kind lead; the same-sex couples are hers too, from the features folders.
 export const weddingsGallery: readonly MediaId[] = [
+  'wed-097', 'wed-107', 'wed-108', 'wed-110', 'wed-111', 'wed-112',
+  'wed-101', 'wed-098', 'wed-099', 'wed-100', 'wed-102', 'wed-103',
+  'wed-104', 'wed-105', 'wed-106', 'wed-109', 'wed-128', 'wed-129',
+  'wed-130', 'wed-131', 'wed-132', 'wed-133', 'dwh-002', 'fem-001',
+  'mv-009', 'mv-002', 'design-030', 'design-033', 'wed-063', 'wed-058',
+  'wed-057', 'wed-049', 'wed-050', 'wed-051', 'wed-052', 'wed-053',
+  'wed-054', 'wed-055', 'wed-056', 'wed-059', 'wed-060', 'wed-061',
+  'wed-062', 'wed-064', 'wed-065', 'wed-066', 'wed-067', 'wed-068',
+  'wed-069', 'wed-070', 'wed-071', 'wed-072', 'wed-089', 'wed-090',
+  'wed-091', 'wed-092', 'wed-093', 'wed-094', 'wed-095', 'wed-096',
+  'wed-081', 'wed-082', 'wed-083', 'wed-084', 'wed-085', 'wed-086',
+  'wed-087', 'wed-088', 'wed-142', 'wed-143', 'wed-145', 'wed-146',
+  'wed-134', 'wed-135', 'wed-136', 'wed-137', 'wed-138', 'wed-139',
+  'wed-140', 'wed-141', 'wed-037', 'wed-113', 'wed-114', 'wed-115',
+  'wed-116', 'wed-040', 'wed-041', 'wed-042', 'wed-043', 'wed-044',
+  'wed-045', 'wed-046', 'wed-047', 'wed-048', 'wed-035', 'wed-036',
+  'wed-038', 'wed-039', 'wed-073', 'wed-074', 'wed-075', 'wed-076',
+  'wed-077', 'wed-078', 'wed-079', 'wed-080', 'wed-117', 'wed-118',
+  'wed-119', 'wed-120', 'wed-121', 'wed-122', 'wed-123', 'wed-124',
+  'wed-125', 'wed-126', 'wed-127', 'wed-148', 'wed-144', 'wed-147',
   'wed-001', 'wed-002', 'wed-003', 'wed-004', 'wed-005', 'wed-006',
   'wed-007', 'wed-008', 'wed-009', 'wed-010', 'wed-011', 'wed-012',
   'wed-013', 'wed-014', 'wed-015', 'wed-016', 'wed-017', 'wed-018',
   'wed-019', 'wed-020', 'wed-021', 'wed-022', 'wed-023', 'wed-024',
   'wed-025', 'wed-026', 'wed-027', 'wed-028', 'wed-029', 'wed-030',
-  'wed-031', 'wed-032', 'wed-033', 'wed-034', 'wed-035', 'wed-036',
-  'wed-037', 'wed-038', 'wed-039', 'wed-040', 'wed-041', 'wed-042',
-  'wed-043', 'wed-044', 'wed-045', 'wed-046', 'wed-047', 'wed-048',
-  'wed-049', 'wed-050', 'wed-051', 'wed-052', 'wed-053', 'wed-054',
-  'wed-055', 'wed-056', 'wed-057', 'wed-058', 'wed-059', 'wed-060',
-  'wed-061', 'wed-062', 'wed-063', 'wed-064', 'wed-065', 'wed-066',
-  'wed-067', 'wed-068', 'wed-069', 'wed-070', 'wed-071', 'wed-072',
-  'wed-073', 'wed-074', 'wed-075', 'wed-076', 'wed-077', 'wed-078',
-  'wed-079', 'wed-080', 'wed-081', 'wed-082', 'wed-083', 'wed-084',
-  'wed-085', 'wed-086', 'wed-087', 'wed-088', 'wed-089', 'wed-090',
-  'wed-091', 'wed-092', 'wed-093', 'wed-094', 'wed-095', 'wed-096',
-  'wed-097', 'wed-098', 'wed-099', 'wed-100', 'wed-101', 'wed-102',
-  'wed-103', 'wed-104', 'wed-105', 'wed-106', 'wed-107', 'wed-108',
-  'wed-109', 'wed-110', 'wed-111', 'wed-112', 'wed-113', 'wed-114',
-  'wed-115', 'wed-116', 'wed-117', 'wed-118', 'wed-119', 'wed-120',
-  'wed-121', 'wed-122', 'wed-123', 'wed-124', 'wed-125', 'wed-126',
-  'wed-127', 'wed-128', 'wed-129', 'wed-130', 'wed-131', 'wed-132',
-  'wed-133', 'wed-134', 'wed-135', 'wed-136', 'wed-137', 'wed-138',
-  'wed-139', 'wed-140', 'wed-141', 'wed-142', 'wed-143', 'wed-144',
-  'wed-145', 'wed-146', 'wed-147', 'wed-148',
+  'wed-031', 'wed-032', 'wed-033', 'wed-034',
 ]
 
+// Signature Moments — a milestone gown, celebrations across generations, a proposal, then her bridal-party folder.
 export const signatureMomentsGallery: readonly MediaId[] = [
-  'sig-001', 'sig-002', 'sig-003', 'sig-004', 'sig-005', 'sig-006',
-  'sig-007', 'sig-008', 'sig-009', 'sig-010', 'sig-011', 'sig-012',
-  'sig-013', 'sig-014', 'sig-015', 'sig-016', 'sig-017', 'sig-018',
-  'sig-019', 'sig-020', 'sig-021', 'sig-022',
+  'intl-004', 'intl-003', 'home-001', 'home-009', 'home-006', 'fund-049',
+  'fund-050', 'sig-003', 'sig-004', 'sig-005', 'sig-006', 'sig-007',
+  'sig-008', 'sig-009', 'sig-010', 'intl-021', 'intl-023', 'intl-027',
+  'intl-013', 'intl-014', 'intl-015', 'intl-016', 'intl-017', 'intl-018',
+  'intl-024', 'intl-025', 'intl-026', 'sig-001', 'sig-002', 'sig-011',
+  'sig-012', 'sig-013', 'sig-014', 'sig-015', 'sig-016', 'sig-017',
+  'sig-018', 'sig-019', 'sig-020', 'sig-021', 'sig-022',
 ]
 
 export const designStylizationGallery: readonly MediaId[] = [
@@ -83,13 +89,12 @@ export const workshopsGallery: readonly MediaId[] = [
   'work-007', 'work-008', 'work-009', 'work-010', 'work-011',
 ]
 
+// Conferences — people convening first, then the venues. Still thin: photographs of delegates, roundtables and sessions are the one thing this page needs from Lynea.
 export const conferencesGallery: readonly MediaId[] = [
-  'conf-001', 'conf-002', 'conf-003', 'conf-004', 'conf-005', 'conf-006',
-  'conf-007', 'conf-008', 'conf-009', 'intl-001', 'intl-002', 'intl-003',
-  'intl-004', 'intl-005', 'intl-006', 'intl-007', 'intl-008', 'intl-009',
-  'intl-010', 'intl-011', 'intl-012', 'intl-013', 'intl-014', 'intl-015',
-  'intl-016', 'intl-017', 'intl-018', 'intl-019', 'intl-020', 'intl-021',
-  'intl-022', 'intl-023', 'intl-024', 'intl-025', 'intl-026', 'intl-027',
+  'work-005', 'conf-009', 'conf-002', 'conf-007', 'conf-006', 'conf-008',
+  'fund-014', 'intl-005', 'intl-002', 'conf-001', 'conf-004', 'conf-005',
+  'conf-003', 'intl-001', 'intl-008', 'intl-009', 'intl-010', 'intl-011',
+  'intl-012', 'intl-019', 'intl-020', 'intl-022', 'intl-006', 'intl-007',
 ]
 
 export const fundraisingGallery: readonly MediaId[] = [
@@ -156,7 +161,8 @@ export const portfolioGallery: readonly MediaId[] = [
 ]
 
 export const homeStrip: readonly MediaId[] = [
-  'wed-049', 'sig-010', 'design-135', 'work-009', 'intl-021', 'fem-013',
+  // In divisionNav order: Weddings, Signature Moments, Design, Workshops, Conferences, Fundraising.
+  'wed-107', 'home-001', 'design-135', 'work-009', 'work-005', 'fund-042',
 ]
 
 export const homeFrames: readonly MediaId[] = [

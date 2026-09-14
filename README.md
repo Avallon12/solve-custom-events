@@ -192,8 +192,26 @@ the six divisions are untouched.
   One Google review with errors was swapped for a clean one; none is edited.
 - **Perspectives** carry a byline (confirm authorship with Lynea).
 - **Connect** explains what happens after an enquiry.
+- **Photography, 14 September (Lynea's brief: everyone should see themselves).**
+  The library already held what was needed; the ordering and slot choices did
+  not show it. Weddings now leads with the white-ballroom wedding (guests in
+  hijabs, dabke dancers), the red wedding, and same-sex couples from the
+  features folders, with the single ski elopement last. Signature Moments
+  leads with a milestone gown, celebrations across generations and a proposal
+  before the bridal-party set. Conferences leads with the panel and the set
+  banquet; the proposal and milestone photographs that were filed under it
+  moved to Signature Moments. Home tiles now match their labels (the Conferences
+  tile is the speakers' panel, not a gazebo; Fundraising is the masquerade, not
+  wedding dresses). Hero slots: `division-weddings` → wed-097,
+  `division-signature-moments` → intl-004, `division-conferences` → work-005,
+  `experiences-hero` → fund-016. Every file in `public/media` is still on a page.
+- **What We Create** lists purposes as "To celebrate…", "To honour…", at her
+  request, instead of six lines beginning "Some".
+- **Breadcrumb** (Home › group › page) on every inner-page hero so a phone,
+  where the bar is hidden, always has a way back.
 - Still open: case studies (needs her material), conference photography of
-  people convening, FAQ content, Facebook reviews, a form endpoint.
+  people convening (the library has one panel and no delegates), FAQ content,
+  Facebook reviews, a form endpoint.
 
 ## SEO
 

@@ -1,8 +1,51 @@
 import type { ReactNode } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import Media from './Media'
 import { Container, Eyebrow } from './primitives'
 import { media as registry, type MediaId, type MediaSlot } from '../data/media'
 import { registerHeroImage } from '../lib/meta'
+import { header } from '../data/site'
+
+/**
+ * Home › group › page, from the same six groups as the bar. On a phone this is
+ * the way back that the hidden bar cannot provide; on desktop it is quiet.
+ */
+function Breadcrumb({ current }: { current: string }) {
+  const { pathname } = useLocation()
+  const group = header.find((item) => item.to === pathname)
+  const parent = group
+    ? undefined
+    : header.find((item) => item.children?.some((c) => c.to.split('#')[0] === pathname))
+  const label = group
+    ? group.label
+    : parent?.children?.find((c) => c.to.split('#')[0] === pathname)?.label ?? current
+  const trail: { label: string; to?: string }[] = [{ label: 'Home', to: '/' }]
+  if (parent) trail.push({ label: parent.label, to: parent.to })
+  trail.push({ label })
+  return (
+    <nav aria-label="Breadcrumb" className="mb-6">
+      <ol
+        className="flex flex-wrap items-center gap-x-2 gap-y-1 font-ui text-[10px] uppercase text-champagne/75 md:text-[11px]"
+        style={{ letterSpacing: '0.22em' }}
+      >
+        {trail.map((crumb, i) => (
+          <li key={crumb.label} className="flex items-center gap-x-2">
+            {i > 0 && <span aria-hidden="true" className="text-gold/70">›</span>}
+            {crumb.to ? (
+              <Link to={crumb.to} className="transition-colors duration-300 hover:text-ivory">
+                {crumb.label}
+              </Link>
+            ) : (
+              <span aria-current="page" className="text-champagne">
+                {crumb.label}
+              </span>
+            )}
+          </li>
+        ))}
+      </ol>
+    </nav>
+  )
+}
 
 /**
  * Hero.
@@ -68,6 +111,7 @@ export default function Hero({
 
       <Container className="relative">
         <div className={full ? 'flex flex-col items-center text-center' : 'max-w-[860px]'}>
+          {!full && <Breadcrumb current={typeof headline === 'string' ? headline : eyebrow} />}
           <Eyebrow tone="light">{eyebrow}</Eyebrow>
 
           <h1

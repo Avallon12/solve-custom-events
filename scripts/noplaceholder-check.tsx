@@ -21,10 +21,10 @@ import WhatWeCreate from '../src/pages/WhatWeCreate'
 import Founder from '../src/pages/Founder'
 import Portfolio from '../src/pages/Portfolio'
 import Connect from '../src/pages/Connect'
-import FAQ from '../src/pages/FAQ'
+import CaseStudy from '../src/pages/CaseStudy'
 import NotFound from '../src/pages/NotFound'
 
-const ROUTES = ['/', '/foundation', '/the-sol-ve-way', '/beyond-the-occasion', '/commitments', '/principles', '/where-it-began', '/what-we-create', '/service-capabilities', '/divisions', ...experiences.map((e) => `/divisions/${e.slug}`), '/perspectives', '/features', '/testimonials', '/founder', '/portfolio', '/connect', '/faq']
+const ROUTES = ['/', '/foundation', '/the-sol-ve-way', '/beyond-the-occasion', '/commitments', '/principles', '/where-it-began', '/what-we-create', '/service-capabilities', '/divisions', ...experiences.map((e) => `/divisions/${e.slug}`), '/perspectives', '/features', '/testimonials', '/founder', '/portfolio', '/portfolio/present-in-the-moment', '/connect']
 
 function Tree({ path }: { path: string }) {
   return (
@@ -47,8 +47,8 @@ function Tree({ path }: { path: string }) {
         <Route path="/what-we-create" element={<WhatWeCreate />} />
         <Route path="/founder" element={<Founder />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/portfolio/:slug" element={<CaseStudy />} />
         <Route path="/connect" element={<Connect />} />
-        <Route path="/faq" element={<FAQ />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

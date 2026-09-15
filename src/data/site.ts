@@ -105,6 +105,7 @@ export const header: NavItem[] = [
     to: '/portfolio',
     children: [
       { label: 'Portfolio & Journal', to: '/portfolio' },
+      { label: 'Case Studies', to: '/portfolio#case-studies' },
       { label: 'Features & Press', to: '/features' },
       { label: 'Client Voices', to: '/testimonials' },
     ],
@@ -156,7 +157,7 @@ export const navigation: NavItem[] = [
   { label: 'Meet the Founder', to: '/founder' },
   { label: 'Portfolio & Journal', to: '/portfolio' },
   { label: 'Connect', to: '/connect' },
-  // FAQ returns to the menu when Lynea supplies its content; the route stays, noindex.
+  // FAQ retired 15 September 2026 ("not needed at this time"); it lives in git history.
 ]
 
 /** Wording approved in the Manual, Chapter 4.1 — never invent new CTA copy. */

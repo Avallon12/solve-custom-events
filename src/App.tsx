@@ -26,7 +26,7 @@ const Testimonials = lazy(() => import('./pages/Testimonials'))
 const Founder = lazy(() => import('./pages/Founder'))
 const Portfolio = lazy(() => import('./pages/Portfolio'))
 const Connect = lazy(() => import('./pages/Connect'))
-const FAQ = lazy(() => import('./pages/FAQ'))
+const CaseStudy = lazy(() => import('./pages/CaseStudy'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
 /** New page: top of page. Same page with a hash: scroll to that section. */
@@ -82,8 +82,8 @@ export function Shell() {
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/founder" element={<Founder />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/portfolio/:slug" element={<CaseStudy />} />
           <Route path="/connect" element={<Connect />} />
-          <Route path="/faq" element={<FAQ />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         </Suspense>

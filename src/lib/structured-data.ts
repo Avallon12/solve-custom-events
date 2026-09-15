@@ -2,6 +2,7 @@ import { SITE_NAME, SITE_URL, absolute, canonicalFor, type PageMeta } from './me
 import { contact, socials } from '../data/site'
 import { experiences } from '../data/experiences'
 import { perspectives } from '../data/content'
+import { caseStudies } from '../data/case-studies'
 
 /**
  * JSON-LD for every prerendered page: the organisation, the website, the page
@@ -73,6 +74,7 @@ function breadcrumb(pathname: string, label: string) {
   const url = canonicalFor(pathname)
   const items: { name: string; item: string }[] = [{ name: 'Home', item: `${SITE_URL}/` }]
   if (pathname.startsWith('/divisions/')) items.push({ name: 'Divisions', item: `${SITE_URL}/divisions` })
+  if (pathname.startsWith('/portfolio/')) items.push({ name: 'Portfolio & Journal', item: `${SITE_URL}/portfolio` })
   if (pathname !== '/') items.push({ name: label, item: url })
   return {
     '@type': 'BreadcrumbList',
@@ -105,6 +107,24 @@ function extras(pathname: string) {
           { '@type': 'City', name: 'Calgary' },
           { '@type': 'Country', name: 'Canada' },
         ],
+      },
+    ]
+  }
+  const study = pathname.startsWith('/portfolio/') ? caseStudies.find((c) => `/portfolio/${c.slug}` === pathname) : undefined
+  if (study) {
+    return [
+      {
+        '@type': 'Article',
+        '@id': `${url}#article`,
+        headline: study.title,
+        alternativeHeadline: study.subtitle,
+        description: study.intro.slice(0, 2).join(' '),
+        keywords: study.tags.join(', '),
+        url,
+        author: { '@id': ORG_ID },
+        publisher: { '@id': ORG_ID },
+        image: absolute(`/media/og/${study.hero}.jpg`),
+        inLanguage: 'en-CA',
       },
     ]
   }

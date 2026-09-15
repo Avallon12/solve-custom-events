@@ -47,6 +47,7 @@ export const signatureMomentsGallery: readonly MediaId[] = [
   'sig-001', 'sig-002', 'sig-011', 'sig-012', 'sig-013', 'sig-014',
   'sig-015', 'sig-016', 'sig-017', 'sig-018', 'sig-019', 'sig-020',
   'sig-021', 'sig-022', 'intl-005', 'intl-002', 'intl-019',
+  'intl-001', 'intl-006',
 ]
 
 // Design & Stylization — ballrooms, stages and installations lead; the full folder sits behind View all.
@@ -153,14 +154,20 @@ export const featureMensVowGallery: readonly MediaId[] = [
   'mv-007', 'mv-008', 'mv-009', 'mv-010', 'mv-011', 'mv-012',
 ]
 
-export const portfolioGallery: readonly MediaId[] = [
-  'wed-028', 'wed-049', 'wed-059', 'wed-062', 'wed-036', 'wed-025',
-  'sig-006', 'sig-009', 'sig-010', 'sig-013', 'sig-014', 'sig-022',
-  'fund-001', 'fund-008', 'fund-016', 'fund-023', 'fund-030', 'fund-033',
-  'conf-009', 'conf-002', 'intl-001', 'intl-006', 'intl-021', 'work-005',
-  'design-135', 'design-125', 'design-143', 'design-079', 'design-002', 'design-023',
-  'work-001', 'work-009', 'work-010', 'work-011', 'work-003', 'work-006',
+/**
+ * Selected Work on the Portfolio page, grouped under her six categories, each
+ * linking to its experience. Conferences shows her conferences folder only.
+ */
+export const portfolioWork: readonly { category: string; to: string; ids: readonly MediaId[] }[] = [
+  { category: 'Weddings', to: '/divisions/weddings', ids: ['wed-110', 'wed-107', 'wed-063', 'wed-130', 'wed-092', 'wed-135'] },
+  { category: 'Signature Moments', to: '/divisions/signature-moments', ids: ['intl-004', 'home-001', 'fund-049', 'sig-006', 'intl-021', 'home-002'] },
+  { category: 'Fundraising Campaigns', to: '/divisions/fundraising', ids: ['fund-001', 'fund-008', 'fund-016', 'fund-023', 'fund-030', 'fund-033'] },
+  { category: 'Conferences & Leadership Events', to: '/divisions/conferences', ids: ['conf-009', 'conf-002', 'conf-007', 'conf-006', 'conf-008', 'conf-001'] },
+  { category: 'Design & Stylization', to: '/divisions/design-stylization', ids: ['design-135', 'design-125', 'design-143', 'design-079', 'design-002', 'design-023'] },
+  { category: 'Workshops & Curated Experiences', to: '/divisions/workshops', ids: ['work-005', 'work-001', 'work-009', 'work-010', 'work-011', 'work-003'] },
 ]
+/** Flat list, for anything that only needs the photographs. */
+export const portfolioGallery: readonly MediaId[] = portfolioWork.flatMap((group) => group.ids)
 
 export const homeStrip: readonly MediaId[] = [
   // In divisionNav order: Weddings, Signature Moments, Design, Workshops, Conferences, Fundraising.

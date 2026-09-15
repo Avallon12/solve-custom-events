@@ -1,4 +1,5 @@
 import { experiences } from './experiences'
+import { caseStudies } from './case-studies'
 
 /**
  * Every indexable route, in the client's page order. The prerender script
@@ -22,6 +23,6 @@ export const ROUTES: readonly string[] = [
   '/testimonials',
   '/founder',
   '/portfolio',
+  ...caseStudies.map((c) => `/portfolio/${c.slug}`),
   '/connect',
-  '/faq',
 ]

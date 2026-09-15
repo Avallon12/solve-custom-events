@@ -13,19 +13,22 @@ import {
   Section,
 } from '../components/primitives'
 import { perspectives, portfolio } from '../data/content'
-import { portfolioGallery } from '../data/galleries'
+import { caseStudies } from '../data/case-studies'
+import { portfolioWork } from '../data/galleries'
 import { usePageMeta } from '../lib/meta'
 
 /**
  * Portfolio / Journal — the document's own sequence: Portfolio, then Features,
- * then Testimonials, then Perspectives. Nothing added.
+ * then Testimonials, then Perspectives. September 2026: the Portfolio section
+ * now opens with case studies (how Sol Vé thinks, what it was asked, what
+ * happened) before the selected work (what was created), grouped by her six
+ * categories.
  */
-
 
 export default function Portfolio() {
   usePageMeta(
     'Portfolio & Journal | Sol Vé Custom Events',
-    'Weddings, signature moments, fundraising campaigns, conferences, design and stylization, and workshops from the Sol Vé Custom Events portfolio in Calgary.',
+    'Case studies and selected work from Sol Vé Custom Events in Calgary: weddings, signature moments, fundraising campaigns, conferences, design and stylization, and workshops.',
   )
 
   return (
@@ -35,44 +38,77 @@ export default function Portfolio() {
         eyebrow="Portfolio & Journal"
         headline={
           <>
-            Portfolio & <Accent>Journal.</Accent>
+            The work is different every time. The philosophy is <Accent>not.</Accent>
           </>
         }
         media="portfolio-hero"
       />
 
-      <Section tone="ivory" rule>
+      <Section tone="ivory" id="case-studies" rule>
         <Container>
           <Reveal>
-            <Eyebrow>Portfolio</Eyebrow>
-            <ul className="mt-8 space-y-1">
-              {portfolio.categories.map((category) => (
-                <li
-                  key={category}
-                  className="font-display text-[26px] leading-snug text-charcoal md:text-[34px]"
-                >
-                  {category}
-                </li>
-              ))}
-            </ul>
+            <Eyebrow>Case Studies</Eyebrow>
           </Reveal>
+          <div className="mt-10 grid gap-6 md:gap-8 lg:grid-cols-3">
+            {caseStudies.map((study, i) => (
+              <Reveal key={study.slug} delay={i * 90} className={study.featured ? 'lg:col-span-2' : ''}>
+                <Link
+                  to={`/portfolio/${study.slug}`}
+                  className="group flex h-full flex-col rounded-[2px] border border-stone/40 bg-ivory transition-all duration-500 hover:border-bronze hover:shadow-[0_6px_30px_rgba(158,141,111,0.16)]"
+                >
+                  <div className="overflow-hidden rounded-t-[2px]">
+                    <Media
+                      id={study.hero}
+                      showCaption={false}
+                      className={`${study.featured ? 'aspect-[16/9]' : 'aspect-[4/3]'} w-full`}
+                      imgClassName="transition-transform duration-[1200ms] group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col p-7 md:p-9">
+                    <p className="font-ui text-[11px] uppercase text-gold" style={{ letterSpacing: '0.24em' }}>
+                      {study.number}{study.featured ? ' — Featured' : ''}
+                    </p>
+                    <h2 className="mt-4 font-display text-[26px] leading-tight text-charcoal transition-colors duration-300 group-hover:text-gold md:text-[32px]">
+                      {study.title}
+                    </h2>
+                    <p className="mt-2 font-body text-[19px] italic text-espresso md:text-[21px]">{study.subtitle}</p>
+                    <p className="mt-auto pt-6 font-ui text-[11px] uppercase text-walnut" style={{ letterSpacing: '0.2em' }}>
+                      {study.tags.join(' · ')}
+                    </p>
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </Section>
 
-          <GalleryGrid ids={portfolioGallery} featured={18} />
+      <Section tone="ivory" id="selected-work">
+        <Container>
+          <Reveal>
+            <Eyebrow>Selected Work</Eyebrow>
+          </Reveal>
+          <div className="mt-6 flex flex-col gap-16 md:gap-20">
+            {portfolioWork.map((group) => (
+              <div key={group.category}>
+                <Reveal className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2 border-b border-stone/40 pb-4">
+                  <h2 className="font-display text-[26px] leading-snug text-charcoal md:text-[32px]">{group.category}</h2>
+                  <Link
+                    to={group.to}
+                    className="font-ui text-[11px] uppercase text-espresso underline underline-offset-4 hover:text-gold"
+                    style={{ letterSpacing: '0.22em' }}
+                  >
+                    View the experience
+                  </Link>
+                </Reveal>
+                <GalleryGrid ids={group.ids} featured={group.ids.length} className="mt-8" />
+              </div>
+            ))}
+          </div>
 
           {/* Event film highlights — the client's Mystic Menagerie film. */}
-          <Reveal className="mt-8 md:mt-12">
+          <Reveal className="mt-16 md:mt-20">
             <Media id="home-film" showCaption={false} className="aspect-video w-full" />
-          </Reveal>
-
-          <Reveal className="mt-16">
-            <p className="font-body text-[18px] text-espresso">Each project should include:</p>
-            <ul className="mt-5 space-y-2">
-              {portfolio.requirements.map((item) => (
-                <li key={item} className="font-body text-[19px] text-charcoal md:text-[21px]">
-                  {item}
-                </li>
-              ))}
-            </ul>
           </Reveal>
         </Container>
       </Section>

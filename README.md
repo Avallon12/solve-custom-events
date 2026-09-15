@@ -238,9 +238,26 @@ the six divisions are untouched.
   hero). Opening selections of Weddings, Signature Moments and Design lead
   with rooms that have people in them. Rooms alone remain where the page is
   about the room (Design hero, Conferences by her instruction, Founder).
-- Still open: case studies (needs her material), photographs of delegates and
-  sessions if she wants the Conferences page to show people convening, FAQ
-  content, Facebook reviews, a form endpoint.
+- **Case studies, 15 September.** The Portfolio page now opens with case
+  studies before selected work: a case study says how Sol Vé thinks, what it
+  was asked to do and what happened; the portfolio says what was created.
+  `src/data/case-studies.ts` holds each study word for word from her Case
+  Files document, rendered by `src/pages/CaseStudy.tsx` at
+  `/portfolio/<slug>` with the document's own image sequence (people →
+  ceremony → detail → interaction → reception → room → behind the scenes →
+  final) and its two oversized quotes. The first, "Present in the Moment", is
+  live and featured. The Masquerade campaign and "Designing Belonging" have
+  titles but no copy yet; add each as an entry when hers arrives and the card,
+  page, sitemap and structured data follow. Selected Work is grouped under her
+  six categories (`portfolioWork` in galleries.ts), each linking to its
+  experience, and no longer shows the internal "each project should include"
+  list. The Portfolio hero line is proposed copy for her approval.
+- **FAQ retired** at her word ("not needed at this time"); the page is in git
+  history if it is ever wanted.
+- Still open: the two remaining case studies (her copy), photographs of
+  delegates and sessions if she wants the Conferences page to show people
+  convening, Facebook reviews (login wall; needs her browser or a paste), a
+  form endpoint.
 
 ## SEO
 

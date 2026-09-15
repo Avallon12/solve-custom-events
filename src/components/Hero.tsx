@@ -16,11 +16,20 @@ function Breadcrumb({ current }: { current: string }) {
   const parent = group
     ? undefined
     : header.find((item) => item.children?.some((c) => c.to.split('#')[0] === pathname))
+  const nested =
+    group || parent
+      ? undefined
+      : header.find((item) => item.children?.some((c) => pathname.startsWith(`${c.to.split('#')[0]}/`)))
+  const nestedChild = nested?.children?.find((c) => pathname.startsWith(`${c.to.split('#')[0]}/`))
   const label = group
     ? group.label
     : parent?.children?.find((c) => c.to.split('#')[0] === pathname)?.label ?? current
   const trail: { label: string; to?: string }[] = [{ label: 'Home', to: '/' }]
   if (parent) trail.push({ label: parent.label, to: parent.to })
+  if (nested && nestedChild) {
+    trail.push({ label: nested.label, to: nested.to })
+    trail.push({ label: nestedChild.label, to: nestedChild.to })
+  }
   trail.push({ label })
   return (
     <nav aria-label="Breadcrumb" className="mb-6">

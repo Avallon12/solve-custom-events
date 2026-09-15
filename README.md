@@ -228,6 +228,16 @@ the six divisions are untouched.
   (Beyond the Occasion, Principles, Testimonials, The Sol Vé Way, Connect,
   Perspectives) swapped their wedding frames for gala, workshop and community
   photographs.
+- **People first, 15 September (second pass).** Nine page heroes were empty
+  rooms and the About pages' pictures were décor. Sixteen slots now show
+  people chosen for breadth of background, body and age: guests arriving at
+  the ballroom (Foundation), the dabke dancers (The Sol Vé Way), friends at
+  the gala photo wall (Principles), the masked host at the door (How We Work),
+  four friends at the masquerade (Connect), the drag artists (Portfolio), an
+  older couple's vows (Where It Began), the bride among her guests (Weddings
+  hero). Opening selections of Weddings, Signature Moments and Design lead
+  with rooms that have people in them. Rooms alone remain where the page is
+  about the room (Design hero, Conferences by her instruction, Founder).
 - Still open: case studies (needs her material), photographs of delegates and
   sessions if she wants the Conferences page to show people convening, FAQ
   content, Facebook reviews, a form endpoint.

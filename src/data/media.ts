@@ -66,24 +66,27 @@ export const media = {
   },
   'foundation-hero': {
     label: 'Foundation hero',
-    alt: 'Airy white ballroom set with round tables, blossom trees and a mirrored dance floor',
+    alt: 'Three guests in cocktail dresses walk through a laser-cut entrance onto marble flooring',
     tone: 'light',
-    src: '/media/design-139.webp',
+    src: '/media/wed-108.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
+    focus: 'top',
   },
   'way-hero': {
     label: 'The Sol Vé Way hero',
-    alt: 'A white ballroom reception set with round tables, oval-back chairs and blossom trees',
+    alt: 'Traditional dancers in embroidered costumes perform in a bright white reception hall',
     tone: 'light',
-    src: '/media/wed-101.webp',
+    src: '/media/wed-111.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
+    focus: 'top',
   },
   'capabilities-hero': {
     label: 'Service Capabilities hero',
-    alt: 'Long banquet tables with white linens, gold chargers and towering white hydrangea spheres',
+    alt: 'A masked guest in a tricorn hat holds a staff at the venue entrance',
     tone: 'light',
-    src: '/media/design-125.webp',
+    src: '/media/fund-039.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
+    focus: 'top',
   },
   'experiences-hero': {
     label: 'What we create hero',
@@ -103,17 +106,19 @@ export const media = {
   },
   'principles-hero': {
     label: 'Sol Vé Principles hero',
-    alt: 'Round guest tables with tall white floral centrepieces, pillar candles and gold chargers',
+    alt: 'Three guests raise a toast beside the gilded step-and-repeat frame',
     tone: 'light',
-    src: '/media/wed-106.webp',
+    src: '/media/fund-012.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
+    focus: 'top',
   },
   'foundation-began': {
     label: 'Where it began hero',
-    alt: 'A rustic head table built from wooden crates dressed in lace runners, mason jars and candles',
+    alt: 'An older couple exchange vows at a draped table beside a sunlit country pond',
     tone: 'light',
-    src: '/media/design-002.webp',
+    src: '/media/wed-037.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
+    focus: 'top',
   },
   'perspectives-hero': {
     label: 'Perspectives hero',
@@ -131,10 +136,11 @@ export const media = {
   },
   'portfolio-hero': {
     label: 'Portfolio hero',
-    alt: 'A gala dance floor washed in gobo lights before a draped stage',
+    alt: 'Three performers pose before a rainbow mural',
     tone: 'light',
-    src: '/media/design-099.webp',
+    src: '/media/fund-065.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
+    focus: 'top',
   },
   'features-hero': {
     label: 'Features hero',
@@ -154,10 +160,11 @@ export const media = {
   },
   'connect-hero': {
     label: 'Connect hero',
-    alt: 'Glass hurricane candles and gold accents lining a champagne satin table runner',
+    alt: 'A group of guests gathered on the club floor',
     tone: 'light',
-    src: '/media/design-134.webp',
+    src: '/media/fund-048.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
+    focus: 'top',
   },
   // Stock — Photograph via Wikimedia Commons, CC0 (public domain dedication)
   'commitments-hero': {
@@ -169,10 +176,11 @@ export const media = {
   },
   'division-weddings': {
     label: 'Division — Weddings',
-    alt: 'An all-white ballroom with marble dance floor, mirrored panels and blossom trees',
+    alt: 'A bride in a lace gown moves through guests in red and pink on the dance floor',
     tone: 'light',
-    src: '/media/wed-097.webp',
+    src: '/media/wed-110.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
+    focus: 'top',
   },
   'division-signature-moments': {
     label: 'Division — Signature Moments',
@@ -221,10 +229,11 @@ export const media = {
   },
   'foundation-detail-1': {
     label: 'Foundation — Blossom Detail',
-    alt: 'White blossom tree on a plinth beneath a crystal chandelier in a bright ballroom',
+    alt: 'Three guests in cocktail dresses walk through a laser-cut entrance onto marble flooring',
     tone: 'light',
-    src: '/media/design-142.webp',
+    src: '/media/wed-108.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
+    focus: 'top',
   },
   'foundation-detail-2': {
     label: 'Foundation — Mirror Vignette',
@@ -235,10 +244,11 @@ export const media = {
   },
   'foundation-detail-3': {
     label: 'Foundation — Candlelight Detail',
-    alt: 'Candlelit head table cascading with white florals and tall gold candelabras',
+    alt: 'A guest in a red beanie dances with a drink in hand',
     tone: 'light',
-    src: '/media/design-144.webp',
+    src: '/media/fund-063.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
+    focus: 'top',
   },
   'way-hospitality': {
     label: 'The Sol Vé Way — Hospitality in Practice',
@@ -375,10 +385,11 @@ export const media = {
   },
   'principles-gal-4': {
     label: 'Principles — Craftsmanship',
-    alt: 'Rosette-piped white wedding cake beside a gold love sign at the head table',
+    alt: 'Traditional dancers in embroidered costumes perform in a bright white reception hall',
     tone: 'light',
-    src: '/media/design-116.webp',
+    src: '/media/wed-111.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
+    focus: 'top',
   },
   'principles-gal-5': {
     label: 'Principles — Collaboration',
@@ -418,17 +429,19 @@ export const media = {
   },
   'create-band': {
     label: 'What We Create — The Room Revealed',
-    alt: 'Ballroom reception with blossom trees, white chairs and a sweeping staircase beyond',
+    alt: 'Guests dance together in the light-washed ballroom',
     tone: 'light',
-    src: '/media/design-143.webp',
+    src: '/media/fund-013.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
+    focus: 'top',
   },
   'divisions-band': {
     label: 'Signature Experiences — Overview',
-    alt: 'Guest tables set with gold chargers, taper candles and hydrangea spheres',
+    alt: 'Guests in a pink gown and suspenders dance energetically at the reception',
     tone: 'light',
-    src: '/media/design-149.webp',
+    src: '/media/wed-112.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
+    focus: 'top',
   },
   'cap-consultation-strategy': {
     label: 'Consultation & Strategy — At the Table',
@@ -492,17 +505,19 @@ export const media = {
   },
   'testimonials-gal-2': {
     label: 'Testimonials — Corporate Partners',
-    alt: 'Round tables in black linens set poolside beneath a shaded pergola walkway',
+    alt: 'Three guests raise a toast beside the gilded step-and-repeat frame',
     tone: 'light',
-    src: '/media/conf-002.webp',
+    src: '/media/fund-012.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
+    focus: 'top',
   },
   'testimonials-gal-3': {
     label: 'Testimonials — Community Partners',
-    alt: 'A chandeliered ballroom with tables dressed in black and blue light for a masquerade',
+    alt: 'An artisan\'s booth of prints and handmade toys inside a market tent',
     tone: 'light',
-    src: '/media/design-089.webp',
+    src: '/media/work-006.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
+    focus: 'top',
   },
   'perspectives-inline-1': {
     label: 'Perspectives — The Conversation Table',
@@ -559,10 +574,11 @@ export const media = {
   },
   'connect-gal-2': {
     label: 'Connect — Studio & Materials',
-    alt: 'Getting-ready vignette with white rose bouquet, jewellery bust and perfume on linen',
+    alt: 'A performer in a celestial cloak and painted mask greets guests',
     tone: 'light',
-    src: '/media/design-130.webp',
+    src: '/media/fund-020.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
+    focus: 'top',
   },
 
   // ── Films — cut from the client’s own footage, September 2026 ──

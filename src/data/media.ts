@@ -95,9 +95,9 @@ export const media = {
   },
   'beyond-hero': {
     label: 'Beyond the Occasion hero',
-    alt: 'A couple stand small on a badlands ridge beneath a sweeping pastel sunset',
+    alt: 'Costumed guests dancing in an ornate gilded ballroom washed in purple uplighting',
     tone: 'light',
-    src: '/media/wed-062.webp',
+    src: '/media/home-007.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
     focus: 'top',
   },
@@ -117,9 +117,9 @@ export const media = {
   },
   'perspectives-hero': {
     label: 'Perspectives hero',
-    alt: 'A riverside tea-party table with tiered pastries, vintage china and burgundy roses',
+    alt: 'A speaker addresses the gala from a stage of stained-glass panels',
     tone: 'light',
-    src: '/media/design-023.webp',
+    src: '/media/fund-014.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
   },
   'founder-hero': {
@@ -146,9 +146,9 @@ export const media = {
   },
   'testimonials-hero': {
     label: 'Testimonials hero',
-    alt: 'A bride and groom dance beside a roaring stone firepit under a string-lit pavilion',
+    alt: 'Guests dance together in the light-washed ballroom',
     tone: 'light',
-    src: '/media/wed-115.webp',
+    src: '/media/fund-013.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
     focus: 'top',
   },
@@ -242,9 +242,9 @@ export const media = {
   },
   'way-hospitality': {
     label: 'The Sol Vé Way — Hospitality in Practice',
-    alt: 'Four friends raising mimosas at a bridal brunch',
+    alt: 'Three friends arm in arm in the red-lit club',
     tone: 'light',
-    src: '/media/fem-020.webp',
+    src: '/media/fund-047.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
     focus: 'top',
   },
@@ -265,10 +265,11 @@ export const media = {
   },
   'beyond-occasion-band': {
     label: 'Beyond the Occasion — What Follows',
-    alt: 'A wide view of an elopement picnic for two tucked into a badlands canyon',
+    alt: 'A panel of four speakers addressing an audience at a workshop',
     tone: 'light',
-    src: '/media/wed-071.webp',
+    src: '/media/work-005.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
+    focus: 'top',
   },
   'beyond-family': {
     label: 'Beyond the Occasion — Family Celebrating',
@@ -280,9 +281,9 @@ export const media = {
   },
   'beyond-toast': {
     label: 'Beyond the Occasion — The Toast',
-    alt: 'A groom pops a bottle of bubbly while his bride laughs in the snow',
+    alt: 'A groom hoisted on his groomsmen\'s shoulders in a white starlit ballroom',
     tone: 'light',
-    src: '/media/wed-015.webp',
+    src: '/media/home-002.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
     focus: 'top',
   },
@@ -366,10 +367,11 @@ export const media = {
   },
   'principles-gal-3': {
     label: 'Principles — Hospitality',
-    alt: 'A BRIDE TO BE brunch table beneath a crystal chandelier',
+    alt: 'Participants painting masquerade masks at a workshop table',
     tone: 'light',
-    src: '/media/fem-015.webp',
+    src: '/media/work-009.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
+    focus: 'top',
   },
   'principles-gal-4': {
     label: 'Principles — Craftsmanship',
@@ -388,9 +390,9 @@ export const media = {
   },
   'principles-gal-6': {
     label: 'Principles — Legacy',
-    alt: 'Two wedding rings resting on a red stone atop weathered driftwood',
+    alt: 'A performer spreads illuminated wings on the gala stage',
     tone: 'light',
-    src: '/media/dwh-004.webp',
+    src: '/media/fund-023.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
   },
   'began-early': {
@@ -474,9 +476,9 @@ export const media = {
   },
   'testimonials-band': {
     label: 'Testimonials — The Couples',
-    alt: 'A groom in a vest kisses his bride\'s temple beside the river and skyline',
+    alt: 'Guests in crystal headdresses and masquerade costumes gathered on a nightclub dance floor',
     tone: 'light',
-    src: '/media/wed-045.webp',
+    src: '/media/home-005.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
     focus: 'top',
   },
@@ -549,9 +551,9 @@ export const media = {
   },
   'connect-gal-1': {
     label: 'Connect — The First Conversation',
-    alt: 'A groom helps his bride swap into cowboy boots beside their SUV',
+    alt: 'A floral arrangement presented to a community partner',
     tone: 'light',
-    src: '/media/wed-069.webp',
+    src: '/media/fund-050.webp',
     credit: 'by the client’s photographers (names to be confirmed)',
     focus: 'top',
   },

@@ -2,6 +2,7 @@ import { Navigate, useParams } from 'react-router-dom'
 import Hero from '../components/Hero'
 import Media from '../components/Media'
 import ClosingCTA from '../components/ClosingCTA'
+import GalleryGrid from '../components/GalleryGrid'
 import { Container, Display, Eyebrow, Ornament, Reveal, Section } from '../components/primitives'
 import { experienceBySlug } from '../data/experiences'
 import { usePageMeta } from '../lib/meta'
@@ -116,21 +117,7 @@ export default function DivisionPage() {
               </Reveal>
             ))}
 
-            {experience.gallery && (
-              <div className="mt-14 grid auto-rows-fr grid-cols-2 gap-5 md:gap-8 lg:grid-cols-3">
-                {experience.gallery.map((id, i) => (
-                  <Reveal key={id} delay={(i % 3) * 80} className="h-full">
-                    <div className="overflow-hidden rounded-[2px]">
-                      <Media
-                        id={id}
-                        className="aspect-square w-full"
-                        imgClassName="transition-transform duration-[1200ms] hover:scale-105"
-                      />
-                    </div>
-                  </Reveal>
-                ))}
-              </div>
-            )}
+            {experience.gallery && <GalleryGrid ids={experience.gallery} />}
           </Container>
         </Section>
       )}

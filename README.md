@@ -217,6 +217,17 @@ the six divisions are untouched.
   photographs left the page: three with people joined Signature Moments
   beside the proposal they belong to, and eight near-identical angles of the
   empty gazebo were removed from the site.
+- **Curated galleries, 15 September.** Ordering alone could not answer
+  "reads as elopement": Weddings was 154 frames, about 80 of them two
+  elopements. `GalleryGrid` now shows the first twelve of each division
+  gallery (eighteen on Portfolio) and keeps the rest in the document behind
+  "View all N photographs", so every supplied photograph stays on the site and
+  the media audit still finds each file. The first twelve of Weddings,
+  Signature Moments, Design and Fundraising were chosen for luxury and for
+  breadth of people. Ten site-wide slots on pages that are not about weddings
+  (Beyond the Occasion, Principles, Testimonials, The Sol Vé Way, Connect,
+  Perspectives) swapped their wedding frames for gala, workshop and community
+  photographs.
 - Still open: case studies (needs her material), photographs of delegates and
   sessions if she wants the Conferences page to show people convening, FAQ
   content, Facebook reviews, a form endpoint.

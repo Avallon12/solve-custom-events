@@ -1,6 +1,7 @@
 import Hero from '../components/Hero'
 import Media from '../components/Media'
 import ClosingCTA from '../components/ClosingCTA'
+import GalleryGrid from '../components/GalleryGrid'
 import { Container, Display, Eyebrow, Ornament, Reveal, Section } from '../components/primitives'
 import { howWeWorkTogether, solVeDifference } from '../data/experiences'
 import {
@@ -118,20 +119,7 @@ export default function ServiceCapabilities() {
                 <Media id={CAP_REEL[capability.slug]!} showCaption={false} className="aspect-video w-full" />
               </Reveal>
             )}
-            <div className="mt-8 grid auto-rows-fr grid-cols-2 gap-5 md:gap-8 lg:grid-cols-3">
-              {CAP_GALLERY[capability.slug].map((id, i) => (
-                <Reveal key={id} delay={(i % 3) * 80} className="h-full">
-                  <div className="overflow-hidden rounded-[2px]">
-                    <Media
-                      id={id}
-                      showCaption={false}
-                      className="aspect-square w-full"
-                      imgClassName="transition-transform duration-[1200ms] hover:scale-105"
-                    />
-                  </div>
-                </Reveal>
-              ))}
-            </div>
+            <GalleryGrid ids={CAP_GALLERY[capability.slug]} showCaption={false} className="mt-8" />
           </Container>
         </Section>
       ))}

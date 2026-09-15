@@ -37,7 +37,7 @@ export const weddingsGallery: readonly MediaId[] = [
   'wed-031', 'wed-032', 'wed-033', 'wed-034',
 ]
 
-// Signature Moments — a milestone gown, celebrations across generations, a proposal, then her bridal-party folder.
+// Signature Moments — a milestone gown, celebrations across generations, a proposal, then her bridal-party folder, then the setting of the beach proposal.
 export const signatureMomentsGallery: readonly MediaId[] = [
   'intl-004', 'intl-003', 'home-001', 'home-009', 'home-006', 'fund-049',
   'fund-050', 'sig-003', 'sig-004', 'sig-005', 'sig-006', 'sig-007',
@@ -45,7 +45,8 @@ export const signatureMomentsGallery: readonly MediaId[] = [
   'intl-013', 'intl-014', 'intl-015', 'intl-016', 'intl-017', 'intl-018',
   'intl-024', 'intl-025', 'intl-026', 'sig-001', 'sig-002', 'sig-011',
   'sig-012', 'sig-013', 'sig-014', 'sig-015', 'sig-016', 'sig-017',
-  'sig-018', 'sig-019', 'sig-020', 'sig-021', 'sig-022',
+  'sig-018', 'sig-019', 'sig-020', 'sig-021', 'sig-022', 'intl-005',
+  'intl-002', 'intl-019',
 ]
 
 export const designStylizationGallery: readonly MediaId[] = [
@@ -89,12 +90,10 @@ export const workshopsGallery: readonly MediaId[] = [
   'work-007', 'work-008', 'work-009', 'work-010', 'work-011',
 ]
 
-// Conferences — people convening first, then the venues. Still thin: photographs of delegates, roundtables and sessions are the one thing this page needs from Lynea.
+// Conferences — Lynea, 15 September: this page uses her "Conferences & International Events" folder and nothing else. The set banquet and poolside tables lead.
 export const conferencesGallery: readonly MediaId[] = [
-  'work-005', 'conf-009', 'conf-002', 'conf-007', 'conf-006', 'conf-008',
-  'fund-014', 'intl-005', 'intl-002', 'conf-001', 'conf-004', 'conf-005',
-  'conf-003', 'intl-001', 'intl-008', 'intl-009', 'intl-010', 'intl-011',
-  'intl-012', 'intl-019', 'intl-020', 'intl-022', 'intl-006', 'intl-007',
+  'conf-002', 'conf-007', 'conf-006', 'conf-008', 'conf-001', 'conf-003',
+  'conf-004', 'conf-005', 'conf-009',
 ]
 
 export const fundraisingGallery: readonly MediaId[] = [
@@ -162,7 +161,7 @@ export const portfolioGallery: readonly MediaId[] = [
 
 export const homeStrip: readonly MediaId[] = [
   // In divisionNav order: Weddings, Signature Moments, Design, Workshops, Conferences, Fundraising.
-  'wed-107', 'home-001', 'design-135', 'work-009', 'work-005', 'fund-042',
+  'wed-107', 'home-001', 'design-135', 'work-009', 'conf-002', 'fund-042',
 ]
 
 export const homeFrames: readonly MediaId[] = [

@@ -209,9 +209,17 @@ the six divisions are untouched.
   request, instead of six lines beginning "Some".
 - **Breadcrumb** (Home › group › page) on every inner-page hero so a phone,
   where the bar is hidden, always has a way back.
-- Still open: case studies (needs her material), conference photography of
-  people convening (the library has one panel and no delegates), FAQ content,
-  Facebook reviews, a form endpoint.
+- **Conferences, 15 September.** Lynea sent her "Conferences & International
+  Events" folder again with the instruction to use only those photographs for
+  that page. They are the nine `conf-*` files already on the site, so the
+  Conferences gallery, hero (`division-conferences` → conf-009) and home tile
+  (conf-002) now draw on that set alone. The beach-gazebo "international"
+  photographs left the page: three with people joined Signature Moments
+  beside the proposal they belong to, and eight near-identical angles of the
+  empty gazebo were removed from the site.
+- Still open: case studies (needs her material), photographs of delegates and
+  sessions if she wants the Conferences page to show people convening, FAQ
+  content, Facebook reviews, a form endpoint.
 
 ## SEO
 

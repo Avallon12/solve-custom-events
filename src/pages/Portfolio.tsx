@@ -51,16 +51,18 @@ export default function Portfolio() {
           </Reveal>
           <div className="mt-10 grid gap-6 md:gap-8 lg:grid-cols-3">
             {caseStudies.map((study, i) => (
-              <Reveal key={study.slug} delay={i * 90} className={study.featured ? 'lg:col-span-2' : ''}>
+              <Reveal key={study.slug} delay={i * 90} className="h-full">
                 <Link
                   to={`/portfolio/${study.slug}`}
-                  className="group flex h-full flex-col rounded-[2px] border border-stone/40 bg-ivory transition-all duration-500 hover:border-bronze hover:shadow-[0_6px_30px_rgba(158,141,111,0.16)]"
+                  className={`group flex h-full flex-col rounded-[2px] border bg-ivory transition-all duration-500 hover:shadow-[0_6px_30px_rgba(158,141,111,0.16)] ${
+                    study.featured ? 'border-gold/70 hover:border-gold' : 'border-stone/40 hover:border-bronze'
+                  }`}
                 >
                   <div className="overflow-hidden rounded-t-[2px]">
                     <Media
                       id={study.hero}
                       showCaption={false}
-                      className={`${study.featured ? 'aspect-[16/9]' : 'aspect-[4/3]'} w-full`}
+                      className="aspect-[4/3] w-full"
                       imgClassName="transition-transform duration-[1200ms] group-hover:scale-105"
                     />
                   </div>

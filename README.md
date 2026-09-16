@@ -245,17 +245,19 @@ the six divisions are untouched.
   Files document, rendered by `src/pages/CaseStudy.tsx` at
   `/portfolio/<slug>` with the document's own image sequence (people →
   ceremony → detail → interaction → reception → room → behind the scenes →
-  final) and its two oversized quotes. The first, "Present in the Moment", is
-  live and featured. The Masquerade campaign and "Designing Belonging" have
-  titles but no copy yet; add each as an entry when hers arrives and the card,
-  page, sitemap and structured data follow. Selected Work is grouped under her
+  final) and its two oversized quotes. All three are live: "Present in the
+  Moment" (weddings), "Mystic Moonlight Masquerade" (featured; the campaign,
+  with the Mystic Threads film and ten photographs in the document's
+  anticipation-to-connection order, and no fundraising totals, as the
+  document asks) and "Designing Belonging" (the three editorial shoots, laid
+  out as a spread). Each study's copy was checked sentence by sentence against
+  her document; inline bold and italics are hers. Selected Work is grouped under her
   six categories (`portfolioWork` in galleries.ts), each linking to its
   experience, and no longer shows the internal "each project should include"
   list. The Portfolio hero line is proposed copy for her approval.
 - **FAQ retired** at her word ("not needed at this time"); the page is in git
   history if it is ever wanted.
-- Still open: the two remaining case studies (her copy), photographs of
-  delegates and sessions if she wants the Conferences page to show people
+- Still open: photographs of delegates and sessions if she wants the Conferences page to show people
   convening, Facebook reviews (login wall; needs her browser or a paste), a
   form endpoint.
 

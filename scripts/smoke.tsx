@@ -44,7 +44,7 @@ const ROUTES = [
   '/features',
   '/testimonials',
   '/founder',
-  '/portfolio', '/portfolio/present-in-the-moment',
+  '/portfolio', '/portfolio/present-in-the-moment', '/portfolio/mystic-moonlight-masquerade', '/portfolio/designing-belonging',
   '/connect',
   '/does-not-exist',
 ]

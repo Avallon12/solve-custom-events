@@ -118,7 +118,7 @@ function extras(pathname: string) {
         '@id': `${url}#article`,
         headline: study.title,
         alternativeHeadline: study.subtitle,
-        description: study.intro.slice(0, 2).join(' '),
+        description: study.summary,
         keywords: study.tags.join(', '),
         url,
         author: { '@id': ORG_ID },

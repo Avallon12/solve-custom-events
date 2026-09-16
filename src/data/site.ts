@@ -107,7 +107,7 @@ export const header: NavItem[] = [
       { label: 'Portfolio & Journal', to: '/portfolio' },
       { label: 'Case Studies', to: '/portfolio#case-studies' },
       { label: 'Features & Press', to: '/features' },
-      { label: 'Client Voices', to: '/testimonials' },
+      { label: 'Testimonials', to: '/testimonials' },
     ],
   },
   {

@@ -265,7 +265,6 @@ export const dimensions: Record<string, [number, number]> = {
   'experiences-hero': [1800, 1200],
   'feat-001': [1050, 1400],
   'feat-002': [1050, 1400],
-  'feat-003': [1400, 1050],
   'feature-bridal-fantasy-1': [648, 799],
   'feature-bridal-fantasy-2': [648, 795],
   'features-band': [1600, 1067],

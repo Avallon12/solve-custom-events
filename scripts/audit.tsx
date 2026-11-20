@@ -1,7 +1,7 @@
 /**
- * Content audit. Renders every Sol Vé route and fails on anything that must not
- * appear there — currently any SOLVÉ Global Summit reference, which the client's
- * newest document asks be kept off the site until the summit is finalised.
+ * Content audit. Renders every Sol Vé route (except /solve) and fails on any
+ * SOLVÉ Global Summit reference that has leaked into the main Sol Vé pages.
+ * The summit itself lives at /solve inside the Sol Vé shell.
  *
  * Run with: npm run audit
  */
@@ -30,7 +30,7 @@ import Connect from '../src/pages/Connect'
 import CaseStudy from '../src/pages/CaseStudy'
 import NotFound from '../src/pages/NotFound'
 
-/** Every Sol Vé route. /solve is excluded — it is the summit's own page. */
+/** Every Sol Vé route. /solve is excluded — audited separately as the summit page. */
 const ROUTES = [
   '/',
   '/foundation',
@@ -54,7 +54,7 @@ const ROUTES = [
 
 /** Case-insensitive; catches alt text, metadata and hidden markup alike. */
 const BANNED = [
-  // SOLVÉ Global Summit — off the Sol Vé site until the client says otherwise.
+  // SOLVÉ Global Summit — must not appear on Sol Vé marketing pages (only /solve).
   /solv[ée]\s+global/i,
   /global\s+summit/i,
   /\bSOLV[ÉE]\b(?!\s*(Custom|Vé))/,

@@ -27,6 +27,8 @@ const Founder = lazy(() => import('./pages/Founder'))
 const Portfolio = lazy(() => import('./pages/Portfolio'))
 const Connect = lazy(() => import('./pages/Connect'))
 const CaseStudy = lazy(() => import('./pages/CaseStudy'))
+const Solve = lazy(() => import('./pages/Solve'))
+const SolveRegister = lazy(() => import('./pages/SolveRegister'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
 /** New page: top of page. Same page with a hash: scroll to that section. */
@@ -84,6 +86,11 @@ export function Shell() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/portfolio/:slug" element={<CaseStudy />} />
           <Route path="/connect" element={<Connect />} />
+          {/* SOLVÉ Global Summit — restored; lives in the Sol Vé shell, not linked in the masthead. */}
+          <Route path="/solve" element={<Solve />} />
+          <Route path="/solve/register" element={<SolveRegister />} />
+          <Route path="/solve/delegate" element={<Navigate to="/solve/register" replace />} />
+          <Route path="/solve/sponsor" element={<Navigate to="/solve/register" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         </Suspense>

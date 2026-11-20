@@ -25,4 +25,6 @@ export const ROUTES: readonly string[] = [
   '/portfolio',
   ...caseStudies.map((c) => `/portfolio/${c.slug}`),
   '/connect',
+  '/solve',
+  '/solve/register',
 ]

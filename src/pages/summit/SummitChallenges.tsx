@@ -48,11 +48,11 @@ export default function SummitChallenges() {
         <Reveal className="mt-10 rounded-[22px] border border-white/80 bg-white/55 px-6 py-9 shadow-[0_18px_48px_rgba(14,27,56,0.08)] backdrop-blur-md md:mt-14 md:px-10">
           <dl className="grid gap-9 text-center md:grid-cols-3 md:gap-0">
             {t.challenges.stats.map((stat, i) => (
-              <div key={i} className={`flex flex-col-reverse md:px-6 ${i > 0 ? 'md:border-l md:border-summit-gold/60' : ''}`}>
+              <div key={i} className={`flex flex-col-reverse justify-end md:px-6 ${i > 0 ? 'md:border-l md:border-summit-gold/60' : ''}`}>
                 <dd className="mx-auto mt-3 max-w-[260px] text-[18px] leading-[1.35] text-summit-ink md:text-[20px]">
                   {stat.label}
                 </dd>
-                <dt className="font-display text-[46px] [font-variant-numeric:lining-nums] font-semibold leading-none text-summit-gold-deep md:text-[56px]">
+                <dt className="font-display text-[46px] font-semibold leading-none [font-variant-numeric:lining-nums] [text-wrap:balance] text-summit-gold-deep md:text-[56px]">
                   {stat.value}
                 </dt>
               </div>

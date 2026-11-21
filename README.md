@@ -281,8 +281,10 @@ Interest button on every page (a fixed bar along the bottom on phones):
 `/solve` and `/solve/*` redirect here (host and router).
 
 - **Copy** — `src/data/summit.ts`, English verbatim from the mockups.
-- **Spanish** — paste Rida's approved copy into `es` in the same file. Anything
-  missing falls back to English. `?lang=es` forces Spanish for a shared link.
+- **Spanish** — `es` in the same file holds Avallon's working translation,
+  live since 2026-11-20 so the switch works. Replace it with Rida's approved
+  copy word for word when it arrives. Anything missing falls back to English.
+  `?lang=es` forces Spanish for a shared link.
 - **Registration** — `src/data/summit-form.ts`. Fill in the team's Google Form
   `formResponse` URL and the five `entry.…` ids; responses then land in the
   Form's linked Sheet. Until then Submit opens an email to

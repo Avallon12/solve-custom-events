@@ -85,7 +85,7 @@ export default function SummitHeader() {
       <header className="sticky top-0 z-50 bg-summit-navy shadow-[0_6px_24px_rgba(6,12,28,0.28)]">
         <div className="mx-auto flex h-[76px] max-w-[1440px] items-center justify-between gap-4 px-4 sm:px-6 md:h-[92px] lg:px-10 xl:h-[104px]">
           <Link to={summitPaths.home} aria-label={`${t.brand} — ${t.nav.home}`} className="shrink-0">
-            <SummitLogo eager className="w-[132px] md:w-[168px] xl:w-[196px]" />
+            <SummitLogo eager className="w-[132px] md:w-[168px] min-[1440px]:w-[196px]" />
           </Link>
 
           <nav aria-label={t.brand} className="hidden xl:block">
@@ -105,15 +105,15 @@ export default function SummitHeader() {
                         <Link
                           to={item.to}
                           aria-current={pathname === item.to ? 'page' : undefined}
-                          className={`relative flex items-center py-3 pl-4 font-ui text-[15px] transition-colors duration-300 ${
-                            item.children ? 'pr-1' : 'pr-4'
+                          className={`relative flex items-center whitespace-nowrap py-3 pl-3 font-ui text-[14px] transition-colors duration-300 min-[1440px]:pl-4 min-[1440px]:text-[15px] ${
+                            item.children ? 'pr-1' : 'pr-3 min-[1440px]:pr-4'
                           } ${active ? 'font-semibold text-summit-gold-light' : 'text-white hover:text-summit-gold-light'}`}
                         >
                           {item.label}
                           <span
                             aria-hidden="true"
-                            className={`absolute bottom-0 left-4 h-[3px] rounded-full bg-summit-gold transition-transform duration-300 ${
-                              item.children ? 'right-1' : 'right-4'
+                            className={`absolute bottom-0 left-3 h-[3px] rounded-full bg-summit-gold transition-transform duration-300 min-[1440px]:left-4 ${
+                              item.children ? 'right-1' : 'right-3 min-[1440px]:right-4'
                             } ${active ? 'scale-x-100' : 'scale-x-0'}`}
                           />
                         </Link>
@@ -167,12 +167,12 @@ export default function SummitHeader() {
             </ul>
           </nav>
 
-          <div className="flex items-center gap-3 sm:gap-5">
+          <div className="flex items-center gap-3 sm:gap-5 xl:gap-4 min-[1440px]:gap-5">
             <span aria-hidden="true" className="hidden h-8 w-[2px] bg-summit-gold xl:block" />
             <LanguageSwitch className="hidden md:flex" />
             <RegisterButton
               size="md"
-              className="hidden !rounded-[8px] !bg-[linear-gradient(180deg,#F3D995_0%,#E3B95E_55%,#CF9E3F_100%)] !text-summit-navy sm:inline-flex"
+              className="hidden whitespace-nowrap !rounded-[8px] !bg-[linear-gradient(180deg,#F3D995_0%,#E3B95E_55%,#CF9E3F_100%)] !text-summit-navy sm:inline-flex xl:!px-5 min-[1440px]:!px-7"
             />
             <button
               type="button"

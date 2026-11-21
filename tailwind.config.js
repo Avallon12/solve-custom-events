@@ -15,14 +15,21 @@ export default {
         cocoa: '#6C6251',
         espresso: '#5C4E32',
         walnut: '#4B3724',
-        // SOLVÉ Global Summit — that section only (Build v5 colour system)
-        solve: {
-          far: '#0E2447',
-          grey: '#808898',
-          gold: '#9E8D6F',
-          white: '#FEFEFE',
-          off: '#FDFDFD',
-          crimson: '#6B0F1A',
+        // SOLVÉ Global Summit at /global-summit — navy, gold and cream from Rida's mockups
+        summit: {
+          navy: '#0E1B38',
+          ink: '#101D3B',
+          body: '#2A3550',
+          muted: '#5B6478',
+          gold: '#C4912C',
+          'gold-light': '#EACB7E',
+          'gold-deep': '#9A6B1A',
+          cream: '#F8F2E4',
+          sand: '#F1E6CC',
+          // The four pillar marks on The Platform mockup
+          equip: '#1F3A6A',
+          unite: '#6B2858',
+          restore: '#4C7A3B',
         },
         // Mystic Moonlight Masquerade — campaign section only
         mmm: {

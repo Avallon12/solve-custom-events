@@ -46,10 +46,10 @@ values strip, "Who we are", Mission/Vision/Values, the first-person biography,
 Notable Work, the founder pull-quote, and the homepage sections beneath the
 hero. Her document gives the Home page one block of copy; that is what it has.
 
-**Removed, on her explicit instruction:** SOLVÉ Global Summit, in full — the
-page, both forms, its data, colours and assets. `npm run audit` renders every
-route and fails the build if a reference reappears, including in alt text and
-metadata.
+**SOLVÉ Global Summit** lives apart from the Sol Vé pages, at `/global-summit`
+(see *SOLVÉ Global Summit* below). The Sol Vé bar links to it as "Global
+Summit"; otherwise `npm run audit` still fails the build if a summit reference
+appears on any Sol Vé page, including in alt text and metadata.
 
 Her brand architecture, in her words, is why the sequence matters:
 
@@ -127,7 +127,8 @@ public-facing address.
 
 Both real marks are in place: `public/media/logo.webp` (Sol Vé, gold on
 transparent, so it works on ivory and on charcoal) and
-`public/media/solve-summit-logo.webp` (SOLVÉ Global Summit). The Sol Vé mark
+`public/media/summit-logo.png` (SOLVÉ Global Summit — Rida's transparent PNG,
+byte-for-byte as sent; never re-encode, crop or tint it). The Sol Vé mark
 renders 56px in the bar and 92px in the footer, well above the old 44px ceiling
 that made it "lost and irrelevant".
 
@@ -260,6 +261,35 @@ the six divisions are untouched.
 - Still open: photographs of delegates and sessions if she wants the Conferences page to show people
   convening, Facebook reviews (login wall; needs her browser or a paste), a
   form endpoint.
+
+## SOLVÉ Global Summit — `/global-summit`
+
+Seven pages in the order of Rida's Website User Flow, each with the summit's own
+navy header (Home returns to `/global-summit`), EN / ES switch, and a Register
+Interest button on every page (a fixed bar along the bottom on phones):
+
+| Page | Route |
+| --- | --- |
+| Summit Home | `/global-summit` |
+| About the Summit | `/global-summit/about` |
+| The Platform | `/global-summit/platform` |
+| Global Challenges | `/global-summit/global-challenges` |
+| Impact | `/global-summit/impact` |
+| Contact | `/global-summit/contact` |
+| Register Your Interest | `/global-summit/register` |
+
+`/solve` and `/solve/*` redirect here (host and router).
+
+- **Copy** — `src/data/summit.ts`, English verbatim from the mockups.
+- **Spanish** — paste Rida's approved copy into `es` in the same file. Anything
+  missing falls back to English. `?lang=es` forces Spanish for a shared link.
+- **Registration** — `src/data/summit-form.ts`. Fill in the team's Google Form
+  `formResponse` URL and the five `entry.…` ids; responses then land in the
+  Form's linked Sheet. Until then Submit opens an email to
+  info@solveglobalsummit.com.
+- **Photography** — the four `summit-*.webp` files are clean crops from the
+  mockups themselves, so they are low resolution. Replace them with the
+  original images, without text, at the same filenames.
 
 ## SEO
 

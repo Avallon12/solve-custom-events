@@ -164,45 +164,49 @@ export default function Nav() {
                 <div
                   key={item.label}
                   className="relative"
-                  onMouseEnter={() => hoverOpen(item.label)}
+                  onMouseEnter={() => (item.children ? hoverOpen(item.label) : setOpenMenu(null))}
                 >
                   <Link
                     to={item.to}
-                    onFocus={() => hoverOpen(item.label)}
-                    aria-expanded={openMenu === item.label}
+                    onFocus={() => (item.children ? hoverOpen(item.label) : setOpenMenu(null))}
+                    aria-expanded={item.children ? openMenu === item.label : undefined}
                     className={`flex items-center gap-1.5 px-4 py-4 font-ui text-[11px] uppercase transition-colors duration-300 xl:text-[12px] ${
                       isActive(item) ? 'text-gold' : 'text-charcoal hover:text-gold'
                     }`}
                     style={{ letterSpacing: '0.18em' }}
                   >
                     {item.label}
-                    <ChevronDown
-                      size={12}
-                      className={`transition-transform duration-300 ${
-                        openMenu === item.label ? 'rotate-180' : ''
-                      }`}
-                    />
+                    {item.children && (
+                      <ChevronDown
+                        size={12}
+                        className={`transition-transform duration-300 ${
+                          openMenu === item.label ? 'rotate-180' : ''
+                        }`}
+                      />
+                    )}
                   </Link>
 
-                  <div
-                    className={`absolute left-1/2 top-full z-50 w-[380px] -translate-x-1/2 transition-all duration-300 ${
-                      openMenu === item.label
-                        ? 'pointer-events-auto translate-y-0 opacity-100'
-                        : 'pointer-events-none -translate-y-2 opacity-0'
-                    }`}
-                  >
-                    <div className="border border-stone/40 bg-ivory p-2 shadow-[0_18px_50px_rgba(36,34,22,0.14)]">
-                      {item.children?.map((child) => (
-                        <Link
-                          key={child.to}
-                          to={child.to}
-                          className="block px-4 py-2.5 font-body text-[16px] leading-snug text-charcoal transition-colors duration-200 hover:bg-linen/60 hover:text-espresso"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
+                  {item.children && (
+                    <div
+                      className={`absolute left-1/2 top-full z-50 w-[380px] -translate-x-1/2 transition-all duration-300 ${
+                        openMenu === item.label
+                          ? 'pointer-events-auto translate-y-0 opacity-100'
+                          : 'pointer-events-none -translate-y-2 opacity-0'
+                      }`}
+                    >
+                      <div className="border border-stone/40 bg-ivory p-2 shadow-[0_18px_50px_rgba(36,34,22,0.14)]">
+                        {item.children?.map((child) => (
+                          <Link
+                            key={child.to}
+                            to={child.to}
+                            className="block px-4 py-2.5 font-body text-[16px] leading-snug text-charcoal transition-colors duration-200 hover:bg-linen/60 hover:text-espresso"
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               ))}
             </div>

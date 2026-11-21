@@ -1,7 +1,8 @@
 /**
- * Content audit. Renders every Sol Vé route (except /solve) and fails on any
- * SOLVÉ Global Summit reference that has leaked into the main Sol Vé pages.
- * The summit itself lives at /solve inside the Sol Vé shell.
+ * Content audit. Renders every Sol Vé route and fails on any SOLVÉ Global
+ * Summit reference that has leaked into the main Sol Vé pages. The summit
+ * lives at /global-summit with its own header; the only mention allowed here
+ * is the "Global Summit" link in the Sol Vé navigation.
  *
  * Run with: npm run audit
  */
@@ -30,7 +31,7 @@ import Connect from '../src/pages/Connect'
 import CaseStudy from '../src/pages/CaseStudy'
 import NotFound from '../src/pages/NotFound'
 
-/** Every Sol Vé route. /solve is excluded — audited separately as the summit page. */
+/** Every Sol Vé route. /global-summit is not one of them. */
 const ROUTES = [
   '/',
   '/foundation',
@@ -54,7 +55,7 @@ const ROUTES = [
 
 /** Case-insensitive; catches alt text, metadata and hidden markup alike. */
 const BANNED = [
-  // SOLVÉ Global Summit — must not appear on Sol Vé marketing pages (only /solve).
+  // SOLVÉ Global Summit — must not appear on Sol Vé marketing pages (only /global-summit).
   /solv[ée]\s+global/i,
   /global\s+summit/i,
   /\bSOLV[ÉE]\b(?!\s*(Custom|Vé))/,
@@ -94,10 +95,13 @@ function Tree({ path }: { path: string }) {
   )
 }
 
+/** The navigation link to the summit section — the one sanctioned mention. */
+const ALLOWED = /<a[^>]*href="\/global-summit"[^>]*>Global Summit<\/a>/g
+
 let failures = 0
 for (const path of ROUTES) {
   // Markup, not just visible text — alt attributes and hidden nodes count.
-  const html = renderToString(<Tree path={path} />)
+  const html = renderToString(<Tree path={path} />).replace(ALLOWED, '')
   const hits = BANNED.flatMap((re) => {
     const m = html.match(new RegExp(re.source, re.flags.includes('g') ? re.flags : re.flags + 'g'))
     return m ?? []

@@ -27,6 +27,8 @@ import Portfolio from '../src/pages/Portfolio'
 import Connect from '../src/pages/Connect'
 import CaseStudy from '../src/pages/CaseStudy'
 import NotFound from '../src/pages/NotFound'
+import SummitSite from '../src/components/summit/SummitSite'
+import { SUMMIT_ROUTES } from '../src/data/routes'
 
 const ROUTES = [
   '/',
@@ -81,12 +83,25 @@ function Tree({ path }: { path: string }) {
   )
 }
 
+/** SOLVÉ Global Summit pages, rendered through their own header and footer. */
+function SummitTree({ path }: { path: string }) {
+  return (
+    <MemoryRouter initialEntries={[path]}>
+      <SummitSite />
+    </MemoryRouter>
+  )
+}
+
 let failed = 0
-for (const path of ROUTES) {
+for (const path of [...ROUTES, ...SUMMIT_ROUTES]) {
   try {
-    const html = renderToString(<Tree path={path} />)
+    const html = renderToString(
+      SUMMIT_ROUTES.includes(path) ? <SummitTree path={path} /> : <Tree path={path} />,
+    )
     const text = html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()
-    const status = text.length > 1200 ? 'ok  ' : 'THIN'
+    // Summit pages carry only the mockup copy, so they run shorter than Sol Vé pages.
+    const floor = SUMMIT_ROUTES.includes(path) ? 600 : 1200
+    const status = text.length > floor ? 'ok  ' : 'THIN'
     if (status === 'THIN') failed++
     console.log(`${status} ${path.padEnd(34)} ${text.length} chars of copy`)
   } catch (error) {

@@ -28,6 +28,8 @@ import Portfolio from '../src/pages/Portfolio'
 import Connect from '../src/pages/Connect'
 import CaseStudy from '../src/pages/CaseStudy'
 import NotFound from '../src/pages/NotFound'
+import SummitSite from '../src/components/summit/SummitSite'
+import { SUMMIT_ROUTES } from '../src/data/routes'
 
 const ROUTES = ['/', '/foundation', '/the-sol-ve-way', '/beyond-the-occasion', '/commitments', '/principles', '/where-it-began', '/what-we-create', '/service-capabilities', '/divisions', ...experiences.map((e) => `/divisions/${e.slug}`), '/perspectives', '/features', '/testimonials', '/founder', '/portfolio', '/portfolio/present-in-the-moment', '/portfolio/mystic-moonlight-masquerade', '/portfolio/designing-belonging', '/connect']
 
@@ -61,9 +63,20 @@ function Tree({ path }: { path: string }) {
   )
 }
 
+/** SOLVÉ Global Summit pages, rendered through their own header and footer. */
+function SummitTree({ path }: { path: string }) {
+  return (
+    <MemoryRouter initialEntries={[path]}>
+      <SummitSite />
+    </MemoryRouter>
+  )
+}
+
 const refs = new Map<string, Set<string>>()
-for (const path of ROUTES) {
-  const html = renderToString(<Tree path={path} />)
+for (const path of [...ROUTES, ...SUMMIT_ROUTES]) {
+  const html = renderToString(
+    SUMMIT_ROUTES.includes(path) ? <SummitTree path={path} /> : <Tree path={path} />,
+  )
   for (const m of html.matchAll(/\/media\/[A-Za-z0-9._-]+/g)) {
     const file = m[0].slice('/media/'.length)
     if (!refs.has(file)) refs.set(file, new Set())
@@ -76,7 +89,7 @@ const files = readdirSync('public/media').filter((f) => !f.startsWith('.') && f 
 const unreferenced = files.filter((f) => !refs.has(f) && f !== 'logo.webp')
 const missing = [...refs.keys()].filter((f) => !files.includes(f))
 for (const [file, paths] of [...refs].sort()) console.log(`${file}\t${[...paths].join(' ')}`)
-console.log(`\n${files.length} files in public/media, ${refs.size} referenced across ${ROUTES.length} routes.`)
+console.log(`\n${files.length} files in public/media, ${refs.size} referenced across ${ROUTES.length + SUMMIT_ROUTES.length} routes.`)
 if (unreferenced.length) console.log(`NOT ON ANY PAGE: ${unreferenced.join(', ')}`)
 if (missing.length) console.log(`REFERENCED BUT MISSING: ${missing.join(', ')}`)
 process.exit(unreferenced.length || missing.length ? 1 : 0)

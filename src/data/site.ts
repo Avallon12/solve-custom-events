@@ -139,6 +139,8 @@ export const header: NavItem[] = [
       { label: 'Community Impact', to: '/commitments#community' },
     ],
   },
+  // SOLVÉ Global Summit — its own section with its own header; no dropdown here.
+  { label: 'Global Summit', to: '/global-summit' },
 ]
 
 /**

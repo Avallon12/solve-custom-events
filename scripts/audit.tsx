@@ -95,7 +95,7 @@ function Tree({ path }: { path: string }) {
   )
 }
 
-/** The navigation link to the summit section — the one sanctioned mention. */
+/** Links to the summit section (bar, menu, footer) — the only sanctioned mentions. */
 const ALLOWED = /<a[^>]*href="\/global-summit"[^>]*>Global Summit<\/a>/g
 
 let failures = 0

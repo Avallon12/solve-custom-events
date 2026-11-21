@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type FocusEvent } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { ChevronDown, Menu, X } from 'lucide-react'
-import { PILLAR_IDS, summitPaths } from '../../data/summit'
+import { summitPaths } from '../../data/summit'
 import { LanguageSwitch, useSummit } from './SummitLanguage'
 import { RegisterButton, SummitLogo } from './ui'
 
@@ -23,13 +23,7 @@ function useItems(): Item[] {
     {
       label: t.nav.platform,
       to: summitPaths.platform,
-      children: [
-        { label: t.nav.pillars, to: summitPaths.platform },
-        ...PILLAR_IDS.map((id, i) => ({
-          label: t.platform.pillars[i].title,
-          to: `${summitPaths.platform}#${id}`,
-        })),
-      ],
+      children: [{ label: t.nav.pillars, to: summitPaths.platform }],
     },
     { label: t.nav.impact, to: summitPaths.impact },
     { label: t.nav.contact, to: summitPaths.contact },

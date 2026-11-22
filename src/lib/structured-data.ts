@@ -2,7 +2,6 @@ import { SITE_NAME, SITE_URL, absolute, canonicalFor, type PageMeta } from './me
 import { contact, socials } from '../data/site'
 import { experiences } from '../data/experiences'
 import { perspectives } from '../data/content'
-import { SUMMIT_BASE, summitPaths } from '../data/summit'
 import { caseStudies } from '../data/case-studies'
 
 /**
@@ -63,8 +62,7 @@ function website() {
 type PageKind = 'WebPage' | 'AboutPage' | 'ContactPage' | 'CollectionPage' | 'ProfilePage'
 
 function kindFor(pathname: string): PageKind {
-  if (pathname === '/connect' || pathname === summitPaths.contact) return 'ContactPage'
-  if (pathname === summitPaths.about) return 'AboutPage'
+  if (pathname === '/connect') return 'ContactPage'
   if (pathname === '/founder') return 'ProfilePage'
   if (['/foundation', '/where-it-began', '/the-sol-ve-way', '/principles'].includes(pathname)) return 'AboutPage'
   if (['/divisions', '/portfolio', '/features', '/perspectives', '/testimonials'].includes(pathname))
@@ -77,7 +75,6 @@ function breadcrumb(pathname: string, label: string) {
   const items: { name: string; item: string }[] = [{ name: 'Home', item: `${SITE_URL}/` }]
   if (pathname.startsWith('/divisions/')) items.push({ name: 'Divisions', item: `${SITE_URL}/divisions` })
   if (pathname.startsWith('/portfolio/')) items.push({ name: 'Portfolio & Journal', item: `${SITE_URL}/portfolio` })
-  if (pathname.startsWith(`${SUMMIT_BASE}/`)) items.push({ name: 'SOLVÉ Global Summit', item: `${SITE_URL}${SUMMIT_BASE}` })
   if (pathname !== '/') items.push({ name: label, item: url })
   return {
     '@type': 'BreadcrumbList',

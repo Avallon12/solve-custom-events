@@ -4,7 +4,6 @@ import Nav from './components/Nav'
 import Footer from './components/Footer'
 import ContactRail from './components/ContactRail'
 import Home from './pages/Home'
-import { SUMMIT_BASE } from './data/summit'
 
 /**
  * Every page but Home loads on demand, so the first visit ships only the
@@ -28,7 +27,6 @@ const Founder = lazy(() => import('./pages/Founder'))
 const Portfolio = lazy(() => import('./pages/Portfolio'))
 const Connect = lazy(() => import('./pages/Connect'))
 const CaseStudy = lazy(() => import('./pages/CaseStudy'))
-const SummitSite = lazy(() => import('./components/summit/SummitSite'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
 /** New page: top of page. Same page with a hash: scroll to that section. */
@@ -51,20 +49,6 @@ function ScrollManager() {
 
 /** The whole app minus the router — shared by the browser entry and the prerender script. */
 export function Shell() {
-  const { pathname } = useLocation()
-
-  // SOLVÉ Global Summit carries its own header and footer in place of the Sol Vé masthead.
-  if (pathname === SUMMIT_BASE || pathname.startsWith(`${SUMMIT_BASE}/`)) {
-    return (
-      <>
-        <ScrollManager />
-        <Suspense fallback={null}>
-          <SummitSite />
-        </Suspense>
-      </>
-    )
-  }
-
   return (
     <>
       <ScrollManager />
@@ -100,9 +84,6 @@ export function Shell() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/portfolio/:slug" element={<CaseStudy />} />
           <Route path="/connect" element={<Connect />} />
-          {/* SOLVÉ Global Summit moved to /global-summit (rendered above); the host redirects too. */}
-          <Route path="/solve" element={<Navigate to={SUMMIT_BASE} replace />} />
-          <Route path="/solve/*" element={<Navigate to={`${SUMMIT_BASE}/register`} replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         </Suspense>

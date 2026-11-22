@@ -36,16 +36,6 @@
       "source": "/values",
       "destination": "/commitments",
       "permanent": true
-    },
-    {
-      "source": "/solve",
-      "destination": "/global-summit",
-      "permanent": true
-    },
-    {
-      "source": "/solve/:path*",
-      "destination": "/global-summit/register",
-      "permanent": true
     }
   ],
   "headers": [

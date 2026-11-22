@@ -4,7 +4,7 @@ import { ChevronDown, Mail, Phone } from 'lucide-react'
 import Logo from './Logo'
 import { FacebookIcon, InstagramIcon, LinkedInIcon } from './BrandIcons'
 import { GoldRule, Ornament } from './primitives'
-import { contact, cta, header, navigation, socials, summitLink, type NavItem } from '../data/site'
+import { contact, cta, header, navigation, socials, type NavItem } from '../data/site'
 
 /**
  * Computed rather than listed — a hard-coded array ran out at VIII the moment a
@@ -171,9 +171,7 @@ export default function Nav() {
                     onFocus={() => (item.children ? hoverOpen(item.label) : setOpenMenu(null))}
                     aria-expanded={item.children ? openMenu === item.label : undefined}
                     className={`flex items-center gap-1.5 px-4 py-4 font-ui text-[11px] uppercase transition-colors duration-300 xl:text-[12px] ${
-                      isActive(item) || item.to === summitLink.to
-                        ? 'text-gold hover:text-bronze'
-                        : 'text-charcoal hover:text-gold'
+                      isActive(item) ? 'text-gold' : 'text-charcoal hover:text-gold'
                     }`}
                     style={{ letterSpacing: '0.18em' }}
                   >
@@ -311,13 +309,6 @@ export default function Nav() {
                 >
                   {cta.primary}
                 </Link>
-                <Link
-                  to={summitLink.to}
-                  className="inline-flex min-h-[54px] flex-1 items-center justify-center rounded-[2px] border border-gold px-7 font-ui text-[13px] font-semibold uppercase text-gold transition-colors duration-300 hover:bg-gold hover:text-ivory"
-                  style={{ letterSpacing: '0.5px' }}
-                >
-                  {summitLink.label}
-                </Link>
               </div>
 
               <div className="my-7">
@@ -337,7 +328,7 @@ export default function Nav() {
                 Explore
               </p>
               <ul className="mt-4">
-                {header.filter((item) => item.to !== summitLink.to).map((item) => (
+                {header.map((item) => (
                   <li key={item.to} className="border-b border-ivory/10">
                     <div className="flex items-center justify-between gap-2">
                       <Link

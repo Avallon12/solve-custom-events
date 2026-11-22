@@ -3,7 +3,7 @@ import { Globe, Mail, MapPin, Phone } from 'lucide-react'
 import Logo from './Logo'
 import { FacebookIcon, InstagramIcon, LinkedInIcon } from './BrandIcons'
 import { Container, Eyebrow, GoldRule } from './primitives'
-import { contact, divisionNav, navigation, socials, summitLink } from '../data/site'
+import { contact, divisionNav, navigation, socials } from '../data/site'
 
 const icons = {
   LinkedIn: LinkedInIcon,
@@ -81,11 +81,6 @@ export default function Footer() {
               <li>
                 <Link to="/connect" className="font-body text-[17px] hover:text-gold">
                   Connect
-                </Link>
-              </li>
-              <li>
-                <Link to={summitLink.to} className="font-body text-[17px] text-gold hover:text-champagne">
-                  {summitLink.label}
                 </Link>
               </li>
             </ul>

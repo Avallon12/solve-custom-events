@@ -52,9 +52,6 @@ export const mystic = {
 } as const
 
 export type NavChild = { label: string; to: string }
-/** SOLVÉ Global Summit — linked from the bar, the menu and the footer. */
-export const summitLink = { label: 'Global Summit', to: '/global-summit' }
-
 export type NavItem = { label: string; to: string; children?: NavChild[] }
 
 /**
@@ -142,8 +139,6 @@ export const header: NavItem[] = [
       { label: 'Community Impact', to: '/commitments#community' },
     ],
   },
-  // SOLVÉ Global Summit — its own section with its own header; no dropdown here.
-  summitLink,
 ]
 
 /**

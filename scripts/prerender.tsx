@@ -15,7 +15,7 @@ import { MemoryRouter } from 'react-router-dom'
 import { Shell } from '../src/App'
 import { DEFAULT_IMAGE, SITE_NAME, SITE_URL, absolute, canonicalFor, readPageMeta, resetPageMeta } from '../src/lib/meta'
 import { graphFor } from '../src/lib/structured-data'
-import { ALL_ROUTES } from '../src/data/routes'
+import { ROUTES } from '../src/data/routes'
 
 const DIST = 'dist'
 const template = readFileSync(join(DIST, 'index.html'), 'utf8')
@@ -91,7 +91,7 @@ function document(path: string, html: string, meta: ReturnType<typeof readPageMe
 }
 
 const indexable: string[] = []
-for (const path of ALL_ROUTES) {
+for (const path of ROUTES) {
   const { html, meta } = await render(path)
   // `/foundation` is served from `foundation.html` (Vercel cleanUrls); `/divisions/weddings` from `divisions/weddings.html`.
   const file = path === '/' ? join(DIST, 'index.html') : join(DIST, `${path}.html`)

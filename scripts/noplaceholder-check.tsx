@@ -23,8 +23,6 @@ import Portfolio from '../src/pages/Portfolio'
 import Connect from '../src/pages/Connect'
 import CaseStudy from '../src/pages/CaseStudy'
 import NotFound from '../src/pages/NotFound'
-import SummitSite from '../src/components/summit/SummitSite'
-import { SUMMIT_ROUTES } from '../src/data/routes'
 
 const ROUTES = ['/', '/foundation', '/the-sol-ve-way', '/beyond-the-occasion', '/commitments', '/principles', '/where-it-began', '/what-we-create', '/service-capabilities', '/divisions', ...experiences.map((e) => `/divisions/${e.slug}`), '/perspectives', '/features', '/testimonials', '/founder', '/portfolio', '/portfolio/present-in-the-moment', '/portfolio/mystic-moonlight-masquerade', '/portfolio/designing-belonging', '/connect']
 
@@ -58,20 +56,9 @@ function Tree({ path }: { path: string }) {
   )
 }
 
-/** SOLVÉ Global Summit pages, rendered through their own header and footer. */
-function SummitTree({ path }: { path: string }) {
-  return (
-    <MemoryRouter initialEntries={[path]}>
-      <SummitSite />
-    </MemoryRouter>
-  )
-}
-
 let bad = 0
-for (const path of [...ROUTES, ...SUMMIT_ROUTES]) {
-  const html = renderToString(
-    SUMMIT_ROUTES.includes(path) ? <SummitTree path={path} /> : <Tree path={path} />,
-  )
+for (const path of ROUTES) {
+  const html = renderToString(<Tree path={path} />)
   const hits = (html.match(/(Photograph|Film) to be provided|photograph pending|film pending/gi) || []).length
   if (hits) { bad++; console.log(`PLACEHOLDER ${path}: ${hits}`) } else console.log(`ok   ${path}`)
 }

@@ -46,10 +46,10 @@ values strip, "Who we are", Mission/Vision/Values, the first-person biography,
 Notable Work, the founder pull-quote, and the homepage sections beneath the
 hero. Her document gives the Home page one block of copy; that is what it has.
 
-**SOLVÉ Global Summit** lives apart from the Sol Vé pages, at `/global-summit`
-(see *SOLVÉ Global Summit* below). The Sol Vé bar links to it as "Global
-Summit"; otherwise `npm run audit` still fails the build if a summit reference
-appears on any Sol Vé page, including in alt text and metadata.
+**SOLVÉ Global Summit** is a completely separate website, at the client's
+request (2026-11-22): no route, link or mention here. `npm run audit` fails the
+build if a summit reference appears on any Sol Vé page, including in alt text
+and metadata.
 
 Her brand architecture, in her words, is why the sequence matters:
 
@@ -125,10 +125,8 @@ public-facing address.
 
 ### 4. Logos — done
 
-Both real marks are in place: `public/media/logo.webp` (Sol Vé, gold on
-transparent, so it works on ivory and on charcoal) and
-`public/media/summit-logo.png` (SOLVÉ Global Summit — Rida's transparent PNG,
-byte-for-byte as sent; never re-encode, crop or tint it). The Sol Vé mark
+The real mark is in place: `public/media/logo.webp` (Sol Vé, gold on
+transparent, so it works on ivory and on charcoal). The Sol Vé mark
 renders 56px in the bar and 92px in the footer, well above the old 44px ceiling
 that made it "lost and irrelevant".
 
@@ -262,37 +260,6 @@ the six divisions are untouched.
   convening, Facebook reviews (login wall; needs her browser or a paste), a
   form endpoint.
 
-## SOLVÉ Global Summit — `/global-summit`
-
-Seven pages in the order of Rida's Website User Flow, each with the summit's own
-navy header (Home returns to `/global-summit`), EN / ES switch, and a Register
-Interest button on every page (a fixed bar along the bottom on phones):
-
-| Page | Route |
-| --- | --- |
-| Summit Home | `/global-summit` |
-| About the Summit | `/global-summit/about` |
-| The Platform | `/global-summit/platform` |
-| Global Challenges | `/global-summit/global-challenges` |
-| Impact | `/global-summit/impact` |
-| Contact | `/global-summit/contact` |
-| Register Your Interest | `/global-summit/register` |
-
-`/solve` and `/solve/*` redirect here (host and router).
-
-- **Copy** — `src/data/summit.ts`, English verbatim from the mockups.
-- **Spanish** — `es` in the same file holds Avallon's working translation,
-  live since 2026-11-20 so the switch works. Replace it with Rida's approved
-  copy word for word when it arrives. Anything missing falls back to English.
-  `?lang=es` forces Spanish for a shared link.
-- **Registration** — `src/data/summit-form.ts`. Fill in the team's Google Form
-  `formResponse` URL and the five `entry.…` ids; responses then land in the
-  Form's linked Sheet. Until then Submit opens an email to
-  info@solveglobalsummit.com.
-- **Photography** — the four `summit-*.webp` files are clean crops from the
-  mockups themselves, so they are low resolution. Replace them with the
-  original images, without text, at the same filenames.
-
 ## SEO
 
 Every route is prerendered to static HTML at build time, so crawlers and
@@ -343,7 +310,6 @@ social scrapers receive the finished document rather than an empty shell.
 | Bronze `#8B765C` | borders, hairlines, hover |
 | Champagne `#C7B6A6` · Linen `#D0C8B1` · Cocoa `#6C6251` | supporting |
 | MMM Burgundy `#5B1020` · MMM Gold `#C9A84C` | campaign section only |
-| SOLVÉ Far Blue `#0E2447` · Grey Blue `#808898` · Deep Crimson `#6B0F1A` | `/solve` only |
 
 Playfair Display for headings, Cormorant Garamond for body, Inter for labels
 and buttons. Type scale, spacing and button specs follow the Manual.
@@ -364,7 +330,7 @@ src/
   components/
     Nav · Footer · ContactRail · MysticDialog
     Hero · ScrollFeature · Media · ClosingCTA · Logo · BrandIcons · ui
-  pages/        one file per route (incl. Solve, SolveDelegate, SolveSponsor)
+  pages/        one file per route
   lib/meta.ts   per-page SEO title + description
 scripts/smoke.tsx   renders all 20 routes, catches runtime errors
 ```
